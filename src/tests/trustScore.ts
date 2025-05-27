@@ -5,22 +5,22 @@ import type {
   IAgentRuntime,
   TestCase,
   TestSuite,
-  UUID
-} from '@elizaos/core';
-import { asUUID, logger } from '@elizaos/core';
-import { v4 as uuidv4 } from 'uuid';
-import { CommunityInvestorService } from '../service';
+  UUID,
+} from "@elizaos/core";
+import { asUUID, logger } from "@elizaos/core";
+import { v4 as uuidv4 } from "uuid";
+import { CommunityInvestorService } from "../service";
 import type {
   Recommendation,
   RecommendationMetric,
   TokenAPIData,
   UserTrustProfile,
-} from '../types';
+} from "../types";
 import {
   Conviction,
   SupportedChain,
-  TRUST_MARKETPLACE_COMPONENT_TYPE
-} from '../types';
+  TRUST_MARKETPLACE_COMPONENT_TYPE,
+} from "../types";
 
 const testUserIdGlobalTrustScore = asUUID(uuidv4());
 const testWorldId = asUUID(uuidv4());
@@ -29,7 +29,7 @@ const testWorldId = asUUID(uuidv4());
 const createFullMockComponentForTrustScore = (
   userId: UUID,
   profileData: UserTrustProfile,
-  runtime: IAgentRuntime
+  runtime: IAgentRuntime,
 ): CoreComponent => ({
   id: asUUID(uuidv4()),
   entityId: userId,
@@ -45,10 +45,10 @@ const createFullMockComponentForTrustScore = (
 const createRecForTrustScore = (
   id: string,
   timestamp: number,
-  type: 'BUY' | 'SELL',
-  conviction: Recommendation['conviction'],
+  type: "BUY" | "SELL",
+  conviction: Recommendation["conviction"],
   metric: RecommendationMetric | undefined,
-  priceAtRec?: number
+  priceAtRec?: number,
 ): Recommendation => ({
   id: asUUID(uuidv4()),
   userId: testUserIdGlobalTrustScore,
@@ -67,51 +67,54 @@ const createRecForTrustScore = (
 // Test Cases for Trust Score Logic
 const recencyWeightTests: TestCase[] = [
   {
-    name: 'TrustScore.Recency: 1.0 for very recent',
+    name: "TrustScore.Recency: 1.0 for very recent",
     fn: async (runtime: IAgentRuntime) => {
       const service = new CommunityInvestorService(runtime);
       const weight = service.getRecencyWeight(Date.now());
       if (Math.abs(weight - 1.0) > 0.015) {
         throw new Error(`Recency Weight: Expected ~1.0, got ${weight}`);
       }
-      logger.info('TrustScore.Recency: 1.0 - Passed');
+      logger.info("TrustScore.Recency: 1.0 - Passed");
     },
   },
   {
-    name: 'TrustScore.Recency: 0.1 for older than RECENCY_WEIGHT_MONTHS',
+    name: "TrustScore.Recency: 0.1 for older than RECENCY_WEIGHT_MONTHS",
     fn: async (runtime: IAgentRuntime) => {
       const service = new CommunityInvestorService(runtime);
       const recencyMonths = 6;
       const sixMonthsInMillis = recencyMonths * 30.44 * 24 * 60 * 60 * 1000;
-      const weight = service.getRecencyWeight(Date.now() - sixMonthsInMillis - 1000);
+      const weight = service.getRecencyWeight(
+        Date.now() - sixMonthsInMillis - 1000,
+      );
       if (Math.abs(weight - 0.1) > 0.01) {
         throw new Error(`Recency Weight: Expected ~0.1, got ${weight}`);
       }
-      logger.info('TrustScore.Recency: 0.1 older - Passed');
+      logger.info("TrustScore.Recency: 0.1 older - Passed");
     },
   },
 ];
 
 const convictionWeightTests: TestCase[] = [
   {
-    name: 'TrustScore.Conviction: Correct weights per level',
+    name: "TrustScore.Conviction: Correct weights per level",
     fn: async (runtime: IAgentRuntime) => {
       const service = new CommunityInvestorService(runtime);
       if (service.getConvictionWeight(Conviction.NONE) !== 0.25)
-        throw new Error('NONE weight mismatch');
+        throw new Error("NONE weight mismatch");
       if (service.getConvictionWeight(Conviction.LOW) !== 0.5)
-        throw new Error('LOW weight mismatch');
+        throw new Error("LOW weight mismatch");
       if (service.getConvictionWeight(Conviction.MEDIUM) !== 1.0)
-        throw new Error('MEDIUM mismatch');
-      if (service.getConvictionWeight(Conviction.HIGH) !== 1.5) throw new Error('HIGH mismatch');
-      logger.info('TrustScore.Conviction: Weights - Passed');
+        throw new Error("MEDIUM mismatch");
+      if (service.getConvictionWeight(Conviction.HIGH) !== 1.5)
+        throw new Error("HIGH mismatch");
+      logger.info("TrustScore.Conviction: Weights - Passed");
     },
   },
 ];
 
 const calculateScoreLogicTests: TestCase[] = [
   {
-    name: 'TrustScore.Calc: New user, no recs, score 0',
+    name: "TrustScore.Calc: New user, no recs, score 0",
     fn: async (runtime: IAgentRuntime) => {
       const service = new CommunityInvestorService(runtime);
       let createdCompData: UserTrustProfile | null = null;
@@ -123,15 +126,22 @@ const calculateScoreLogicTests: TestCase[] = [
           createdCompData = comp.data as UserTrustProfile;
           return true;
         };
-        await service.calculateUserTrustScore(testUserIdGlobalTrustScore, runtime, testWorldId);
-        if (!createdCompData) throw new Error('createComponent was not effectively called');
+        await service.calculateUserTrustScore(
+          testUserIdGlobalTrustScore,
+          runtime,
+          testWorldId,
+        );
+        if (!createdCompData)
+          throw new Error("createComponent was not effectively called");
         if (
           createdCompData.trustScore !== 0 ||
           (createdCompData.recommendations || []).length !== 0
         ) {
-          throw new Error(`New user score expected 0, got ${createdCompData.trustScore}`);
+          throw new Error(
+            `New user score expected 0, got ${createdCompData.trustScore}`,
+          );
         }
-        logger.info('TrustScore.Calc: New user - Passed');
+        logger.info("TrustScore.Calc: New user - Passed");
       } finally {
         runtime.getComponent = originalGetComponent;
         runtime.createComponent = originalCreateComponent;
@@ -139,27 +149,27 @@ const calculateScoreLogicTests: TestCase[] = [
     },
   },
   {
-    name: 'TrustScore.Calc: Single good BUY (+50% perf, recent, high conv)',
+    name: "TrustScore.Calc: Single good BUY (+50% perf, recent, high conv)",
     fn: async (runtime: IAgentRuntime) => {
       const service = new CommunityInvestorService(runtime);
       const recTimestamp = Date.now() - 1 * 24 * 60 * 60 * 1000;
       const basePerformance = 50;
       const recs = [
         createRecForTrustScore(
-          'goodBuy',
+          "goodBuy",
           recTimestamp,
-          'BUY',
+          "BUY",
           Conviction.HIGH,
           {
             potentialProfitPercent: basePerformance,
             evaluationTimestamp: recTimestamp,
             isScamOrRug: false,
           },
-          10
+          10,
         ),
       ];
       const initialProfile: UserTrustProfile = {
-        version: '1.0.0',
+        version: "1.0.0",
         userId: testUserIdGlobalTrustScore,
         trustScore: 0,
         lastTrustScoreCalculationTimestamp: 0,
@@ -168,14 +178,18 @@ const calculateScoreLogicTests: TestCase[] = [
       const initialComponent = createFullMockComponentForTrustScore(
         testUserIdGlobalTrustScore,
         initialProfile,
-        runtime
+        runtime,
       );
 
       let updatedCompData: UserTrustProfile | null = null;
       const originalGetComponent = runtime.getComponent;
       const originalUpdateComponent = runtime.updateComponent;
-      const originalServiceGetTokenAPIData = (service as any).getTokenAPIData?.bind(service);
-      const originalServiceIsLikelyScamOrRug = (service as any).isLikelyScamOrRug?.bind(service);
+      const originalServiceGetTokenAPIData = (
+        service as any
+      ).getTokenAPIData?.bind(service);
+      const originalServiceIsLikelyScamOrRug = (
+        service as any
+      ).isLikelyScamOrRug?.bind(service);
 
       try {
         runtime.getComponent = async () => initialComponent;
@@ -189,23 +203,31 @@ const calculateScoreLogicTests: TestCase[] = [
               { timestamp: recTimestamp, price: 10.0 },
               { timestamp: Date.now(), price: 15.0 },
             ],
-            name: 'TestCoin',
-            symbol: 'TST',
+            name: "TestCoin",
+            symbol: "TST",
           }) as TokenAPIData;
         (service as any).isLikelyScamOrRug = async () => false;
 
-        await service.calculateUserTrustScore(testUserIdGlobalTrustScore, runtime, testWorldId);
+        await service.calculateUserTrustScore(
+          testUserIdGlobalTrustScore,
+          runtime,
+          testWorldId,
+        );
 
-        if (!updatedCompData) throw new Error('updateComponent was not effectively called');
+        if (!updatedCompData)
+          throw new Error("updateComponent was not effectively called");
 
-        const expectedFinalScore = Math.max(-100, Math.min(100, basePerformance));
+        const expectedFinalScore = Math.max(
+          -100,
+          Math.min(100, basePerformance),
+        );
 
         if (Math.abs(updatedCompData.trustScore - expectedFinalScore) > 0.01) {
           throw new Error(
-            `Expected score ${expectedFinalScore.toFixed(2)}, got ${updatedCompData.trustScore.toFixed(2)}`
+            `Expected score ${expectedFinalScore.toFixed(2)}, got ${updatedCompData.trustScore.toFixed(2)}`,
           );
         }
-        logger.info('TrustScore.Calc: Single good BUY - Passed');
+        logger.info("TrustScore.Calc: Single good BUY - Passed");
       } finally {
         runtime.getComponent = originalGetComponent;
         runtime.updateComponent = originalUpdateComponent;
@@ -219,22 +241,26 @@ const calculateScoreLogicTests: TestCase[] = [
     },
   },
   {
-    name: 'TrustScore.Calc: Single scam BUY (-100 perf, recent, med conv)',
+    name: "TrustScore.Calc: Single scam BUY (-100 perf, recent, med conv)",
     fn: async (runtime: IAgentRuntime) => {
       const service = new CommunityInvestorService(runtime);
       const recTimestamp = Date.now() - 2 * 24 * 60 * 60 * 1000;
       const recs = [
         createRecForTrustScore(
-          'scamBuy',
+          "scamBuy",
           recTimestamp,
-          'BUY',
+          "BUY",
           Conviction.MEDIUM,
-          { potentialProfitPercent: -99, isScamOrRug: true, evaluationTimestamp: recTimestamp },
-          10
+          {
+            potentialProfitPercent: -99,
+            isScamOrRug: true,
+            evaluationTimestamp: recTimestamp,
+          },
+          10,
         ),
       ];
       const initialProfile: UserTrustProfile = {
-        version: '1.0.0',
+        version: "1.0.0",
         userId: testUserIdGlobalTrustScore,
         trustScore: 0,
         lastTrustScoreCalculationTimestamp: 0,
@@ -243,14 +269,18 @@ const calculateScoreLogicTests: TestCase[] = [
       const initialComponent = createFullMockComponentForTrustScore(
         testUserIdGlobalTrustScore,
         initialProfile,
-        runtime
+        runtime,
       );
 
       let updatedCompData: UserTrustProfile | null = null;
       const originalGetComponent = runtime.getComponent;
       const originalUpdateComponent = runtime.updateComponent;
-      const originalServiceGetTokenAPIData = (service as any).getTokenAPIData?.bind(service);
-      const originalServiceIsLikelyScamOrRug = (service as any).isLikelyScamOrRug?.bind(service);
+      const originalServiceGetTokenAPIData = (
+        service as any
+      ).getTokenAPIData?.bind(service);
+      const originalServiceIsLikelyScamOrRug = (
+        service as any
+      ).isLikelyScamOrRug?.bind(service);
 
       try {
         runtime.getComponent = async () => initialComponent;
@@ -258,19 +288,29 @@ const calculateScoreLogicTests: TestCase[] = [
           updatedCompData = comp.data as UserTrustProfile;
         };
         (service as any).getTokenAPIData = async () =>
-          ({ currentPrice: 0.01, name: 'ScamCoin', symbol: 'SCM' }) as TokenAPIData;
+          ({
+            currentPrice: 0.01,
+            name: "ScamCoin",
+            symbol: "SCM",
+          }) as TokenAPIData;
         (service as any).isLikelyScamOrRug = async () => true;
 
-        await service.calculateUserTrustScore(testUserIdGlobalTrustScore, runtime, testWorldId);
+        await service.calculateUserTrustScore(
+          testUserIdGlobalTrustScore,
+          runtime,
+          testWorldId,
+        );
 
         if (!updatedCompData)
-          throw new Error('updateComponent was not effectively called for scam BUY');
+          throw new Error(
+            "updateComponent was not effectively called for scam BUY",
+          );
         if (Math.abs(updatedCompData.trustScore - -100) > 0.01) {
           throw new Error(
-            `Expected score ~-100 for scam BUY, got ${updatedCompData.trustScore.toFixed(2)}`
+            `Expected score ~-100 for scam BUY, got ${updatedCompData.trustScore.toFixed(2)}`,
           );
         }
-        logger.info('TrustScore.Calc: Single scam BUY - Passed');
+        logger.info("TrustScore.Calc: Single scam BUY - Passed");
       } finally {
         runtime.getComponent = originalGetComponent;
         runtime.updateComponent = originalUpdateComponent;
@@ -284,21 +324,25 @@ const calculateScoreLogicTests: TestCase[] = [
     },
   },
   {
-    name: 'TrustScore.Calc: Score clamps at +100',
+    name: "TrustScore.Calc: Score clamps at +100",
     fn: async (runtime: IAgentRuntime) => {
       const service = new CommunityInvestorService(runtime);
       const recs = [
         createRecForTrustScore(
-          'superGood',
+          "superGood",
           Date.now(),
-          'BUY',
+          "BUY",
           Conviction.HIGH,
-          { potentialProfitPercent: 500, evaluationTimestamp: Date.now(), isScamOrRug: false },
-          1
+          {
+            potentialProfitPercent: 500,
+            evaluationTimestamp: Date.now(),
+            isScamOrRug: false,
+          },
+          1,
         ),
       ];
       const initialProfile: UserTrustProfile = {
-        version: '1.0.0',
+        version: "1.0.0",
         userId: testUserIdGlobalTrustScore,
         trustScore: 0,
         lastTrustScoreCalculationTimestamp: 0,
@@ -307,13 +351,17 @@ const calculateScoreLogicTests: TestCase[] = [
       const initialComponent = createFullMockComponentForTrustScore(
         testUserIdGlobalTrustScore,
         initialProfile,
-        runtime
+        runtime,
       );
       let updatedCompData: UserTrustProfile | null = null;
       const originalGetComponent = runtime.getComponent;
       const originalUpdateComponent = runtime.updateComponent;
-      const originalServiceGetTokenAPIData = (service as any).getTokenAPIData?.bind(service);
-      const originalServiceIsLikelyScamOrRug = (service as any).isLikelyScamOrRug?.bind(service);
+      const originalServiceGetTokenAPIData = (
+        service as any
+      ).getTokenAPIData?.bind(service);
+      const originalServiceIsLikelyScamOrRug = (
+        service as any
+      ).isLikelyScamOrRug?.bind(service);
 
       try {
         runtime.getComponent = async () => initialComponent;
@@ -321,18 +369,27 @@ const calculateScoreLogicTests: TestCase[] = [
           updatedCompData = comp.data as UserTrustProfile;
         };
         (service as any).getTokenAPIData = async () =>
-          ({ currentPrice: 6, name: 'SuperCoin', symbol: 'SUP' }) as TokenAPIData;
+          ({
+            currentPrice: 6,
+            name: "SuperCoin",
+            symbol: "SUP",
+          }) as TokenAPIData;
         (service as any).isLikelyScamOrRug = async () => false;
 
-        await service.calculateUserTrustScore(testUserIdGlobalTrustScore, runtime, testWorldId);
+        await service.calculateUserTrustScore(
+          testUserIdGlobalTrustScore,
+          runtime,
+          testWorldId,
+        );
 
-        if (!updatedCompData) throw new Error('updateComponent was not effectively called');
+        if (!updatedCompData)
+          throw new Error("updateComponent was not effectively called");
         if (Math.abs(updatedCompData.trustScore - 100) > 0.01) {
           throw new Error(
-            `Expected score clamped at 100, got ${updatedCompData.trustScore.toFixed(2)}`
+            `Expected score clamped at 100, got ${updatedCompData.trustScore.toFixed(2)}`,
           );
         }
-        logger.info('TrustScore.Calc: Clamping at +100 - Passed');
+        logger.info("TrustScore.Calc: Clamping at +100 - Passed");
       } finally {
         runtime.getComponent = originalGetComponent;
         runtime.updateComponent = originalUpdateComponent;
@@ -346,21 +403,25 @@ const calculateScoreLogicTests: TestCase[] = [
     },
   },
   {
-    name: 'TrustScore.Calc: Score clamps at -100',
+    name: "TrustScore.Calc: Score clamps at -100",
     fn: async (runtime: IAgentRuntime) => {
       const service = new CommunityInvestorService(runtime);
       const recs = [
         createRecForTrustScore(
-          'superBad',
+          "superBad",
           Date.now(),
-          'BUY',
+          "BUY",
           Conviction.HIGH,
-          { potentialProfitPercent: -500, evaluationTimestamp: Date.now(), isScamOrRug: false },
-          1
+          {
+            potentialProfitPercent: -500,
+            evaluationTimestamp: Date.now(),
+            isScamOrRug: false,
+          },
+          1,
         ),
       ];
       const initialProfile: UserTrustProfile = {
-        version: '1.0.0',
+        version: "1.0.0",
         userId: testUserIdGlobalTrustScore,
         trustScore: 0,
         lastTrustScoreCalculationTimestamp: 0,
@@ -369,13 +430,17 @@ const calculateScoreLogicTests: TestCase[] = [
       const initialComponent = createFullMockComponentForTrustScore(
         testUserIdGlobalTrustScore,
         initialProfile,
-        runtime
+        runtime,
       );
       let updatedCompData: UserTrustProfile | null = null;
       const originalGetComponent = runtime.getComponent;
       const originalUpdateComponent = runtime.updateComponent;
-      const originalServiceGetTokenAPIData = (service as any).getTokenAPIData?.bind(service);
-      const originalServiceIsLikelyScamOrRug = (service as any).isLikelyScamOrRug?.bind(service);
+      const originalServiceGetTokenAPIData = (
+        service as any
+      ).getTokenAPIData?.bind(service);
+      const originalServiceIsLikelyScamOrRug = (
+        service as any
+      ).isLikelyScamOrRug?.bind(service);
 
       try {
         runtime.getComponent = async () => initialComponent;
@@ -383,18 +448,27 @@ const calculateScoreLogicTests: TestCase[] = [
           updatedCompData = comp.data as UserTrustProfile;
         };
         (service as any).getTokenAPIData = async () =>
-          ({ currentPrice: 0.01, name: 'SuperBadCoin', symbol: 'SBD' }) as TokenAPIData;
+          ({
+            currentPrice: 0.01,
+            name: "SuperBadCoin",
+            symbol: "SBD",
+          }) as TokenAPIData;
         (service as any).isLikelyScamOrRug = async () => false;
 
-        await service.calculateUserTrustScore(testUserIdGlobalTrustScore, runtime, testWorldId);
+        await service.calculateUserTrustScore(
+          testUserIdGlobalTrustScore,
+          runtime,
+          testWorldId,
+        );
 
-        if (!updatedCompData) throw new Error('updateComponent was not effectively called');
+        if (!updatedCompData)
+          throw new Error("updateComponent was not effectively called");
         if (Math.abs(updatedCompData.trustScore - -100) > 0.01) {
           throw new Error(
-            `Expected score clamped at -100, got ${updatedCompData.trustScore.toFixed(2)}`
+            `Expected score clamped at -100, got ${updatedCompData.trustScore.toFixed(2)}`,
           );
         }
-        logger.info('TrustScore.Calc: Clamping at -100 - Passed');
+        logger.info("TrustScore.Calc: Clamping at -100 - Passed");
       } finally {
         runtime.getComponent = originalGetComponent;
         runtime.updateComponent = originalUpdateComponent;
@@ -408,24 +482,30 @@ const calculateScoreLogicTests: TestCase[] = [
     },
   },
   {
-    name: 'TrustScore.Calc: Metric re-evaluation due to interval',
+    name: "TrustScore.Calc: Metric re-evaluation due to interval",
     fn: async (runtime: IAgentRuntime) => {
       const service = new CommunityInvestorService(runtime);
-      const METRIC_REFRESH_INTERVAL = (service as any)['METRIC_REFRESH_INTERVAL'];
+      const METRIC_REFRESH_INTERVAL = (service as any)[
+        "METRIC_REFRESH_INTERVAL"
+      ];
       const oldEvalTimestamp = Date.now() - METRIC_REFRESH_INTERVAL * 2;
       const recTimestamp = Date.now() - METRIC_REFRESH_INTERVAL * 3;
       const recs = [
         createRecForTrustScore(
-          'needsReEval',
+          "needsReEval",
           recTimestamp,
-          'BUY',
+          "BUY",
           Conviction.MEDIUM,
-          { potentialProfitPercent: 5, evaluationTimestamp: oldEvalTimestamp, isScamOrRug: false },
-          10
+          {
+            potentialProfitPercent: 5,
+            evaluationTimestamp: oldEvalTimestamp,
+            isScamOrRug: false,
+          },
+          10,
         ),
       ];
       const initialProfile: UserTrustProfile = {
-        version: '1.0.0',
+        version: "1.0.0",
         userId: testUserIdGlobalTrustScore,
         trustScore: 0,
         recommendations: recs,
@@ -434,14 +514,18 @@ const calculateScoreLogicTests: TestCase[] = [
       const initialComponent = createFullMockComponentForTrustScore(
         testUserIdGlobalTrustScore,
         initialProfile,
-        runtime
+        runtime,
       );
       let updatedCompData: UserTrustProfile | null = null;
       let getTokenAPIDataCalledCount = 0;
       const originalGetComponent = runtime.getComponent;
       const originalUpdateComponent = runtime.updateComponent;
-      const originalServiceGetTokenAPIData = (service as any).getTokenAPIData?.bind(service);
-      const originalServiceIsLikelyScamOrRug = (service as any).isLikelyScamOrRug?.bind(service);
+      const originalServiceGetTokenAPIData = (
+        service as any
+      ).getTokenAPIData?.bind(service);
+      const originalServiceIsLikelyScamOrRug = (
+        service as any
+      ).isLikelyScamOrRug?.bind(service);
 
       try {
         runtime.getComponent = async () => initialComponent;
@@ -456,24 +540,33 @@ const calculateScoreLogicTests: TestCase[] = [
               { timestamp: recTimestamp, price: 10 },
               { timestamp: Date.now(), price: 12 },
             ],
-            name: 'ReevalCoin',
-            symbol: 'REV',
+            name: "ReevalCoin",
+            symbol: "REV",
           } as TokenAPIData;
         };
         (service as any).isLikelyScamOrRug = async () => false;
 
-        await service.calculateUserTrustScore(testUserIdGlobalTrustScore, runtime, testWorldId);
+        await service.calculateUserTrustScore(
+          testUserIdGlobalTrustScore,
+          runtime,
+          testWorldId,
+        );
 
-        if (!updatedCompData) throw new Error('updateComponent was not effectively called');
+        if (!updatedCompData)
+          throw new Error("updateComponent was not effectively called");
         if (getTokenAPIDataCalledCount === 0)
-          throw new Error('getTokenAPIData was NOT called for re-eval');
+          throw new Error("getTokenAPIData was NOT called for re-eval");
         if (
-          Math.abs((updatedCompData.recommendations[0].metrics?.potentialProfitPercent || 0) - 20) >
-          0.01
+          Math.abs(
+            (updatedCompData.recommendations[0].metrics
+              ?.potentialProfitPercent || 0) - 20,
+          ) > 0.01
         ) {
-          throw new Error('Metric not re-evaluated correctly to 20%');
+          throw new Error("Metric not re-evaluated correctly to 20%");
         }
-        logger.info('TrustScore.Calc: Metric re-evaluation due to interval - Passed');
+        logger.info(
+          "TrustScore.Calc: Metric re-evaluation due to interval - Passed",
+        );
       } finally {
         runtime.getComponent = originalGetComponent;
         runtime.updateComponent = originalUpdateComponent;
@@ -487,28 +580,31 @@ const calculateScoreLogicTests: TestCase[] = [
     },
   },
   {
-    name: 'TrustScore.Calc: Fresh metric NOT re-evaluated',
+    name: "TrustScore.Calc: Fresh metric NOT re-evaluated",
     fn: async (runtime: IAgentRuntime) => {
       const service = new CommunityInvestorService(runtime);
-      const METRIC_REFRESH_INTERVAL = (service as any)['METRIC_REFRESH_INTERVAL'];
-      const evalTimestampWithinInterval = Date.now() - METRIC_REFRESH_INTERVAL / 2;
+      const METRIC_REFRESH_INTERVAL = (service as any)[
+        "METRIC_REFRESH_INTERVAL"
+      ];
+      const evalTimestampWithinInterval =
+        Date.now() - METRIC_REFRESH_INTERVAL / 2;
       const recTimestamp = Date.now() - METRIC_REFRESH_INTERVAL / 3;
       const recsFreshMetrics = [
         createRecForTrustScore(
-          'freshMetrics',
+          "freshMetrics",
           recTimestamp,
-          'BUY',
+          "BUY",
           Conviction.HIGH,
           {
             potentialProfitPercent: 15,
             evaluationTimestamp: evalTimestampWithinInterval,
             isScamOrRug: false,
           },
-          10
+          10,
         ),
       ];
       const initialProfileFreshMetrics: UserTrustProfile = {
-        version: '1.0.0',
+        version: "1.0.0",
         userId: testUserIdGlobalTrustScore,
         trustScore: 0,
         recommendations: recsFreshMetrics,
@@ -517,13 +613,15 @@ const calculateScoreLogicTests: TestCase[] = [
       const mockCompFreshMetrics = createFullMockComponentForTrustScore(
         testUserIdGlobalTrustScore,
         initialProfileFreshMetrics,
-        runtime
+        runtime,
       );
       let updatedCompData: UserTrustProfile | null = null;
       let getTokenAPIDataCalledCount = 0;
       const originalGetComponent = runtime.getComponent;
       const originalUpdateComponent = runtime.updateComponent;
-      const originalServiceGetTokenAPIData = (service as any).getTokenAPIData?.bind(service);
+      const originalServiceGetTokenAPIData = (
+        service as any
+      ).getTokenAPIData?.bind(service);
 
       try {
         runtime.getComponent = async () => mockCompFreshMetrics;
@@ -535,19 +633,29 @@ const calculateScoreLogicTests: TestCase[] = [
           return {} as TokenAPIData;
         };
 
-        await service.calculateUserTrustScore(testUserIdGlobalTrustScore, runtime, testWorldId);
+        await service.calculateUserTrustScore(
+          testUserIdGlobalTrustScore,
+          runtime,
+          testWorldId,
+        );
 
         if (!updatedCompData)
-          throw new Error('updateComponent was not effectively called (freshMetrics)');
+          throw new Error(
+            "updateComponent was not effectively called (freshMetrics)",
+          );
         if (getTokenAPIDataCalledCount > 0)
-          throw new Error('getTokenAPIData WAS called for fresh metric, but should not have been.');
+          throw new Error(
+            "getTokenAPIData WAS called for fresh metric, but should not have been.",
+          );
         if (
-          Math.abs((updatedCompData.recommendations[0].metrics?.potentialProfitPercent || 0) - 15) >
-          0.01
+          Math.abs(
+            (updatedCompData.recommendations[0].metrics
+              ?.potentialProfitPercent || 0) - 15,
+          ) > 0.01
         ) {
-          throw new Error('Existing fresh metric was incorrectly changed');
+          throw new Error("Existing fresh metric was incorrectly changed");
         }
-        logger.info('TrustScore.Calc: Fresh metric NOT re-evaluated - Passed');
+        logger.info("TrustScore.Calc: Fresh metric NOT re-evaluated - Passed");
       } finally {
         runtime.getComponent = originalGetComponent;
         runtime.updateComponent = originalUpdateComponent;
@@ -560,6 +668,10 @@ const calculateScoreLogicTests: TestCase[] = [
 ];
 
 export const trustScoreTestSuite: TestSuite = {
-  name: 'Trust Score Logic Tests (Runtime Format)',
-  tests: [...recencyWeightTests, ...convictionWeightTests, ...calculateScoreLogicTests],
+  name: "Trust Score Logic Tests (Runtime Format)",
+  tests: [
+    ...recencyWeightTests,
+    ...convictionWeightTests,
+    ...calculateScoreLogicTests,
+  ],
 };

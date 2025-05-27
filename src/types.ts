@@ -1,4 +1,9 @@
-import type { Content, UUID as CoreUUID, IAgentRuntime, Memory } from '@elizaos/core';
+import type {
+  Content,
+  UUID as CoreUUID,
+  IAgentRuntime,
+  Memory,
+} from "@elizaos/core";
 
 // Re-export UUID type for use in other files
 /**
@@ -31,9 +36,10 @@ export type Pretty<type> = { [key in keyof type]: type[key] } & unknown;
  * @param {T} T The input string to extract variables from
  * @returns {Var} The variables extracted from the input string
  */
-type ExtractVariables<T extends string> = T extends `${infer Start}{{${infer Var}}}${infer Rest}`
-  ? Var | ExtractVariables<Rest>
-  : never;
+type ExtractVariables<T extends string> =
+  T extends `${infer Start}{{${infer Var}}}${infer Rest}`
+    ? Var | ExtractVariables<Rest>
+    : never;
 
 /**
  * Represents a type that defines template variables for a given string type.
@@ -216,11 +222,11 @@ export interface TokenPerformance {
  * @property {string} VERY_HIGH - Very high level of conviction.
  */
 export enum Conviction {
-  NONE = 'NONE',
-  LOW = 'LOW',
-  MEDIUM = 'MEDIUM',
-  HIGH = 'HIGH',
-  VERY_HIGH = 'VERY_HIGH',
+  NONE = "NONE",
+  LOW = "LOW",
+  MEDIUM = "MEDIUM",
+  HIGH = "HIGH",
+  VERY_HIGH = "VERY_HIGH",
 }
 
 /**
@@ -228,12 +234,12 @@ export enum Conviction {
  * IMPORTANT: Must match the enum in config.ts
  */
 export enum RecommendationType {
-  BUY = 'BUY',
-  DONT_BUY = 'DONT_BUY',
-  SELL = 'SELL',
-  DONT_SELL = 'DONT_SELL',
-  NONE = 'NONE',
-  HOLD = 'HOLD',
+  BUY = "BUY",
+  DONT_BUY = "DONT_BUY",
+  SELL = "SELL",
+  DONT_SELL = "DONT_SELL",
+  NONE = "NONE",
+  HOLD = "HOLD",
 }
 
 export type TokenRecommendation = {
@@ -254,7 +260,7 @@ export type TokenRecommendation = {
   riskScore: number;
   performanceScore: number;
   metadata: Record<string, any>;
-  status: 'ACTIVE' | 'COMPLETED' | 'EXPIRED' | 'WITHDRAWN';
+  status: "ACTIVE" | "COMPLETED" | "EXPIRED" | "WITHDRAWN";
   createdAt: Date;
   updatedAt: Date;
 };
@@ -266,7 +272,7 @@ export interface Position {
   chain: string;
   walletAddress: string;
   balance: string;
-  status: 'OPEN' | 'CLOSED';
+  status: "OPEN" | "CLOSED";
   createdAt: Date;
   closedAt?: Date;
   isSimulation: boolean;
@@ -285,10 +291,10 @@ export type PositionWithBalance = Position & {
  * IMPORTANT: Must match the enum in config.ts
  */
 export enum TransactionType {
-  BUY = 'BUY',
-  SELL = 'SELL',
-  TRANSFER_IN = 'transfer_in',
-  TRANSFER_OUT = 'transfer_out',
+  BUY = "BUY",
+  SELL = "SELL",
+  TRANSFER_IN = "transfer_in",
+  TRANSFER_OUT = "transfer_out",
 }
 
 /**
@@ -415,7 +421,8 @@ export interface TrustWalletProvider<
   QuoteData = any,
   TQuoteResult extends QuoteResult<QuoteData> = QuoteResult<QuoteData>,
   SwapResultData = any,
-  TSwapResult extends SwapInResult<SwapResultData> = SwapInResult<SwapResultData>,
+  TSwapResult extends
+    SwapInResult<SwapResultData> = SwapInResult<SwapResultData>,
 > {
   getCurrencyAddress(): string;
   getAddress(): string;
@@ -466,8 +473,8 @@ export type TokenMarketData = {
 export interface MessageRecommendation {
   tokenMentioned: string;
   isTicker: boolean;
-  sentiment: 'positive' | 'negative' | 'neutral';
-  conviction: 'NONE' | 'LOW' | 'MEDIUM' | 'HIGH';
+  sentiment: "positive" | "negative" | "neutral";
+  conviction: "NONE" | "LOW" | "MEDIUM" | "HIGH";
   quote: string;
 }
 
@@ -917,15 +924,15 @@ export type PositionPerformance = Pretty<
 
 // ServiceType Enum to identify the service within the runtime
 export enum ServiceType {
-  COMMUNITY_INVESTOR = 'community-investor',
+  COMMUNITY_INVESTOR = "community-investor",
 }
 
 // Supported cryptocurrency chains
 export enum SupportedChain {
-  SOLANA = 'SOLANA',
-  ETHEREUM = 'ETHEREUM',
-  BASE = 'BASE',
-  UNKNOWN = 'UNKNOWN', // For cases where chain can't be determined
+  SOLANA = "SOLANA",
+  ETHEREUM = "ETHEREUM",
+  BASE = "BASE",
+  UNKNOWN = "UNKNOWN", // For cases where chain can't be determined
 }
 
 // Metrics calculated after observing a recommendation's market performance
@@ -946,8 +953,8 @@ export interface Recommendation {
   tokenTicker?: string; // e.g., "SOL", "BTC" (if identified as a ticker)
   tokenAddress: string; // e.g., "So11111111111111111111111111111111111111112"
   chain: SupportedChain; // The blockchain the token is on
-  recommendationType: 'BUY' | 'SELL'; // 'SELL' for criticisms
-  conviction: 'NONE' | 'LOW' | 'MEDIUM' | 'HIGH'; // Sender's conviction level
+  recommendationType: "BUY" | "SELL"; // 'SELL' for criticisms
+  conviction: "NONE" | "LOW" | "MEDIUM" | "HIGH"; // Sender's conviction level
   rawMessageQuote: string; // The exact text snippet that is the recommendation/criticism
   priceAtRecommendation?: number; // Price of the token when the recommendation was made
   metrics?: RecommendationMetric; // Performance metrics, calculated later by a task
@@ -968,7 +975,7 @@ export interface UserTrustProfile {
 export type TrustMarketplaceComponentData = UserTrustProfile;
 
 // Constant for the component type name used in runtime.getComponent/createComponent
-export const TRUST_MARKETPLACE_COMPONENT_TYPE = 'communityInvestorProfile';
+export const TRUST_MARKETPLACE_COMPONENT_TYPE = "communityInvestorProfile";
 
 // Payload for the PROCESS_TRADE_DECISION task
 export interface TradeDecisionInput {
@@ -1006,17 +1013,27 @@ export interface ICommunityInvestorService {
   resolveTicker(
     ticker: string,
     chain: SupportedChain,
-    contextMessages: Memory[]
-  ): Promise<{ address: string; chain: SupportedChain; ticker?: string } | null>;
-  getTokenAPIData(address: string, chain: SupportedChain): Promise<TokenAPIData | null>;
-  isLikelyScamOrRug(tokenData: TokenAPIData, recommendationTimestamp: number): Promise<boolean>;
+    contextMessages: Memory[],
+  ): Promise<{
+    address: string;
+    chain: SupportedChain;
+    ticker?: string;
+  } | null>;
+  getTokenAPIData(
+    address: string,
+    chain: SupportedChain,
+  ): Promise<TokenAPIData | null>;
+  isLikelyScamOrRug(
+    tokenData: TokenAPIData,
+    recommendationTimestamp: number,
+  ): Promise<boolean>;
   evaluateRecommendationPerformance(
     recommendation: Recommendation,
-    tokenData: TokenAPIData
+    tokenData: TokenAPIData,
   ): Promise<RecommendationMetric>;
   calculateUserTrustScore(userId: UUID, runtime: IAgentRuntime): Promise<void>;
   getRecencyWeight(recommendationTimestamp: number): number;
-  getConvictionWeight(conviction: Recommendation['conviction']): number;
+  getConvictionWeight(conviction: Recommendation["conviction"]): number;
   getLeaderboardData(runtime: IAgentRuntime): Promise<LeaderboardEntry[]>;
   // ensureTaskWorkersRegistered(runtime: IAgentRuntime): void; // Task registration is internal to constructor
 }
@@ -1027,7 +1044,7 @@ export interface MessageReceivedHandlerParams {
   message: Memory;
   callback: (
     response: string | Record<string, any>,
-    metadata?: Record<string, any>
+    metadata?: Record<string, any>,
   ) => Promise<void>;
   onComplete?: () => void;
 }

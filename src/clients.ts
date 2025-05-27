@@ -1,7 +1,7 @@
-import type { IAgentRuntime } from '@elizaos/core';
-import BigNumber from 'bignumber.js';
-import * as dotenv from 'dotenv';
-import { BTC_ADDRESS, ETH_ADDRESS, SOL_ADDRESS } from './constants';
+import type { IAgentRuntime } from "@elizaos/core";
+import BigNumber from "bignumber.js";
+import * as dotenv from "dotenv";
+import { BTC_ADDRESS, ETH_ADDRESS, SOL_ADDRESS } from "./constants";
 import type {
   DexScreenerData,
   DexScreenerPair,
@@ -12,7 +12,7 @@ import type {
   TokenTradeData,
   WalletPortfolio,
   WalletPortfolioItem,
-} from './types';
+} from "./types";
 dotenv.config();
 
 /**
@@ -25,7 +25,9 @@ let nextRpcRequestId = 1;
  * It can either be a key-value pair object with string, number, boolean, null or undefined values,
  * or an instance of the URLSearchParams class.
  */
-type QueryParams = Record<string, string | number | boolean | null | undefined> | URLSearchParams;
+type QueryParams =
+  | Record<string, string | number | boolean | null | undefined>
+  | URLSearchParams;
 
 /**
  * Interface representing retry options for a retry mechanism.
@@ -78,22 +80,28 @@ class RequestError extends Error {
    */
   constructor(
     message: string,
-    public response?: Response
+    public response?: Response,
   ) {
     super(message);
-    this.name = 'RequestError';
+    this.name = "RequestError";
   }
 }
 
-const sleep = (ms: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, ms));
+const sleep = (ms: number): Promise<void> =>
+  new Promise((resolve) => setTimeout(resolve, ms));
 
-const calculateDelay = (attempt: number, options: Required<RetryOptions>): number => {
+const calculateDelay = (
+  attempt: number,
+  options: Required<RetryOptions>,
+): number => {
   const delay = options.initialDelay * options.backoffFactor ** (attempt - 1);
   return Math.min(delay, options.maxDelay);
 };
 
 const isRetryableError = (error: any): boolean =>
-  error.name === 'TypeError' || error.name === 'AbortError' || error instanceof RequestError;
+  error.name === "TypeError" ||
+  error.name === "AbortError" ||
+  error instanceof RequestError;
 
 /**
  * Build a URL with optional query parameters.
@@ -111,10 +119,10 @@ const buildUrl = (url: string, params?: QueryParams): string => {
       : new URLSearchParams(
           Object.entries(params)
             .filter(([_, value]) => value != null)
-            .map(([key, value]) => [key, String(value)])
+            .map(([key, value]) => [key, String(value)]),
         );
 
-  const separator = url.includes('?') ? '&' : '?';
+  const separator = url.includes("?") ? "&" : "?";
   const queryString = searchParams.toString();
 
   return queryString ? `${url}${separator}${queryString}` : url;
@@ -142,7 +150,10 @@ export const http = {
 
         if (!res.ok) {
           const errorText = await res.text();
-          throw new RequestError(`Request failed with status ${res.status}: ${errorText}`, res);
+          throw new RequestError(
+            `Request failed with status ${res.status}: ${errorText}`,
+            res,
+          );
         }
 
         return res;
@@ -151,7 +162,7 @@ export const http = {
           const delay = calculateDelay(attempt, retryOptions);
           console.warn(
             `Request failed with error: ${error.message}. ` +
-              `Retrying in ${delay}ms (attempt ${attempt}/${retryOptions.maxRetries})`
+              `Retrying in ${delay}ms (attempt ${attempt}/${retryOptions.maxRetries})`,
           );
           await sleep(delay);
           attempt++;
@@ -168,7 +179,7 @@ export const http = {
     const res = await this.request(url, {
       ...options,
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         ...options?.headers,
       },
     });
@@ -179,14 +190,18 @@ export const http = {
     async request(url: string, params?: QueryParams, options?: RequestInit) {
       return http.request(url, {
         ...options,
-        method: 'GET',
+        method: "GET",
         params,
       });
     },
-    async json<T = any>(url: string, params?: QueryParams, options?: RequestInit) {
+    async json<T = any>(
+      url: string,
+      params?: QueryParams,
+      options?: RequestInit,
+    ) {
       return http.json<T>(url, {
         ...options,
-        method: 'GET',
+        method: "GET",
         params,
       });
     },
@@ -196,7 +211,7 @@ export const http = {
     async request(url: string, body: object, options?: RequestOptions) {
       return http.request(url, {
         ...options,
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify(body),
       });
     },
@@ -204,11 +219,11 @@ export const http = {
     async json<ReturnType = any, Body extends object = object>(
       url: string,
       body: Body,
-      options?: RequestOptions
+      options?: RequestOptions,
     ) {
       return http.json<ReturnType>(url, {
         ...options,
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify(body),
       });
     },
@@ -218,17 +233,17 @@ export const http = {
     url: string,
     method: string,
     params: Params,
-    headers?: HeadersInit
+    headers?: HeadersInit,
   ) {
     return this.post.json(
       url,
       {
-        jsonrpc: '2.0',
+        jsonrpc: "2.0",
         id: nextRpcRequestId++,
         method,
         params,
       },
-      { headers }
+      { headers },
     );
   },
 
@@ -236,7 +251,7 @@ export const http = {
     url: string,
     query: string,
     variables: Variables,
-    headers?: HeadersInit
+    headers?: HeadersInit,
   ) {
     return this.post.json(
       url,
@@ -244,7 +259,7 @@ export const http = {
         query,
         variables,
       },
-      { headers }
+      { headers },
     );
   },
 };
@@ -254,8 +269,8 @@ export const http = {
  */
 
 export class JupiterClient {
-  static baseUrl = 'https://api.jup.ag/swap/v1';
-  static xApiKey = process.env.JUPITER_API_KEY || '';
+  static baseUrl = "https://api.jup.ag/swap/v1";
+  static xApiKey = process.env.JUPITER_API_KEY || "";
 
   /**
    * Fetches a quote for a given input and output mint, amount, and slippage.
@@ -265,10 +280,15 @@ export class JupiterClient {
    * @param {number} [slippageBps=50] The slippage tolerance in basis points (default: 50).
    * @returns {Promise<{inputMint: string, outputMint: string, inAmount: string, outAmount: string, routePlan: unknown[]} | {error: unknown}>} The quote object or an error object.
    */
-  static async getQuote(inputMint: string, outputMint: string, amount: string, slippageBps = 50) {
+  static async getQuote(
+    inputMint: string,
+    outputMint: string,
+    amount: string,
+    slippageBps = 50,
+  ) {
     const headers: Record<string, string> = {};
     if (JupiterClient.xApiKey) {
-      headers['x-api-key'] = JupiterClient.xApiKey;
+      headers["x-api-key"] = JupiterClient.xApiKey;
     }
 
     const quote = await http.get.json<
@@ -288,12 +308,14 @@ export class JupiterClient {
         amount,
         slippageBps: slippageBps.toString(),
       },
-      { headers }
+      { headers },
     );
 
-    if ('error' in quote) {
-      console.error('Quote error:', quote);
-      throw new Error(`Failed to get quote: ${quote?.error || 'Unknown error'}`);
+    if ("error" in quote) {
+      console.error("Quote error:", quote);
+      throw new Error(
+        `Failed to get quote: ${quote?.error || "Unknown error"}`,
+      );
     }
 
     return quote;
@@ -308,7 +330,7 @@ export class JupiterClient {
   static async swap(quoteData: any, walletPublicKey: string) {
     const headers: Record<string, string> = {};
     if (JupiterClient.xApiKey) {
-      headers['x-api-key'] = JupiterClient.xApiKey;
+      headers["x-api-key"] = JupiterClient.xApiKey;
     }
 
     const swapRequestBody = {
@@ -319,14 +341,18 @@ export class JupiterClient {
       dynamicComputeUnitLimit: true,
     };
 
-    const swapData = await http.post.json(`${JupiterClient.baseUrl}/swap`, swapRequestBody, {
-      headers,
-    });
+    const swapData = await http.post.json(
+      `${JupiterClient.baseUrl}/swap`,
+      swapRequestBody,
+      {
+        headers,
+      },
+    );
 
     if (!swapData || !swapData.swapTransaction) {
-      console.error('Swap error:', swapData);
+      console.error("Swap error:", swapData);
       throw new Error(
-        `Failed to get swap transaction: ${swapData?.error || 'No swap transaction returned'}`
+        `Failed to get swap transaction: ${swapData?.error || "No swap transaction returned"}`,
       );
     }
 
@@ -373,20 +399,27 @@ export class DexscreenerClient {
    * @param {DexscreenerOptions} [options] - Optional options for the request
    * @returns {Promise<T>} - A promise that resolves with the data returned from the API
    */
-  async request<T = any>(path: string, params?: QueryParams, options?: DexscreenerOptions) {
+  async request<T = any>(
+    path: string,
+    params?: QueryParams,
+    options?: DexscreenerOptions,
+  ) {
     const cacheKey = [
-      'dexscreener',
+      "dexscreener",
       buildUrl(path, params), // remove first "/"
     ]
       .filter(Boolean)
-      .join('/');
+      .join("/");
 
     if (options?.expires) {
       const cached = await this.runtime.getCache<T>(cacheKey);
       if (cached) return cached;
     }
 
-    const res = await http.get.json<T>(`https://api.dexscreener.com/${path}`, params);
+    const res = await http.get.json<T>(
+      `https://api.dexscreener.com/${path}`,
+      params,
+    );
 
     if (options?.expires) {
       await this.runtime.setCache<T>(cacheKey, res);
@@ -402,25 +435,28 @@ export class DexscreenerClient {
    * @param {DexscreenerOptions} [options] - Optional parameters for the request.
    * @returns {Promise<DexScreenerData>} A promise that resolves with the DexScreener data.
    */
-  async search(address: string, options?: DexscreenerOptions): Promise<DexScreenerData> {
+  async search(
+    address: string,
+    options?: DexscreenerOptions,
+  ): Promise<DexScreenerData> {
     try {
       const data = await this.request<DexScreenerData>(
-        'latest/dex/search',
+        "latest/dex/search",
         {
           q: address,
         },
-        options
+        options,
       );
 
       if (!data || !data.pairs) {
-        throw new Error('No DexScreener data available');
+        throw new Error("No DexScreener data available");
       }
 
       return data;
     } catch (error) {
-      console.error('Error fetching DexScreener data:', error);
+      console.error("Error fetching DexScreener data:", error);
       return {
-        schemaVersion: '1.0.0',
+        schemaVersion: "1.0.0",
         pairs: [],
       };
     }
@@ -437,7 +473,7 @@ export class DexscreenerClient {
   async searchForHighestLiquidityPair(
     address: string,
     chain?: string,
-    options?: DexscreenerOptions
+    options?: DexscreenerOptions,
   ): Promise<DexScreenerPair | null> {
     let { pairs } = await this.search(address, options);
 
@@ -472,7 +508,7 @@ export class HeliusClient {
    */
   constructor(
     private readonly apiKey: string,
-    _runtime: IAgentRuntime
+    _runtime: IAgentRuntime,
   ) {}
 
   /**
@@ -483,10 +519,10 @@ export class HeliusClient {
    * @throws {Error} Thrown if HELIUS_API_KEY is missing from the runtime settings.
    */
   static createFromRuntime(runtime: IAgentRuntime) {
-    const apiKey = runtime.getSetting('HELIUS_API_KEY');
+    const apiKey = runtime.getSetting("HELIUS_API_KEY");
 
     if (!apiKey) {
-      throw new Error('missing HELIUS_API_KEY');
+      throw new Error("missing HELIUS_API_KEY");
     }
 
     return new HeliusClient(apiKey, runtime);
@@ -503,9 +539,14 @@ export class HeliusClient {
    *
    * @returns {Promise<HolderData[]>} A promise that resolves to an array of HolderData objects representing the token holders.
    */
-  async fetchHolderList(address: string, options?: { expires?: string }): Promise<HolderData[]> {
+  async fetchHolderList(
+    address: string,
+    options?: { expires?: string },
+  ): Promise<HolderData[]> {
     if (options?.expires) {
-      const cached = await this.runtime.getCache<HolderData[]>(`helius/token-holders/${address}`);
+      const cached = await this.runtime.getCache<HolderData[]>(
+        `helius/token-holders/${address}`,
+      );
 
       if (cached) return cached;
     }
@@ -537,7 +578,7 @@ export class HeliusClient {
           break;
         }
 
-        const data = await http.jsonrpc(url, 'getTokenAccounts', params);
+        const data = await http.jsonrpc(url, "getTokenAccounts", params);
 
         if (
           !data ||
@@ -566,16 +607,19 @@ export class HeliusClient {
         ([address, balance]) => ({
           address,
           balance: balance.toString(),
-        })
+        }),
       );
 
       if (options?.expires)
-        await this.runtime.setCache<HolderData[]>(`helius/token-holders/${address}`, holders);
+        await this.runtime.setCache<HolderData[]>(
+          `helius/token-holders/${address}`,
+          holders,
+        );
 
       return holders;
     } catch (error) {
-      console.error('Error fetching holder list from Helius:', error);
-      throw new Error('Failed to fetch holder list from Helius.');
+      console.error("Error fetching holder list from Helius:", error);
+      throw new Error("Failed to fetch holder list from Helius.");
     }
   }
 }
@@ -603,7 +647,7 @@ export class CoingeckoClient {
    */
   constructor(
     private readonly apiKey: string,
-    private readonly runtime: IAgentRuntime
+    private readonly runtime: IAgentRuntime,
   ) {}
 
   /**
@@ -613,10 +657,10 @@ export class CoingeckoClient {
    * @returns {CoingeckoClient} A new instance of CoingeckoClient initialized with the apiKey and runtime.
    */
   static createFromRuntime(runtime: IAgentRuntime) {
-    const apiKey = runtime.getSetting('COINGECKO_API_KEY');
+    const apiKey = runtime.getSetting("COINGECKO_API_KEY");
 
     if (!apiKey) {
-      throw new Error('missing COINGECKO_API_KEY');
+      throw new Error("missing COINGECKO_API_KEY");
     }
 
     return new CoingeckoClient(apiKey, runtime);
@@ -630,19 +674,29 @@ export class CoingeckoClient {
    * @param {CoingeckoOptions} [options] - Additional options for the request.
    * @returns {Promise<T>} The response data from the API.
    */
-  async request<T = any>(path: string, params?: QueryParams, options?: CoingeckoOptions) {
-    const cacheKey = ['coingecko', buildUrl(path, params)].filter(Boolean).join('/');
+  async request<T = any>(
+    path: string,
+    params?: QueryParams,
+    options?: CoingeckoOptions,
+  ) {
+    const cacheKey = ["coingecko", buildUrl(path, params)]
+      .filter(Boolean)
+      .join("/");
 
     if (options?.expires) {
       const cached = await this.runtime.getCache<T>(cacheKey);
       if (cached) return cached;
     }
 
-    const res = await http.get.json<T>(`https://api.coingecko.com/api/v3/${path}`, params, {
-      headers: {
-        'x-cg-demo-api-key': this.apiKey,
+    const res = await http.get.json<T>(
+      `https://api.coingecko.com/api/v3/${path}`,
+      params,
+      {
+        headers: {
+          "x-cg-demo-api-key": this.apiKey,
+        },
       },
-    });
+    );
 
     if (options?.expires) {
       await this.runtime.setCache<T>(cacheKey, res);
@@ -659,12 +713,12 @@ export class CoingeckoClient {
    */
   async fetchPrices(options?: CoingeckoOptions): Promise<Prices> {
     const prices = await this.request<Prices>(
-      'simple/price',
+      "simple/price",
       {
-        ids: 'solana,bitcoin,ethereum',
-        vs_currencies: 'usd',
+        ids: "solana,bitcoin,ethereum",
+        vs_currencies: "usd",
       },
-      options
+      options,
     );
 
     return prices;
@@ -677,11 +731,11 @@ export class CoingeckoClient {
    */
   async fetchGlobal() {
     return this.request(
-      'global',
+      "global",
       {},
       {
-        expires: '30m',
-      }
+        expires: "30m",
+      },
     );
   }
 
@@ -691,11 +745,11 @@ export class CoingeckoClient {
    */
   async fetchCategories() {
     return this.request(
-      'coins/categories',
+      "coins/categories",
       {},
       {
-        expires: '30m',
-      }
+        expires: "30m",
+      },
     );
   }
 }
@@ -740,7 +794,7 @@ type WalletTokenList = {
 /**
  * Represents a type that can either be "solana" or "ethereum" for the BirdeyeXChain.
  */
-type BirdeyeXChain = 'solana' | 'ethereum';
+type BirdeyeXChain = "solana" | "ethereum";
 
 /**
  * Type representing headers for BirdeyeClient.
@@ -748,7 +802,7 @@ type BirdeyeXChain = 'solana' | 'ethereum';
  * @property {BirdeyeXChain} ["x-chain"] - Optional header for BirdeyeXChain.
  */
 type BirdeyeClientHeaders = {
-  'x-chain'?: BirdeyeXChain;
+  "x-chain"?: BirdeyeXChain;
 };
 
 /**
@@ -768,7 +822,7 @@ type BirdeyeRequestOptions = {
  */
 
 export class BirdeyeClient {
-  static readonly url = 'https://public-api.birdeye.so/';
+  static readonly url = "https://public-api.birdeye.so/";
 
   /**
    * Send a request to the Birdeye API using the provided API key, path, query parameters, and headers.
@@ -783,7 +837,7 @@ export class BirdeyeClient {
     apiKey: string,
     path: string,
     params?: QueryParams,
-    headers?: BirdeyeClientHeaders
+    headers?: BirdeyeClientHeaders,
   ): Promise<T> {
     const res = await http.get.json<{ success: boolean; data?: T }>(
       BirdeyeClient.url + path,
@@ -791,9 +845,9 @@ export class BirdeyeClient {
       {
         headers: {
           ...headers,
-          'X-API-KEY': apiKey,
+          "X-API-KEY": apiKey,
         },
-      }
+      },
     );
 
     if (!res.success || !res.data) {
@@ -812,7 +866,7 @@ export class BirdeyeClient {
    */
   constructor(
     private readonly apiKey: string,
-    private readonly runtime: IAgentRuntime
+    private readonly runtime: IAgentRuntime,
   ) {}
 
   /**
@@ -823,10 +877,10 @@ export class BirdeyeClient {
    * @throws {Error} Thrown if the BIRDEYE_API_KEY setting is missing in the runtime object.
    */
   static createFromRuntime(runtime: IAgentRuntime) {
-    const apiKey = runtime.getSetting('BIRDEYE_API_KEY');
+    const apiKey = runtime.getSetting("BIRDEYE_API_KEY");
 
     if (!apiKey) {
-      throw new Error('missing BIRDEYE_API_KEY');
+      throw new Error("missing BIRDEYE_API_KEY");
     }
 
     return new BirdeyeClient(apiKey, runtime);
@@ -845,9 +899,11 @@ export class BirdeyeClient {
     path: string,
     params: QueryParams,
     options?: BirdeyeRequestOptions,
-    forceRefresh?: boolean
+    forceRefresh?: boolean,
   ) {
-    const cacheKey = ['birdeye', options?.chain, buildUrl(path, params)].filter(Boolean).join('/');
+    const cacheKey = ["birdeye", options?.chain, buildUrl(path, params)]
+      .filter(Boolean)
+      .join("/");
 
     if (options?.expires && !forceRefresh) {
       const cached = await this.runtime.getCache<T>(cacheKey);
@@ -860,9 +916,9 @@ export class BirdeyeClient {
       params,
       options?.chain
         ? {
-            'x-chain': options.chain,
+            "x-chain": options.chain,
           }
-        : undefined
+        : undefined,
     );
 
     if (options?.expires) {
@@ -879,8 +935,15 @@ export class BirdeyeClient {
    * @param {BirdeyeRequestOptions} [options] - The options for the Birdeye request.
    * @returns {Promise<number>} The price value fetched for the given address.
    */
-  async fetchPrice(address: string, options?: BirdeyeRequestOptions): Promise<number> {
-    const price = await this.request<{ value: number }>('defi/price', { address }, options);
+  async fetchPrice(
+    address: string,
+    options?: BirdeyeRequestOptions,
+  ): Promise<number> {
+    const price = await this.request<{ value: number }>(
+      "defi/price",
+      { address },
+      options,
+    );
 
     return price.value;
   }
@@ -891,12 +954,12 @@ export class BirdeyeClient {
    */
   async fetchPrices(): Promise<Prices> {
     const prices = await this.request<Record<string, { value: number }>>(
-      'defi/multi_price',
-      { list_address: [SOL_ADDRESS, ETH_ADDRESS, BTC_ADDRESS].join(',') },
+      "defi/multi_price",
+      { list_address: [SOL_ADDRESS, ETH_ADDRESS, BTC_ADDRESS].join(",") },
       {
-        chain: 'solana',
-        expires: '5m',
-      }
+        chain: "solana",
+        expires: "5m",
+      },
     );
 
     return {
@@ -917,13 +980,13 @@ export class BirdeyeClient {
   async fetchTokenOverview(
     address: string,
     options?: BirdeyeRequestOptions,
-    forceRefresh = false
+    forceRefresh = false,
   ): Promise<TokenOverview> {
     const token = await this.request<TokenOverview>(
-      'defi/token_overview',
+      "defi/token_overview",
       { address },
       options,
-      forceRefresh
+      forceRefresh,
     );
 
     return token;
@@ -937,12 +1000,12 @@ export class BirdeyeClient {
    */
   async fetchTokenSecurity(
     address: string,
-    options?: BirdeyeRequestOptions
+    options?: BirdeyeRequestOptions,
   ): Promise<TokenSecurityData> {
     const security = await this.request<TokenSecurityData>(
-      'defi/token_security',
+      "defi/token_security",
       { address },
-      options
+      options,
     );
 
     return security;
@@ -956,12 +1019,12 @@ export class BirdeyeClient {
    */
   async fetchTokenTradeData(
     address: string,
-    options?: BirdeyeRequestOptions
+    options?: BirdeyeRequestOptions,
   ): Promise<TokenTradeData> {
     const tradeData = await this.request<TokenTradeData>(
-      'defi/v3/token/trade-data/single',
+      "defi/v3/token/trade-data/single",
       { address },
-      options
+      options,
     );
 
     return tradeData;
@@ -976,9 +1039,9 @@ export class BirdeyeClient {
    */
   async fetchWalletTokenList(address: string, options?: BirdeyeRequestOptions) {
     const tokenList = await this.request<WalletTokenList>(
-      'v1/wallet/token_list',
+      "v1/wallet/token_list",
       { wallet: address },
-      options
+      options,
     );
 
     return tokenList;
@@ -994,12 +1057,12 @@ export class BirdeyeClient {
    */
   async fetchPortfolioValue(
     address: string,
-    options?: BirdeyeRequestOptions
+    options?: BirdeyeRequestOptions,
   ): Promise<WalletPortfolio> {
     try {
       const portfolio: WalletPortfolio = {
-        totalUsd: '0',
-        totalSol: '0',
+        totalUsd: "0",
+        totalSol: "0",
         items: [],
       };
 
@@ -1011,26 +1074,28 @@ export class BirdeyeClient {
 
       const items: WalletPortfolioItem[] = tokenList.items.map((item) => ({
         address: item.address,
-        name: item.name || 'Unknown',
-        symbol: item.symbol || 'Unknown',
+        name: item.name || "Unknown",
+        symbol: item.symbol || "Unknown",
         decimals: item.decimals,
-        valueSol: new BigNumber(item.valueUsd || 0).div(solPriceInUSD).toFixed(6),
-        priceUsd: item.priceUsd?.toString() || '0',
-        valueUsd: item.valueUsd?.toString() || '0',
-        uiAmount: item.uiAmount?.toString() || '0',
-        balance: item.balance?.toString() || '0',
+        valueSol: new BigNumber(item.valueUsd || 0)
+          .div(solPriceInUSD)
+          .toFixed(6),
+        priceUsd: item.priceUsd?.toString() || "0",
+        valueUsd: item.valueUsd?.toString() || "0",
+        uiAmount: item.uiAmount?.toString() || "0",
+        balance: item.balance?.toString() || "0",
       }));
 
       const totalSol = totalUsd.div(solPriceInUSD);
       portfolio.totalUsd = totalUsd.toString();
       portfolio.totalSol = totalSol.toFixed(6);
       portfolio.items = items.sort((a, b) =>
-        new BigNumber(b.valueUsd).minus(new BigNumber(a.valueUsd)).toNumber()
+        new BigNumber(b.valueUsd).minus(new BigNumber(a.valueUsd)).toNumber(),
       );
 
       return portfolio;
     } catch (error) {
-      console.error('Error fetching portfolio:', error);
+      console.error("Error fetching portfolio:", error);
       throw error;
     }
   }
@@ -1064,5 +1129,5 @@ function parseTimeToMs(timeStr: string) {
  * @returns {number} The expiration time in milliseconds.
  */
 function parseExpires(expires: string | number) {
-  return typeof expires === 'string' ? parseTimeToMs(expires) : expires;
+  return typeof expires === "string" ? parseTimeToMs(expires) : expires;
 }

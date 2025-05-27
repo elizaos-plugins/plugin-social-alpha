@@ -1,6 +1,6 @@
-import { XMLParser } from 'fast-xml-parser';
-import type { ZodType } from 'zod';
-import zodToJsonSchema from 'zod-to-json-schema';
+import { XMLParser } from "fast-xml-parser";
+import type { ZodType } from "zod";
+import zodToJsonSchema from "zod-to-json-schema";
 
 /**
  * Retrieves the JSON schema representation of a Zod schema.
@@ -8,7 +8,7 @@ import zodToJsonSchema from 'zod-to-json-schema';
  * @returns {any} The JSON schema representing the Zod schema.
  */
 export function getZodJsonSchema(schema: ZodType<any>) {
-  return zodToJsonSchema(schema, 'schema').definitions?.schema;
+  return zodToJsonSchema(schema, "schema").definitions?.schema;
 }
 
 /**
@@ -23,7 +23,7 @@ export function extractXMLFromResponse(output: string, tag: string) {
   const end = output.indexOf(`</${tag}>`) + `</${tag}>`.length;
 
   if (start === -1 || end === -1) {
-    return '';
+    return "";
   }
 
   return output.slice(start, end);
@@ -38,7 +38,7 @@ export function extractXMLFromResponse(output: string, tag: string) {
 export function parseRecommendationsResponse(xmlResponse: string) {
   const parser = new XMLParser({
     ignoreAttributes: false,
-    isArray: (name) => name === 'recommendation', // Treat individual recommendations as array elements
+    isArray: (name) => name === "recommendation", // Treat individual recommendations as array elements
   });
   const result = parser.parse(xmlResponse);
   return result.new_recommendations?.recommendation || []; // Access the nested array structure
@@ -53,7 +53,7 @@ export function parseRecommendationsResponse(xmlResponse: string) {
 export function parseTokensResponse(xmlResponse: string) {
   const parser = new XMLParser({
     ignoreAttributes: false,
-    isArray: (name) => name === 'tokenAddress', // Treat individual recommendations as array elements
+    isArray: (name) => name === "tokenAddress", // Treat individual recommendations as array elements
   });
   const result = parser.parse(xmlResponse);
   return result.tokens.tokenAddress || []; // Access the nested array structure
@@ -70,7 +70,7 @@ export function parseConfirmationResponse(xmlResponse: string) {
     ignoreAttributes: false,
   });
   const result = parser.parse(xmlResponse);
-  return result.message || '';
+  return result.message || "";
 }
 
 /**

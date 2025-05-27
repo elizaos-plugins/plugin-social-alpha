@@ -50,7 +50,7 @@
   },
   "scripts": {
     "dev": "tsup --watch",
-    "build": "tsup",
+    "build": "vite build && tsup",
     "lint": "prettier --write ./src",
     "test": "elizaos test",
     "format": "prettier --write ./src",

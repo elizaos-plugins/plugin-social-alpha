@@ -1,8 +1,8 @@
-import type { TestSuite, TestCase } from '@elizaos/core';
-import { serviceTestSuite } from './service';
-import { eventsTestSuite } from './events';
-import { trustScoreTestSuite } from './trustScore';
-import { communityInvestorE2ETestSuite } from './socialAlpha.e2e';
+import type { TestSuite, TestCase } from "@elizaos/core";
+import { serviceTestSuite } from "./service";
+import { eventsTestSuite } from "./events";
+import { trustScoreTestSuite } from "./trustScore";
+import { communityInvestorE2ETestSuite } from "./socialAlpha.e2e";
 
 const testCases: TestCase[] = [
   ...serviceTestSuite.tests,
@@ -12,6 +12,6 @@ const testCases: TestCase[] = [
 ];
 
 export const tests: TestSuite = {
-  name: 'CommunityInvestor Plugin - All Tests',
+  name: "CommunityInvestor Plugin - All Tests",
   tests: testCases,
 };
