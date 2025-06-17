@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "4f2bf1b2-a08b-4604-be47-51cb834df040",
+    "originalMessageId": "1306985039279558657",
+    "userId": "928695383650078791",
+    "username": "Pmore",
+    "timestamp": 1731679915972,
+    "content": "Naval becoming sentient. Bullish ... aping more",
+    "tokenMentioned": "Naval",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses bullish sentiment on Naval token becoming sentient.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-15"
+  },
+  {
+    "callId": "96d78303-4ae8-4f96-914f-8bd6b7d39475",
+    "originalMessageId": "1306985200290631720",
+    "userId": "732087860571668510",
+    "username": "Noname $ai16z",
+    "timestamp": 1731679954360,
+    "content": "Ai takeover",
+    "tokenMentioned": "AI16Z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User mentions AI takeover, which could be interpreted as bullish for AI-related tokens.",
+    "certainty": "low",
+    "fileSource": "chat_2024-11-15"
+  },
+  {
+    "callId": "010d8a5a-a3c0-47b1-9663-cebce9f52929",
+    "originalMessageId": "1306985349213585429",
+    "userId": "1305900903353684024",
+    "username": "ktw805",
+    "timestamp": 1731679989866,
+    "content": "-get out agis",
+    "tokenMentioned": "AGIS",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User mentions 'agis', which could be a token name or abbreviation.",
+    "certainty": "low",
+    "fileSource": "chat_2024-11-15"
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "29c05259-25c6-46bf-ac24-0dd26c16cbff",
+    "originalMessageId": "1311267889059332107",
+    "userId": "877610347484282920",
+    "username": "POV",
+    "timestamp": 1732701026931,
+    "content": "I wonder if it’s gonna slow down tho cus idk the real ai value proposition",
+    "tokenMentioned": "MONA",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User questions MONA's AI value proposition",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "acf5eb0f-932b-492c-886b-5504a79a154e",
+    "originalMessageId": "1311268232178434128",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1732701108737,
+    "content": "new entry on ongo... CxN2KctowQ216p9wWRgiQeMe9ExRSrL7UeR2UYRzpump",
+    "tokenMentioned": "ONGO",
+    "caMentioned": "CxN2KctowQ216p9wWRgiQeMe9ExRSrL7UeR2UYRzpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is entering a position in ONGO",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "9cde06ad-6b97-4862-9534-7e792c81630c",
+    "originalMessageId": "1311268763001425941",
+    "userId": "1307441609733963896",
+    "username": "Mndy Aoorray",
+    "timestamp": 1732701235295,
+    "content": "Randy isn't a rug",
+    "tokenMentioned": "RANDY",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User defending RANDY against rug accusations",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "b1a5dac1-cb89-49e3-9fb4-b42e9c816969",
+    "originalMessageId": "1311268992861601793",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1732701290098,
+    "content": "let's pump ongo first guys",
+    "tokenMentioned": "ONGO",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User wants to pump ONGO",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "5debf172-cc84-49f8-9292-89c4865a6886",
+    "originalMessageId": "1314322700084314132",
+    "userId": "186857450639458306",
+    "username": "Stacker✝",
+    "timestamp": 1733429350635,
+    "content": "bunny rugged",
+    "tokenMentioned": "Bunny",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User confirms that the Bunny token has rugged, indicating a negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-05"
+  },
+  {
+    "callId": "e11ee0ba-3135-4c8d-93df-158a9804e400",
+    "originalMessageId": "1314322857613983775",
+    "userId": "503630344986165258",
+    "username": "velja",
+    "timestamp": 1733429388193,
+    "content": "yes , i said i left this will rug",
+    "tokenMentioned": "Bunny",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User indicates they left the Bunny token because it was expected to rug.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-05"
+  },
+  {
+    "callId": "7bc571fd-56f2-460c-a780-d348306585bd",
+    "originalMessageId": "1314323116188500100",
+    "userId": "753711619673948210",
+    "username": "Azul",
+    "timestamp": 1733429449842,
+    "content": "I misswd the bunnies did they rugged?",
+    "tokenMentioned": "Bunny",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User missed the Bunny token and is inquiring if it rugged, indicating a negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-05"
+  },
+  {
+    "callId": "1b757d35-181b-4e13-a507-9a0334d087a8",
+    "originalMessageId": "1314323581957701663",
+    "userId": "503630344986165258",
+    "username": "velja",
+    "timestamp": 1733429560890,
+    "content": "good coins ? i didnt have any good coin besides baby kaia",
+    "tokenMentioned": "Baby Kaia",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions Baby Kaia as a good coin, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-05"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "639ee565-881e-47b5-9884-458a3c298943",
+    "originalMessageId": "1310404152068800535",
+    "userId": "1079085482077589534",
+    "username": "greatkaww",
+    "timestamp": 1732495095985,
+    "content": "FYRvpCuafCfSpLssVE4cgLuRgN6SPmJKA22khXNApump",
+    "caMentioned": "FYRvpCuafCfSpLssVE4cgLuRgN6SPmJKA22khXNApump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-24"
+  },
+  {
+    "callId": "e45bac3f-3141-4521-add8-f5db4910f09d",
+    "originalMessageId": "1310404558513766441",
+    "userId": "1075144835641647194",
+    "username": "CmdNFT",
+    "timestamp": 1732495192889,
+    "content": "FYRvpCuafCfSpLssVE4cgLuRgN6SPmJKA22khXNApump",
+    "caMentioned": "FYRvpCuafCfSpLssVE4cgLuRgN6SPmJKA22khXNApump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-24"
+  }
+]

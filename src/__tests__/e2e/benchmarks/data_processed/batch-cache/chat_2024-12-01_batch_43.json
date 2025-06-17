@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "3e9f4a35-1ce4-418d-88f5-cd99d56d2329",
+    "originalMessageId": "1312932825791725588",
+    "userId": "883850045433192519",
+    "username": "Burtiik",
+    "timestamp": 1733097978781,
+    "content": "7bD1RTKSZSsneDXDoMincSswED3uBnzuRyHi5tJ7ZjwN",
+    "caMentioned": "7bD1RTKSZSsneDXDoMincSswED3uBnzuRyHi5tJ7ZjwN",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-01"
+  },
+  {
+    "callId": "a6b627e0-84c3-4b75-b976-90bfb77d382c",
+    "originalMessageId": "1312933167753203752",
+    "userId": "832664669755146290",
+    "username": "0xSimpleFarmer",
+    "timestamp": 1733098060311,
+    "content": "I sent another 62 mil of kAIa to the dao",
+    "tokenMentioned": "kAIa",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User sent a large amount of kAIa to the DAO, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-01"
+  }
+]

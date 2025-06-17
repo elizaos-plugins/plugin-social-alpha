@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "aaf69d3f-c93e-4ea1-840f-6fb1af554ff0",
+    "originalMessageId": "1323314855410798673",
+    "userId": "265148310107586565",
+    "username": "joun",
+    "timestamp": 1735573247531,
+    "content": "EovfxuA6xc5Fn6Cx7r2WgJS5PgcEWWJqmPkpNFZdpump",
+    "caMentioned": "EovfxuA6xc5Fn6Cx7r2WgJS5PgcEWWJqmPkpNFZdpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "8b94c67a-8ea1-41d6-831b-4acaa029eb80",
+    "originalMessageId": "1323315165147566110",
+    "userId": "718499445427404811",
+    "username": "ImamDojava",
+    "timestamp": 1735573321378,
+    "content": ".dp EovfxuA6xc5Fn6Cx7r2WgJS5PgcEWWJqmPkpNFZdpump",
+    "caMentioned": "EovfxuA6xc5Fn6Cx7r2WgJS5PgcEWWJqmPkpNFZdpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "e0719f9b-c606-4d77-a118-cb4fdc75bd28",
+    "originalMessageId": "1323315244575232060",
+    "userId": "445368551134593045",
+    "username": "Nermic",
+    "timestamp": 1735573340315,
+    "content": "EovfxuA6xc5Fn6Cx7r2WgJS5PgcEWWJqmPkpNFZdpump this website is delicious i'm ngl",
+    "caMentioned": "EovfxuA6xc5Fn6Cx7r2WgJS5PgcEWWJqmPkpNFZdpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "6a91bf3a-c8d4-4d8a-87ed-3823ebf94b62",
+    "originalMessageId": "1323022418541023262",
+    "userId": "781532025252478987",
+    "username": "10Cents",
+    "timestamp": 1735503525148,
+    "content": "SEC interesting narrative, showing some signs of cook\n\nFT2KeEtgT84mBjwCCbKgUwpk6SxXkZGCvCk85Uq9pump",
+    "caMentioned": "FT2KeEtgT84mBjwCCbKgUwpk6SxXkZGCvCk85Uq9pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "c2edf411-4d19-4ddd-921f-afb8ce60a3f8",
+    "originalMessageId": "1323026727860961370",
+    "userId": "445368551134593045",
+    "username": "Nermic",
+    "timestamp": 1735504552570,
+    "content": "OH SHIT I DIDN'T EVEN NOTICE LMAOO\nGvgueUAfCoFtTrcvuBGDVmrBmDWQpxgrb4tLcUA3pump",
+    "caMentioned": "GvgueUAfCoFtTrcvuBGDVmrBmDWQpxgrb4tLcUA3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "2283d237-ca1f-4198-a0d3-41a070d216c1",
+    "originalMessageId": "1323026803803029619",
+    "userId": "1162569240155529287",
+    "username": "AnimePlace",
+    "timestamp": 1735504570676,
+    "content": "E4wg8YF472u8oiLvSNKB84Y23gZhkSQ3PSCJaUj4pump",
+    "caMentioned": "E4wg8YF472u8oiLvSNKB84Y23gZhkSQ3PSCJaUj4pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "91746780-bf2d-4f2b-b6d2-b5519f288669",
+    "originalMessageId": "1323027058128977931",
+    "userId": "481898401433255957",
+    "username": "EddyTheHead",
+    "timestamp": 1735504631312,
+    "content": "3kD5DN4bbA3nykb1abjS66VF7cYZkKdirX8bZ6ShJjBB",
+    "caMentioned": "3kD5DN4bbA3nykb1abjS66VF7cYZkKdirX8bZ6ShJjBB",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  }
+]

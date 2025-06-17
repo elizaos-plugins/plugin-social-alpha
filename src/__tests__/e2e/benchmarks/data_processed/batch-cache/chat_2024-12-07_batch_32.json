@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "f640499c-9fdc-4e3b-aa45-674a44b532aa",
+    "originalMessageId": "1315224200864071690",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1733644285170,
+    "content": "yeah took dave prof to early and tereza to late",
+    "tokenMentioned": "Dave",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User mentions taking profits on Dave and Tereza, indicating trading activity.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-07"
+  },
+  {
+    "callId": "6c4d8bcc-8fbd-4140-a281-877fd7a6018e",
+    "originalMessageId": "1315224437687189584",
+    "userId": "796570112354025524",
+    "username": "Dosh",
+    "timestamp": 1733644341633,
+    "content": ".dp C7V5Hv3xR15kR8D1iJM62SdGBYbNngSHgDg1RTF4pump",
+    "caMentioned": "C7V5Hv3xR15kR8D1iJM62SdGBYbNngSHgDg1RTF4pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-07"
+  },
+  {
+    "callId": "ca2e62a2-d2c3-4a30-b6c3-3627b00d1302",
+    "originalMessageId": "1315225775158591488",
+    "userId": "1077595440498884638",
+    "username": "kokni_dev",
+    "timestamp": 1733644660511,
+    "content": "GekTNfm84QfyP2GdAHZ5AgACBRd69aNmgA5FDhZupump",
+    "caMentioned": "GekTNfm84QfyP2GdAHZ5AgACBRd69aNmgA5FDhZupump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-07"
+  }
+]

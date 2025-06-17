@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "128f40e9-2bb2-4f1c-85b1-5f0d8167cecb",
+    "originalMessageId": "1313832061349396520",
+    "userId": "628939577356451840",
+    "username": "Vegeta",
+    "timestamp": 1733312373245,
+    "content": "he used wrong ticker for the launch, it should be $CAI  maybe he will relaunch",
+    "tokenMentioned": "CAI",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a potential relaunch of a token with the correct ticker $CAI.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "e137e677-b8fb-4d85-92c9-ec8d8405ec99",
+    "originalMessageId": "1313832114570924053",
+    "userId": "628939577356451840",
+    "username": "Vegeta",
+    "timestamp": 1733312385934,
+    "content": "he launched with $CIA",
+    "tokenMentioned": "CIA",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a token launch with the ticker $CIA, implying a call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "aa58e419-f345-41aa-936c-904263acbc37",
+    "originalMessageId": "1313832738612183041",
+    "userId": "186857450639458306",
+    "username": "Stacker✝",
+    "timestamp": 1733312534717,
+    "content": "DJhpCBKYtBTYVVuzpks8das9Yj3L6FYEZAjx5YNCpump",
+    "caMentioned": "DJhpCBKYtBTYVVuzpks8das9Yj3L6FYEZAjx5YNCpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  }
+]

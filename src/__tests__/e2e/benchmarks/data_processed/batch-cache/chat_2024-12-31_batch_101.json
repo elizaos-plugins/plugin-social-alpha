@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "eefa6da6-0cc4-4c4e-b572-714b6e164cfc",
+    "originalMessageId": "1323878272248844288",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1735707576573,
+    "content": ".cc 4pLzntr9x8nATdHGv5zAXQYWg2yoNcdBpFoKuAmBVukx 5m",
+    "caMentioned": "4pLzntr9x8nATdHGv5zAXQYWg2yoNcdBpFoKuAmBVukx",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-31"
+  },
+  {
+    "callId": "bd92fbd7-53bf-4ca8-a1ac-e9c71424494e",
+    "originalMessageId": "1323878881140412416",
+    "userId": "532222421457960961",
+    "username": "Sai | retAIred",
+    "timestamp": 1735707721744,
+    "content": "got the alpha on smore",
+    "tokenMentioned": "Smore",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User claims to have insider information on Smore.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-31"
+  },
+  {
+    "callId": "577a6c17-9af0-41fe-906c-c472b71c792d",
+    "originalMessageId": "1323879116633804881",
+    "userId": "917560931674902588",
+    "username": "Jaba",
+    "timestamp": 1735707777890,
+    "content": "5fWqV8HGtQHiBU77DThizvTDn3Xiy3gXFWWCizQWpump",
+    "caMentioned": "5fWqV8HGtQHiBU77DThizvTDn3Xiy3gXFWWCizQWpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-31"
+  }
+]

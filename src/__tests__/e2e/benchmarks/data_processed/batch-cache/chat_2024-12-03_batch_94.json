@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "c5022608-d1f1-4cb0-92fe-5e2ff375ce49",
+    "originalMessageId": "1313773418541219850",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1733298391710,
+    "content": ".cc melody 1h",
+    "tokenMentioned": "MELODY",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is checking price/chart for Melody token",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  }
+]

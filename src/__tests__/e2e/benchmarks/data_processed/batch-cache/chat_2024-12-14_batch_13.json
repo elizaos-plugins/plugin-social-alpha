@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "eea8b7f6-7700-496c-9b0b-95196a98f000",
+    "originalMessageId": "1317509428911804517",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1734189125994,
+    "content": "This is a little bit insane right now NGL @anon I think it's an overreaction that sets a bad precedent. \n\nHe delivered mad value here. Made one (yes, dumb) mistake, and gone forever? \n\nYet ruggers can stay in and 2-3x rug before getting kicked? \n\nIdk. Yikes.",
+    "tokenMentioned": "SHAW",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is expressing a positive sentiment towards SHAW, suggesting others to buy.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-14"
+  },
+  {
+    "callId": "199774f9-dedd-47d4-be40-effa52cc9010",
+    "originalMessageId": "1317510365260808243",
+    "userId": "356476516789518336",
+    "username": "JabuSella",
+    "timestamp": 1734189349237,
+    "content": "Linked social is follwed by Shaw",
+    "tokenMentioned": "SHAW",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User mentions SHAW in a context that suggests it's being followed by a linked social, indicating interest.",
+    "certainty": "low",
+    "fileSource": "chat_2024-12-14"
+  }
+]

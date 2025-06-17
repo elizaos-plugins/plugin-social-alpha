@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "3e5ecbcc-34f1-4617-83ec-34e9e3ceb5a1",
+    "originalMessageId": "1312353982563225610",
+    "userId": "1252201026141032518",
+    "username": "GTrench",
+    "timestamp": 1732959971801,
+    "content": "im waiting for mindbath i think it will rug above 10m",
+    "tokenMentioned": "Mindbath",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User is waiting for Mindbath, expecting it to rug above 10m.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-30"
+  },
+  {
+    "callId": "dcd2c430-783b-468b-b973-ce0756a5694c",
+    "originalMessageId": "1312354236641837127",
+    "userId": "377569324866732042",
+    "username": "Whatever",
+    "timestamp": 1732960032378,
+    "content": "8JJW1vE9XZnA5y2XpcgHScMMsvNvoWc9gL3SLnCWpump",
+    "caMentioned": "8JJW1vE9XZnA5y2XpcgHScMMsvNvoWc9gL3SLnCWpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-30"
+  },
+  {
+    "callId": "0c8c8b56-abe9-427c-9e60-399905d34206",
+    "originalMessageId": "1312355405581783051",
+    "userId": "1311384441909805216",
+    "username": "Gilles",
+    "timestamp": 1732960311075,
+    "content": ".dp 2EqCesh2xPhuASFoY2hnencfCZhK2fdqogEWUyhdh29H",
+    "caMentioned": "2EqCesh2xPhuASFoY2hnencfCZhK2fdqogEWUyhdh29H",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-30"
+  },
+  {
+    "callId": "577bf4be-847b-441b-9a05-ada04c4d74f3",
+    "originalMessageId": "1312356841946353746",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1732960653531,
+    "content": ".x 2EqCesh2xPhuASFoY2hnencfCZhK2fdqogEWUyhdh29H",
+    "caMentioned": "2EqCesh2xPhuASFoY2hnencfCZhK2fdqogEWUyhdh29H",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-30"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "7e6b3425-d4ea-4587-907e-9df627bed6f0",
+    "originalMessageId": "1317171329396510760",
+    "userId": "816616233843032076",
+    "username": "Tren",
+    "timestamp": 1734108516788,
+    "content": "Just on gmgn. Dug a bit and found the X and website. Lots of speculation",
+    "tokenMentioned": "GMGN",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions researching GMGN token",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "eb0e8244-fd46-42fa-9189-a5ef1717025e",
+    "originalMessageId": "1317172841547825242",
+    "userId": "193681207840604161",
+    "username": "Elias",
+    "timestamp": 1734108877313,
+    "content": "6CLkgTjkZbBnoVAKdLjvvobJhLxuJvAF2Uso4Tsupump",
+    "caMentioned": "6CLkgTjkZbBnoVAKdLjvvobJhLxuJvAF2Uso4Tsupump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "00b7a039-2260-45b3-ae13-860127900a5a",
+    "originalMessageId": "1317173564704555069",
+    "userId": "904586441823244310",
+    "username": "andré (skott)",
+    "timestamp": 1734109049727,
+    "content": "AI meta I think easy mode, but normal memes I'm terrible",
+    "tokenMentioned": "AI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User indicates AI tokens are easy mode for trading",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-13"
+  }
+]

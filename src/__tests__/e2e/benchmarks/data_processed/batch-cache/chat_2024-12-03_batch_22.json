@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "111bdcdd-a9ca-4bb3-bef2-c0820c181473",
+    "originalMessageId": "1313510916318433392",
+    "userId": "843874179236757535",
+    "username": "nomekop",
+    "timestamp": 1733235806303,
+    "content": "an advanced AI project designed to integrate multiple AI capabilities, including speech recognition, text processing, and image analysis, into a cohesive system",
+    "tokenMentioned": "AI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is promoting an AI token project",
+    "certainty": "low",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "73dbdbab-295d-41c3-94b4-690cb7cfddf3",
+    "originalMessageId": "1313511141284249610",
+    "userId": "1011297759246160022",
+    "username": "ika",
+    "timestamp": 1733235859939,
+    "content": "does your ai token possess the up only technology?",
+    "tokenMentioned": "AI",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "low",
+    "llmReasoning": "User is sarcastically questioning an AI token",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "00c6768b-d0ef-4302-86af-00c6c4328cc7",
+    "originalMessageId": "1313511422973710387",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1733235927099,
+    "content": "Hopefully CJ launching another token soon🔥",
+    "tokenMentioned": "CJ",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expressing anticipation for CJ's next token launch",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  }
+]

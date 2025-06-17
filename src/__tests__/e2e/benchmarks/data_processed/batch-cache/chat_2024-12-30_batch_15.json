@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "c53f493f-947a-462e-b04d-3b6f774a31e3",
+    "originalMessageId": "1323262638419087433",
+    "userId": "393595531030429696",
+    "username": "pupathebig",
+    "timestamp": 1735560798030,
+    "content": "buy palms",
+    "tokenMentioned": "PALMS",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is suggesting to buy Palms.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-30"
+  }
+]

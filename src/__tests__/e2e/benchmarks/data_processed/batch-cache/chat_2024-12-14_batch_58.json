@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "508874d1-2e9f-4f3b-a01c-fe158012bda0",
+    "originalMessageId": "1317709844463095858",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1734236908785,
+    "content": "4FXm3uodVkE5Gsm6xFiCsuhx1yhCixszVypraeAfpump",
+    "caMentioned": "4FXm3uodVkE5Gsm6xFiCsuhx1yhCixszVypraeAfpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-14"
+  }
+]

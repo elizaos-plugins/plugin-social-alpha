@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "fe831ef7-f0da-4616-a7d3-1353949de118",
+    "originalMessageId": "1313641048437817437",
+    "userId": "816616233843032076",
+    "username": "Tren",
+    "timestamp": 1733266832218,
+    "content": "BOOM\n\nX. CYs9m7dqtdpnkScttBrU95bEzytQNKYesH4WtuPjpump",
+    "caMentioned": "CYs9m7dqtdpnkScttBrU95bEzytQNKYesH4WtuPjpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "5cf07978-01f0-4278-acfe-cd12ac6210e8",
+    "originalMessageId": "1313641946463604756",
+    "userId": "625305443140370442",
+    "username": "PETER 加鹽鬆餅🧂🥞",
+    "timestamp": 1733267046324,
+    "content": "DL2KEwrkXN96qpk5PnHG1EYCxEsUGU44C7R1XJUspump",
+    "caMentioned": "DL2KEwrkXN96qpk5PnHG1EYCxEsUGU44C7R1XJUspump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "117565b9-deca-4522-890c-534997f11c85",
+    "originalMessageId": "1313643755156537384",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1733267477550,
+    "content": ".dp DL2KEwrkXN96qpk5PnHG1EYCxEsUGU44C7R1XJUspump",
+    "caMentioned": "DL2KEwrkXN96qpk5PnHG1EYCxEsUGU44C7R1XJUspump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  }
+]

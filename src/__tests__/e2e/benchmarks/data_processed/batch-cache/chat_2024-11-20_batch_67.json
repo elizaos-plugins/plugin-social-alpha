@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "cb0899fa-1ddb-4fa1-a040-2a069c352fc8",
+    "originalMessageId": "1309031509776273459",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1732167832560,
+    "content": "Anyone know if the $GRUMPY dev is in here?\n\nGRUmPYbiTpq9ZPy5LAqBMMze7kErf5dEX2i9qYfwoSmR",
+    "tokenMentioned": "GRUMPY",
+    "caMentioned": "GRUmPYbiTpq9ZPy5LAqBMMze7kErf5dEX2i9qYfwoSmR",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User is inquiring about the $GRUMPY token, indicating interest.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "f3c60769-e2e7-4ca9-8ea1-5499a41b4e9c",
+    "originalMessageId": "1309031855143522347",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1732167914902,
+    "content": "5cTQWHrqwVydWSxatrWt368eWf6hTkpTbkQQ5xiKpump",
+    "caMentioned": "5cTQWHrqwVydWSxatrWt368eWf6hTkpTbkQQ5xiKpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "6c6ce152-4b22-42e0-b9a6-a52b1b043ca9",
+    "originalMessageId": "1309032793996529664",
+    "userId": "1262579683778625548",
+    "username": "Xi",
+    "timestamp": 1732168138742,
+    "content": "E6ZeLyFUvpaSREvAv1rVu91kndLD3tdpvkcA51bxpump",
+    "caMentioned": "E6ZeLyFUvpaSREvAv1rVu91kndLD3tdpvkcA51bxpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "ea781421-ea1a-4bac-a685-8bdd721f4482",
+    "originalMessageId": "1309033071332556871",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1732168204864,
+    "content": "WOW guts really ripping\n\n9T6owj9NLBh5qUJtmp5y2qAKPckdpbAEHjmACamTgCaP",
+    "caMentioned": "9T6owj9NLBh5qUJtmp5y2qAKPckdpbAEHjmACamTgCaP",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  }
+]

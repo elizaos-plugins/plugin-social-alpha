@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "4058f9cb-7175-4dd1-b18d-4f2b848aac5d",
+    "originalMessageId": "1309200648478261350",
+    "userId": "238086587873886220",
+    "username": "MasoRich",
+    "timestamp": 1732208158369,
+    "content": "i started with 1 sol of ai16z 3 weeks ago and am at 200x",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User reports a significant gain from investing in ai16z, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-21"
+  },
+  {
+    "callId": "3325f262-3eeb-4d74-a5e7-8e5de0235cf5",
+    "originalMessageId": "1309201168202727436",
+    "userId": "928695383650078791",
+    "username": "Pmore",
+    "timestamp": 1732208282281,
+    "content": "SFX to go WAY higher.",
+    "tokenMentioned": "SFX",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User predicts SFX will increase in value, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-21"
+  },
+  {
+    "callId": "7f396031-17a8-425d-b6f2-fb283878a375",
+    "originalMessageId": "1309202468038643774",
+    "userId": "574000461485572097",
+    "username": "RiverRyan",
+    "timestamp": 1732208592186,
+    "content": "4dWgBEhs4XK3CgekGuErTvAARpECEqtH51zNNwmupump",
+    "caMentioned": "4dWgBEhs4XK3CgekGuErTvAARpECEqtH51zNNwmupump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-21"
+  },
+  {
+    "callId": "845521dc-1db2-44c4-9e35-bf19d39175a8",
+    "originalMessageId": "1309202676059476048",
+    "userId": "851172561084481607",
+    "username": "laurent Castellani",
+    "timestamp": 1732208641782,
+    "content": "C2pgi48XeWtqjD9qCeWV9CcSGRtjHiEesbqstiHepump",
+    "caMentioned": "C2pgi48XeWtqjD9qCeWV9CcSGRtjHiEesbqstiHepump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-21"
+  }
+]

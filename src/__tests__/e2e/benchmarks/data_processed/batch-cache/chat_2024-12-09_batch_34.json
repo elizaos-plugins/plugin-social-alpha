@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "d7d576e4-33ea-4519-9fa6-80bf68b45c76",
+    "originalMessageId": "1315819325352972359",
+    "userId": "1162569240155529287",
+    "username": "AnimePlace",
+    "timestamp": 1733786173905,
+    "content": "A2DS9Acjv5EJbzdHRySN7u22HwwjwEuRkeceSP5YWxD",
+    "caMentioned": "A2DS9Acjv5EJbzdHRySN7u22HwwjwEuRkeceSP5YWxD",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "532a6b34-5970-4dc4-a054-3b37d016a383",
+    "originalMessageId": "1315820555483611186",
+    "userId": "1164510671807975495",
+    "username": "Bojj",
+    "timestamp": 1733786467191,
+    "content": "F6BAi7e2DHqFbgCe9NZTnuEKX7bdE67ELYsVgKMjpump",
+    "caMentioned": "F6BAi7e2DHqFbgCe9NZTnuEKX7bdE67ELYsVgKMjpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "b54aa3fd-8f53-492d-83a0-f0a7283cf7de",
+    "originalMessageId": "1315821202874433537",
+    "userId": "1162569240155529287",
+    "username": "AnimePlace",
+    "timestamp": 1733786621541,
+    "content": "EsciG7G8g8xVeg9dpy8yJCAavrWNDaykmoMERU8f4Lhv",
+    "caMentioned": "EsciG7G8g8xVeg9dpy8yJCAavrWNDaykmoMERU8f4Lhv",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "11ea5a14-6fd2-4390-8893-a74a1394ad9d",
+    "originalMessageId": "1315821236332531732",
+    "userId": "1311288464863662090",
+    "username": "krome",
+    "timestamp": 1733786629518,
+    "content": "F6BAi7e2DHqFbgCe9NZTnuEKX7bdE67ELYsVgKMjpump",
+    "caMentioned": "F6BAi7e2DHqFbgCe9NZTnuEKX7bdE67ELYsVgKMjpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-09"
+  }
+]

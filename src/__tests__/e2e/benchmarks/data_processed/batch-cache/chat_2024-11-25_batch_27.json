@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "447560b4-e00a-43ca-be63-8c41f6b71681",
+    "originalMessageId": "1310650697783447695",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1732553877064,
+    "content": "22Xeo6diWfJrScaoVFzgkwzrCByPukK45fdwkJyrpump GUESS IM GONNA BUY MUSTARD DIP AND SLEEP",
+    "caMentioned": "22Xeo6diWfJrScaoVFzgkwzrCByPukK45fdwkJyrpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses intent to buy after a dip, indicating a positive sentiment towards the token associated with the contract address.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "d0f4e5b7-f012-4c2a-9865-9978143cf1cf",
+    "originalMessageId": "1310650831254716497",
+    "userId": "524358860211879937",
+    "username": "ozmij",
+    "timestamp": 1732553908886,
+    "content": "45hMxUznkUPWrgLkvcogW6jzc8CX9ZgZ5Jb21Cqepump",
+    "caMentioned": "45hMxUznkUPWrgLkvcogW6jzc8CX9ZgZ5Jb21Cqepump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "fbd69b81-f7df-4743-9f14-2a9223a3b190",
+    "originalMessageId": "1310651562686677125",
+    "userId": "1307441609733963896",
+    "username": "Mndy Aoorray",
+    "timestamp": 1732554083273,
+    "content": "74yEfuLwCUSj5KEyLxF7VT2qo2PgNcJ7BVjYitrYvm8e",
+    "caMentioned": "74yEfuLwCUSj5KEyLxF7VT2qo2PgNcJ7BVjYitrYvm8e",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  }
+]

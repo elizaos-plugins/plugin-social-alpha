@@ -1,5 +1,5 @@
-import { z } from "zod";
-import type { Transaction } from "./types.js";
+import { z } from 'zod';
+import type { Transaction } from './types';
 
 /**
  * Core schema definitions for community-trader plugin
@@ -8,17 +8,17 @@ import type { Transaction } from "./types.js";
 
 // Define consistent transaction types
 export const TransactionType = {
-  BUY: "BUY",
-  SELL: "SELL",
-  TRANSFER_IN: "transfer_in",
-  TRANSFER_OUT: "transfer_out",
+  BUY: 'BUY',
+  SELL: 'SELL',
+  TRANSFER_IN: 'transfer_in',
+  TRANSFER_OUT: 'transfer_out',
 } as const;
 
 // Define TokenPerformance schema
 export const tokenPerformanceSchema = z.object({
-  chain: z.string().default("unknown"),
+  chain: z.string().default('unknown'),
   address: z.string(),
-  name: z.string().optional().default(""),
+  name: z.string().optional().default(''),
   symbol: z.string(),
   decimals: z.number().default(0),
   metadata: z.record(z.any()).default({}),
@@ -47,7 +47,7 @@ export const tokenPerformanceSchema = z.object({
 export const transactionSchema = z.object({
   id: z.string(),
   positionId: z.string(),
-  chain: z.string().default("unknown"),
+  chain: z.string().default('unknown'),
   tokenAddress: z.string(),
   transactionHash: z.string(),
   // Use lowercase transaction types consistently
@@ -120,7 +120,7 @@ export const tokenRecommendationSchema = z.object({
   riskScore: z.number(),
   performanceScore: z.number(),
   metadata: z.record(z.any()).default({}),
-  status: z.enum(["ACTIVE", "COMPLETED", "EXPIRED", "WITHDRAWN"]),
+  status: z.enum(['ACTIVE', 'COMPLETED', 'EXPIRED', 'WITHDRAWN']),
   createdAt: z.date(),
   updatedAt: z.date(),
 });
@@ -135,53 +135,31 @@ export type TokenRecommendation = z.infer<typeof tokenRecommendationSchema>;
  * Transform functions to convert database objects to schema-validated objects
  */
 
-export function transformTokenPerformance(
-  dbToken: any,
-  chain = "unknown",
-): TokenPerformance {
+export function transformTokenPerformance(dbToken: any, chain = 'unknown'): TokenPerformance {
   const input = {
     chain,
     address: dbToken.tokenAddress || dbToken.token_address,
     name: dbToken.name || dbToken.symbol,
     symbol: dbToken.symbol,
-    price: typeof dbToken.price === "number" ? dbToken.price : 0,
-    volume: typeof dbToken.volume === "number" ? dbToken.volume : 0,
-    trades: typeof dbToken.trades === "number" ? dbToken.trades : 0,
-    liquidity: typeof dbToken.liquidity === "number" ? dbToken.liquidity : 0,
-    holders: typeof dbToken.holders === "number" ? dbToken.holders : 0,
-    price24hChange:
-      typeof dbToken.price_change_24h === "number"
-        ? dbToken.price_change_24h
-        : 0,
-    volume24hChange:
-      typeof dbToken.volume_change_24h === "number"
-        ? dbToken.volume_change_24h
-        : 0,
-    trades24hChange:
-      typeof dbToken.trade_24h_change === "number"
-        ? dbToken.trade_24h_change
-        : 0,
-    holders24hChange:
-      typeof dbToken.holder_change_24h === "number"
-        ? dbToken.holder_change_24h
-        : 0,
+    price: typeof dbToken.price === 'number' ? dbToken.price : 0,
+    volume: typeof dbToken.volume === 'number' ? dbToken.volume : 0,
+    trades: typeof dbToken.trades === 'number' ? dbToken.trades : 0,
+    liquidity: typeof dbToken.liquidity === 'number' ? dbToken.liquidity : 0,
+    holders: typeof dbToken.holders === 'number' ? dbToken.holders : 0,
+    price24hChange: typeof dbToken.price_change_24h === 'number' ? dbToken.price_change_24h : 0,
+    volume24hChange: typeof dbToken.volume_change_24h === 'number' ? dbToken.volume_change_24h : 0,
+    trades24hChange: typeof dbToken.trade_24h_change === 'number' ? dbToken.trade_24h_change : 0,
+    holders24hChange: typeof dbToken.holder_change_24h === 'number' ? dbToken.holder_change_24h : 0,
     initialMarketCap:
-      typeof dbToken.initial_market_cap === "number"
-        ? dbToken.initial_market_cap
-        : 0,
+      typeof dbToken.initial_market_cap === 'number' ? dbToken.initial_market_cap : 0,
     currentMarketCap:
-      typeof dbToken.current_market_cap === "number"
-        ? dbToken.current_market_cap
-        : 0,
+      typeof dbToken.current_market_cap === 'number' ? dbToken.current_market_cap : 0,
     rugPull: Boolean(dbToken.rug_pull),
     isScam: Boolean(dbToken.is_scam),
     sustainedGrowth: Boolean(dbToken.sustained_growth),
     rapidDump: Boolean(dbToken.rapid_dump),
     suspiciousVolume: Boolean(dbToken.suspicious_volume),
-    validationTrust:
-      typeof dbToken.validation_trust === "number"
-        ? dbToken.validation_trust
-        : 0,
+    validationTrust: typeof dbToken.validation_trust === 'number' ? dbToken.validation_trust : 0,
     createdAt: dbToken.created_at ? new Date(dbToken.created_at) : new Date(),
     updatedAt: dbToken.updated_at ? new Date(dbToken.updated_at) : new Date(),
   };
@@ -191,40 +169,37 @@ export function transformTokenPerformance(
 
 export function transformTransaction(
   dbTx: any,
-  positionId = "unknown",
-  chain = "unknown",
+  positionId = 'unknown',
+  chain = 'unknown'
 ): Transaction {
-  const type =
-    typeof dbTx.type === "string"
-      ? dbTx.type.toLowerCase()
-      : TransactionType.BUY;
+  const type = typeof dbTx.type === 'string' ? dbTx.type.toLowerCase() : TransactionType.BUY;
 
   const input = {
-    id: dbTx.id || dbTx.transaction_hash || "",
+    id: dbTx.id || dbTx.transaction_hash || '',
     positionId: dbTx.positionId || dbTx.position_id || positionId,
     chain: dbTx.chain || chain,
     tokenAddress: dbTx.tokenAddress || dbTx.token_address,
     transactionHash: dbTx.transactionHash || dbTx.transaction_hash,
-    type: type === "BUY" || type === "SELL" ? type : "BUY",
+    type: type === 'BUY' || type === 'SELL' ? type : 'BUY',
     amount:
-      typeof dbTx.amount === "bigint"
+      typeof dbTx.amount === 'bigint'
         ? dbTx.amount
-        : typeof dbTx.amount === "string"
+        : typeof dbTx.amount === 'string'
           ? BigInt(dbTx.amount)
-          : typeof dbTx.amount === "number"
+          : typeof dbTx.amount === 'number'
             ? BigInt(Math.floor(dbTx.amount))
             : BigInt(0),
     price:
-      typeof dbTx.price === "string"
+      typeof dbTx.price === 'string'
         ? Number(dbTx.price)
-        : typeof dbTx.price === "number"
+        : typeof dbTx.price === 'number'
           ? dbTx.price
           : undefined,
     isSimulation: Boolean(dbTx.isSimulation || dbTx.is_simulation),
     timestamp:
       dbTx.timestamp instanceof Date
         ? dbTx.timestamp.toISOString()
-        : typeof dbTx.timestamp === "string"
+        : typeof dbTx.timestamp === 'string'
           ? dbTx.timestamp
           : new Date().toISOString(),
   };
@@ -234,27 +209,22 @@ export function transformTransaction(
 
 export function transformPosition(dbPos: any): Position {
   const input = {
-    id: dbPos.id || "",
-    chain: dbPos.chain || "unknown",
+    id: dbPos.id || '',
+    chain: dbPos.chain || 'unknown',
     tokenAddress: dbPos.tokenAddress || dbPos.token_address,
     walletAddress: dbPos.walletAddress || dbPos.wallet_address,
     isSimulation: Boolean(dbPos.isSimulation || dbPos.is_simulation),
     entityId: dbPos.entityId || dbPos.recommender_id,
     recommendationId: dbPos.recommendationId || dbPos.recommendation_id,
-    initialPrice:
-      dbPos.initialPrice?.toString() || dbPos.initial_price?.toString() || "0",
+    initialPrice: dbPos.initialPrice?.toString() || dbPos.initial_price?.toString() || '0',
     initialMarketCap:
-      dbPos.initialMarketCap?.toString() ||
-      dbPos.initial_market_cap?.toString() ||
-      "0",
+      dbPos.initialMarketCap?.toString() || dbPos.initial_market_cap?.toString() || '0',
     initialLiquidity:
-      dbPos.initialLiquidity?.toString() ||
-      dbPos.initial_liquidity?.toString() ||
-      "0",
+      dbPos.initialLiquidity?.toString() || dbPos.initial_liquidity?.toString() || '0',
     performanceScore:
-      typeof dbPos.performanceScore === "number"
+      typeof dbPos.performanceScore === 'number'
         ? dbPos.performanceScore
-        : typeof dbPos.performance_score === "number"
+        : typeof dbPos.performance_score === 'number'
           ? dbPos.performance_score
           : 0,
     rapidDump: Boolean(dbPos.rapidDump || dbPos.rapid_dump),
@@ -263,9 +233,9 @@ export function transformPosition(dbPos: any): Position {
         ? dbPos.openedAt
         : dbPos.opened_at instanceof Date
           ? dbPos.opened_at
-          : typeof dbPos.openedAt === "string"
+          : typeof dbPos.openedAt === 'string'
             ? new Date(dbPos.openedAt)
-            : typeof dbPos.opened_at === "string"
+            : typeof dbPos.opened_at === 'string'
               ? new Date(dbPos.opened_at)
               : new Date(),
     closedAt:
@@ -273,9 +243,9 @@ export function transformPosition(dbPos: any): Position {
         ? dbPos.closedAt
         : dbPos.closed_at instanceof Date
           ? dbPos.closed_at
-          : typeof dbPos.closedAt === "string"
+          : typeof dbPos.closedAt === 'string'
             ? new Date(dbPos.closedAt)
-            : typeof dbPos.closed_at === "string"
+            : typeof dbPos.closed_at === 'string'
               ? new Date(dbPos.closed_at)
               : undefined,
     updatedAt:
@@ -283,16 +253,14 @@ export function transformPosition(dbPos: any): Position {
         ? dbPos.updatedAt
         : dbPos.updated_at instanceof Date
           ? dbPos.updated_at
-          : typeof dbPos.updatedAt === "string"
+          : typeof dbPos.updatedAt === 'string'
             ? new Date(dbPos.updatedAt)
-            : typeof dbPos.updated_at === "string"
+            : typeof dbPos.updated_at === 'string'
               ? new Date(dbPos.updated_at)
               : new Date(),
-    amount: dbPos.amount?.toString() || "0",
-    entryPrice:
-      dbPos.entryPrice?.toString() || dbPos.entry_price?.toString() || "0",
-    currentPrice:
-      dbPos.currentPrice?.toString() || dbPos.current_price?.toString() || "0",
+    amount: dbPos.amount?.toString() || '0',
+    entryPrice: dbPos.entryPrice?.toString() || dbPos.entry_price?.toString() || '0',
+    currentPrice: dbPos.currentPrice?.toString() || dbPos.current_price?.toString() || '0',
   };
 
   return positionSchema.parse(input);
@@ -310,16 +278,14 @@ export const recommendationSchema = z
   .object({
     username: z
       .string()
-      .describe(
-        "The username of the person making the recommendation in the conversation",
-      ),
+      .describe('The username of the person making the recommendation in the conversation'),
 
     ticker: z
       .string()
       .optional()
       .nullable()
       .describe(
-        "The ticker symbol of the recommended asset (e.g., 'BTC', 'AAPL'). Optional as recommendations may discuss assets without explicit tickers",
+        "The ticker symbol of the recommended asset (e.g., 'BTC', 'AAPL'). Optional as recommendations may discuss assets without explicit tickers"
       ),
 
     tokenAddress: z
@@ -327,23 +293,23 @@ export const recommendationSchema = z
       .optional()
       .nullable()
       .describe(
-        "The blockchain contract address of the token if mentioned. This helps disambiguate tokens that might share similar names or symbols",
+        'The blockchain contract address of the token if mentioned. This helps disambiguate tokens that might share similar names or symbols'
       ),
 
     type: z
-      .enum(["BUY", "SELL", "DONT_BUY", "DONT_SELL", "NONE"])
+      .enum(['BUY', 'SELL', 'DONT_BUY', 'DONT_SELL', 'NONE'])
       .describe(
-        "The type of trading recommendation being made. This captures both positive recommendations (buy/sell) and explicit warnings against actions",
+        'The type of trading recommendation being made. This captures both positive recommendations (buy/sell) and explicit warnings against actions'
       ),
 
     conviction: z
-      .enum(["NONE", "LOW", "MEDIUM", "HIGH"])
+      .enum(['NONE', 'LOW', 'MEDIUM', 'HIGH'])
       .describe(
-        "The level of confidence or urgency expressed in the recommendation, helping prioritize stronger signals",
+        'The level of confidence or urgency expressed in the recommendation, helping prioritize stronger signals'
       ),
   })
   .describe(
-    "Schema for extracting trading recommendations from conversational text, capturing the key components of who made the recommendation, what asset was discussed, what action was recommended, and how strongly it was recommended",
+    'Schema for extracting trading recommendations from conversational text, capturing the key components of who made the recommendation, what asset was discussed, what action was recommended, and how strongly it was recommended'
   );
 
 export function transformTokenRecommendation(dbRec: any): TokenRecommendation {
@@ -351,29 +317,27 @@ export function transformTokenRecommendation(dbRec: any): TokenRecommendation {
     return tokenRecommendationSchema.parse({
       id: dbRec.id || dbRec.recommendation_id,
       entityId: dbRec.entityId || dbRec.recommender_id,
-      chain: dbRec.chain || "unknown",
+      chain: dbRec.chain || 'unknown',
       tokenAddress: dbRec.tokenAddress || dbRec.token_address,
-      type: dbRec.type || "BUY",
-      conviction: dbRec.conviction || "MEDIUM",
-      initialMarketCap:
-        dbRec.initialMarketCap || dbRec.initial_market_cap || "0",
-      initialLiquidity:
-        dbRec.initialLiquidity || dbRec.initial_liquidity || "0",
-      initialPrice: dbRec.initialPrice || dbRec.initial_price || "0",
-      marketCap: dbRec.marketCap || dbRec.market_cap || "0",
-      liquidity: dbRec.liquidity || "0",
-      price: dbRec.price || "0",
+      type: dbRec.type || 'BUY',
+      conviction: dbRec.conviction || 'MEDIUM',
+      initialMarketCap: dbRec.initialMarketCap || dbRec.initial_market_cap || '0',
+      initialLiquidity: dbRec.initialLiquidity || dbRec.initial_liquidity || '0',
+      initialPrice: dbRec.initialPrice || dbRec.initial_price || '0',
+      marketCap: dbRec.marketCap || dbRec.market_cap || '0',
+      liquidity: dbRec.liquidity || '0',
+      price: dbRec.price || '0',
       rugPull: Boolean(dbRec.rugPull || dbRec.rug_pull || false),
       isScam: Boolean(dbRec.isScam || dbRec.is_scam || false),
       riskScore: dbRec.riskScore || dbRec.risk_score || 0,
       performanceScore: dbRec.performanceScore || dbRec.performance_score || 0,
       metadata: dbRec.metadata || {},
-      status: dbRec.status || "ACTIVE",
+      status: dbRec.status || 'ACTIVE',
       createdAt: new Date(dbRec.createdAt || dbRec.created_at || Date.now()),
       updatedAt: new Date(dbRec.updatedAt || dbRec.updated_at || Date.now()),
     });
   } catch (error) {
-    console.error("Error transforming token recommendation:", error);
-    return null;
+    console.error('Error transforming token recommendation:', error);
+    throw error; // Re-throw the error instead of returning null
   }
 }

@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "859303b4-c3ad-4bed-859b-20bd7077e100",
+    "originalMessageId": "1299996703952207873",
+    "userId": "863545673592602655",
+    "username": "DegenSpartan",
+    "timestamp": 1730013766993,
+    "content": "its a token with some lines of code attached",
+    "tokenMentioned": "DEGENAI",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User describes degenai as a token, confirming its existence.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump",
+      "symbol": "degenai",
+      "name": "Degen Spartan AI",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.003502,
+      "calledPriceTimestamp": 1730013766993,
+      "bestPrice": 0.0040333121723861816,
+      "bestPriceTimestamp": 1730618566993,
+      "worstPrice": 0.0032252475623897646,
+      "worstPriceTimestamp": 1732346566993,
+      "idealProfitLoss": 0.0002767524376102353,
+      "idealProfitLossPercent": 7.902696676477307,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438752034
+  },
+  {
+    "callId": "7a2f477c-411a-417e-9aec-0da4a949678b",
+    "originalMessageId": "1300171144543993949",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730055356871,
+    "content": "then moon to half a bil+",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User predicts ai16z will reach half a billion market cap.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730055356871,
+      "bestPrice": 0.24430607079131694,
+      "bestPriceTimestamp": 1731264956871,
+      "worstPrice": 0.1969949868657748,
+      "worstPriceTimestamp": 1732474556871,
+      "idealProfitLoss": 0.030688234075645582,
+      "idealProfitLossPercent": 14.365951152521077,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438752463
+  },
+  {
+    "callId": "027322ba-365d-4951-bf3f-c1951c286c28",
+    "originalMessageId": "1300171208108806335",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730055372026,
+    "content": "we just touched 90 something+ mil",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User mentions ai16z reached 90+ million market cap.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730055372026,
+      "bestPrice": 0.22139786431317438,
+      "bestPriceTimestamp": 1730055372026,
+      "worstPrice": 0.18785999051824648,
+      "worstPriceTimestamp": 1732474572026,
+      "idealProfitLoss": 0.025757846197424883,
+      "idealProfitLossPercent": 12.057909860640043,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438752458
+  },
+  {
+    "callId": "bc777a65-acc4-4ec3-a30d-8c97bd6b8f3c",
+    "originalMessageId": "1300171225913495553",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730055376271,
+    "content": "retraced 50%",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User notes ai16z retraced 50% from its high.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730055376271,
+      "bestPrice": 0.22735305891049065,
+      "bestPriceTimestamp": 1732474576271,
+      "worstPrice": 0.1959370811115214,
+      "worstPriceTimestamp": 1730832976271,
+      "idealProfitLoss": 0.017680755604149972,
+      "idealProfitLossPercent": 8.276816147934001,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438752421
+  },
+  {
+    "callId": "4db9dacb-46cd-4fe5-a003-6dc52ba70c2d",
+    "originalMessageId": "1300171237229858936",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730055378969,
+    "content": "and now bouncing hard",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User indicates ai16z is bouncing back strongly.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730055378969,
+      "bestPrice": 0.23317975553915712,
+      "bestPriceTimestamp": 1730746578969,
+      "worstPrice": 0.20445971918176686,
+      "worstPriceTimestamp": 1732560978969,
+      "idealProfitLoss": 0.019561918823485763,
+      "idealProfitLossPercent": 9.157437002567805,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438752423
+  }
+]

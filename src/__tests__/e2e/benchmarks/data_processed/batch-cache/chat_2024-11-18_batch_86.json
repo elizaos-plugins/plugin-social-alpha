@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "29af0d94-ee5b-470b-948e-f700e911c220",
+    "originalMessageId": "1308204485176463370",
+    "userId": "1256598790849429605",
+    "username": "UoS",
+    "timestamp": 1731970654530,
+    "content": "wow guys UOS is pumping",
+    "nameMentioned": "Universal Operating System",
+    "tokenMentioned": "UOS",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is indicating that UOS is experiencing a price increase.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-18"
+  },
+  {
+    "callId": "1d302d33-07c6-449a-b130-cd43b88f509b",
+    "originalMessageId": "1308204588859654184",
+    "userId": "461750203620524042",
+    "username": "eman8n",
+    "timestamp": 1731970679250,
+    "content": "79HZeHkX9A5WfBg72ankd1ppTXGepoSGpmkxW63wsrHY nearly bonded guys",
+    "caMentioned": "79HZeHkX9A5WfBg72ankd1ppTXGepoSGpmkxW63wsrHY",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is highlighting a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-18"
+  },
+  {
+    "callId": "5eea0af5-8681-4a8a-856f-fd026c127633",
+    "originalMessageId": "1308205129606107277",
+    "userId": "1300775142057705533",
+    "username": "AIMAC",
+    "timestamp": 1731970808174,
+    "content": "just launched a new agent for the swarm ca: 6QBM6Pp1S7yEGK2oByYpdWK3HgJWSeYc63UcSnkFJMC2",
+    "caMentioned": "6QBM6Pp1S7yEGK2oByYpdWK3HgJWSeYc63UcSnkFJMC2",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-18"
+  },
+  {
+    "callId": "39c618bd-e4cf-4f86-8a36-0a574daf0c49",
+    "originalMessageId": "1308205572192997396",
+    "userId": "831476829608738866",
+    "username": "Antagonist.sats",
+    "timestamp": 1731970913695,
+    "content": ".X 79HZeHkX9A5WfBg72ankd1ppTXGepoSGpmkxW63wsrHY",
+    "caMentioned": "79HZeHkX9A5WfBg72ankd1ppTXGepoSGpmkxW63wsrHY",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is highlighting a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-18"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "3e50498a-9cc5-46f4-9402-b5ca94c0194e",
+    "originalMessageId": "1322680113862807692",
+    "userId": "1166356222413385778",
+    "username": "Popopoop",
+    "timestamp": 1735421913353,
+    "content": "SOLENG pumping",
+    "tokenMentioned": "SOLENG",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions SOLENG is pumping, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "82e62036-cef4-4fd6-bfe8-71c8362f1d2d",
+    "originalMessageId": "1322680148524531882",
+    "userId": "1100907083647430756",
+    "username": "Socrate",
+    "timestamp": 1735421921617,
+    "content": "ez ape",
+    "tokenMentioned": "SOLENG",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses intent to invest, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "df0c1725-7125-4d0c-ad25-95c17be7bb0b",
+    "originalMessageId": "1322680175749496842",
+    "userId": "917560931674902588",
+    "username": "Jaba",
+    "timestamp": 1735421928108,
+    "content": ".c Soleng",
+    "tokenMentioned": "SOLENG",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is checking the status of SOLENG, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  }
+]

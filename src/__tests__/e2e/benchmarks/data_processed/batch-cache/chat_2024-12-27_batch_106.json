@@ -1,0 +1,33 @@
+[
+  {
+    "callId": "4e9ee377-4ab3-4f8e-a11d-12d165f0fe2e",
+    "originalMessageId": "1322473495095021618",
+    "userId": "656934801764515860",
+    "username": "Jank Dankins",
+    "timestamp": 1735372651600,
+    "content": "someone on the spaces said they had an ai that was shorting solana meme coins and then forcing it by overselling",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User mentions AI bot shorting Solana memecoins, implying negative sentiment on SOL memecoins as a category",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-27"
+  },
+  {
+    "callId": "18389085-e8b2-4c50-af3c-3ed4f03abc6d",
+    "originalMessageId": "1322473751182573679",
+    "userId": "744104000231702580",
+    "username": "Quanatee",
+    "timestamp": 1735372712656,
+    "content": ".x goatagi",
+    "tokenMentioned": "GOATAGI",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User references GOATAGI token with .x command",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-27"
+  }
+]

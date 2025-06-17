@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "a345fe92-75e2-4755-9e09-6426ccd66b8a",
+    "originalMessageId": "1322555208341127210",
+    "userId": "767798692740071426",
+    "username": "jotarokujo.btc",
+    "timestamp": 1735392133556,
+    "content": ".cc METAV",
+    "tokenMentioned": "METAV",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User is checking the contract code for METAV, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "f2db6f73-ce4e-4cf2-9086-59033c57bd66",
+    "originalMessageId": "1322555309834768444",
+    "userId": "781532025252478987",
+    "username": "10Cents",
+    "timestamp": 1735392157754,
+    "content": "For a tiny caps, Pinkblob is the one to check out.",
+    "nameMentioned": "Pinkblob",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "neutral",
+    "llmReasoning": "User suggests checking out Pinkblob for tiny caps, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "0c0fea71-51c6-4e20-9e22-c471df66604b",
+    "originalMessageId": "1322555375668559947",
+    "userId": "781532025252478987",
+    "username": "10Cents",
+    "timestamp": 1735392173450,
+    "content": "8McGgUg8hxfDJuTHuDugnEqMVu89AYzaurcQUEoupump",
+    "caMentioned": "8McGgUg8hxfDJuTHuDugnEqMVu89AYzaurcQUEoupump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  }
+]

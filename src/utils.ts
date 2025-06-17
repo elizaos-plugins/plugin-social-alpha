@@ -8,7 +8,7 @@ import zodToJsonSchema from "zod-to-json-schema";
  * @returns {any} The JSON schema representing the Zod schema.
  */
 export function getZodJsonSchema(schema: ZodType<any>) {
-  return zodToJsonSchema(schema, "schema").definitions?.schema;
+  return (zodToJsonSchema as any)(schema, "schema").definitions?.schema;
 }
 
 /**
@@ -38,7 +38,7 @@ export function extractXMLFromResponse(output: string, tag: string) {
 export function parseRecommendationsResponse(xmlResponse: string) {
   const parser = new XMLParser({
     ignoreAttributes: false,
-    isArray: (name) => name === "recommendation", // Treat individual recommendations as array elements
+    isArray: (name: string) => name === "recommendation", // Treat individual recommendations as array elements
   });
   const result = parser.parse(xmlResponse);
   return result.new_recommendations?.recommendation || []; // Access the nested array structure
@@ -53,7 +53,7 @@ export function parseRecommendationsResponse(xmlResponse: string) {
 export function parseTokensResponse(xmlResponse: string) {
   const parser = new XMLParser({
     ignoreAttributes: false,
-    isArray: (name) => name === "tokenAddress", // Treat individual recommendations as array elements
+    isArray: (name: string) => name === "tokenAddress", // Treat individual recommendations as array elements
   });
   const result = parser.parse(xmlResponse);
   return result.tokens.tokenAddress || []; // Access the nested array structure

@@ -1,0 +1,48 @@
+[
+  {
+    "callId": "b38cf47a-82d9-49b6-b354-098e7e79ad59",
+    "originalMessageId": "1312027422559834135",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1732882113829,
+    "content": "4GDGSxCdm5CDLHepkp19jk9xqF2T7Vf2iawQTsQapump just checking",
+    "caMentioned": "4GDGSxCdm5CDLHepkp19jk9xqF2T7Vf2iawQTsQapump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is checking a contract address, implying interest in the token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "f1f88cde-2c53-4ad5-a015-77d417319371",
+    "originalMessageId": "1312028115018448896",
+    "userId": "186857450639458306",
+    "username": "Stacker✝",
+    "timestamp": 1732882278924,
+    "content": "should I buy 50 sol?",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is considering buying 50 SOL, indicating a positive sentiment towards SOL.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "0d42555d-c6b2-4c6a-8841-209171034b10",
+    "originalMessageId": "1312028142982139956",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1732882285591,
+    "content": "@Sai  something for u bzmDU6AeYjAQEhe6XE7yUSqQMboNAYzWoWXFvwKpump",
+    "caMentioned": "bzmDU6AeYjAQEhe6XE7yUSqQMboNAYzWoWXFvwKpump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is mentioning a contract address, indicating interest in the token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  }
+]

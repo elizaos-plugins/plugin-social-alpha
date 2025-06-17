@@ -1,0 +1,133 @@
+[
+  {
+    "callId": "548a37c2-5c62-4298-a604-b837985ea2de",
+    "originalMessageId": "1300212746377498628",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730065275521,
+    "content": "and if shaw comes through with the trading stuff + 8% carry then its just a bonus",
+    "nameMentioned": "DegenAI",
+    "tokenMentioned": "DEGENAI",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions potential benefits for DegenAI.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "failed",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mqcDvZLhbiewCaAp1M",
+      "symbol": "DEGENAI",
+      "name": "DEGENAI",
+      "chain": "SOLANA"
+    },
+    "enrichmentError": "Could not get price data"
+  },
+  {
+    "callId": "bc613149-665b-4ed3-b1c1-4402dfd3ffb3",
+    "originalMessageId": "1300212981124304926",
+    "userId": "554773373864116224",
+    "username": "MintMadCow",
+    "timestamp": 1730065331489,
+    "content": "That's how I see it, with degen being somewhat tied to ai16z makes me bullish",
+    "nameMentioned": "DegenAI",
+    "tokenMentioned": "DEGENAI",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User expresses bullish sentiment on DegenAI due to its connection with AI16Z.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "failed",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mqcDvZLhbiewCaAp1M",
+      "symbol": "DEGENAI",
+      "name": "DEGENAI",
+      "chain": "SOLANA"
+    },
+    "enrichmentError": "Could not get price data"
+  },
+  {
+    "callId": "d25d7517-d2ac-4a5e-bdbb-f6da08fc8089",
+    "originalMessageId": "1300213604699603077",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730065480161,
+    "content": "shaw made degen first for fun, in the beginning, degen was very agressive and just cussing at ppl lol",
+    "nameMentioned": "DegenAI",
+    "tokenMentioned": "DEGENAI",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User explains the origin of DegenAI, providing context for its potential.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "failed",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mqcDvZLhbiewCaAp1M",
+      "symbol": "DEGENAI",
+      "name": "DEGENAI",
+      "chain": "SOLANA"
+    },
+    "enrichmentError": "Could not get price data"
+  },
+  {
+    "callId": "9650e028-834c-42b3-a4ee-23852d6eade7",
+    "originalMessageId": "1300213904810446859",
+    "userId": "207145119898402816",
+    "username": "Bobby Axelrod",
+    "timestamp": 1730065551713,
+    "content": "there's still good beta chasing degenai",
+    "nameMentioned": "DegenAI",
+    "tokenMentioned": "DEGENAI",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests there's still good opportunity in DegenAI.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "failed",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mqcDvZLhbiewCaAp1M",
+      "symbol": "DEGENAI",
+      "name": "DEGENAI",
+      "chain": "SOLANA"
+    },
+    "enrichmentError": "Could not get price data"
+  },
+  {
+    "callId": "6cfc54e4-3979-47c1-b9b5-1f6fcf237b49",
+    "originalMessageId": "1300214020045013093",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730065579187,
+    "content": "now degenai is a lot more polished and even more similar. seeing this, my thesis for ai16z was hmm if he can replicate degenspartan this close, why not marc? legit dev for sure",
+    "nameMentioned": "AI16Z",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User expresses confidence in the developer and potential of AI16Z.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730065579187,
+      "bestPrice": 0.23154661948559693,
+      "bestPriceTimestamp": 1731447979187,
+      "worstPrice": 0.20317331702971295,
+      "worstPriceTimestamp": 1730497579187,
+      "idealProfitLoss": 0.017928782769925572,
+      "idealProfitLossPercent": 8.392924039292215,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438780170
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "ebfa815e-4cf6-4d6c-8722-bf64ddf1714a",
+    "originalMessageId": "1313309934561001565",
+    "userId": "531121861111840811",
+    "username": "MYSA",
+    "timestamp": 1733187888518,
+    "content": "EGrUKVGpojPkzRxR4FvduuiuhTfm4HJHCHrFmxu6pump",
+    "caMentioned": "EGrUKVGpojPkzRxR4FvduuiuhTfm4HJHCHrFmxu6pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-02"
+  },
+  {
+    "callId": "5b1ad62e-65a2-4a2b-abd0-415160c80327",
+    "originalMessageId": "1313310054136545401",
+    "userId": "531121861111840811",
+    "username": "MYSA",
+    "timestamp": 1733187917027,
+    "content": "DONT BUY THIS SHIT",
+    "caMentioned": "EGrUKVGpojPkzRxR4FvduuiuhTfm4HJHCHrFmxu6pump",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User is advising against buying the token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-02"
+  },
+  {
+    "callId": "acd3f2e5-6ea7-4bd4-a14e-ac1a636c9fc4",
+    "originalMessageId": "1313310215516721172",
+    "userId": "255491781179867147",
+    "username": "RibTip",
+    "timestamp": 1733187955503,
+    "content": "5QDGeZseY3DGLRHwihktQSXvedaVSBDReEMuFY4UWVMo",
+    "caMentioned": "5QDGeZseY3DGLRHwihktQSXvedaVSBDReEMuFY4UWVMo",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-02"
+  },
+  {
+    "callId": "1b561552-60da-4f19-8ce8-001d76705820",
+    "originalMessageId": "1313311555173093387",
+    "userId": "855347837340090379",
+    "username": "JohnMarsh",
+    "timestamp": 1733188274902,
+    "content": "5QDGeZseY3DGLRHwihktQSXvedaVSBDReEMuFY4UWVMo",
+    "caMentioned": "5QDGeZseY3DGLRHwihktQSXvedaVSBDReEMuFY4UWVMo",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-02"
+  }
+]

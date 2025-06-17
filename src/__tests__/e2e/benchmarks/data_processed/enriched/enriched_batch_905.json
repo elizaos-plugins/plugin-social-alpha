@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "143d9624-be87-4516-9393-c5b270da6ad4",
+    "originalMessageId": "1306241089770098710",
+    "userId": "1305900903353684024",
+    "username": "ktw805",
+    "timestamp": 1731502544587,
+    "content": "let'sgo4J869ikzZt4Gn6vjfTQkY5DqDDwMeP8gcL9EeAkypump",
+    "caMentioned": "4J869ikzZt4Gn6vjfTQkY5DqDDwMeP8gcL9EeAkypump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User posts a contract address with 'let'sgo', implying a positive call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "4J869ikzZt4Gn6vjfTQkY5DqDDwMeP8gcL9EeAkypump",
+      "symbol": "TRUMPEXE",
+      "name": "TRUMP.EXE",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.00000421227543492708,
+      "calledPriceTimestamp": 1731502544587,
+      "bestPrice": 0.000004284209037032021,
+      "bestPriceTimestamp": 1732712144587,
+      "worstPrice": 0.0000033212251478814046,
+      "worstPriceTimestamp": 1733921744587,
+      "idealProfitLoss": 7.193360210494127e-8,
+      "idealProfitLossPercent": 1.7077136387731617,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437904014
+  },
+  {
+    "callId": "a9e6f6c1-57c8-4fad-a82b-64439bde1232",
+    "originalMessageId": "1306241279268491316",
+    "userId": "1232060253504274503",
+    "username": "Otilrac",
+    "timestamp": 1731502589767,
+    "content": "4J869ikzZt4Gn6vjfTQkY5DqDDwMeP8gcL9EeAkypump",
+    "caMentioned": "4J869ikzZt4Gn6vjfTQkY5DqDDwMeP8gcL9EeAkypump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "4J869ikzZt4Gn6vjfTQkY5DqDDwMeP8gcL9EeAkypump",
+      "symbol": "TRUMPEXE",
+      "name": "TRUMP.EXE",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.00000421227543492708,
+      "calledPriceTimestamp": 1731502589767,
+      "bestPrice": 0.0000045182101535639834,
+      "bestPriceTimestamp": 1733662589767,
+      "worstPrice": 0.00000387340141617942,
+      "worstPriceTimestamp": 1732712189767,
+      "idealProfitLoss": 3.059347186369034e-7,
+      "idealProfitLossPercent": 7.262932430775376,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437904037
+  },
+  {
+    "callId": "14a30d8e-85df-456a-a5f4-eb25975d1456",
+    "originalMessageId": "1306241566142103562",
+    "userId": "756963441477943326",
+    "username": "not_in_a_dao_ai",
+    "timestamp": 1731502658163,
+    "content": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+    "caMentioned": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User reposts a contract address, reinforcing the call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+      "symbol": "VIVEK",
+      "name": "Head of D.O.G.E ",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000005998424489046495,
+      "calledPriceTimestamp": 1731502658163,
+      "bestPrice": 0.000005843441720203076,
+      "bestPriceTimestamp": 1731502658163,
+      "worstPrice": 0.000004826275701801158,
+      "worstPriceTimestamp": 1733921858163,
+      "idealProfitLoss": -1.5498276884341904e-7,
+      "idealProfitLossPercent": -2.5837245951237273,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437904072
+  },
+  {
+    "callId": "177d20cc-d386-4e37-955b-8055deef97f0",
+    "originalMessageId": "1306241714704613461",
+    "userId": "918516563240419328",
+    "username": "Franxxco",
+    "timestamp": 1731502693583,
+    "content": "7JofsgKgD3MerQDa7hEe4dfkY3c3nMnsThZzUuYyTFpE",
+    "caMentioned": "7JofsgKgD3MerQDa7hEe4dfkY3c3nMnsThZzUuYyTFpE",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "7JofsgKgD3MerQDa7hEe4dfkY3c3nMnsThZzUuYyTFpE",
+      "symbol": "GRIN",
+      "name": "Cheshire Grin",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000018038333683310843,
+      "calledPriceTimestamp": 1731502693583,
+      "bestPrice": 0.000020573265706980406,
+      "bestPriceTimestamp": 1734008293583,
+      "worstPrice": 0.000017128269641293756,
+      "worstPriceTimestamp": 1732798693583,
+      "idealProfitLoss": 0.0000025349320236695625,
+      "idealProfitLossPercent": 14.053027669705957,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437903982
+  },
+  {
+    "callId": "3f085634-170d-4df1-a1be-e185c26124fb",
+    "originalMessageId": "1306241826344407051",
+    "userId": "918516563240419328",
+    "username": "Franxxco",
+    "timestamp": 1731502720200,
+    "content": "Dont fade boys",
+    "caMentioned": "7JofsgKgD3MerQDa7hEe4dfkY3c3nMnsThZzUuYyTFpE",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User encourages not to fade, implying positive sentiment for the previously mentioned token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "7JofsgKgD3MerQDa7hEe4dfkY3c3nMnsThZzUuYyTFpE",
+      "symbol": "GRIN",
+      "name": "Cheshire Grin",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000018038333683310843,
+      "calledPriceTimestamp": 1731502720200,
+      "bestPrice": 0.00001884744616508545,
+      "bestPriceTimestamp": 1731589120200,
+      "worstPrice": 0.000014063306732948263,
+      "worstPriceTimestamp": 1734008320200,
+      "idealProfitLoss": 8.091124817746051e-7,
+      "idealProfitLossPercent": 4.485516766569187,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437904032
+  }
+]

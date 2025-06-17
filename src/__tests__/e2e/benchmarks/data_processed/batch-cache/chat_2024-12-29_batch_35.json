@@ -1,0 +1,48 @@
+[
+  {
+    "callId": "ca67ad4c-425c-4702-9c40-957c513889a5",
+    "originalMessageId": "1322972488698695851",
+    "userId": "1210517654708686870",
+    "username": "jeweloffuture_2.0",
+    "timestamp": 1735491620946,
+    "content": "8nzCP3xmkpKAq2un87d6Jgg4r3JnvgUSkFemfLbFpump",
+    "caMentioned": "8nzCP3xmkpKAq2un87d6Jgg4r3JnvgUSkFemfLbFpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "b7fab8ba-134b-48ba-b413-7428ca3f7c45",
+    "originalMessageId": "1322974313413873734",
+    "userId": "357913740600934400",
+    "username": "Cosmik",
+    "timestamp": 1735492055992,
+    "content": "shit btc is being a downer again",
+    "nameMentioned": "Bitcoin",
+    "tokenMentioned": "BTC",
+    "chain": "bitcoin",
+    "sentiment": "negative",
+    "conviction": "low",
+    "llmReasoning": "User expresses negative sentiment towards BTC.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "8f0099e9-6f88-45e3-86bc-17cafc4c4e0a",
+    "originalMessageId": "1322974584466833419",
+    "userId": "403325839594487818",
+    "username": "VincentVG",
+    "timestamp": 1735492120616,
+    "content": "Palms holding well!! @gableon | palms any updates?",
+    "tokenMentioned": "Palms",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User is inquiring about updates on Palms, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  }
+]

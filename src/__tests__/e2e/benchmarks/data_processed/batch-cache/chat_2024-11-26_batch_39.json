@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "a5a5cb6d-4633-404f-8adc-8c551fb6a785",
+    "originalMessageId": "1311019628406767636",
+    "userId": "448823570580242442",
+    "username": "Rey",
+    "timestamp": 1732641836979,
+    "content": "dev burn 50% he supply, dex paid \n\nweb good\n\n6kxaqBx9R7BmQjaqsNwHw5W1cUqkf2LWKbcp167Mpump",
+    "caMentioned": "6kxaqBx9R7BmQjaqsNwHw5W1cUqkf2LWKbcp167Mpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address and describes positive actions by the dev, implying a positive sentiment.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "537a39d5-4197-4436-80c8-84837d1d462e",
+    "originalMessageId": "1311020890745733121",
+    "userId": "531121861111840811",
+    "username": "MYSA",
+    "timestamp": 1732642137944,
+    "content": "J7Q9gHS3FoXideE6Yk43gQPk7YMbr3wi15FGChVzpump aped, will dyor later",
+    "caMentioned": "J7Q9gHS3FoXideE6Yk43gQPk7YMbr3wi15FGChVzpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User mentions a contract address and states intent to research later, implying a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "45b65986-ab24-4303-931a-a329ceb4994d",
+    "originalMessageId": "1311021900859707494",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1732642378774,
+    "content": "someone in this :/ DAu7V1y1w7hp6zFsE7Hq7ZYT62EkK4tsTZNKsXNwpump",
+    "caMentioned": "DAu7V1y1w7hp6zFsE7Hq7ZYT62EkK4tsTZNKsXNwpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  }
+]

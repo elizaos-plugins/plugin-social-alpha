@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "af795193-933b-4e75-9689-8ad779ae0f0c",
+    "originalMessageId": "1310991705708953660",
+    "userId": "901765234589564939",
+    "username": "HOLYdeym!",
+    "timestamp": 1732635179689,
+    "content": "7STaKQtEnNhivgPUb7aeJ7vq5xgVjAUZk8HuucwYpump",
+    "caMentioned": "7STaKQtEnNhivgPUb7aeJ7vq5xgVjAUZk8HuucwYpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "97962f27-9f71-4ce2-a156-27c04ae122ca",
+    "originalMessageId": "1310992825734791169",
+    "userId": "1175255582580691085",
+    "username": "4paw",
+    "timestamp": 1732635446724,
+    "content": "7LdpsJjDF9uiipsQwfYt9nsespNE6QHDz3pMkBxa4oMJ",
+    "caMentioned": "7LdpsJjDF9uiipsQwfYt9nsespNE6QHDz3pMkBxa4oMJ",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "f611d2aa-313d-4988-bba7-c90f212dd042",
+    "originalMessageId": "1310993944385032284",
+    "userId": "120322824614182912",
+    "username": "CJ",
+    "timestamp": 1732635713431,
+    "content": "ubc dip might be generational entry",
+    "tokenMentioned": "UBC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests UBC dip might be a good entry point.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "037bd93c-4d5d-4c76-a6c4-112f7f56a487",
+    "originalMessageId": "1310994083178614865",
+    "userId": "918516563240419328",
+    "username": "Franxxco",
+    "timestamp": 1732635746522,
+    "content": "I live in Brazil too, now we have an idiot president who made the dollar go to 6 reais (our currency) if anyone wants to help me\n41N7ncCdBcbiGL6VSVim8eSwBHRa4tgNdtwyB6ZACHDY",
+    "caMentioned": "41N7ncCdBcbiGL6VSVim8eSwBHRa4tgNdtwyB6ZACHDY",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  }
+]

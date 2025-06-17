@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "7c7d27e2-29e9-4e27-acee-53470405de8c",
+    "originalMessageId": "1323401486931071037",
+    "userId": "1100907083647430756",
+    "username": "Socrate",
+    "timestamp": 1735593902095,
+    "content": "AM84n1iLdxgVTAyENBcLdjXoyvjentTbu5Q6EpKV1PeG dao adress",
+    "caMentioned": "AM84n1iLdxgVTAyENBcLdjXoyvjentTbu5Q6EpKV1PeG",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "37bce633-6ffc-4624-bcc6-89fadbe9c95b",
+    "originalMessageId": "1323401524574945420",
+    "userId": "1319447861078917171",
+    "username": "Stan",
+    "timestamp": 1735593911070,
+    "content": "This will fly\n\n8BQdCZt4hdbbn62bYgN2LrFf2pvMeZt8xaqZqHN3pump",
+    "caMentioned": "8BQdCZt4hdbbn62bYgN2LrFf2pvMeZt8xaqZqHN3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "b9c56d60-43d4-49fa-85e8-c73215092d7b",
+    "originalMessageId": "1323401648575348828",
+    "userId": "264038959426830337",
+    "username": "Refunt (BlockGuard)",
+    "timestamp": 1735593940634,
+    "content": ".cc H1NPJkh3KUJGbpjkyQD5qG1nrpFW7tHiqek5SAbMpump 3h",
+    "caMentioned": "H1NPJkh3KUJGbpjkyQD5qG1nrpFW7tHiqek5SAbMpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "907cf68d-bd33-45fe-9a68-2327b7f0e5c1",
+    "originalMessageId": "1323402252882415637",
+    "userId": "781532025252478987",
+    "username": "10Cents",
+    "timestamp": 1735594084712,
+    "content": "Shitter Mooncoin will it moon idk\n\n7mQCQqmf1dStBqhBsLGy5UAeWXVTAPzN7WbyDk1Vpump",
+    "caMentioned": "7mQCQqmf1dStBqhBsLGy5UAeWXVTAPzN7WbyDk1Vpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  }
+]

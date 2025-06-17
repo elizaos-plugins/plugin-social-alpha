@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "dc522bbf-399a-4a45-8559-0ab53dbde592",
+    "originalMessageId": "1314607899561164800",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1733497347489,
+    "content": "about this shizzle bruh EDQQ6qGPy6LkSSzJg6BbZaHKYsKpYceTGvbGqtTMpump",
+    "caMentioned": "EDQQ6qGPy6LkSSzJg6BbZaHKYsKpYceTGvbGqtTMpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-06"
+  },
+  {
+    "callId": "6bf0e502-4615-4fee-bb1b-6d4a923d0d84",
+    "originalMessageId": "1314608903228624907",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1733497586782,
+    "content": "BbtrrZ2ExfCTzrndFBCx5iNDFXxuVxNMdEZ14BZxpump",
+    "caMentioned": "BbtrrZ2ExfCTzrndFBCx5iNDFXxuVxNMdEZ14BZxpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-06"
+  }
+]

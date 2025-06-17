@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "934e13e5-473f-429c-85a6-1a5432b7a11a",
+    "originalMessageId": "1308879944901726229",
+    "userId": "475044516395745312",
+    "username": "kimbo",
+    "timestamp": 1732131696678,
+    "content": "surprised $tiktok isnt sending harder",
+    "tokenMentioned": "tiktok",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "low",
+    "llmReasoning": "User is surprised that $tiktok isn't performing as expected, indicating a negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "feaf7dcb-5541-4cb7-95ef-b0ade3e70191",
+    "originalMessageId": "1308880033758318745",
+    "userId": "475044516395745312",
+    "username": "kimbo",
+    "timestamp": 1732131717863,
+    "content": "same with $babyoil lol i thought that one was funny",
+    "tokenMentioned": "babyoil",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions $babyoil, indicating interest or investment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "66e3da86-cda4-48cb-9e18-9e6bfc46f15a",
+    "originalMessageId": "1308880039072497665",
+    "userId": "1011297759246160022",
+    "username": "ika",
+    "timestamp": 1732131719130,
+    "content": "i think $fyp has more potential personnally",
+    "tokenMentioned": "fyp",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User believes $fyp has more potential, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "c8114f8d-e44b-48ab-adfc-b1ee95f8cfa9",
+    "originalMessageId": "1308880344828874784",
+    "userId": "475044516395745312",
+    "username": "kimbo",
+    "timestamp": 1732131792028,
+    "content": "was thinking $tiktok would be like the beehive for all tiktok memes and go up as they go up",
+    "tokenMentioned": "tiktok",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User expected $tiktok to perform well with tiktok memes, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-20"
+  }
+]

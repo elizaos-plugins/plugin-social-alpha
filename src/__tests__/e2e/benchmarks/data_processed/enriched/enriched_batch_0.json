@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "3b94c425-1859-4dc7-9dd9-b79f96d92ee2",
+    "originalMessageId": "1299989559358263407",
+    "userId": "252139682631122945",
+    "username": "VavityVa",
+    "timestamp": 1730012063589,
+    "content": "good price.",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User indicates a positive sentiment about a token's price, likely referring to ai16z from context.",
+    "certainty": "low",
+    "fileSource": "chat_2024-10-26",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "ai16z",
+      "name": "ai16z",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.2139,
+      "calledPriceTimestamp": 1730012063589,
+      "bestPrice": 0.23499067019628186,
+      "bestPriceTimestamp": 1730271263589,
+      "worstPrice": 0.2046668519213605,
+      "worstPriceTimestamp": 1732517663589,
+      "idealProfitLoss": 0.021090670196281858,
+      "idealProfitLossPercent": 9.860060867826956,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438748221
+  },
+  {
+    "callId": "dab9c1a7-e64f-47a8-96f2-3fd35cb97809",
+    "originalMessageId": "1299989708595789844",
+    "userId": "689009715388219423",
+    "username": "kezfourtwez",
+    "timestamp": 1730012099170,
+    "content": "what do you think about ai16z @DegenSpartan",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User asks for opinion on ai16z, indicating interest.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-26",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "ai16z",
+      "name": "ai16z",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.2139,
+      "calledPriceTimestamp": 1730012099170,
+      "bestPrice": 0.21439775905732075,
+      "bestPriceTimestamp": 1730012099170,
+      "worstPrice": 0.17471282008732666,
+      "worstPriceTimestamp": 1730876099170,
+      "idealProfitLoss": 0.03918717991267334,
+      "idealProfitLossPercent": 18.32032721490105,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438747384
+  },
+  {
+    "callId": "8bad49b5-65e1-489a-9a11-4a9a49c8dfe8",
+    "originalMessageId": "1299989901491834901",
+    "userId": "465930462498652170",
+    "username": "SotoAlt | WAWE",
+    "timestamp": 1730012145160,
+    "content": "good price",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User indicates a positive sentiment about a token's price, likely referring to ai16z from context.",
+    "certainty": "low",
+    "fileSource": "chat_2024-10-26",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "ai16z",
+      "name": "ai16z",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.2139,
+      "calledPriceTimestamp": 1730012145160,
+      "bestPrice": 0.22972832893985054,
+      "bestPriceTimestamp": 1731394545160,
+      "worstPrice": 0.20309098716464757,
+      "worstPriceTimestamp": 1730962545160,
+      "idealProfitLoss": 0.015828328939850533,
+      "idealProfitLossPercent": 7.399873277162475,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438747374
+  },
+  {
+    "callId": "557edf94-eac9-4223-ade5-5b467a38bbdd",
+    "originalMessageId": "1299989996098293852",
+    "userId": "465930462498652170",
+    "username": "SotoAlt | WAWE",
+    "timestamp": 1730012167716,
+    "content": "@DegenSpartan price prediction for ai16z?",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User asks for price prediction of ai16z, showing interest.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-26",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "ai16z",
+      "name": "ai16z",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.2139,
+      "calledPriceTimestamp": 1730012167716,
+      "bestPrice": 0.21902064522893847,
+      "bestPriceTimestamp": 1730098567716,
+      "worstPrice": 0.1678613089862197,
+      "worstPriceTimestamp": 1731999367716,
+      "idealProfitLoss": 0.0460386910137803,
+      "idealProfitLossPercent": 21.523464709574707,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438747486
+  },
+  {
+    "callId": "70e898b7-fd65-433d-abbc-eea05a8346df",
+    "originalMessageId": "1299990007963979848",
+    "userId": "863545673592602655",
+    "username": "DegenSpartan",
+    "timestamp": 1730012170545,
+    "content": "ai16z will pump because it has to \n\n nothing else matters",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User predicts ai16z will pump, showing strong positive sentiment.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-26",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "ai16z",
+      "name": "ai16z",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.2139,
+      "calledPriceTimestamp": 1730012170545,
+      "bestPrice": 0.21737081284155257,
+      "bestPriceTimestamp": 1730012170545,
+      "worstPrice": 0.16185055590155129,
+      "worstPriceTimestamp": 1732344970545,
+      "idealProfitLoss": 0.0034708128415525674,
+      "idealProfitLossPercent": 1.6226333995103166,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438747372
+  }
+]

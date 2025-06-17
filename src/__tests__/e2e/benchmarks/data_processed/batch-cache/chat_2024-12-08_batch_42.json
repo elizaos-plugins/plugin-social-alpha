@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "ae3492d5-125d-43a0-8a65-9f04eb0f034f",
+    "originalMessageId": "1315525202771316776",
+    "userId": "372064931681533962",
+    "username": "Veki",
+    "timestamp": 1733716049617,
+    "content": "HPAFyMjbFZDhdrF58f1RdyfYVn86o1i7ANha6u6hF7U2",
+    "caMentioned": "HPAFyMjbFZDhdrF58f1RdyfYVn86o1i7ANha6u6hF7U2",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "e9db39b2-2e6d-4042-a722-ddbd25c4df06",
+    "originalMessageId": "1315526227104235591",
+    "userId": "372064931681533962",
+    "username": "Veki",
+    "timestamp": 1733716293837,
+    "content": "shit we need that 220k i am going to ape on this and lets hope it goes to 1 milion",
+    "caMentioned": "HPAFyMjbFZDhdrF58f1RdyfYVn86o1i7ANha6u6hF7U2",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User expresses intent to invest in the token, hoping for a significant return.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "87dfaaf4-c3bd-4565-8488-4b33fb86add7",
+    "originalMessageId": "1315526548832387142",
+    "userId": "1100907083647430756",
+    "username": "Socrate",
+    "timestamp": 1733716370543,
+    "content": ".dp HPAFyMjbFZDhdrF58f1RdyfYVn86o1i7ANha6u6hF7U2",
+    "caMentioned": "HPAFyMjbFZDhdrF58f1RdyfYVn86o1i7ANha6u6hF7U2",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "245b0b12-4047-4706-a1ae-ae0f0796130f",
+    "originalMessageId": "1315526827313467473",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1733716436938,
+    "content": "fair enough. Gonna ape in and hold ser",
+    "caMentioned": "HPAFyMjbFZDhdrF58f1RdyfYVn86o1i7ANha6u6hF7U2",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses intent to invest in the token, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  }
+]

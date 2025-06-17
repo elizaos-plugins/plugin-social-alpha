@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "d028a08b-132a-4220-81fc-87cd1bf15b1e",
+    "originalMessageId": "1315719452830204009",
+    "userId": "503630344986165258",
+    "username": "velja",
+    "timestamp": 1733762362440,
+    "content": "its this coin EgN39454EHVTrj2mayHBjjg7Z4SmyZ1VKWjDpUPPpump",
+    "caMentioned": "EgN39454EHVTrj2mayHBjjg7Z4SmyZ1VKWjDpUPPpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "f74ac563-7b18-4ece-a5f4-7c60b33ce1f0",
+    "originalMessageId": "1315720407696805981",
+    "userId": "744104000231702580",
+    "username": "Quanatee",
+    "timestamp": 1733762590098,
+    "content": "Even that upcoming HomeAI is gonna be a time + sol rug pull, but we'll still play hot potato with it",
+    "nameMentioned": "HomeAI",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User suggests HomeAI is a potential rug pull but acknowledges participation.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "79149fd2-e160-4b41-9d9c-44d14d032ff9",
+    "originalMessageId": "1315720499023839252",
+    "userId": "1100907083647430756",
+    "username": "Socrate",
+    "timestamp": 1733762611872,
+    "content": "google home remix now launched on pump fun guys! millions are programmed for sure",
+    "nameMentioned": "Google Home Remix",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a launch on pump.fun, implying a call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-09"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "bd773f03-92af-4c6f-bcfe-00d7d32d7ca9",
+    "originalMessageId": "1308311503908110357",
+    "userId": "851969606741786645",
+    "username": "Deleted User",
+    "timestamp": 1731996169784,
+    "content": "shaw posted his wallet, some alpha in there\n\n\nDScqtGwFoDTme2Rzdjpdb2w7CtuKc6Z8KF7hMhbx8ugQ",
+    "caMentioned": "DScqtGwFoDTme2Rzdjpdb2w7CtuKc6Z8KF7hMhbx8ugQ",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-18"
+  },
+  {
+    "callId": "4aa85f91-de9b-4cf7-a848-35c65563d0b6",
+    "originalMessageId": "1308313012221775934",
+    "userId": "724150556318498869",
+    "username": "OVT",
+    "timestamp": 1731996529394,
+    "content": "13x on bakkt, I should have aped that shit",
+    "tokenMentioned": "Bakkt",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User regrets not investing in Bakkt, indicating it was a good opportunity.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-18"
+  },
+  {
+    "callId": "d65962f8-5832-40c0-8389-38fd9741476f",
+    "originalMessageId": "1308313067729190943",
+    "userId": "238086587873886220",
+    "username": "MasoRich",
+    "timestamp": 1731996542628,
+    "content": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
+    "caMentioned": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-18"
+  }
+]

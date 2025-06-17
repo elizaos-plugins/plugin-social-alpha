@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "baa21acd-9813-4730-b2ba-17ad9ad4734f",
+    "originalMessageId": "1311688424968949841",
+    "userId": "148210374271827969",
+    "username": "Al-Ghayb",
+    "timestamp": 1732801290505,
+    "content": "https://solscan.io/account/DQs57R9746QCqzgB7KENRTVvC78Hpc1MwWkcq3sECicH this bot account gonna drop off once its bonded",
+    "caMentioned": "DQs57R9746QCqzgB7KENRTVvC78Hpc1MwWkcq3sECicH",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "d38d794a-9a9f-4bd1-a3cf-c013f35fe710",
+    "originalMessageId": "1311691841439141940",
+    "userId": "148210374271827969",
+    "username": "Al-Ghayb",
+    "timestamp": 1732802105055,
+    "content": ".dp CmsQyyHFSrQXJKsrQjkRrg7WfcRdRRhPY1vTmSp3pump",
+    "caMentioned": "CmsQyyHFSrQXJKsrQjkRrg7WfcRdRRhPY1vTmSp3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "04b2539c-a463-4dca-a994-6fa0e13f0849",
+    "originalMessageId": "1317380924975087688",
+    "userId": "1305746315224813578",
+    "username": "4paw",
+    "timestamp": 1734158488268,
+    "content": "7h5AzpYTAnh4Gyux8Gqko5Fvx4AYQBZdkzHZ2CsBudvJ is it larp",
+    "caMentioned": "7h5AzpYTAnh4Gyux8Gqko5Fvx4AYQBZdkzHZ2CsBudvJ",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "6ff74b90-f368-482c-b9e7-9e75868b84a2",
+    "originalMessageId": "1317383201290719272",
+    "userId": "904586441823244310",
+    "username": "andré (skott)",
+    "timestamp": 1734159030984,
+    "content": "CX9YDTED9TWgVXVoFy8JL9gSSAEWcTv4mzjLSv17LQsj",
+    "caMentioned": "CX9YDTED9TWgVXVoFy8JL9gSSAEWcTv4mzjLSv17LQsj",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  }
+]

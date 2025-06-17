@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "7556b51d-d8dc-4354-9030-37608671444d",
+    "originalMessageId": "1300205878141653033",
+    "userId": "387401735666270212",
+    "username": "Decentralize Or Die (e/acc)",
+    "timestamp": 1730063638006,
+    "content": "i derisked on goat panic",
+    "tokenMentioned": "GOAT",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User mentions derisking on GOAT, implying a sell.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump",
+      "symbol": "GOAT",
+      "name": "Goatseus Maximus",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.11885978545094104,
+      "calledPriceTimestamp": 1730063638006,
+      "bestPrice": 0.13814874519198567,
+      "bestPriceTimestamp": 1731100438006,
+      "worstPrice": 0.11615916382409738,
+      "worstPriceTimestamp": 1730063638006,
+      "idealProfitLoss": 0.0027006216268436606,
+      "idealProfitLossPercent": 2.272107102160581,
+      "windowDays": 14
+    },
+    "enrichedAt": 1749438770292
+  },
+  {
+    "callId": "15e82f8b-c567-4ae8-a0c9-dd0064885eac",
+    "originalMessageId": "1300205896625815688",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063642413,
+    "content": "then when he was doing ai16z i just aped into it just like degen",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User mentions buying both AI16Z and DegenAI.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063642413,
+      "bestPrice": 0.2844613995120648,
+      "bestPriceTimestamp": 1730841242413,
+      "worstPrice": 0.22368736169941908,
+      "worstPriceTimestamp": 1732223642413,
+      "idealProfitLoss": 0.07084356279639342,
+      "idealProfitLossPercent": 33.16369264177471,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438770292
+  },
+  {
+    "callId": "45e7f48b-1aa9-4765-9d70-3843f68ab856",
+    "originalMessageId": "1300205978012221481",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063661817,
+    "content": "because money is rotating out of goat into ai16z and degen",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User explains money rotating from GOAT to AI16Z and DegenAI.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063661817,
+      "bestPrice": 0.24127021658531705,
+      "bestPriceTimestamp": 1732569261817,
+      "worstPrice": 0.20220210974048855,
+      "worstPriceTimestamp": 1730150061817,
+      "idealProfitLoss": 0.027652379869645693,
+      "idealProfitLossPercent": 12.944789767930962,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438770292
+  },
+  {
+    "callId": "ce52aabb-5062-4fa9-aa9e-479947397510",
+    "originalMessageId": "1300206017237487779",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063671169,
+    "content": "ppl realizing that truth is meh",
+    "tokenMentioned": "GOAT",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User suggests Truth Terminal (GOAT) is underwhelming, implying a bearish sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump",
+      "symbol": "GOAT",
+      "name": "Goatseus Maximus",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.11885978545094104,
+      "calledPriceTimestamp": 1730063671169,
+      "bestPrice": 0.11714939383383632,
+      "bestPriceTimestamp": 1730236471169,
+      "worstPrice": 0.10473978961266461,
+      "worstPriceTimestamp": 1731100471169,
+      "idealProfitLoss": 0.01411999583827643,
+      "idealProfitLossPercent": 11.879540068751352,
+      "windowDays": 14
+    },
+    "enrichedAt": 1749438770292
+  },
+  {
+    "callId": "60b12195-ee47-460c-be0c-a4f8f22f6891",
+    "originalMessageId": "1300206220111515831",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063719538,
+    "content": "noice, i bought after it was funded unfortunately but hey",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions buying AI16Z after funding, indicating positive sentiment.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063719538,
+      "bestPrice": 0.2555334527561981,
+      "bestPriceTimestamp": 1732482919538,
+      "worstPrice": 0.21638924038329796,
+      "worstPriceTimestamp": 1730150119538,
+      "idealProfitLoss": 0.04191561604052674,
+      "idealProfitLossPercent": 19.62177722842361,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438770292
+  }
+]

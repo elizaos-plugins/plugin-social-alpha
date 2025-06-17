@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "484d1e4f-d1d2-42b8-8692-d65f4c49683e",
+    "originalMessageId": "1314135658310144030",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733384756401,
+    "content": "broke agi is cooking, buy now before its too late",
+    "tokenMentioned": "Broke AGI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is suggesting to buy Broke AGI before it's too late, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "dfc84258-e009-4539-a99d-e27277291fb5",
+    "originalMessageId": "1314136513977782292",
+    "userId": "825237352560721940",
+    "username": "miu",
+    "timestamp": 1733384960408,
+    "content": "3HgcdkiKYRRPdZwPMrh1D6EZSwv9gAkskJPvPaWsYwQv",
+    "caMentioned": "3HgcdkiKYRRPdZwPMrh1D6EZSwv9gAkskJPvPaWsYwQv",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  }
+]

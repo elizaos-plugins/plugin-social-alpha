@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "5cfe5aff-9dfa-49c8-aad0-8c4c509b2f71",
+    "originalMessageId": "1313656397124210758",
+    "userId": "416704453601787935",
+    "username": "Klimq",
+    "timestamp": 1733270491630,
+    "content": "Cm9fXHhjJay9kssd7zHoebsa3vpJaG7za7Fo3pXSEAmm",
+    "caMentioned": "Cm9fXHhjJay9kssd7zHoebsa3vpJaG7za7Fo3pXSEAmm",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "d92ef907-4ee5-4724-ab98-4fef703a9020",
+    "originalMessageId": "1313657369875714048",
+    "userId": "255788704851951616",
+    "username": "h3rt",
+    "timestamp": 1733270723552,
+    "content": "2zf4pnRR54hvBkeBikYSB6V2qBi8T1TeJmW6C82Wpump",
+    "caMentioned": "2zf4pnRR54hvBkeBikYSB6V2qBi8T1TeJmW6C82Wpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "db19fab4-0d9b-439f-b83e-5579423707d7",
+    "originalMessageId": "1313657445968777217",
+    "userId": "351890923476615169",
+    "username": "Unit",
+    "timestamp": 1733270741694,
+    "content": "0x19Ca55855378D8Dea763252376698F9615e7c7b5 (Virtuals) Friends of mine made this (that's my disclaimer) so I bought some to support. Gives access to a pumpvision/memescope style platform for Virtuals if you have 600k+ of the token",
+    "tokenMentioned": "Virtuals",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions buying a token called Virtuals.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "366c5287-9694-4c26-a86b-28e4c43105af",
+    "originalMessageId": "1313657660045787156",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733270792734,
+    "content": "aped again and I'm fresh out of SOL now",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User states they have aped again and are out of SOL, indicating a call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  }
+]

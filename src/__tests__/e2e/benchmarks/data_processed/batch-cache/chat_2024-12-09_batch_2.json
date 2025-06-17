@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "826d5065-acbf-4fdf-818a-30086fb44fdc",
+    "originalMessageId": "1315620733275340800",
+    "userId": "261844124762636290",
+    "username": "Zardique",
+    "timestamp": 1733738825864,
+    "content": "MpKFzJoSXY8Gr3YNshxNA3rvR1BdmUAoSZh28yUpump",
+    "caMentioned": "MpKFzJoSXY8Gr3YNshxNA3rvR1BdmUAoSZh28yUpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "9195e3e3-49c7-49bb-85b4-26b91a5fd9d6",
+    "originalMessageId": "1315623744995196989",
+    "userId": "261844124762636290",
+    "username": "Zardique",
+    "timestamp": 1733739543914,
+    "content": "there was a CA posted previously on their Twitter https://pump.fun/coin/H36PsjkWJu2s3oPPPVYrgV38SBDW9BuULdjPQXBWpump",
+    "caMentioned": "H36PsjkWJu2s3oPPPVYrgV38SBDW9BuULdjPQXBWpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a link to a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-09"
+  }
+]

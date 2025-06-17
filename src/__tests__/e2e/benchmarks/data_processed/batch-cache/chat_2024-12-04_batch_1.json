@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "168fae19-1e6d-4d90-90a0-4eb54147f131",
+    "originalMessageId": "1313792796917760041",
+    "userId": "261844124762636290",
+    "username": "Zardique",
+    "timestamp": 1733303011875,
+    "content": "41efRpYgL94NCMktNH84fkVxwSFkhahJ58X4UfVC292h",
+    "caMentioned": "41efRpYgL94NCMktNH84fkVxwSFkhahJ58X4UfVC292h",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  }
+]

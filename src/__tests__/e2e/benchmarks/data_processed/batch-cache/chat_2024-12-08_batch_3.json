@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "67adbbf7-1f83-42b9-81d7-ea30416b349d",
+    "originalMessageId": "1315276276264730736",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733656700913,
+    "content": "52eniz3JfrejHL9CCyu9cPKUvbYkEWkc85VcEZS7pump",
+    "caMentioned": "52eniz3JfrejHL9CCyu9cPKUvbYkEWkc85VcEZS7pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "b6684428-ec5f-4462-a150-a9d645b6eb69",
+    "originalMessageId": "1315281208107864145",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733657876756,
+    "content": "3Y6WbtBHVpNVg8g6Fu1LCRMWx7LyZ272V7GqrAr7m5VW i need this one to grow hard",
+    "caMentioned": "3Y6WbtBHVpNVg8g6Fu1LCRMWx7LyZ272V7GqrAr7m5VW",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "2615afec-0b18-4a0e-be74-e2d450bf59d2",
+    "originalMessageId": "1315281225782530139",
+    "userId": "1311401906354257972",
+    "username": "Rugpull",
+    "timestamp": 1733657880970,
+    "content": "Can someone check out this project. No idea if I should jump into a little 71K5DMFYQ91vFraVsoaXDrxbcBsRhfWLyaD55SK2pump",
+    "caMentioned": "71K5DMFYQ91vFraVsoaXDrxbcBsRhfWLyaD55SK2pump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is considering investing in the token associated with the contract address.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "1a57bdfd-962d-47e0-aaf6-1cb5825b1e93",
+    "originalMessageId": "1313472176023797853",
+    "userId": "1307441609733963896",
+    "username": "Mndy Aoorray",
+    "timestamp": 1733226569897,
+    "content": "7bD1RTKSZSsneDXDoMincSswED3uBnzuRyHi5tJ7ZjwN",
+    "caMentioned": "7bD1RTKSZSsneDXDoMincSswED3uBnzuRyHi5tJ7ZjwN",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "a1b6eda0-3985-4b83-b2d5-2a00c1969e22",
+    "originalMessageId": "1313472206189236295",
+    "userId": "816323354474709053",
+    "username": "Cinnamoon",
+    "timestamp": 1733226577089,
+    "content": ".dp Cr6atEwyydgcXUjpoF7LqEFAXmxf11tPN8mQJfGtpump",
+    "caMentioned": "Cr6atEwyydgcXUjpoF7LqEFAXmxf11tPN8mQJfGtpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "3cc7924f-72e8-4a62-8b94-dbbe131c49c1",
+    "originalMessageId": "1313472800236769342",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733226718721,
+    "content": "GO VYNIA",
+    "tokenMentioned": "VYNIA",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is expressing positive sentiment towards VYNIA.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "c19698e1-8caf-405e-93a0-0e3fe103ddb3",
+    "originalMessageId": "1313474195090313238",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733227051280,
+    "content": "go for 1000x",
+    "tokenMentioned": "VYNIA",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is expressing positive sentiment towards VYNIA with a high potential for gains.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "9582fd12-8926-49e4-b02f-0267a7820fbd",
+    "originalMessageId": "1317307625603469345",
+    "userId": "1158224225178505337",
+    "username": "zilyx",
+    "timestamp": 1734141012336,
+    "content": "J2MwPfzGJopVLSwHe5YruTnoza6J4PNWqGL8EwNfpump",
+    "caMentioned": "J2MwPfzGJopVLSwHe5YruTnoza6J4PNWqGL8EwNfpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "b43aada9-c93b-4980-a852-4f9f0ad9fe49",
+    "originalMessageId": "1317309084457762877",
+    "userId": "305113320686485514",
+    "username": "Siddhartha",
+    "timestamp": 1734141360154,
+    "content": "3d8VrFB5ESJDZiHJMDBhiR6djkGzd61op9WYguifpump",
+    "caMentioned": "3d8VrFB5ESJDZiHJMDBhiR6djkGzd61op9WYguifpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "b0223f42-3330-44be-bcc4-700b1e180be0",
+    "originalMessageId": "1317309323780554784",
+    "userId": "784622484439564328",
+    "username": "franklyn.eth",
+    "timestamp": 1734141417213,
+    "content": "bullis asf on $Zods",
+    "tokenMentioned": "Zods",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is bullish on Zods.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-13"
+  }
+]

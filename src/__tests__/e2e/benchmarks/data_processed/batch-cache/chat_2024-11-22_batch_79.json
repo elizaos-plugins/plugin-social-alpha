@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "1c7ce2ab-1aca-46e4-aad8-adb8d9db4290",
+    "originalMessageId": "1309787539984482315",
+    "userId": "365658034749440000",
+    "username": "Tony Serrano",
+    "timestamp": 1732348084208,
+    "content": "guys should we buy flower on this dip",
+    "tokenMentioned": "flower",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is considering buying the token 'flower' on a dip, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "a943405e-d023-413c-8f86-0790e52ce302",
+    "originalMessageId": "1309787792955674644",
+    "userId": "365658034749440000",
+    "username": "Tony Serrano",
+    "timestamp": 1732348144521,
+    "content": "might get in here on flower",
+    "tokenMentioned": "flower",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is considering entering a position in 'flower', indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "ff069aae-5d04-4fb3-9616-a23cb1a4790e",
+    "originalMessageId": "1309787858441207880",
+    "userId": "1158224225178505337",
+    "username": "zilyx - noob crypto",
+    "timestamp": 1732348160134,
+    "content": "D31BkMewERdR56TdnMD7fvh4fySjFKeG54jZ2rQwpump in a dip",
+    "caMentioned": "D31BkMewERdR56TdnMD7fvh4fySjFKeG54jZ2rQwpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address in a dip, implying a potential buying opportunity.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "16ab0701-902e-411f-a1c0-a6eb63149178",
+    "originalMessageId": "1309788225656590356",
+    "userId": "1158224225178505337",
+    "username": "zilyx - noob crypto",
+    "timestamp": 1732348247685,
+    "content": "D31BkMewERdR56TdnMD7fvh4fySjFKeG54jZ2rQwpump",
+    "caMentioned": "D31BkMewERdR56TdnMD7fvh4fySjFKeG54jZ2rQwpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User repeats a contract address, drawing attention to it.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "e4b8c6b5-c64b-408b-9b65-63ce5b0d48f3",
+    "originalMessageId": "1315661540220735518",
+    "userId": "708269174413328416",
+    "username": "Crispy✨",
+    "timestamp": 1733748554998,
+    "content": ".x 9sqa899GR5UqAusC4nikGKRiVxi2d9MsNJcKLfAKpump",
+    "caMentioned": "9sqa899GR5UqAusC4nikGKRiVxi2d9MsNJcKLfAKpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "6fd6b7f4-247c-4976-b188-179a1f5f75cf",
+    "originalMessageId": "1315663306467577876",
+    "userId": "831476829608738866",
+    "username": "Antagonist.sats",
+    "timestamp": 1733748976104,
+    "content": "8SpPaFLycx897D6sowPZkEkcNdDahzRZb5itr6D8pump",
+    "caMentioned": "8SpPaFLycx897D6sowPZkEkcNdDahzRZb5itr6D8pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "7ff56fb8-b900-44fa-81e0-3eadd51264fa",
+    "originalMessageId": "1315669301273038919",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733750405377,
+    "content": "Shit lmfao. \n\nI joke fudded in NAVAL TG chat just now and got booted, didn't get my punch line off in time. Quick everyone buy a massive bag of NAVAL so @BORED lets me back in 😂 \n\nStill a whale there, this is financial advice.",
+    "tokenMentioned": "NAVAL",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is suggesting to buy NAVAL.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "146e1a8c-1a44-4523-a68c-bcc3206a504d",
+    "originalMessageId": "1315670161495425084",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733750610470,
+    "content": "BUT, on the bright side .... BAGS ARE CHEAP! \n\nThis is a 100m coin larping around as a 3-6M coin right now.\n\nCan't wait for him to turn the promo jets on 🚀",
+    "tokenMentioned": "NAVAL",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is bullish on NAVAL, suggesting it's undervalued.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-09"
+  }
+]

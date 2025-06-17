@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "00d7ba91-3fb5-43c6-b63d-1500325702ab",
+    "originalMessageId": "1321165855245205535",
+    "userId": "518797447942766617",
+    "username": "JudahHex",
+    "timestamp": 1735060885965,
+    "content": "yeah im still going to hold onto my ZODs it doesnt make sense for the dev to build something for months like this just to rug. product is literally beginning to roll out",
+    "tokenMentioned": "ZODS",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is expressing confidence in ZODS token despite price drop",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-24"
+  },
+  {
+    "callId": "695a17d0-a266-46a6-aeca-654e0267fcdb",
+    "originalMessageId": "1321165957196152852",
+    "userId": "238086587873886220",
+    "username": "MasoRich",
+    "timestamp": 1735060910272,
+    "content": "Dev not rugging, it’s retards jeeting on fud",
+    "tokenMentioned": "ZODS",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User defending ZODS against FUD",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-24"
+  },
+  {
+    "callId": "c4405b2a-47e8-466b-a154-0678bd4e7122",
+    "originalMessageId": "1321166376953712661",
+    "userId": "1320988969969651815",
+    "username": "William (not william)",
+    "timestamp": 1735061010350,
+    "content": "i will not post ca i only come for presale as guy said he is ai16z and i found discord in shaws twitter",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions ai16z presale context",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-24"
+  },
+  {
+    "callId": "dbc62a4f-2bc6-4f76-9db9-b721b4a23c6a",
+    "originalMessageId": "1321166984410300528",
+    "userId": "367629761297645568",
+    "username": "Komen",
+    "timestamp": 1735061155179,
+    "content": "Elbru created solimp yesterday and rug I always remember",
+    "tokenMentioned": "SOLIMP",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User mentions SOLIMP token was rugged",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-24"
+  }
+]

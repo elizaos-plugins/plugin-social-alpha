@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "74e53e53-c7ef-42a2-8955-ebb8f27b30fd",
+    "originalMessageId": "1311995368233500683",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1732874471482,
+    "content": "CNT1cbvCxBev8WTjmrhKxXFFfnXzBxoaZSNkhKwtpump",
+    "caMentioned": "CNT1cbvCxBev8WTjmrhKxXFFfnXzBxoaZSNkhKwtpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "4237e470-9590-4988-ae33-62cfe833d92e",
+    "originalMessageId": "1300202967873487010",
+    "userId": "399014163113967633",
+    "username": "rick",
+    "timestamp": 1730062944144,
+    "content": "errrr guys, what's $sma and why it's going to 0?",
+    "tokenMentioned": "SMA",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User asks about $SMA token, indicating it's dropping in value.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "4994XJ88RjBS5SKv7qSe4fM3qtPRYzqYBQLe4NRDpump",
+      "symbol": "sma",
+      "name": "sma",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.00002002,
+      "calledPriceTimestamp": 1730062944144,
+      "bestPrice": 0.000022948704203778187,
+      "bestPriceTimestamp": 1731099744144,
+      "worstPrice": 0.000019696743804307872,
+      "worstPriceTimestamp": 1730235744144,
+      "idealProfitLoss": 3.2325619569212964e-7,
+      "idealProfitLossPercent": 1.6146663121484994,
+      "windowDays": 14
+    },
+    "enrichedAt": 1749438767109
+  },
+  {
+    "callId": "ef49bfe5-1bb6-403d-9fad-2249144e4601",
+    "originalMessageId": "1300203007249747969",
+    "userId": "399014163113967633",
+    "username": "rick",
+    "timestamp": 1730062953532,
+    "content": "but mainly, why it's related to ai16z?",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions AI16Z in relation to another token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730062953532,
+      "bestPrice": 0.25102817433639674,
+      "bestPriceTimestamp": 1731704553532,
+      "worstPrice": 0.2068333296495925,
+      "worstPriceTimestamp": 1730235753532,
+      "idealProfitLoss": 0.00678450706607886,
+      "idealProfitLossPercent": 3.1760021402656298,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438766818
+  },
+  {
+    "callId": "39f6eb0f-999a-4427-b301-98b370ffc84f",
+    "originalMessageId": "1300203320480370750",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063028212,
+    "content": "in terms of ai memes, we are all sooo early. too early in fact",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests it's early for AI meme tokens, implying potential growth.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063028212,
+      "bestPrice": 0.21648081348893708,
+      "bestPriceTimestamp": 1731531828212,
+      "worstPrice": 0.1847980817372054,
+      "worstPriceTimestamp": 1730927028212,
+      "idealProfitLoss": 0.0028629767732657185,
+      "idealProfitLossPercent": 1.3402330148471566,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438766816
+  },
+  {
+    "callId": "e58430d3-cd0d-4436-96af-cfda27c9dedd",
+    "originalMessageId": "1300203419528728577",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063051827,
+    "content": "prices may dump more or just range and go nowhere, but this is like defi summer again",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User compares current market to DeFi summer, implying potential for growth in AI tokens.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063051827,
+      "bestPrice": 0.24814100769347525,
+      "bestPriceTimestamp": 1731877451827,
+      "worstPrice": 0.21437215341240023,
+      "worstPriceTimestamp": 1730235851827,
+      "idealProfitLoss": 0.034523170977803885,
+      "idealProfitLossPercent": 16.16118368605837,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438766759
+  },
+  {
+    "callId": "df83d0c8-53e2-4563-b94a-6ac194aeb082",
+    "originalMessageId": "1300203521936855072",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063076243,
+    "content": "eventually the major ai meme names will all go to the moon",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User predicts major AI meme tokens will increase significantly in value.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063076243,
+      "bestPrice": 0.271108146643567,
+      "bestPriceTimestamp": 1731877476243,
+      "worstPrice": 0.2057776376431529,
+      "worstPriceTimestamp": 1730235876243,
+      "idealProfitLoss": 0.057490309927895666,
+      "idealProfitLossPercent": 26.912691754488723,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438766732
+  }
+]

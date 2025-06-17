@@ -227,6 +227,7 @@ export enum Conviction {
   MEDIUM = "MEDIUM",
   HIGH = "HIGH",
   VERY_HIGH = "VERY_HIGH",
+  NEUTRAL = "NEUTRAL",
 }
 
 /**
@@ -954,7 +955,7 @@ export interface Recommendation {
   tokenAddress: string; // e.g., "So11111111111111111111111111111111111111112"
   chain: SupportedChain; // The blockchain the token is on
   recommendationType: "BUY" | "SELL"; // 'SELL' for criticisms
-  conviction: "NONE" | "LOW" | "MEDIUM" | "HIGH"; // Sender's conviction level
+  conviction: Conviction; // Sender's conviction level - CHANGED TO USE ENUM
   rawMessageQuote: string; // The exact text snippet that is the recommendation/criticism
   priceAtRecommendation?: number; // Price of the token when the recommendation was made
   metrics?: RecommendationMetric; // Performance metrics, calculated later by a task
@@ -969,6 +970,8 @@ export interface UserTrustProfile {
   lastTrustScoreCalculationTimestamp: number; // When trustScore was last calculated
   lastTradeDecisionMadeTimestamp?: number; // For the 12-hour cooldown for *acting* on this user's recs
   recommendations: Recommendation[]; // Array of recommendations made by this user
+  // Allow additional properties for Metadata compatibility
+  [key: string]: any;
 }
 
 // Type alias for the data field within the ElizaOS Component
@@ -988,21 +991,25 @@ export interface TokenAPIData {
   name?: string;
   symbol?: string;
   currentPrice?: number;
-  ath?: number; // All-Time High
-  atl?: number; // All-Time Low
-  priceAtRecommendation?: number; // Price snapshot when the recommendation was made (if fetched at that time)
-  priceHistory?: Array<{ timestamp: number; price: number }>; // For historical analysis
+  ath?: number;
+  atl?: number;
+  priceHistory?: { timestamp: number, price: number }[];
   liquidity?: number;
   marketCap?: number;
-  isKnownScam?: boolean; // From external data sources if available
+  isKnownScam?: boolean;
+}
+
+export interface HighValueHolder {
+  holderAddress: string;
+  balanceUsd: string;
 }
 
 // Data structure for frontend leaderboard entries
 export interface LeaderboardEntry {
+  rank?: number;
   userId: UUID;
   username?: string; // Display name for the user
   trustScore: number;
-  rank?: number; // Calculated dynamically
   recommendations: Recommendation[]; // Full recommendation history for drill-down
 }
 
@@ -1031,7 +1038,10 @@ export interface ICommunityInvestorService {
     recommendation: Recommendation,
     tokenData: TokenAPIData,
   ): Promise<RecommendationMetric>;
-  calculateUserTrustScore(userId: UUID, runtime: IAgentRuntime): Promise<void>;
+  calculateUserTrustScore(
+    userId: UUID,
+    runtime: IAgentRuntime,
+  ): Promise<number>;
   getRecencyWeight(recommendationTimestamp: number): number;
   getConvictionWeight(conviction: Recommendation["conviction"]): number;
   getLeaderboardData(runtime: IAgentRuntime): Promise<LeaderboardEntry[]>;

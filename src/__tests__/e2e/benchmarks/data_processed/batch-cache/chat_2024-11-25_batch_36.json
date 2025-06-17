@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "498dbc45-c4db-4eda-a8aa-da03ae2297e1",
+    "originalMessageId": "1310688916226965584",
+    "userId": "801155277227294760",
+    "username": "martinz",
+    "timestamp": 1732562989051,
+    "content": "Serious volume on Rogue\nwhat a winner if you reloaded at 0.0002 \n(I didn't)",
+    "tokenMentioned": "Rogue",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions serious volume on Rogue, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "7c5f2a1b-e20a-4c4e-8981-6f9689e22319",
+    "originalMessageId": "1310689234809651201",
+    "userId": "851172561084481607",
+    "username": "laurent Castellani",
+    "timestamp": 1732563065007,
+    "content": "C2pgi48XeWtqjD9qCeWV9CcSGRtjHiEesbqstiHepump",
+    "caMentioned": "C2pgi48XeWtqjD9qCeWV9CcSGRtjHiEesbqstiHepump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "acafc287-3569-4cd0-b158-43f0a004c0fc",
+    "originalMessageId": "1310689327692513320",
+    "userId": "1108083049742209036",
+    "username": "Bluff",
+    "timestamp": 1732563087152,
+    "content": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
+    "caMentioned": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  }
+]

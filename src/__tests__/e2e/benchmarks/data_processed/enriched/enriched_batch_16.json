@@ -1,0 +1,121 @@
+[
+  {
+    "callId": "0a53b140-65c2-4f70-a2bd-eedb9a6d7079",
+    "originalMessageId": "1300211454867144836",
+    "userId": "554773373864116224",
+    "username": "MintMadCow",
+    "timestamp": 1730064967601,
+    "content": "Can someone give me a thesis for degenai",
+    "tokenMentioned": "DEGENAI",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User asks for a thesis on DegenAI, showing interest in the token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "failed",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mqcDvZLhbiewCaAp1M",
+      "symbol": "DEGENAI",
+      "name": "DEGENAI",
+      "chain": "SOLANA"
+    },
+    "enrichmentError": "Could not get price data"
+  },
+  {
+    "callId": "2070c17d-4a17-49cc-b7db-df409702b7a0",
+    "originalMessageId": "1300212001133432944",
+    "userId": "554773373864116224",
+    "username": "MintMadCow",
+    "timestamp": 1730065097841,
+    "content": "Can I ask what makes degenai a better more entertaining ai agent?",
+    "nameMentioned": "DegenAI",
+    "tokenMentioned": "DEGENAI",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is asking about DegenAI, implying interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "failed",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mqcDvZLhbiewCaAp1M",
+      "symbol": "DEGENAI",
+      "name": "DEGENAI",
+      "chain": "SOLANA"
+    },
+    "enrichmentError": "Could not get price data"
+  },
+  {
+    "callId": "cf54ebe6-5dfa-4a3e-a5d9-b0f63cf60f33",
+    "originalMessageId": "1300212064824066258",
+    "userId": "554773373864116224",
+    "username": "MintMadCow",
+    "timestamp": 1730065113026,
+    "content": "I got a bag but my mental model atm is still being figured out",
+    "nameMentioned": "DegenAI",
+    "tokenMentioned": "DEGENAI",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions having a bag of DegenAI.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "failed",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mqcDvZLhbiewCaAp1M",
+      "symbol": "DEGENAI",
+      "name": "DEGENAI",
+      "chain": "SOLANA"
+    },
+    "enrichmentError": "Could not get price data"
+  },
+  {
+    "callId": "47764f44-bfc2-47b5-ae6b-48a27ba4112c",
+    "originalMessageId": "1300212305107226697",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730065170314,
+    "content": "but even if its not more entertaining, it doesnt matter tbh. this whole meta is going up",
+    "nameMentioned": "DegenAI",
+    "tokenMentioned": "DEGENAI",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is bullish on the entire AI meta, including DegenAI.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "failed",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mqcDvZLhbiewCaAp1M",
+      "symbol": "DEGENAI",
+      "name": "DEGENAI",
+      "chain": "SOLANA"
+    },
+    "enrichmentError": "Could not get price data"
+  },
+  {
+    "callId": "f01ffe6b-0c8a-4c3b-8bec-d540b043b3a7",
+    "originalMessageId": "1300212485084807220",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730065213224,
+    "content": "if fartcoin can go to 30milly and doesnt do anything, degen might just have a chance. esp being tied to ai16z at the hip",
+    "nameMentioned": "DegenAI",
+    "tokenMentioned": "DEGENAI",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User compares DegenAI to other meme coins, suggesting potential.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "failed",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mqcDvZLhbiewCaAp1M",
+      "symbol": "DEGENAI",
+      "name": "DEGENAI",
+      "chain": "SOLANA"
+    },
+    "enrichmentError": "Could not get price data"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "5e3ac03d-1469-4d57-bb5d-42afdafa4d1b",
+    "originalMessageId": "1323709126324260964",
+    "userId": "842106247264469012",
+    "username": "CertifiedShia",
+    "timestamp": 1735667249042,
+    "content": "We can do better than 30k MC on $KEO",
+    "tokenMentioned": "KEO",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is optimistic about $KEO reaching a higher market cap.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-31"
+  }
+]

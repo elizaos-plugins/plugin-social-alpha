@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "6ac1a99c-7621-4427-9b29-9274237042ea",
+    "originalMessageId": "1310652334216450060",
+    "userId": "1307441609733963896",
+    "username": "Mndy Aoorray",
+    "timestamp": 1732554267220,
+    "content": "Dp. 45hMxUznkUPWrgLkvcogW6jzc8CX9ZgZ5Jb21Cqepump",
+    "caMentioned": "45hMxUznkUPWrgLkvcogW6jzc8CX9ZgZ5Jb21Cqepump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "3aabda5f-ce1c-4344-9b86-38808e651bb5",
+    "originalMessageId": "1310652575623938069",
+    "userId": "461750203620524042",
+    "username": "eman8n",
+    "timestamp": 1732554324776,
+    "content": "I'm holding and adding $UOS",
+    "tokenMentioned": "UOS",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is holding and adding to their position in UOS, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "433713f4-d775-41d7-9f0d-6cb62e8e9af0",
+    "originalMessageId": "1310653278853271634",
+    "userId": "1307441609733963896",
+    "username": "Mndy Aoorray",
+    "timestamp": 1732554492439,
+    "content": "I'm not even joking you guys ape anything but a guy comes out with a shitcoin casino powered by ai16z and you aren't amazed? 74yEfuLwCUSj5KEyLxF7VT2qo2PgNcJ7BVjYitrYvm8e",
+    "tokenMentioned": "ai16z",
+    "caMentioned": "74yEfuLwCUSj5KEyLxF7VT2qo2PgNcJ7BVjYitrYvm8e",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address related to a casino powered by ai16z, indicating a call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "182d8b7b-4a46-46e7-b556-c7d7eaa51237",
+    "originalMessageId": "1310653286457806973",
+    "userId": "461750203620524042",
+    "username": "eman8n",
+    "timestamp": 1732554494252,
+    "content": "$AIDM starting to climb - and dev just bought",
+    "tokenMentioned": "AIDM",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions AIDM starting to climb and a dev buying, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  }
+]

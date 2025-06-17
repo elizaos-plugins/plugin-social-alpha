@@ -4,7 +4,7 @@
  * This file centralizes all configuration options for the trading system.
  */
 
-import type { UUID } from "./types";
+import type { UUID } from './types';
 
 /**
  * Buy amount configuration
@@ -56,7 +56,7 @@ export interface MemoryConfig {
 export const DEFAULT_TRADING_CONFIG: TradingConfig = {
   slippageBps: 100, // 1%
   forceSimulation: false,
-  defaultChain: "solana",
+  defaultChain: 'solana',
   maxPositionsPerToken: 3,
   maxPositionsPerRecommender: 5,
   minLiquidityUsd: 10000, // $10k
@@ -74,7 +74,7 @@ export const DEFAULT_TRADING_CONFIG: TradingConfig = {
  * Default database configuration
  */
 export const DEFAULT_DATABASE_CONFIG: DatabaseConfig = {
-  schemaVersion: "1.0",
+  schemaVersion: '1.0',
   enableCaching: true,
   cacheTimeout: 3600, // 1 hour
 };
@@ -83,7 +83,7 @@ export const DEFAULT_DATABASE_CONFIG: DatabaseConfig = {
  * Default memory configuration
  */
 export const DEFAULT_MEMORY_CONFIG: MemoryConfig = {
-  embeddingModel: "text-embedding-ada-002",
+  embeddingModel: 'text-embedding-ada-002',
   embeddingDimension: 1536,
   similarityThreshold: 0.7,
   cacheTimeout: 3600, // 1 hour
@@ -94,11 +94,12 @@ export const DEFAULT_MEMORY_CONFIG: MemoryConfig = {
  * IMPORTANT: Must match the enum in types.ts
  */
 export enum Conviction {
-  NONE = "NONE",
-  LOW = "LOW",
-  MEDIUM = "MEDIUM",
-  HIGH = "HIGH",
-  VERY_HIGH = "VERY_HIGH",
+  NONE = 'NONE',
+  LOW = 'LOW',
+  MEDIUM = 'MEDIUM',
+  HIGH = 'HIGH',
+  VERY_HIGH = 'VERY_HIGH',
+  NEUTRAL = 'NEUTRAL',
 }
 
 /**
@@ -106,12 +107,12 @@ export enum Conviction {
  * IMPORTANT: Must match the enum in types.ts
  */
 export enum RecommendationType {
-  BUY = "BUY",
-  DONT_BUY = "DONT_BUY",
-  SELL = "SELL",
-  DONT_SELL = "DONT_SELL",
-  NONE = "NONE",
-  HOLD = "HOLD",
+  BUY = 'BUY',
+  DONT_BUY = 'DONT_BUY',
+  SELL = 'SELL',
+  DONT_SELL = 'DONT_SELL',
+  NONE = 'NONE',
+  HOLD = 'HOLD',
 }
 
 /**
@@ -119,10 +120,10 @@ export enum RecommendationType {
  * IMPORTANT: Must match the enum in types.ts
  */
 export enum TransactionType {
-  BUY = "BUY",
-  SELL = "SELL",
-  TRANSFER_IN = "transfer_in",
-  TRANSFER_OUT = "transfer_out",
+  BUY = 'BUY',
+  SELL = 'SELL',
+  TRANSFER_IN = 'transfer_in',
+  TRANSFER_OUT = 'transfer_out',
 }
 
 /**
@@ -209,3 +210,15 @@ export function getVolumeMultiplier(volume: number): number {
   if (volume < 500000) return 1.25;
   return 1.5;
 }
+
+// ===================== CONSTANTS =====================
+// Moved from constants.ts
+
+export const SOLANA_NETWORK_ID = 1399811149;
+
+export const SOL_ADDRESS = 'So11111111111111111111111111111111111111112';
+export const USDC_ADDRESS = 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v';
+export const BTC_ADDRESS = '3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh'; // WORMHOLE
+export const ETH_ADDRESS = '7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs'; // WORMHOLE
+
+export const TRUST_LEADERBOARD_WORLD_SEED = 'trust-leaderboard-world-v1'; // Added version for future changes

@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "c817c330-52f8-4c19-9776-ef8c0d4c6bde",
+    "originalMessageId": "1300206250226880623",
+    "userId": "343526121184428035",
+    "username": "arctx",
+    "timestamp": 1730063726718,
+    "content": "Wen binance listing",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User asks about Binance listing for AI16Z, implying potential price increase.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063726718,
+      "bestPrice": 0.28047806509872464,
+      "bestPriceTimestamp": 1731532526718,
+      "worstPrice": 0.21812992284807253,
+      "worstPriceTimestamp": 1730150126718,
+      "idealProfitLoss": 0.06686022838305328,
+      "idealProfitLossPercent": 31.298991418982148,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438771776
+  },
+  {
+    "callId": "5a281b19-71c8-46ba-b5e3-bb54d90d4a89",
+    "originalMessageId": "1300206488287051809",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063783476,
+    "content": "now we sit and watch ai16z go to 150m+",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User predicts AI16Z will reach 150m+ market cap.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063783476,
+      "bestPrice": 0.224134052941344,
+      "bestPriceTimestamp": 1730754983476,
+      "worstPrice": 0.20087905034449913,
+      "worstPriceTimestamp": 1731186983476,
+      "idealProfitLoss": 0.010516216225672642,
+      "idealProfitLossPercent": 4.922911114238971,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438771684
+  },
+  {
+    "callId": "ec3e12e1-4737-4339-b62f-6c880e8070ce",
+    "originalMessageId": "1300206626053292092",
+    "userId": "562056248992989204",
+    "username": "Aarishaa (Severa)",
+    "timestamp": 1730063816322,
+    "content": "150m+ into another 50% dump ? what do you think",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User asks about potential dump after 150m+ for AI16Z.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063816322,
+      "bestPrice": 0.28466485631901706,
+      "bestPriceTimestamp": 1732569416322,
+      "worstPrice": 0.2179452446277255,
+      "worstPriceTimestamp": 1730063816322,
+      "idealProfitLoss": -0.004327407912054132,
+      "idealProfitLossPercent": -2.0257708712844886,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438771669
+  },
+  {
+    "callId": "85b5fdcd-dfca-4c54-ace9-1f4a00469899",
+    "originalMessageId": "1300206725294592010",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063839983,
+    "content": "yea for these kinds of coins, 30 - 50% is like a normal occurence",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User explains volatility for AI16Z, implying it's normal for the token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063839983,
+      "bestPrice": 0.22268177942028242,
+      "bestPriceTimestamp": 1731964639983,
+      "worstPrice": 0.19670339885006655,
+      "worstPriceTimestamp": 1730150239983,
+      "idealProfitLoss": 0.016914437865604814,
+      "idealProfitLossPercent": 7.918083117805463,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438771636
+  },
+  {
+    "callId": "502fa7d2-712e-4bb5-80c0-4ec1d4d7ba5f",
+    "originalMessageId": "1300206763395649617",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063849067,
+    "content": "we may even get a 30 - 40% dip on the way to 150m",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User predicts potential dip on the way to 150m for AI16Z.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063849067,
+      "bestPrice": 0.2620958959198744,
+      "bestPriceTimestamp": 1731187049067,
+      "worstPrice": 0.20254428205809039,
+      "worstPriceTimestamp": 1732483049067,
+      "idealProfitLoss": 0.011073554657580975,
+      "idealProfitLossPercent": 5.183815559521862,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438771684
+  }
+]

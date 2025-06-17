@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "25e60a2d-65fd-4ec3-9277-f2e28cec6d61",
+    "originalMessageId": "1313487642654146591",
+    "userId": "811670495366873108",
+    "username": "noycos",
+    "timestamp": 1733230257429,
+    "content": "ABXW1ZYLeE3ZNrK7zFprrVDJkbqpqxfUDsCo2pEipump",
+    "caMentioned": "ABXW1ZYLeE3ZNrK7zFprrVDJkbqpqxfUDsCo2pEipump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "0260ad1a-44db-4a1c-8254-01f2905ebfff",
+    "originalMessageId": "1313488084377145394",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1733230362744,
+    "content": "Sosxbt sending tf is it actually?",
+    "tokenMentioned": "SOSXBT",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is questioning if SOSXBT is performing well.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "f143aa07-ff35-4d2c-811c-8b85df1c6d14",
+    "originalMessageId": "1313489659476840501",
+    "userId": "1162569240155529287",
+    "username": "AnimePlace",
+    "timestamp": 1733230738277,
+    "content": "Sosxbt 1m",
+    "tokenMentioned": "SOSXBT",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions SOSXBT reaching 1 million, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "52d1f089-5d98-4ac5-b38e-0fd0cbb045fe",
+    "originalMessageId": "1312942122873131048",
+    "userId": "416704453601787935",
+    "username": "Klimq",
+    "timestamp": 1733100195378,
+    "content": "top holder has 850k in wallet and its not a wallet im pretty sure is Latuche the KOL and he follows the twitter also good concept 5% to dao BRkSSCsW7iu73q6LtmHst32QKeqR6BvpeM5K4BGitptK",
+    "caMentioned": "BRkSSCsW7iu73q6LtmHst32QKeqR6BvpeM5K4BGitptK",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-01"
+  },
+  {
+    "callId": "e190650a-e190-426c-9715-aefaa271b289",
+    "originalMessageId": "1312942675028213780",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1733100327022,
+    "content": "Ruby's back!\n\nABHQGzXNoRbJ1sjUsCJ2TmTAo1uMx4EUpV1qYiSVpump",
+    "caMentioned": "ABHQGzXNoRbJ1sjUsCJ2TmTAo1uMx4EUpV1qYiSVpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-01"
+  },
+  {
+    "callId": "fec5ffe9-aac6-4d44-996d-98775c2d1b15",
+    "originalMessageId": "1312942984140034150",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1733100400720,
+    "content": "Kaia dead?",
+    "tokenMentioned": "Kaia",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "low",
+    "llmReasoning": "User is questioning the status of Kaia, implying negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-01"
+  },
+  {
+    "callId": "27297e92-89fb-4ff6-9c4a-205eee17f0e5",
+    "originalMessageId": "1312943282258448394",
+    "userId": "416704453601787935",
+    "username": "Klimq",
+    "timestamp": 1733100471797,
+    "content": "BRkSSCsW7iu73q6LtmHst32QKeqR6BvpeM5K4BGitptK latuche follows and i think hes the top holde r",
+    "caMentioned": "BRkSSCsW7iu73q6LtmHst32QKeqR6BvpeM5K4BGitptK",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-01"
+  }
+]

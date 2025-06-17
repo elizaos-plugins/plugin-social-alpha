@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "a20000ad-4014-4ae9-9e37-e248e03e01ca",
+    "originalMessageId": "1322743620486434857",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1735437054512,
+    "content": "Wen 30M soleng",
+    "tokenMentioned": "Soleng",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is speculating on Soleng reaching 30M, indicating bullish sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "99eb6f45-bae0-46c4-a2a8-a42037f0fe07",
+    "originalMessageId": "1322743960636100639",
+    "userId": "385839041255309312",
+    "username": "saem °",
+    "timestamp": 1735437135610,
+    "content": "ok fine ill top blast some soleng",
+    "tokenMentioned": "Soleng",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses intent to buy more Soleng, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "97824364-987e-4057-b07e-dd0c14f95664",
+    "originalMessageId": "1322745236249645157",
+    "userId": "520095895702863873",
+    "username": "randomuser",
+    "timestamp": 1735437439740,
+    "content": "62HBj6sgMTmZ7zoSstkjj4qHr8TdtSBRANMg9Byopump",
+    "caMentioned": "62HBj6sgMTmZ7zoSstkjj4qHr8TdtSBRANMg9Byopump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  }
+]

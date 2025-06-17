@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "4ad75004-5d4b-41bd-bb29-992862ec7606",
+    "originalMessageId": "1314604234150248478",
+    "userId": "808418812839198771",
+    "username": "izzy3911",
+    "timestamp": 1733496473587,
+    "content": "EDQQ6qGPy6LkSSzJg6BbZaHKYsKpYceTGvbGqtTMpump",
+    "caMentioned": "EDQQ6qGPy6LkSSzJg6BbZaHKYsKpYceTGvbGqtTMpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-06"
+  },
+  {
+    "callId": "fb7cb8e1-6cef-4439-9a3a-7a2a145c2fc5",
+    "originalMessageId": "1314605356227493960",
+    "userId": "808418812839198771",
+    "username": "izzy3911",
+    "timestamp": 1733496741111,
+    "content": "moving EDQQ6qGPy6LkSSzJg6BbZaHKYsKpYceTGvbGqtTMpump",
+    "caMentioned": "EDQQ6qGPy6LkSSzJg6BbZaHKYsKpYceTGvbGqtTMpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is moving a token, indicating trading activity.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-06"
+  },
+  {
+    "callId": "7b5840b5-7c4d-474e-9d05-7a2aefca077b",
+    "originalMessageId": "1314605766677762049",
+    "userId": "503630344986165258",
+    "username": "velja",
+    "timestamp": 1733496838970,
+    "content": ".dp EDQQ6qGPy6LkSSzJg6BbZaHKYsKpYceTGvbGqtTMpump",
+    "caMentioned": "EDQQ6qGPy6LkSSzJg6BbZaHKYsKpYceTGvbGqtTMpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-06"
+  },
+  {
+    "callId": "078950c2-bad9-4d13-be0b-2a0cd3a2209b",
+    "originalMessageId": "1314605941185843283",
+    "userId": "816123544504762391",
+    "username": "Prime",
+    "timestamp": 1733496880576,
+    "content": "Yeah bro. 2 sol gone wtf",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User mentions losing SOL, indicating trading activity.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-06"
+  }
+]

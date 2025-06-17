@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "00c79a8f-61d5-463b-a0b3-79398416ba80",
+    "originalMessageId": "1323950032201977886",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1735724685479,
+    "content": "Holy fuck lmao SMORE almost back at a milly ya'll are crazy FR",
+    "tokenMentioned": "SMORE",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is expressing positive sentiment about SMORE reaching a high value.",
+    "certainty": "medium",
+    "fileSource": "chat_2025-01-01"
+  },
+  {
+    "callId": "04356d8d-de17-4df3-8cd6-b77e46c7fc95",
+    "originalMessageId": "1323950355708641283",
+    "userId": "183431572467351552",
+    "username": "Malion",
+    "timestamp": 1735724762609,
+    "content": "https://pump.fun/coin/ESKoy9dZNkgzJ18aHmmzUwDW5M8Ji6qbxMBt6CgSpump",
+    "caMentioned": "ESKoy9dZNkgzJ18aHmmzUwDW5M8Ji6qbxMBt6CgSpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a link to a pump.fun page for a specific contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2025-01-01"
+  }
+]

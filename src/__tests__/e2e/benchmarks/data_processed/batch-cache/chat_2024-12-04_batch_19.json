@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "9c0a1f11-c19c-4a71-8093-cee87cc2f7bd",
+    "originalMessageId": "1313880515081670746",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733323925515,
+    "content": "mAIchi",
+    "tokenMentioned": "mAIchi",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions mAIchi, indicating interest or involvement.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "9b5131da-2ee0-458d-a57c-1eaa0da5b183",
+    "originalMessageId": "1313880767180443784",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733323985620,
+    "content": "AX3JvRUvN5kA7EhFzjiAWmZQY6SUER73RMAatFQnpump",
+    "caMentioned": "AX3JvRUvN5kA7EhFzjiAWmZQY6SUER73RMAatFQnpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "bde101c6-fbdb-4ce6-b20c-cf660a3c8b45",
+    "originalMessageId": "1313880899883892817",
+    "userId": "303632418907226112",
+    "username": "WolfDotPump🐺",
+    "timestamp": 1733324017259,
+    "content": "Aped 2 sol in this and lost 10 sol.. god dammit",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User mentions losing SOL, indicating a negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "93876cbd-29df-435e-9a6a-0431516f5efe",
+    "originalMessageId": "1313880970197467267",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733324034023,
+    "content": "merlin the ai",
+    "tokenMentioned": "merlinai",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions 'merlin the ai', indicating interest or involvement.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  }
+]

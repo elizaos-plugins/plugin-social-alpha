@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "511cf6dd-0948-4f91-8337-ab5712d86d02",
+    "originalMessageId": "1309690956664274964",
+    "userId": "315559474771525635",
+    "username": "Kehndry",
+    "timestamp": 1732325056950,
+    "content": "Yea. $french .",
+    "tokenMentioned": "french",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User mentions $french, indicating interest or a call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "e7c4ceec-3b8c-4e2b-872d-13a33f41ee97",
+    "originalMessageId": "1309691265171849248",
+    "userId": "238086587873886220",
+    "username": "MasoRich",
+    "timestamp": 1732325130504,
+    "content": "rimor dip coming",
+    "tokenMentioned": "rimor",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User predicts a dip for Rimor, indicating a potential buying opportunity.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "bb4c1a86-7828-4699-9592-7b2ed8c92651",
+    "originalMessageId": "1309691354359660596",
+    "userId": "315559474771525635",
+    "username": "Kehndry",
+    "timestamp": 1732325151768,
+    "content": "$french",
+    "tokenMentioned": "french",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User mentions $french again, reinforcing interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "4687317b-4d17-41b4-90c3-f752433ca71a",
+    "originalMessageId": "1309692833438896219",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1732325504408,
+    "content": "sale $gfc",
+    "tokenMentioned": "gfc",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "neutral",
+    "llmReasoning": "User mentions selling $gfc, indicating a trading action.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  }
+]

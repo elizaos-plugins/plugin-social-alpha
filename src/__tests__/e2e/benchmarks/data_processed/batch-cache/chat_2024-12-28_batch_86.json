@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "56352fd1-295e-4b63-beff-a5c33c88ada7",
+    "originalMessageId": "1322718237183442944",
+    "userId": "1240451108556767273",
+    "username": "wockyslush",
+    "timestamp": 1735431002661,
+    "content": "I shoulda sold my shibori earlier here i feel like but ill take the 2x",
+    "tokenMentioned": "Shibori",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses regret for not selling Shibori earlier, indicating a past positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "559df72d-2b9b-4c18-81cd-79ad4cb9ce4b",
+    "originalMessageId": "1322718766718517248",
+    "userId": "1319447861078917171",
+    "username": "Stan",
+    "timestamp": 1735431128912,
+    "content": "And who is this\n\n5wTLevkkUWzKgRTWKcSjrgdoP8TnrEnXYGaAxFKibsS5",
+    "caMentioned": "5wTLevkkUWzKgRTWKcSjrgdoP8TnrEnXYGaAxFKibsS5",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "ed16f291-bb57-4363-b1a8-dbbfac476bea",
+    "originalMessageId": "1322718890115207278",
+    "userId": "917560931674902588",
+    "username": "Jaba",
+    "timestamp": 1735431158332,
+    "content": "buy morrrrrrrrrrrrrrrr SHIBORI",
+    "tokenMentioned": "Shibori",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is encouraging others to buy more Shibori, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "8cc608dd-1483-4d51-9885-40b888f36b0e",
+    "originalMessageId": "1310514762940944444",
+    "userId": "943882630502428772",
+    "username": "ChungMyung",
+    "timestamp": 1732521467672,
+    "content": "welp I didnt say that you have to talk abt the price of your token, I'm just saying that u dont even have to mention those words if you are really building a big shit because it sounds bearish",
+    "tokenMentioned": "TESLAI",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User is expressing bearish sentiment about TESLAI based on context of dev's communication",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-24"
+  }
+]

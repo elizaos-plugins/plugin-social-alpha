@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "610a1f79-58bd-4fc1-a788-91270a900da7",
+    "originalMessageId": "1311907073860046870",
+    "userId": "181932874365140992",
+    "username": "Affaan",
+    "timestamp": 1732853420463,
+    "content": "CCG5RhXuRfT9UYTimtgaYRMPf2YGDd3sF34a7qj3pump",
+    "caMentioned": "CCG5RhXuRfT9UYTimtgaYRMPf2YGDd3sF34a7qj3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "93cd1c0f-4d4a-4f9d-844e-d0c358422a64",
+    "originalMessageId": "1311907078113333340",
+    "userId": "377569324866732042",
+    "username": "Whatever",
+    "timestamp": 1732853421477,
+    "content": "Kia9gCkcnTRdQLXZ1n9Y1KPKWKmC9dSN6GPnZEapump",
+    "caMentioned": "Kia9gCkcnTRdQLXZ1n9Y1KPKWKmC9dSN6GPnZEapump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "80523112-33df-4579-9180-1bde20a27bc4",
+    "originalMessageId": "1311907889752834169",
+    "userId": "724150556318498869",
+    "username": "OVT",
+    "timestamp": 1732853614987,
+    "content": "Don't say much just ape Merlin \nKia9gCkcnTRdQLXZ1n9Y1KPKWKmC9dSN6GPnZEapump",
+    "tokenMentioned": "Merlin",
+    "caMentioned": "Kia9gCkcnTRdQLXZ1n9Y1KPKWKmC9dSN6GPnZEapump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests buying Merlin and provides a contract address.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "1b7c76aa-8083-4002-aaa6-7f14d9824493",
+    "originalMessageId": "1311908282881019974",
+    "userId": "812814582594535494",
+    "username": "𝔓𝔩𝔞𝔱𝔞",
+    "timestamp": 1732853708716,
+    "content": "bv88GZQfPHeTXHctPPxkbFCAKBCocXFSENYGYBppump\n\n\nPeople are buying to get approved for daos.fun link  for  late capital",
+    "caMentioned": "bv88GZQfPHeTXHctPPxkbFCAKBCocXFSENYGYBppump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  }
+]

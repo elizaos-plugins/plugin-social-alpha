@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "54cb7be2-2bee-48c7-8e55-162ea83fe86e",
+    "originalMessageId": "1314324546672660502",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1733429790896,
+    "content": "Eliza has a new website",
+    "nameMentioned": "Eliza",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions a new website for Eliza, indicating potential interest or activity.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-05"
+  },
+  {
+    "callId": "d8007b20-55dc-4610-8385-79d46825620a",
+    "originalMessageId": "1314324610463956992",
+    "userId": "148210374271827969",
+    "username": "Al-Ghayb",
+    "timestamp": 1733429806105,
+    "content": "yeah, only rugs these days, solana is dead xD",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User expresses negative sentiment about Solana, calling it dead.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-05"
+  },
+  {
+    "callId": "fcc7c48e-1617-447f-a7ce-469dcc52d71f",
+    "originalMessageId": "1314325243950530701",
+    "userId": "108121781537079296",
+    "username": "herby",
+    "timestamp": 1733429957140,
+    "content": "EBGaJP7srpUUN8eRdta1MsojrNtweuHYsdP3P1TRpump",
+    "caMentioned": "EBGaJP7srpUUN8eRdta1MsojrNtweuHYsdP3P1TRpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-05"
+  },
+  {
+    "callId": "b5521016-c8ff-46b9-aa3c-a58fb49ef4ca",
+    "originalMessageId": "1314325528693440532",
+    "userId": "1077595440498884638",
+    "username": "kokni_dev",
+    "timestamp": 1733430025028,
+    "content": "DwoNRpAVPHEW9qYAq9RjJ7aUK7o2Ft19aMz8y6sZpump",
+    "caMentioned": "DwoNRpAVPHEW9qYAq9RjJ7aUK7o2Ft19aMz8y6sZpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-05"
+  }
+]

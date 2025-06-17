@@ -1,0 +1,48 @@
+[
+  {
+    "callId": "fc034f07-14d4-4bf1-9369-9a292d2ef4b0",
+    "originalMessageId": "1323870517828259901",
+    "userId": "690213568758808621",
+    "username": "stankela",
+    "timestamp": 1735705727775,
+    "content": "i aped sol idc",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User aped into SOL, indicating a positive sentiment towards Solana.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-31"
+  },
+  {
+    "callId": "f6d8c97a-5628-4baf-94c8-8419cf6ce636",
+    "originalMessageId": "1323871419930644600",
+    "userId": "503630344986165258",
+    "username": "velja",
+    "timestamp": 1735705942853,
+    "content": ".dp 5XEQq6pPqvo2yx2DeUihBfXu9JsZaLwXZUQ5TwHmpump",
+    "caMentioned": "5XEQq6pPqvo2yx2DeUihBfXu9JsZaLwXZUQ5TwHmpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-31"
+  },
+  {
+    "callId": "1df52afa-4b7c-4ebf-ba69-330657e5a18f",
+    "originalMessageId": "1323872985517396070",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1735706316118,
+    "content": ".cc 4pLzntr9x8nATdHGv5zAXQYWg2yoNcdBpFoKuAmBVukx 5m",
+    "caMentioned": "4pLzntr9x8nATdHGv5zAXQYWg2yoNcdBpFoKuAmBVukx",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-31"
+  }
+]

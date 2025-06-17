@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "b509a7e3-12e4-44c3-9b93-65e6c0372b43",
+    "originalMessageId": "1317267669908455518",
+    "userId": "279417666073264131",
+    "username": "BabyAma",
+    "timestamp": 1734131486156,
+    "content": "9BCtUx2aFsgPSP96aY6Uiw6hatnshMzQnpyXM5GR9uwx",
+    "caMentioned": "9BCtUx2aFsgPSP96aY6Uiw6hatnshMzQnpyXM5GR9uwx",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "25511427-16a0-4c64-b82c-7bcb22db91c3",
+    "originalMessageId": "1317267873928056916",
+    "userId": "1228060339955040350",
+    "username": "PaucoTao",
+    "timestamp": 1734131534798,
+    "content": ".dp 9BCtUx2aFsgPSP96aY6Uiw6hatnshMzQnpyXM5GR9uwx",
+    "caMentioned": "9BCtUx2aFsgPSP96aY6Uiw6hatnshMzQnpyXM5GR9uwx",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is referencing a contract address, indicating interest.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "6a45347d-cc65-4a13-bc7a-75520aecaf2f",
+    "originalMessageId": "1317267874548547595",
+    "userId": "708269174413328416",
+    "username": "Crispy✨",
+    "timestamp": 1734131534946,
+    "content": ".dp 9BCtUx2aFsgPSP96aY6Uiw6hatnshMzQnpyXM5GR9uwx",
+    "caMentioned": "9BCtUx2aFsgPSP96aY6Uiw6hatnshMzQnpyXM5GR9uwx",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is referencing a contract address, indicating interest.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "680a1772-7640-4128-81f5-64a7bc5db072",
+    "originalMessageId": "1317268170784116837",
+    "userId": "708269174413328416",
+    "username": "Crispy✨",
+    "timestamp": 1734131605574,
+    "content": ".dp 9BCtUx2aFsgPSP96aY6Uiw6hatnshMzQnpyXM5GR9uwx",
+    "caMentioned": "9BCtUx2aFsgPSP96aY6Uiw6hatnshMzQnpyXM5GR9uwx",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is referencing a contract address, indicating interest.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  }
+]

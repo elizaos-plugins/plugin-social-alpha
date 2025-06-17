@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "90274256-8b28-42a7-88bf-44f6aef3cbab",
+    "originalMessageId": "1313505759795089448",
+    "userId": "303632418907226112",
+    "username": "WolfDotPump🐺",
+    "timestamp": 1733234576892,
+    "content": "I also hopped in on Zeregorl, seems cool.. even if it's just the female verion of Zerebro.. good enough for me",
+    "tokenMentioned": "Zeregorl",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is interested in Zeregorl, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "7f55fbc7-68bc-4d8f-8421-24970c6b54fe",
+    "originalMessageId": "1313506238587469825",
+    "userId": "193681207840604161",
+    "username": "Elias",
+    "timestamp": 1733234691045,
+    "content": "Question, did zeregorl srsly just pumped because we all aped it again?",
+    "tokenMentioned": "Zeregorl",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is questioning if Zeregorl pumped due to group action, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "d6f65aac-b0bd-42aa-82c7-d33508cea194",
+    "originalMessageId": "1313506805300727880",
+    "userId": "628939577356451840",
+    "username": "Vegeta",
+    "timestamp": 1733234826160,
+    "content": "FcBMeSR1pcFETQJZDJaRsCy8U9dpuvog5jzfu9iEVyre",
+    "caMentioned": "FcBMeSR1pcFETQJZDJaRsCy8U9dpuvog5jzfu9iEVyre",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  }
+]

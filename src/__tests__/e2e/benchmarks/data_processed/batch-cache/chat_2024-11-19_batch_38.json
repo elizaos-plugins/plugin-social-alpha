@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "d19434a5-3c19-4949-8291-94e370b42995",
+    "originalMessageId": "1308491380133335090",
+    "userId": "719354684258779187",
+    "username": "Adii",
+    "timestamp": 1732039055618,
+    "content": "Tura getting cooked",
+    "tokenMentioned": "Tura",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User mentions Tura getting cooked, implying negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "14b796b7-e176-4b24-b486-f3c2d10335b7",
+    "originalMessageId": "1308491770354466836",
+    "userId": "525206459168849923",
+    "username": "Satchel | JUP & JUICE 🧃",
+    "timestamp": 1732039148654,
+    "content": "blackswan is running",
+    "tokenMentioned": "Black Swan",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions Black Swan is running, implying positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "03cec635-25a3-46d0-afb1-6ef34d41b844",
+    "originalMessageId": "1308492358790156310",
+    "userId": "326610960179789825",
+    "username": "Sneak",
+    "timestamp": 1732039288948,
+    "content": "DboESTxSMqikZUgy4yKamxzPjbMewPiSEUtxyW5Kpump",
+    "caMentioned": "DboESTxSMqikZUgy4yKamxzPjbMewPiSEUtxyW5Kpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-19"
+  }
+]

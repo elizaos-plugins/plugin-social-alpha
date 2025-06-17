@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "d53ca8fe-853f-4a3f-9f77-5e849a30a475",
+    "originalMessageId": "1323408744511574036",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1735595632437,
+    "content": "$TANK is gonna melt faces soon",
+    "tokenMentioned": "TANK",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is bullish on TANK, suggesting it will perform well.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "0c9636ab-49a5-4806-b529-324502655aab",
+    "originalMessageId": "1323408776384217108",
+    "userId": "1321668049866194944",
+    "username": "parody",
+    "timestamp": 1735595640036,
+    "content": "SOLENG formed a base at 9M and moving toward 15M. Next stop would be 20M",
+    "tokenMentioned": "SOLENG",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is bullish on SOLENG, expecting it to rise to 20M.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "a13b3dc2-66aa-4ed7-984e-16bc900e2376",
+    "originalMessageId": "1323408851625574529",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1735595657975,
+    "content": ".cc 7fbTnN92i1NGAcMqw7qtWfvZQ1M1NDfcv9Pc4bsyZ1qz 5m",
+    "caMentioned": "7fbTnN92i1NGAcMqw7qtWfvZQ1M1NDfcv9Pc4bsyZ1qz",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "059696d8-2995-4fe6-bb72-f84bdd82bafc",
+    "originalMessageId": "1323409729757646979",
+    "userId": "1317157255271157973",
+    "username": "Pilgu",
+    "timestamp": 1735595867338,
+    "content": "8fb5D1zmjU9Bs7V2oqjtf47SwajCAgi4jzN6Nr5md3Ns send smore",
+    "caMentioned": "8fb5D1zmjU9Bs7V2oqjtf47SwajCAgi4jzN6Nr5md3Ns",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  }
+]

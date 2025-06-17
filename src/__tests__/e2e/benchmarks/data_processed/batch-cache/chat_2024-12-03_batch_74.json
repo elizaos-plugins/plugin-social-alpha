@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "eb36ede5-1046-4273-87cc-912a89f5ce13",
+    "originalMessageId": "1313667292550402090",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1733273089302,
+    "content": "Cm9fXHhjJay9kssd7zHoebsa3vpJaG7za7Fo3pXSEAmm",
+    "caMentioned": "Cm9fXHhjJay9kssd7zHoebsa3vpJaG7za7Fo3pXSEAmm",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "64eeaf1d-1dc1-4d51-a369-7e86283c4296",
+    "originalMessageId": "1313668109516935269",
+    "userId": "186857450639458306",
+    "username": "Stacker✝",
+    "timestamp": 1733273284082,
+    "content": "D4c97BA43gDPMU6Le1QWeBzfjQsPUwSt5xKg7vVhA2sF\n\nI 100% think this is a rug and dev bought too much but IF no rug I like the art",
+    "caMentioned": "D4c97BA43gDPMU6Le1QWeBzfjQsPUwSt5xKg7vVhA2sF",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "low",
+    "llmReasoning": "User posted a contract address and expressed skepticism, implying a call with caution.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "9eaaa49c-5d09-416c-902c-0234586d1108",
+    "originalMessageId": "1313668362114695200",
+    "userId": "719354684258779187",
+    "username": "Adii",
+    "timestamp": 1733273344306,
+    "content": "7MZ9578aRKBXow9wbDbM3Z5bXebeEKc8RqrucrL3pump",
+    "caMentioned": "7MZ9578aRKBXow9wbDbM3Z5bXebeEKc8RqrucrL3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  }
+]

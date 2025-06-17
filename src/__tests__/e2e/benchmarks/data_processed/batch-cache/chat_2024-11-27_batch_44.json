@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "2f483d44-b7fd-49e9-ae32-4c7cd9e5d33f",
+    "originalMessageId": "1311369305744478261",
+    "userId": "921468176288600065",
+    "username": "Eduardo Chiarotti",
+    "timestamp": 1732725206553,
+    "content": "6Nj6ia4wUsCaBnEZ42WtFme9PUp6d8qK3gH9uteSpump",
+    "caMentioned": "6Nj6ia4wUsCaBnEZ42WtFme9PUp6d8qK3gH9uteSpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "51d7f273-8b47-4a20-a509-fecbe2a90a21",
+    "originalMessageId": "1311369565841784863",
+    "userId": "1300900247249358861",
+    "username": "0xbubs",
+    "timestamp": 1732725268565,
+    "content": "FP5UnWgQ1oZUJpwhXZPjcMvDWcoaacZsMgC2zVdzpump",
+    "caMentioned": "FP5UnWgQ1oZUJpwhXZPjcMvDWcoaacZsMgC2zVdzpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "2df36edb-c272-41a0-8d2c-6b214921fabc",
+    "originalMessageId": "1311370497681784882",
+    "userId": "921468176288600065",
+    "username": "Eduardo Chiarotti",
+    "timestamp": 1732725490733,
+    "content": "6Nj6ia4wUsCaBnEZ42WtFme9PUp6d8qK3gH9uteSpump",
+    "caMentioned": "6Nj6ia4wUsCaBnEZ42WtFme9PUp6d8qK3gH9uteSpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  }
+]

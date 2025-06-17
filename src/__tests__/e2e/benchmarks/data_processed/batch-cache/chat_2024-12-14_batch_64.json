@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "9b7d2963-64ff-4153-810d-c478a70fb4ba",
+    "originalMessageId": "1317730666745565237",
+    "userId": "696861777799020575",
+    "username": "Emahd",
+    "timestamp": 1734241873204,
+    "content": "funny that, im waiting to buy zod",
+    "tokenMentioned": "ZOD",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is expressing intent to buy ZOD, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-14"
+  },
+  {
+    "callId": "9889c8fa-f6fc-4e59-ae8d-fd2607c300e5",
+    "originalMessageId": "1317731303872921612",
+    "userId": "541393572990025749",
+    "username": "CtrlAltElite",
+    "timestamp": 1734242025107,
+    "content": "We're out here as a public good for the AI16z community. Dexscreener is in the process of being reclaimed right now",
+    "tokenMentioned": "AI16z",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions AI16z community, indicating involvement with the token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-14"
+  },
+  {
+    "callId": "e2a44e53-a5c4-49b7-bcd1-33ad6d8696b2",
+    "originalMessageId": "1317732318856876120",
+    "userId": "831476829608738866",
+    "username": "Antagonist.sats",
+    "timestamp": 1734242267098,
+    "content": "$agency is a enough good trade for today",
+    "tokenMentioned": "AGENCY",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions $AGENCY as a good trade, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-14"
+  }
+]

@@ -3,3 +3,28 @@ dist
 node_modules
 
 .env
+
+# Temporary files and caches
+simulation-cache/
+data/
+simulation-cache-test/
+trust-optimization-logs/
+.elizadb-test/
+data.json
+*.log
+
+# IDE
+.cursor/
+.vscode/
+.idea/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# OS files
+.DS_Store
+Thumbs.db
+trenches-chat-dataset/
+.eliza
+.elizadb*

@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "915bf3c9-69ae-4a6c-8e37-42f39eed6b70",
+    "originalMessageId": "1309645613339643925",
+    "userId": "1054146717546725407",
+    "username": "Shilliam",
+    "timestamp": 1732314246259,
+    "content": "EZpTkDM7AH5hFsxXhaT4cMHm7wuFouEK9LdMHfvKpump",
+    "caMentioned": "EZpTkDM7AH5hFsxXhaT4cMHm7wuFouEK9LdMHfvKpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "56aa6661-7c58-4c8f-9487-66834cae3be0",
+    "originalMessageId": "1309646236977987614",
+    "userId": "1226743509004980335",
+    "username": "ricky",
+    "timestamp": 1732314394946,
+    "content": "also @MasoRich, just aped, thanks for the potential alpha!",
+    "tokenMentioned": "Halo",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User indicates they have invested in a potential opportunity.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "ffc75f21-a768-40ab-ac51-91869f84ed3e",
+    "originalMessageId": "1309646427810566155",
+    "userId": "1226743509004980335",
+    "username": "ricky",
+    "timestamp": 1732314440444,
+    "content": "honestly - i keep seeing @clover building the coin, asking for advice and getting constant updates - Halo feels like an ai16z community coin at this point",
+    "tokenMentioned": "Halo",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is discussing Halo as a community coin, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-22"
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "187d3306-c673-4958-8c6e-c4403e4d0c4f",
+    "originalMessageId": "1316212145486168106",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1733879829523,
+    "content": "easiest money for today is to swingtrade mana and pnet",
+    "nameMentioned": "Decentraland",
+    "tokenMentioned": "MANA",
+    "chain": "ethereum",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests swing trading MANA and PNET for easy profits.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-10"
+  },
+  {
+    "callId": "07a2bb88-314d-4fe9-bb05-e2bb1a243d75",
+    "originalMessageId": "1316212145486168106",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1733879829523,
+    "content": "easiest money for today is to swingtrade mana and pnet",
+    "tokenMentioned": "PNET",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests swing trading MANA and PNET for easy profits.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-10"
+  },
+  {
+    "callId": "ed1d3c2d-cd7a-4f54-b3a4-df93a629ddd2",
+    "originalMessageId": "1316212519290802186",
+    "userId": "1244324072264040450",
+    "username": "David.joanou",
+    "timestamp": 1733879918645,
+    "content": "Bw5K8eZaf361uDLHgX2UUn1PNfC7XtgQVvY9sSappump",
+    "caMentioned": "Bw5K8eZaf361uDLHgX2UUn1PNfC7XtgQVvY9sSappump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-10"
+  },
+  {
+    "callId": "19b7de23-b036-4602-946e-06aaa3b9b1b8",
+    "originalMessageId": "1316215233257406484",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733880565705,
+    "content": "GACpABn18xqiSJbD9ZEyArJDT9RHRMUut5nK9Z9Spump",
+    "caMentioned": "GACpABn18xqiSJbD9ZEyArJDT9RHRMUut5nK9Z9Spump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-10"
+  }
+]

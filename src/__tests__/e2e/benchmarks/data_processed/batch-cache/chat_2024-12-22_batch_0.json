@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "7caa13da-18bf-4e72-9d2f-17961a24c24c",
+    "originalMessageId": "1320300893157068840",
+    "userId": "1158224225178505337",
+    "username": "zilyx",
+    "timestamp": 1734854662933,
+    "content": "@ElBru PSST GSCI printing hard 😉",
+    "tokenMentioned": "GSCI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User indicates GSCI is performing well",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-22"
+  },
+  {
+    "callId": "ede4ffbb-4589-404d-a195-095adfbac732",
+    "originalMessageId": "1320301547984392202",
+    "userId": "1158224225178505337",
+    "username": "zilyx",
+    "timestamp": 1734854819056,
+    "content": "Printing - > 7zoBbeibT6f9T7dTfPU1sc149oMX1aTcuh2Dm4oipump",
+    "caMentioned": "7zoBbeibT6f9T7dTfPU1sc149oMX1aTcuh2Dm4oipump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User posts a contract address indicating it's printing",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-22"
+  },
+  {
+    "callId": "9fc8d9bd-9080-41b5-98c0-e7016f1bf0c9",
+    "originalMessageId": "1320303236950790187",
+    "userId": "1158224225178505337",
+    "username": "zilyx",
+    "timestamp": 1734855221737,
+    "content": "This ai16z guys are epic i think this is a milestone perhaps in the future",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses positive sentiment about ai16z",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-22"
+  },
+  {
+    "callId": "13626db4-6ca5-4e84-8c51-8149a8452a78",
+    "originalMessageId": "1320303397169266688",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1734855259936,
+    "content": "Soleng new ath when?",
+    "tokenMentioned": "SOLENG",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User asks about Soleng reaching new ATH",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-22"
+  }
+]

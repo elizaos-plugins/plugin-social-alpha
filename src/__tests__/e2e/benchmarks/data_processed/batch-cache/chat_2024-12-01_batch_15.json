@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "6ddc33e4-beea-4b9e-9809-cf49b56773b0",
+    "originalMessageId": "1312824189438398596",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1733072077856,
+    "content": "Yeaa degenai making some moves i see, anyone knows what will happen next week?\n\nAnd how the degenai trading will work? Aslike with profits rotated into degenai buyings? Or other things?",
+    "tokenMentioned": "Degenai",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is discussing Degenai, indicating interest and potential positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-01"
+  },
+  {
+    "callId": "2a3bc9ad-4174-42a8-bd4d-ac46114d7ff0",
+    "originalMessageId": "1312824495282847754",
+    "userId": "816323354474709053",
+    "username": "Cinnamoon",
+    "timestamp": 1733072150775,
+    "content": "92cCPLniCMvVsGqjFAkyqK26G7BXT5taa8Qhu5gVpump",
+    "caMentioned": "92cCPLniCMvVsGqjFAkyqK26G7BXT5taa8Qhu5gVpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-01"
+  },
+  {
+    "callId": "07a01707-a1ed-4ccb-a007-c83f134fca46",
+    "originalMessageId": "1312827483824853064",
+    "userId": "816323354474709053",
+    "username": "Cinnamoon",
+    "timestamp": 1733072863299,
+    "content": ".dp 92cCPLniCMvVsGqjFAkyqK26G7BXT5taa8Qhu5gVpump",
+    "caMentioned": "92cCPLniCMvVsGqjFAkyqK26G7BXT5taa8Qhu5gVpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-01"
+  },
+  {
+    "callId": "dc922aa2-834c-47e7-90c3-12c88f5ecbe9",
+    "originalMessageId": "1312827773383086160",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1733072932335,
+    "content": "92cCPLniCMvVsGqjFAkyqK26G7BXT5taa8Qhu5gVpump",
+    "caMentioned": "92cCPLniCMvVsGqjFAkyqK26G7BXT5taa8Qhu5gVpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-01"
+  }
+]

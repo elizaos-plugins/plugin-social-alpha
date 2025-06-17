@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "366cc8c0-01bf-492b-8aa8-975a7bcba210",
+    "originalMessageId": "1313886432640766065",
+    "userId": "1228060339955040350",
+    "username": "RonnySeibt",
+    "timestamp": 1733325336371,
+    "content": "this the token? EV1cFHH2DAFx1zBJnNvK4QzCpVz8F7AtpfkdjoiXpump",
+    "caMentioned": "EV1cFHH2DAFx1zBJnNvK4QzCpVz8F7AtpfkdjoiXpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is drawing attention to a specific contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "cd412ec4-ff8a-4188-943a-166ec6b2ec6f",
+    "originalMessageId": "1313886875198423134",
+    "userId": "251706420251066368",
+    "username": "napvez",
+    "timestamp": 1733325441885,
+    "content": "Wandai pump, idk why it isn't getting attention, could be more with a few tweaks\n\n932PJ3py7t7QJ3msPMFfVq7AKVrpAjzx4uB1W4kQpump",
+    "caMentioned": "932PJ3py7t7QJ3msPMFfVq7AKVrpAjzx4uB1W4kQpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is drawing attention to a specific contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  }
+]

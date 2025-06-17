@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "50d3cf60-ebfb-42db-8798-a15c4d3f4b8b",
+    "originalMessageId": "1313886257729900640",
+    "userId": "400797447049445386",
+    "username": "lewiscopernicus",
+    "timestamp": 1733325294669,
+    "content": "Ai6z next",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions ai16z, indicating interest or a call to action.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  }
+]

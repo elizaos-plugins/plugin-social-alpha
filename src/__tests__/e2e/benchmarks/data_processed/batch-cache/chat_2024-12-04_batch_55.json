@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "2f16b6ef-5e43-478e-88b7-ecf34be496d0",
+    "originalMessageId": "1314024743753748561",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1733358312310,
+    "content": "This gones send once btc hits 100k J3dyBS4CbUXz6PvZqyt3KLVAjU3fj1mMW3qxAjW3pump",
+    "caMentioned": "J3dyBS4CbUXz6PvZqyt3KLVAjU3fj1mMW3qxAjW3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is implying a positive sentiment for the token associated with the contract address.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "45e76a89-6174-4ee9-9aab-eabf15650917",
+    "originalMessageId": "1314026619265880167",
+    "userId": "303632418907226112",
+    "username": "WolfDotPump🐺",
+    "timestamp": 1733358759467,
+    "content": "shMZAwY3xsKcenhvJkAyp8w1LU4YBYT5GZ412ropump",
+    "caMentioned": "shMZAwY3xsKcenhvJkAyp8w1LU4YBYT5GZ412ropump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "7d01a454-be84-44cb-a83e-487b2158a511",
+    "originalMessageId": "1314028318265180201",
+    "userId": "503630344986165258",
+    "username": "velja",
+    "timestamp": 1733359164540,
+    "content": "5hZbzG7H2sMigqZo1KRcQjwM2zkjg5iGP6yfv46spump",
+    "caMentioned": "5hZbzG7H2sMigqZo1KRcQjwM2zkjg5iGP6yfv46spump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "d1471dd8-36b6-4440-a23b-d4478acbff70",
+    "originalMessageId": "1314028428667912223",
+    "userId": "1100907083647430756",
+    "username": "Socrate",
+    "timestamp": 1733359190862,
+    "content": "buy coins like ai16z only forget the trenches",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests buying ai16z, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  }
+]

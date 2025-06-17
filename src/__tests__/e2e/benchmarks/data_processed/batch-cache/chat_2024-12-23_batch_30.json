@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "3c50c85c-ecfc-4841-9eec-37b85c4c2ec1",
+    "originalMessageId": "1320822795311251498",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1734979094103,
+    "content": "This dev might be joining us later on, twitter calls look pretty cool DcU8uHn7abXgYL8AJUK3t8FckeAXrNcGYYBK7uBFpump",
+    "caMentioned": "DcU8uHn7abXgYL8AJUK3t8FckeAXrNcGYYBK7uBFpump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User shared a contract address, implying a call",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-23"
+  },
+  {
+    "callId": "9f5611c5-581f-425b-ae15-442f214c39df",
+    "originalMessageId": "1320823254193016934",
+    "userId": "361161947930165250",
+    "username": "harryzooberry",
+    "timestamp": 1734979203509,
+    "content": "You guys have managed to be more dumb than the soleng hour which is something special",
+    "tokenMentioned": "SOLENG",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User mentions SOLENG negatively",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-23"
+  },
+  {
+    "callId": "f0568f1c-626b-44df-b6b4-322eeb26c1f5",
+    "originalMessageId": "1320823845875224586",
+    "userId": "1316302280613433394",
+    "username": "Sicario | QPAL | WPM",
+    "timestamp": 1734979344577,
+    "content": "N7rtb3wX8VsH7jp246eaE9857DXcA9Xywua1aqGpump",
+    "caMentioned": "N7rtb3wX8VsH7jp246eaE9857DXcA9Xywua1aqGpump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User shared a contract address",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-23"
+  },
+  {
+    "callId": "0400e678-6a0c-4d48-8b01-664a160c0bd0",
+    "originalMessageId": "1320823849117421579",
+    "userId": "816616233843032076",
+    "username": "Tren",
+    "timestamp": 1734979345350,
+    "content": "TNSR 👀",
+    "tokenMentioned": "TNSR",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions TNSR with eyes emoji suggesting attention",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-23"
+  }
+]

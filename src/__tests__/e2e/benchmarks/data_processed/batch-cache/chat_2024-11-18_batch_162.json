@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "ce91a1cd-fd2c-47af-ab36-3a53398f6d90",
+    "originalMessageId": "1308339329004863528",
+    "userId": "1158224225178505337",
+    "username": "zilyx - noob crypto",
+    "timestamp": 1732002803804,
+    "content": "to me it sounds very straight forward, **we** are going to help ***ELIZA***",
+    "nameMentioned": "Eliza",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses intent to support Eliza, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-18"
+  },
+  {
+    "callId": "16eff4d6-b45f-4504-bee7-5a96bf288769",
+    "originalMessageId": "1308339368796360734",
+    "userId": "211176844706185227",
+    "username": "litn",
+    "timestamp": 1732002813291,
+    "content": "6qetqno2sysjmz4t5gt99fj4rjdjwb1gtvsfyle258jh",
+    "caMentioned": "6qetqno2sysjmz4t5gt99fj4rjdjwb1gtvsfyle258jh",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-18"
+  },
+  {
+    "callId": "3a493a23-9012-4948-b1a2-ceb144d28979",
+    "originalMessageId": "1308339636304871425",
+    "userId": "108121781537079296",
+    "username": "herby",
+    "timestamp": 1732002877070,
+    "content": "GEVqugYZESSzZaYU6SKdpW6znCCEtH7aoSTzPHbqpump",
+    "caMentioned": "GEVqugYZESSzZaYU6SKdpW6znCCEtH7aoSTzPHbqpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-18"
+  },
+  {
+    "callId": "04090d92-d4d6-4554-b734-8fef659f76bd",
+    "originalMessageId": "1308339669267779645",
+    "userId": "1158224225178505337",
+    "username": "zilyx - noob crypto",
+    "timestamp": 1732002884929,
+    "content": "so as much as we try to work against the idea, the rule has been set, **eliza** is backed",
+    "nameMentioned": "Eliza",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User states that Eliza is backed, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-18"
+  }
+]

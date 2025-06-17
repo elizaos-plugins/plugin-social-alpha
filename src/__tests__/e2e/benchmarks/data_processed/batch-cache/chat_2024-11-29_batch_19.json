@@ -1,0 +1,48 @@
+[
+  {
+    "callId": "ae7eccba-ef7d-4bd0-883b-cc0f1a8c3021",
+    "originalMessageId": "1312020058343473172",
+    "userId": "208232198329991169",
+    "username": "MevPanda",
+    "timestamp": 1732880358063,
+    "content": "send it to sub zero (so I can buy 5 sol)",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is waiting for the price to drop to buy more.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "2edd2aba-1076-40a1-96da-7b940e168403",
+    "originalMessageId": "1312020861032861716",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1732880549439,
+    "content": "CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "caMentioned": "CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "232f48e8-394d-4032-acee-685f55828d4c",
+    "originalMessageId": "1312020944612626452",
+    "userId": "816323354474709053",
+    "username": "Cinnamoon",
+    "timestamp": 1732880569366,
+    "content": ".dp CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "caMentioned": "CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  }
+]

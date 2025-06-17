@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "368f9695-94df-43ad-bfb3-82761e641b1b",
+    "originalMessageId": "1321889606815453316",
+    "userId": "445368551134593045",
+    "username": "Nermic",
+    "timestamp": 1735233441786,
+    "content": "3Cbxn7EE79VxMe9pFLyLUVKDKaq7DdwsoV5z4RBqpump",
+    "caMentioned": "3Cbxn7EE79VxMe9pFLyLUVKDKaq7DdwsoV5z4RBqpump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-26"
+  },
+  {
+    "callId": "5e73304f-4080-4e2a-b964-b1015348e11c",
+    "originalMessageId": "1321890142390321316",
+    "userId": "400797447049445386",
+    "username": "lewiscopernicus",
+    "timestamp": 1735233569477,
+    "content": "I’m 80 sol deep in $neur",
+    "tokenMentioned": "NEUR",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User states they are heavily invested in NEUR",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-26"
+  },
+  {
+    "callId": "f7a540c1-054c-42f8-8ef8-a43c4d22640d",
+    "originalMessageId": "1321890242688454687",
+    "userId": "367629761297645568",
+    "username": "Komen",
+    "timestamp": 1735233593390,
+    "content": "you made alot yesterday man from mira, miradog and andrew",
+    "tokenMentioned": "MIRA",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions multiple tokens that generated profits",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-26"
+  },
+  {
+    "callId": "71cadc79-0c46-467f-8b19-55e024accdbe",
+    "originalMessageId": "1321890264935174176",
+    "userId": "400797447049445386",
+    "username": "lewiscopernicus",
+    "timestamp": 1735233598694,
+    "content": "Just need neur to 2x and I got 80sol lol",
+    "tokenMentioned": "NEUR",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User expresses price target for NEUR",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-26"
+  }
+]

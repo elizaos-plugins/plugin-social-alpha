@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "58524965-8c3b-4d18-93cb-e519766c6c6a",
+    "originalMessageId": "1322768254803906600",
+    "userId": "487897109694251009",
+    "username": "End Weakness",
+    "timestamp": 1735442927791,
+    "content": "randy ca 74yEfuLwCUSj5KEyLxF7VT2qo2PgNcJ7BVjYitrYvm8e",
+    "caMentioned": "74yEfuLwCUSj5KEyLxF7VT2qo2PgNcJ7BVjYitrYvm8e",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "05012ccf-ed04-4c6e-8602-19d1cfe98553",
+    "originalMessageId": "1322768578130219098",
+    "userId": "952742840239259710",
+    "username": "Belle Athena",
+    "timestamp": 1735443004878,
+    "content": "74yEfuLwCUSj5KEyLxF7VT2qo2PgNcJ7BVjYitrYvm8e",
+    "caMentioned": "74yEfuLwCUSj5KEyLxF7VT2qo2PgNcJ7BVjYitrYvm8e",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "4d004829-f1b8-4cca-9859-68b9554caf10",
+    "originalMessageId": "1322768610313375825",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1735443012551,
+    "content": "EHit91cQUuJMe5vJUrP7cFmR2jFSx3jncVUXERpApump",
+    "caMentioned": "EHit91cQUuJMe5vJUrP7cFmR2jFSx3jncVUXERpApump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "96a40734-9a8a-45d1-be45-c40f594d1b74",
+    "originalMessageId": "1315658372967825520",
+    "userId": "518797447942766617",
+    "username": "JudahHex",
+    "timestamp": 1733747799866,
+    "content": "J1ow1c3ExcJYQmgNFRPfCp1LMYRf6P3A33isDcBmpump",
+    "caMentioned": "J1ow1c3ExcJYQmgNFRPfCp1LMYRf6P3A33isDcBmpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-09"
+  }
+]

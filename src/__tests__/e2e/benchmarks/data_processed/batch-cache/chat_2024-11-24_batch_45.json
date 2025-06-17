@@ -1,0 +1,48 @@
+[
+  {
+    "callId": "2a93a12e-ce26-42fe-9d21-97bf3903290b",
+    "originalMessageId": "1310351069187936340",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1732482440040,
+    "content": "This may be a good companion to Agent Rogue\n\nAd9XUqU954PNTso966rTxitGi3R2v9GCzZcvjpzSbfVQ",
+    "caMentioned": "Ad9XUqU954PNTso966rTxitGi3R2v9GCzZcvjpzSbfVQ",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-24"
+  },
+  {
+    "callId": "e3e180c2-7247-49b8-a68a-5f0322666c72",
+    "originalMessageId": "1310351800603381781",
+    "userId": "191484827189379072",
+    "username": "pajio",
+    "timestamp": 1732482614423,
+    "content": "Got a project here that's followed by dread bongo, Dickie Emerson and more. Seems like next cabal coin, DYOR check the X - 3cxqCGH1gq5BzvfxfrWXMm4V3ZaAyBMcXMomzDxapump",
+    "caMentioned": "3cxqCGH1gq5BzvfxfrWXMm4V3ZaAyBMcXMomzDxapump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-24"
+  },
+  {
+    "callId": "3a7bc037-56ed-4543-95e9-d58057d40f5b",
+    "originalMessageId": "1310352495104753694",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1732482780005,
+    "content": "Etf's gonna pop sol bigtime",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is bullish on SOL due to ETF news.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-24"
+  }
+]

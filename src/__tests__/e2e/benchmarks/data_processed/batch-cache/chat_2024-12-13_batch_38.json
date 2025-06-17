@@ -1,0 +1,48 @@
+[
+  {
+    "callId": "04cec3e8-0f6c-48f0-af31-bd3b3bb79eff",
+    "originalMessageId": "1317211402271985744",
+    "userId": "193681207840604161",
+    "username": "Elias",
+    "timestamp": 1734118070906,
+    "content": "FNqJtYs7rsP1H9GXWTtc5VnDoL2GhXEUKhYN46EEpump I bought dip, timer almost over, bullish",
+    "caMentioned": "FNqJtYs7rsP1H9GXWTtc5VnDoL2GhXEUKhYN46EEpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is bullish on the token associated with the contract address FNqJtYs7rsP1H9GXWTtc5VnDoL2GhXEUKhYN46EEpump.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "ab737d8f-ba1f-4ce7-857a-02b7ddcdf8e9",
+    "originalMessageId": "1317214536830423041",
+    "userId": "719354684258779187",
+    "username": "Adii",
+    "timestamp": 1734118818243,
+    "content": "maybe thats whats happening with Galileo, Dev sold, TG admin says to send him all your tokens he will send you V2 tokens yet some big buys keep holding up the price. Mayve dev got hacked?\n\nhttps://x.com/GalileoIndexSOL\n\nsomeone look into this withme. \n\nPrice should have nuked to 0",
+    "nameMentioned": "Galileo",
+    "tokenMentioned": "Galileo",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User is discussing potential issues with the Galileo token, suggesting it might be a scam or hacked.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "c6b0487d-f65a-4efa-85f0-a31056c39c54",
+    "originalMessageId": "1317215023088537684",
+    "userId": "811670495366873108",
+    "username": "noycos",
+    "timestamp": 1734118934176,
+    "content": "5nt5LuYKozGFpwz9X8w4uDz1uuMijHAzsGqiVmUPpump",
+    "caMentioned": "5nt5LuYKozGFpwz9X8w4uDz1uuMijHAzsGqiVmUPpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  }
+]

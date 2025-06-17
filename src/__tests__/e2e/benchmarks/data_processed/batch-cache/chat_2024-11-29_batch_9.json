@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "eb24beca-f859-41f0-9e6d-cc00a32f203c",
+    "originalMessageId": "1312005424442245210",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1732876869069,
+    "content": "I as dev will sell to shake out bots, wait until confirmation, then the dev wallet will havejust a little bit when buy again, that's it \"This is for entertaining purposes only\" not real, nothing legit, not rug by me just PvP and following the santa narrative",
+    "tokenMentioned": "Chad Claus",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "Dr. Neuro mentions selling to shake out bots, which implies a trading strategy involving the token associated with the 'santa narrative'.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "505faaab-5eeb-4eab-9584-aaea8db95e61",
+    "originalMessageId": "1312005983899222116",
+    "userId": "813526297379995690",
+    "username": "Artego",
+    "timestamp": 1732877002454,
+    "content": "I can feel this gonna xplode if we do it right",
+    "tokenMentioned": "Chad Claus",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses optimism about the potential success of the project if executed correctly.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "c6786ff3-53e3-4d1c-ba3b-02347ce3b8ff",
+    "originalMessageId": "1312006819320959037",
+    "userId": "813526297379995690",
+    "username": "Artego",
+    "timestamp": 1732877201634,
+    "content": "Chad Claus will fix it all",
+    "tokenMentioned": "Chad Claus",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses confidence that Chad Claus will resolve issues, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-29"
+  }
+]

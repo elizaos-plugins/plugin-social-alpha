@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "02c5c1b4-559e-484a-ac51-838d9413277c",
+    "originalMessageId": "1310724640242532412",
+    "userId": "320595556294721536",
+    "username": "rus1an",
+    "timestamp": 1732571506320,
+    "content": "F968SJJfWg7GWfQR5jajk87vaE2ydwNZ4uPrQiTv2hat",
+    "caMentioned": "F968SJJfWg7GWfQR5jajk87vaE2ydwNZ4uPrQiTv2hat",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "ce0c07f5-2dc0-4c28-9dea-05a7b376ed96",
+    "originalMessageId": "1310726352604889170",
+    "userId": "732641521563598941",
+    "username": "JacksonINU",
+    "timestamp": 1732571914579,
+    "content": "anyone info on this https://pump.fun/coin/5kybu8rkvU1uao2PQBjzyKMjpPHvYG9GhcchrV7D7Mko seems like dev has sent 5% to the dao but doesnt have any supply himself.",
+    "caMentioned": "5kybu8rkvU1uao2PQBjzyKMjpPHvYG9GhcchrV7D7Mko",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is discussing a token with a link, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "03eef7cd-8320-426c-b802-2893b11e2fe6",
+    "originalMessageId": "1310726396716384301",
+    "userId": "416704453601787935",
+    "username": "Klimq",
+    "timestamp": 1732571925096,
+    "content": "aparently this ai coin is followed by some exchange and he has it in his bio i got 0 info on this and i dont call this but its interesting AyCK7h17yqn1H15KvnpzT7ZHWiX8dGhcw3jbsXEy9XWs",
+    "caMentioned": "AyCK7h17yqn1H15KvnpzT7ZHWiX8dGhcw3jbsXEy9XWs",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions a contract address, indicating a call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "815ad322-887c-4597-8611-2f8fa250a2a1",
+    "originalMessageId": "1310727264056639693",
+    "userId": "732641521563598941",
+    "username": "JacksonINU",
+    "timestamp": 1732572131886,
+    "content": "this looks good, aped",
+    "caMentioned": "5kybu8rkvU1uao2PQBjzyKMjpPHvYG9GhcchrV7D7Mko",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User indicates they have invested in the token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  }
+]

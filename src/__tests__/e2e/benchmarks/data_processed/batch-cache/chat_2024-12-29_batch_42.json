@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "602c9df9-9190-4b93-b6d9-3daf8b4db058",
+    "originalMessageId": "1322982836105646174",
+    "userId": "819697057979564034",
+    "username": "Pat",
+    "timestamp": 1735494087960,
+    "content": "Ai16z obv",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses a preference for ai16z, implying positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "98c22a13-8fd3-4a9f-9d24-d952cfab2f72",
+    "originalMessageId": "1322982988526391369",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1735494124300,
+    "content": "Ah yes, a classic Shibori\n\nI'm up 343% on Shibori",
+    "tokenMentioned": "Shibori",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User reports a significant gain on Shibori, indicating positive sentiment.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "f403e5a3-521f-4257-a9f1-5044ce2e03fe",
+    "originalMessageId": "1322983400272957482",
+    "userId": "342118680068358144",
+    "username": "GujuViper",
+    "timestamp": 1735494222468,
+    "content": "8UyF5QTWir3dGgmsGDLsTTugc7tG1domFywoSB2zpump",
+    "caMentioned": "8UyF5QTWir3dGgmsGDLsTTugc7tG1domFywoSB2zpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "763eb78c-cddd-425e-9c3c-ef414759da9d",
+    "originalMessageId": "1322983567516635208",
+    "userId": "342118680068358144",
+    "username": "GujuViper",
+    "timestamp": 1735494262342,
+    "content": ".cc 8UyF5QTWir3dGgmsGDLsTTugc7tG1domFywoSB2zpump",
+    "caMentioned": "8UyF5QTWir3dGgmsGDLsTTugc7tG1domFywoSB2zpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "6d02a438-06db-4857-96d6-f63cbe8b7845",
+    "originalMessageId": "1311615682613612564",
+    "userId": "877610347484282920",
+    "username": "POV",
+    "timestamp": 1732783947376,
+    "content": "Im honestly suprised it’s not higher. That’s why I tapped this dip more",
+    "tokenMentioned": "Sitecraft",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is buying more of the token on a dip, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "2f632803-a48e-4027-b56e-39ee589fdee2",
+    "originalMessageId": "1311615985257676800",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1732784019532,
+    "content": "Threw some in as well",
+    "tokenMentioned": "Sitecraft",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User indicates they have invested in the token, suggesting positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "ef86f697-117f-4dcc-babb-ac82f08cf227",
+    "originalMessageId": "1311616461437014028",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1732784133062,
+    "content": "Back in $MTM, nice bounce.",
+    "tokenMentioned": "MTM",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User indicates they have re-entered a position in $MTM, suggesting positive sentiment.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  }
+]

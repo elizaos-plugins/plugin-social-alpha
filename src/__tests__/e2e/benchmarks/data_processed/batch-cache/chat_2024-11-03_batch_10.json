@@ -1,0 +1,18 @@
+[
+  {
+    "callId": "483734b0-cb02-4dd3-863d-42d7ab4ac45b",
+    "originalMessageId": "1302898294191685663",
+    "userId": "204498241281064960",
+    "username": "LevelsDennis",
+    "timestamp": 1730705560015,
+    "content": "nm the one i was thinking of doesnt support sol",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions SOL (Solana) in the context of a dashboard not supporting it.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-03"
+  }
+]

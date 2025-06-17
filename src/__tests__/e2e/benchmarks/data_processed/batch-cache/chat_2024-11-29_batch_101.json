@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "00148acb-6094-432a-804a-9733cc75279d",
+    "originalMessageId": "1312323212452958279",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1732952635635,
+    "content": "Haha $COIN website went live\nhttps:// justacoin.io/",
+    "tokenMentioned": "COIN",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions the $COIN website going live, indicating interest in the token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "334a7c1f-89c6-4629-a3d7-1de03c604d2c",
+    "originalMessageId": "1312323344082669670",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1732952667018,
+    "content": ".c 56mc6mwdwgwg9k2qvjgq5rmdzzqfcwvzig4xjdltirsy",
+    "caMentioned": "56mc6mwdwgwg9k2qvjgq5rmdzzqfcwvzig4xjdltirsy",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "c96ecfcb-5994-495b-92e0-95e6d295c505",
+    "originalMessageId": "1312325610579693628",
+    "userId": "377569324866732042",
+    "username": "Whatever",
+    "timestamp": 1732953207393,
+    "content": "8CLsURizURUKvapqq85F4zZWtDeqUZAiFubPyTFBEkgq",
+    "caMentioned": "8CLsURizURUKvapqq85F4zZWtDeqUZAiFubPyTFBEkgq",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "7dc0aa84-afaf-400d-9b3d-4d40bf5ecca9",
+    "originalMessageId": "1312326184679374850",
+    "userId": "209724094394925059",
+    "username": "Ponzi",
+    "timestamp": 1732953344269,
+    "content": "mindbath is time rugging me rn",
+    "tokenMentioned": "mindbath",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User expresses negative sentiment about mindbath, indicating a negative call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-29"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "f815f0fc-5994-4694-b374-52eb3dc6f41a",
+    "originalMessageId": "1315565528009543733",
+    "userId": "719354684258779187",
+    "username": "Adii",
+    "timestamp": 1733725663903,
+    "content": "stoic next zod",
+    "tokenMentioned": "Stoic",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests Stoic could be the next big token like Zod.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "19b21881-91f4-4089-b745-64e950601692",
+    "originalMessageId": "1315565935263748157",
+    "userId": "719354684258779187",
+    "username": "Adii",
+    "timestamp": 1733725761000,
+    "content": "modern stoic.\n\nbro that other stoic is trash. They arent even active. They have 2 tweets in total from 6 months ago",
+    "tokenMentioned": "Stoic",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User is negative on the other Stoic project due to inactivity.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "dfcb407c-27ce-4593-bc0e-d82737d6cb91",
+    "originalMessageId": "1315566003777966080",
+    "userId": "719354684258779187",
+    "username": "Adii",
+    "timestamp": 1733725777335,
+    "content": "Modern stoic can easilly goto 300k like them or 30x from here",
+    "tokenMentioned": "Modern Stoic",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is bullish on Modern Stoic, suggesting it could increase significantly in value.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "7b67c1db-cca6-41d7-9885-6cccb7525561",
+    "originalMessageId": "1315567422333390918",
+    "userId": "326610960179789825",
+    "username": "Sneak",
+    "timestamp": 1733726115545,
+    "content": "$CJISGAY",
+    "tokenMentioned": "CJISGAY",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions a token with a humorous ticker, indicating a casual call.",
+    "certainty": "low",
+    "fileSource": "chat_2024-12-08"
+  }
+]

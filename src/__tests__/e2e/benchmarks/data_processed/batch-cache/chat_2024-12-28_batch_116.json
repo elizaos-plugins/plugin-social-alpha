@@ -1,0 +1,49 @@
+[
+  {
+    "callId": "42a07a21-9d67-4654-8cd7-fba8ee149d70",
+    "originalMessageId": "1322770339347955832",
+    "userId": "385839041255309312",
+    "username": "saem °",
+    "timestamp": 1735443424785,
+    "content": "Solimp🫴my portfolio",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions Solana in a casual context, indicating a potential interest in the token.",
+    "certainty": "low",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "86b3ecc9-143e-48d6-8a33-2d39d4af86a2",
+    "originalMessageId": "1322771098554728478",
+    "userId": "914031103424200735",
+    "username": "gableon | palms",
+    "timestamp": 1735443605794,
+    "content": "I locked twice by the way:\n https: //app.streamflow.finance/contract/ solana/mainnet/C9TeEkqQBv7XTeZZfHLpxCvAQYofMtRvg6KxHwH4L8ss",
+    "caMentioned": "C9TeEkqQBv7XTeZZfHLpxCvAQYofMtRvg6KxHwH4L8ss",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "9bd6235e-a53b-42f5-bea1-cce988959bb9",
+    "originalMessageId": "1322771766149644329",
+    "userId": "1310036944117305356",
+    "username": "Randy",
+    "timestamp": 1735443764961,
+    "content": "you must be able to start  a game with 10 sol, if 500 sol is played, you'd earn 2.5 sol directly nad possibly 5 sol at the end.",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User describes a potential investment strategy involving Solana, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "01ad8f79-dbe4-471b-9caf-21cdf23aab40",
+    "originalMessageId": "1317263611797962793",
+    "userId": "1244324072264040450",
+    "username": "David.joanou",
+    "timestamp": 1734130518627,
+    "content": "FNqJtYs7rsP1H9GXWTtc5VnDoL2GhXEUKhYN46EEpump",
+    "caMentioned": "FNqJtYs7rsP1H9GXWTtc5VnDoL2GhXEUKhYN46EEpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "c8536030-026e-490a-b199-7a9cbe24f8a0",
+    "originalMessageId": "1317263942598398062",
+    "userId": "503630344986165258",
+    "username": "velja",
+    "timestamp": 1734130597496,
+    "content": "bond it 9BCtUx2aFsgPSP96aY6Uiw6hatnshMzQnpyXM5GR9uwx",
+    "caMentioned": "9BCtUx2aFsgPSP96aY6Uiw6hatnshMzQnpyXM5GR9uwx",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is suggesting to bond the token, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "a77a465b-26cc-442a-bdc9-a75fdaa85d04",
+    "originalMessageId": "1317264550533271552",
+    "userId": "1162569240155529287",
+    "username": "AnimePlace",
+    "timestamp": 1734130742439,
+    "content": "FNqJtYs7rsP1H9GXWTtc5VnDoL2GhXEUKhYN46EEpump",
+    "caMentioned": "FNqJtYs7rsP1H9GXWTtc5VnDoL2GhXEUKhYN46EEpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "b95958c9-11f3-4156-8892-55850085820a",
+    "originalMessageId": "1317265281286017106",
+    "userId": "796570112354025524",
+    "username": "Dosh",
+    "timestamp": 1734130916664,
+    "content": "57TJS5TWkufyYuN8jgQ9iSR5SmDMokSfWtwG91aepump",
+    "caMentioned": "57TJS5TWkufyYuN8jgQ9iSR5SmDMokSfWtwG91aepump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  }
+]

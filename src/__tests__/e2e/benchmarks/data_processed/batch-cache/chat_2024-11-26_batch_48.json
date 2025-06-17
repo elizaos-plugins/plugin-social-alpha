@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "1c63f74d-f629-4fda-89c7-932795396c48",
+    "originalMessageId": "1311054910397222915",
+    "userId": "943882630502428772",
+    "username": "ChungMyung",
+    "timestamp": 1732650248861,
+    "content": "and he created this \n\nhttps://solscan.io/account/4V3yFTXTJhvKJrGKvauSyie5LJZo236tPqfb878ErY9o#balanceChanges\n\ncheck it lol \n\nhttps://solscan.io/tx/3pf9U5jtknnsRBQ4QFdHatTYXXQv9atGm7EVsNgXXwXUgVfqHTGfbCHLacUW8QeHkkiYADJsrwQLUQtuD4bYrpg2",
+    "caMentioned": "4V3yFTXTJhvKJrGKvauSyie5LJZo236tPqfb878ErY9o",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User is drawing attention to a specific token by sharing a Solscan link.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "adefb747-6fd3-4ffd-9bc0-07967a8cfed3",
+    "originalMessageId": "1311055507133304913",
+    "userId": "388083658302423050",
+    "username": "supachimp",
+    "timestamp": 1732650391134,
+    "content": "thoughts on this one? HWd7AKLC4V8U8gaZ2yzgx5M3SMPPTbgdCA3ENwJspump",
+    "caMentioned": "HWd7AKLC4V8U8gaZ2yzgx5M3SMPPTbgdCA3ENwJspump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User is asking for thoughts on a specific token by sharing a contract address.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  }
+]

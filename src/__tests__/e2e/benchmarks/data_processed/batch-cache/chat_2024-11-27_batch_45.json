@@ -1,0 +1,48 @@
+[
+  {
+    "callId": "03838314-ccc5-4b99-8dc9-7db038d9df94",
+    "originalMessageId": "1311372214687371396",
+    "userId": "1077595440498884638",
+    "username": "kokni_dev",
+    "timestamp": 1732725900099,
+    "content": "CxN2KctowQ216p9wWRgiQeMe9ExRSrL7UeR2UYRzpump",
+    "caMentioned": "CxN2KctowQ216p9wWRgiQeMe9ExRSrL7UeR2UYRzpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "b5afa90b-e331-4f68-b6dc-110e2dd87e4a",
+    "originalMessageId": "1311373228395991082",
+    "userId": "1311326538293051454",
+    "username": "BigBro",
+    "timestamp": 1732726141786,
+    "content": "Don’t sleep on $noopAI  \n\nCA: 45hMxUznkUPWrgLkvcogW6jzc8CX9ZgZ5Jb21Cqepump",
+    "tokenMentioned": "noopAI",
+    "caMentioned": "45hMxUznkUPWrgLkvcogW6jzc8CX9ZgZ5Jb21Cqepump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is drawing attention to $noopAI and its contract address.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "a5c460fe-62d9-4310-9acf-dc306b2cdef9",
+    "originalMessageId": "1311375522277625917",
+    "userId": "878229527862607904",
+    "username": "Adam Dee | $equalscash",
+    "timestamp": 1732726688690,
+    "content": "2fZB7doFZyq52kpZLT4Povb4ADTPVMoEsL47U3uapump",
+    "caMentioned": "2fZB7doFZyq52kpZLT4Povb4ADTPVMoEsL47U3uapump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  }
+]

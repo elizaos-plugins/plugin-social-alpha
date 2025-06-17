@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "3f440d5d-5c4a-4642-a94e-822773293eb0",
+    "originalMessageId": "1317478505860169759",
+    "userId": "218464496845324289",
+    "username": "firekid",
+    "timestamp": 1734181753364,
+    "content": "i firmly believe Tetsuo below 100m is free",
+    "tokenMentioned": "Tetsuo",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User believes Tetsuo is undervalued below 100m.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-14"
+  },
+  {
+    "callId": "6d757fab-c489-4ac1-b0b1-777a35005d30",
+    "originalMessageId": "1317481488488595567",
+    "userId": "835942944942456852",
+    "username": "unchained",
+    "timestamp": 1734182464478,
+    "content": "8vBhnwFJ3K6mRZzRRhqRQ17unYernRN5mz78fCDppump",
+    "caMentioned": "8vBhnwFJ3K6mRZzRRhqRQ17unYernRN5mz78fCDppump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-14"
+  },
+  {
+    "callId": "0b09bfb3-db55-4cb2-a080-a344741cd2ea",
+    "originalMessageId": "1317482301537390652",
+    "userId": "417371196913352704",
+    "username": "Niels",
+    "timestamp": 1734182658324,
+    "content": "PGqha58Ua83N6UqapWpjsSnL6pe858LczR5WFjsF8os\n\nLooks pretty undervalued lol",
+    "caMentioned": "PGqha58Ua83N6UqapWpjsSnL6pe858LczR5WFjsF8os",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-14"
+  }
+]

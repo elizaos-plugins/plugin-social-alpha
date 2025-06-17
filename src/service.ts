@@ -10,9 +10,12 @@ import {
   type Task, // Added for task worker
   asUUID, // Ensure asUUID is imported for creating component IDs
   createUniqueUuid, // Added for creating unique UUIDs
-} from "@elizaos/core";
-import { v4 as uuidv4 } from "uuid";
-import { BirdeyeClient, DexscreenerClient, HeliusClient } from "./clients";
+  parseJSONObjectFromText,
+  ChannelType,
+} from '@elizaos/core';
+import { v4 as uuidv4 } from 'uuid';
+import { BirdeyeClient, DexscreenerClient, HeliusClient } from './clients';
+import { BalancedTrustScoreCalculator } from './services/balancedTrustScoreCalculator';
 import {
   DEFAULT_TRADING_CONFIG,
   type TradingConfig,
@@ -20,9 +23,9 @@ import {
   getLiquidityMultiplier,
   getMarketCapMultiplier,
   getVolumeMultiplier,
-} from "./config";
-import { TRUST_LEADERBOARD_WORLD_SEED } from "./constants"; // Import the seed
-import { formatFullReport } from "./reports";
+} from './config';
+import { TRUST_LEADERBOARD_WORLD_SEED } from './config'; // Import the seed
+import { formatFullReport } from './reports';
 import {
   type BuySignalMessage,
   Conviction,
@@ -47,11 +50,11 @@ import {
   TRUST_MARKETPLACE_COMPONENT_TYPE,
   type TrustMarketplaceComponentData,
   type ICommunityInvestorService,
-  Recommendation,
-  RecommendationMetric,
-  UserTrustProfile,
-} from "./types";
-import { ChannelType } from "@elizaos/core";
+  type Recommendation,
+  type RecommendationMetric,
+  type UserTrustProfile,
+  type HighValueHolder,
+} from './types';
 
 // Event types
 /**
@@ -64,11 +67,11 @@ import { ChannelType } from "@elizaos/core";
  * @property {TokenPerformance} [performance] - The token performance associated with the event. (if type is 'token_performance_updated')
  */
 export type TradingEvent =
-  | { type: "position_opened"; position: Position }
-  | { type: "position_closed"; position: Position }
-  | { type: "transaction_added"; transaction: Transaction }
-  | { type: "recommendation_added"; recommendation: TokenRecommendation }
-  | { type: "token_performance_updated"; performance: TokenPerformance };
+  | { type: 'position_opened'; position: Position }
+  | { type: 'position_closed'; position: Position }
+  | { type: 'transaction_added'; transaction: Transaction }
+  | { type: 'recommendation_added'; recommendation: TokenRecommendation }
+  | { type: 'token_performance_updated'; performance: TokenPerformance };
 
 /**
  * Unified Trading Service that centralizes all trading operations
@@ -81,13 +84,10 @@ export type TradingEvent =
  * @method storeRecommenderMetrics - Store entity metrics and cache for 5 minutes.
  * @method storeRecommenderMetricsHistory - Store entity metrics history.
  */
-export class CommunityInvestorService
-  extends Service
-  implements ICommunityInvestorService
-{
+export class CommunityInvestorService extends Service implements ICommunityInvestorService {
   static override serviceType = ServiceType.COMMUNITY_INVESTOR;
   public capabilityDescription =
-    "Manages community-driven investment trust scores and recommendations.";
+    'Manages community-driven investment trust scores and recommendations.';
 
   // Client instances
   private birdeyeClient: BirdeyeClient;
@@ -103,6 +103,8 @@ export class CommunityInvestorService
     dexscreener?: string;
   } = {};
 
+  private balancedTrustCalculator: BalancedTrustScoreCalculator;
+
   // Constants can be defined here or loaded from config/settings
   private readonly POSITIVE_TRADE_THRESHOLD = 10; // Trust score above this might trigger a trade
   private readonly NEUTRAL_MARGIN = 5; // Trust scores within +/- this from 0 are neutral
@@ -113,20 +115,20 @@ export class CommunityInvestorService
 
   // Add this property to the class
   private userRegistry: Set<UUID> = new Set();
-  private componentWorldId: UUID;
-  private componentRoomId: UUID; // This will be the same as componentWorldId
+  public readonly componentWorldId: UUID;
+  public readonly componentRoomId: UUID; // This will be the same as componentWorldId
 
   constructor(protected override runtime: IAgentRuntime) {
     super(runtime);
 
+    // Initialize the balanced trust calculator
+    this.balancedTrustCalculator = new BalancedTrustScoreCalculator();
+
     // Generate the consistent World ID and Room ID for this plugin's components
-    this.componentWorldId = createUniqueUuid(
-      runtime,
-      TRUST_LEADERBOARD_WORLD_SEED,
-    );
+    this.componentWorldId = createUniqueUuid(runtime, TRUST_LEADERBOARD_WORLD_SEED);
     this.componentRoomId = this.componentWorldId; // Use the same ID for room context of components
     logger.info(
-      `[CommunityInvestorService] Using Component World/Room ID: ${this.componentWorldId}`,
+      `[CommunityInvestorService] Using Component World/Room ID: ${this.componentWorldId}`
     );
 
     // Ensure this world and room exist for the plugin's components
@@ -139,10 +141,7 @@ export class CommunityInvestorService
     try {
       this.heliusClient = HeliusClient.createFromRuntime(runtime);
     } catch (error) {
-      logger.warn(
-        "Failed to initialize Helius client, holder data will be limited:",
-        error,
-      );
+      logger.warn('Failed to initialize Helius client, holder data will be limited:', error);
     }
 
     // Merge provided config with defaults
@@ -152,17 +151,15 @@ export class CommunityInvestorService
     this.registerTaskWorkers(runtime); // Register task workers on service instantiation
   }
 
-  static async start(
-    runtime: IAgentRuntime,
-  ): Promise<CommunityInvestorService> {
+  static async start(runtime: IAgentRuntime): Promise<CommunityInvestorService> {
     const service = new CommunityInvestorService(runtime);
     return service;
   }
 
   static async stop(runtime: IAgentRuntime): Promise<void> {
-    const service = runtime.getService("trading");
+    const service = runtime.getService('trading');
     if (service) {
-      await service.stop();
+      await service.stop?.();
     }
   }
 
@@ -173,16 +170,19 @@ export class CommunityInvestorService
   /**
    * Process a buy signal from an entity
    */
-  async processBuySignal(
-    buySignal: BuySignalMessage,
-    entity: Entity,
-  ): Promise<Position | null> {
-    logger.debug("processing buy signal", buySignal, entity);
+  async processBuySignal(buySignal: BuySignalMessage, entity: Entity): Promise<Position | null> {
+    logger.debug('processing buy signal', buySignal, entity);
     try {
+      // Ensure entity has a valid ID
+      if (!entity.id) {
+        logger.error('Entity ID is required for processing buy signal');
+        return null;
+      }
+
       // Validate the token
       const tokenPerformance = await this.getOrFetchTokenPerformance(
         buySignal.tokenAddress,
-        buySignal.chain || this.tradingConfig.defaultChain,
+        buySignal.chain || this.tradingConfig.defaultChain
       );
 
       if (!tokenPerformance) {
@@ -201,13 +201,11 @@ export class CommunityInvestorService
         entity.id,
         tokenPerformance,
         buySignal.conviction || Conviction.MEDIUM,
-        RecommendationType.BUY,
+        RecommendationType.BUY
       );
 
       if (!recommendation) {
-        logger.error(
-          `Failed to create recommendation for token: ${buySignal.tokenAddress}`,
-        );
+        logger.error(`Failed to create recommendation for token: ${buySignal.tokenAddress}`);
         return null;
       }
 
@@ -215,7 +213,7 @@ export class CommunityInvestorService
       const buyAmount = this.calculateBuyAmount(
         entity,
         buySignal.conviction || Conviction.MEDIUM,
-        tokenPerformance,
+        tokenPerformance
       );
 
       // Create position
@@ -223,16 +221,14 @@ export class CommunityInvestorService
         recommendation.id,
         entity.id,
         buySignal.tokenAddress,
-        buySignal.walletAddress || "simulation",
+        buySignal.walletAddress || 'simulation',
         buyAmount,
-        tokenPerformance.price?.toString() || "0",
-        buySignal.isSimulation || this.tradingConfig.forceSimulation,
+        tokenPerformance.price?.toString() || '0',
+        buySignal.isSimulation || this.tradingConfig.forceSimulation
       );
 
       if (!position) {
-        logger.error(
-          `Failed to create position for token: ${buySignal.tokenAddress}`,
-        );
+        logger.error(`Failed to create position for token: ${buySignal.tokenAddress}`);
         return null;
       }
 
@@ -243,7 +239,7 @@ export class CommunityInvestorService
         TransactionType.BUY,
         buyAmount,
         tokenPerformance.price || 0,
-        position.isSimulation,
+        position.isSimulation
       );
 
       // Emit event
@@ -251,7 +247,7 @@ export class CommunityInvestorService
 
       return position;
     } catch (error) {
-      logger.error("Error processing buy signal:", error);
+      logger.error('Error processing buy signal:', error);
       return null;
     }
   }
@@ -259,12 +255,9 @@ export class CommunityInvestorService
   /**
    * Process a sell signal for an existing position
    */
-  async processSellSignal(
-    positionId: UUID,
-    _sellRecommenderId: UUID,
-  ): Promise<boolean> {
+  async processSellSignal(positionId: UUID, _sellRecommenderId: UUID): Promise<boolean> {
     try {
-      logger.debug("processing sell signal", positionId, _sellRecommenderId);
+      logger.debug('processing sell signal', positionId, _sellRecommenderId);
       // Get position
       const position = await this.getPosition(positionId);
       if (!position) {
@@ -281,7 +274,7 @@ export class CommunityInvestorService
       // Get token performance
       const tokenPerformance = await this.getOrFetchTokenPerformance(
         position.tokenAddress,
-        position.chain,
+        position.chain
       );
 
       if (!tokenPerformance) {
@@ -292,8 +285,7 @@ export class CommunityInvestorService
       // Calculate performance metrics
       const initialPrice = Number.parseFloat(position.initialPrice);
       const currentPrice = tokenPerformance.price || 0;
-      const priceChange =
-        initialPrice > 0 ? (currentPrice - initialPrice) / initialPrice : 0;
+      const priceChange = initialPrice > 0 ? (currentPrice - initialPrice) / initialPrice : 0;
 
       // Update position
       const updatedPosition: Position = {
@@ -312,7 +304,7 @@ export class CommunityInvestorService
         TransactionType.SELL,
         BigInt(position.amount),
         currentPrice,
-        position.isSimulation,
+        position.isSimulation
       );
 
       // Update entity metrics
@@ -323,7 +315,7 @@ export class CommunityInvestorService
 
       return true;
     } catch (error) {
-      logger.error("Error processing sell signal:", error);
+      logger.error('Error processing sell signal:', error);
       return false;
     }
   }
@@ -340,14 +332,21 @@ export class CommunityInvestorService
       type: RecommendationType;
       timestamp: Date;
       metadata?: Record<string, any>;
-    },
+    }
   ): Promise<Position | null> {
     try {
-      logger.debug("handling recommendation", entity, recommendation);
+      logger.debug('handling recommendation', entity, recommendation);
+
+      // Ensure entity has a valid ID
+      if (!entity.id) {
+        logger.error('Entity ID is required for handling recommendation');
+        return null;
+      }
+
       // Get token performance
       const tokenPerformance = await this.getOrFetchTokenPerformance(
         recommendation.tokenAddress,
-        recommendation.chain,
+        recommendation.chain
       );
 
       if (!tokenPerformance) {
@@ -360,13 +359,11 @@ export class CommunityInvestorService
         entity.id,
         tokenPerformance,
         recommendation.conviction,
-        recommendation.type,
+        recommendation.type
       );
 
       if (!tokenRecommendation) {
-        logger.error(
-          `Failed to create recommendation for token: ${recommendation.tokenAddress}`,
-        );
+        logger.error(`Failed to create recommendation for token: ${recommendation.tokenAddress}`);
         return null;
       }
 
@@ -376,7 +373,7 @@ export class CommunityInvestorService
         const buyAmount = this.calculateBuyAmount(
           entity,
           recommendation.conviction,
-          tokenPerformance,
+          tokenPerformance
         );
 
         // Create position
@@ -384,16 +381,14 @@ export class CommunityInvestorService
           tokenRecommendation.id,
           entity.id,
           recommendation.tokenAddress,
-          "simulation", // Use simulation wallet by default
+          'simulation', // Use simulation wallet by default
           buyAmount,
-          tokenPerformance.price?.toString() || "0",
-          true, // Simulation by default
+          tokenPerformance.price?.toString() || '0',
+          true // Simulation by default
         );
 
         if (!position) {
-          logger.error(
-            `Failed to create position for token: ${recommendation.tokenAddress}`,
-          );
+          logger.error(`Failed to create position for token: ${recommendation.tokenAddress}`);
           return null;
         }
 
@@ -404,7 +399,7 @@ export class CommunityInvestorService
           TransactionType.BUY,
           buyAmount,
           tokenPerformance.price || 0,
-          true, // Simulation by default
+          true // Simulation by default
         );
 
         // Return position
@@ -413,7 +408,7 @@ export class CommunityInvestorService
 
       return null;
     } catch (error) {
-      logger.error("Error handling recommendation:", error);
+      logger.error('Error handling recommendation:', error);
       return null;
     }
   }
@@ -422,9 +417,9 @@ export class CommunityInvestorService
    * Check if a wallet is registered for a chain
    */
   hasWallet(chain: string): boolean {
-    logger.debug("hasWallet", chain);
+    logger.debug('hasWallet', chain);
     // This implementation would check if a wallet config exists for the specified chain
-    return chain.toLowerCase() === "solana"; // Assuming Solana is always supported
+    return chain.toLowerCase() === 'solana'; // Assuming Solana is always supported
   }
 
   // ===================== TOKEN PROVIDER METHODS =====================
@@ -435,36 +430,31 @@ export class CommunityInvestorService
   async getTokenOverview(
     chain: string,
     tokenAddress: string,
-    forceRefresh = false,
+    forceRefresh = false
   ): Promise<TokenMetadata & TokenMarketData> {
     try {
-      logger.debug("getting token overview", chain, tokenAddress, forceRefresh);
+      logger.debug('getting token overview', chain, tokenAddress, forceRefresh);
       // Check cache first unless force refresh is requested
       if (!forceRefresh) {
         const cacheKey = `token:${chain}:${tokenAddress}:overview`;
-        const cachedData = await this.runtime.getCache<
-          TokenMetadata & TokenMarketData
-        >(cacheKey);
+        const cachedData = await this.runtime.getCache<TokenMetadata & TokenMarketData>(cacheKey);
 
         if (cachedData) {
           return cachedData;
         }
 
         // Also check in memory
-        const tokenPerformance = await this.getTokenPerformance(
-          tokenAddress,
-          chain,
-        );
+        const tokenPerformance = await this.getTokenPerformance(tokenAddress, chain);
         if (tokenPerformance) {
           const tokenData = {
             chain: tokenPerformance.chain || chain,
             address: tokenPerformance.address || tokenAddress,
-            name: tokenPerformance.name || "",
-            symbol: tokenPerformance.symbol || "",
+            name: tokenPerformance.name || '',
+            symbol: tokenPerformance.symbol || '',
             decimals: tokenPerformance.decimals || 0,
             metadata: tokenPerformance.metadata || {},
             price: tokenPerformance.price || 0,
-            priceUsd: tokenPerformance.price?.toString() || "0",
+            priceUsd: tokenPerformance.price?.toString() || '0',
             price24hChange: tokenPerformance.price24hChange || 0,
             marketCap: tokenPerformance.currentMarketCap || 0,
             liquidityUsd: tokenPerformance.liquidity || 0,
@@ -478,47 +468,35 @@ export class CommunityInvestorService
           };
 
           // Cache the token data
-          await this.runtime.setCache<TokenMetadata & TokenMarketData>(
-            cacheKey,
-            tokenData,
-          ); // Cache for 5 minutes
+          await this.runtime.setCache<TokenMetadata & TokenMarketData>(cacheKey, tokenData); // Cache for 5 minutes
 
           return tokenData;
         }
       }
 
       // Need to fetch fresh data
-      if (chain.toLowerCase() === "solana") {
+      if (chain.toLowerCase() === 'solana') {
         const [dexScreenerData, birdeyeData] = await Promise.all([
-          this.dexscreenerClient.searchForHighestLiquidityPair(
-            tokenAddress,
-            chain,
-            {
-              expires: "5m",
-            },
-          ),
-          this.birdeyeClient.fetchTokenOverview(
-            tokenAddress,
-            { expires: "5m" },
-            forceRefresh,
-          ),
+          this.dexscreenerClient.searchForHighestLiquidityPair(tokenAddress, chain, {
+            expires: '5m',
+          }),
+          this.birdeyeClient.fetchTokenOverview(tokenAddress, { expires: '5m' }, forceRefresh),
         ]);
 
         // If we have DexScreener data, it's typically more reliable for prices and liquidity
         const tokenData = {
           chain,
           address: tokenAddress,
-          name: birdeyeData?.name || dexScreenerData?.baseToken?.name || "",
-          symbol:
-            birdeyeData?.symbol || dexScreenerData?.baseToken?.symbol || "",
+          name: birdeyeData?.name || dexScreenerData?.baseToken?.name || '',
+          symbol: birdeyeData?.symbol || dexScreenerData?.baseToken?.symbol || '',
           decimals: birdeyeData?.decimals || 9, // Default for Solana tokens
           metadata: {
-            logoURI: birdeyeData?.logoURI || "",
-            pairAddress: dexScreenerData?.pairAddress || "",
-            dexId: dexScreenerData?.dexId || "",
+            logoURI: birdeyeData?.logoURI || '',
+            pairAddress: dexScreenerData?.pairAddress || '',
+            dexId: dexScreenerData?.dexId || '',
           },
-          price: Number.parseFloat(dexScreenerData?.priceUsd || "0"),
-          priceUsd: dexScreenerData?.priceUsd || "0",
+          price: Number.parseFloat(dexScreenerData?.priceUsd || '0'),
+          priceUsd: dexScreenerData?.priceUsd || '0',
           price24hChange: dexScreenerData?.priceChange?.h24 || 0,
           marketCap: dexScreenerData?.marketCap || 0,
           liquidityUsd: dexScreenerData?.liquidity?.usd || 0,
@@ -533,10 +511,7 @@ export class CommunityInvestorService
 
         // Cache the token data
         const cacheKey = `token:${chain}:${tokenAddress}:overview`;
-        await this.runtime.setCache<TokenMetadata & TokenMarketData>(
-          cacheKey,
-          tokenData,
-        ); // Cache for 5 minutes
+        await this.runtime.setCache<TokenMetadata & TokenMarketData>(cacheKey, tokenData); // Cache for 5 minutes
 
         return tokenData;
       }
@@ -553,17 +528,17 @@ export class CommunityInvestorService
   async resolveTicker(
     ticker: string,
     chain: SupportedChain = SupportedChain.SOLANA,
-    contextMessages?: Memory[], // Context might be used to disambiguate if multiple matches
+    contextMessages?: Memory[] // Context might be used to disambiguate if multiple matches
   ): Promise<{
     address: string;
     chain: SupportedChain;
     ticker?: string;
   } | null> {
     logger.debug(
-      `[CommunityInvestorService] Attempting to resolve ticker "${ticker}" on chain ${chain}`,
+      `[CommunityInvestorService] Attempting to resolve ticker "${ticker}" on chain ${chain}`
     );
 
-    const cleanTicker = ticker.startsWith("$")
+    const cleanTicker = ticker.startsWith('$')
       ? ticker.substring(1).toUpperCase()
       : ticker.toUpperCase();
 
@@ -571,10 +546,7 @@ export class CommunityInvestorService
     if (contextMessages) {
       for (const msg of contextMessages.slice().reverse()) {
         // Check recent first
-        if (
-          msg.content?.text?.includes(ticker) &&
-          msg.content.text.length > ticker.length + 5
-        ) {
+        if (msg.content?.text?.includes(ticker) && msg.content.text.length > ticker.length + 5) {
           // Basic check for potential address patterns
           // Split by spaces, parentheses, commas, then iterate and validate
           const potentialAddressParts = msg.content.text.split(/[\s(),]+/);
@@ -587,7 +559,7 @@ export class CommunityInvestorService
               /^[a-zA-Z0-9]+$/.test(part)
             ) {
               logger.info(
-                `[CommunityInvestorService] Found potential Solana address ${part} for ticker ${ticker} in context.`,
+                `[CommunityInvestorService] Found potential Solana address ${part} for ticker ${ticker} in context.`
               );
               return {
                 address: part,
@@ -597,14 +569,13 @@ export class CommunityInvestorService
             }
             // Ethereum/Base addresses: 0x followed by 40 hex characters
             if (
-              (chain === SupportedChain.ETHEREUM ||
-                chain === SupportedChain.BASE) &&
+              (chain === SupportedChain.ETHEREUM || chain === SupportedChain.BASE) &&
               part.length === 42 &&
-              part.toLowerCase().startsWith("0x") &&
+              part.toLowerCase().startsWith('0x') &&
               /^0x[a-fA-F0-9]{40}$/.test(part)
             ) {
               logger.info(
-                `[CommunityInvestorService] Found potential Ethereum/Base address ${part} for ticker ${ticker} in context.`,
+                `[CommunityInvestorService] Found potential Ethereum/Base address ${part} for ticker ${ticker} in context.`
               );
               return {
                 address: part,
@@ -620,16 +591,16 @@ export class CommunityInvestorService
     // Known tokens on Solana
     if (chain === SupportedChain.SOLANA) {
       const knownSolanaTokens: Record<string, string> = {
-        SOL: "So11111111111111111111111111111111111111112",
-        USDC: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-        USDT: "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
-        WIF: "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzL7WDb43cuQu2",
-        BONK: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
-        JUP: "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
-        RAY: "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
-        ORCA: "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
-        SRM: "SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt",
-        FTT: "AGFEad2et2ZJif9jaGpdMixQqvW5i81aBdvKe7PHNfz3",
+        SOL: 'So11111111111111111111111111111111111111112',
+        USDC: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+        USDT: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB',
+        WIF: 'EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzL7WDb43cuQu2',
+        BONK: 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263',
+        JUP: 'JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN',
+        RAY: '4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R',
+        ORCA: 'orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE',
+        SRM: 'SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt',
+        FTT: 'AGFEad2et2ZJif9jaGpdMixQqvW5i81aBdvKe7PHNfz3',
       };
 
       if (knownSolanaTokens[cleanTicker]) {
@@ -643,25 +614,17 @@ export class CommunityInvestorService
       // Try to search using DexScreener for Solana
       try {
         const searchResults = await this.dexscreenerClient.search(cleanTicker, {
-          expires: "5m",
+          expires: '5m',
         });
-        if (
-          searchResults &&
-          searchResults.pairs &&
-          searchResults.pairs.length > 0
-        ) {
+        if (searchResults && searchResults.pairs && searchResults.pairs.length > 0) {
           // Find the most liquid pair for this token
           const bestPair = searchResults.pairs
-            .filter(
-              (pair) => pair.baseToken.symbol.toUpperCase() === cleanTicker,
-            )
-            .sort(
-              (a, b) => (b.liquidity?.usd || 0) - (a.liquidity?.usd || 0),
-            )[0];
+            .filter((pair) => pair.baseToken.symbol.toUpperCase() === cleanTicker)
+            .sort((a, b) => (b.liquidity?.usd || 0) - (a.liquidity?.usd || 0))[0];
 
           if (bestPair) {
             logger.info(
-              `[CommunityInvestorService] Found ${cleanTicker} via DexScreener: ${bestPair.baseToken.address}`,
+              `[CommunityInvestorService] Found ${cleanTicker} via DexScreener: ${bestPair.baseToken.address}`
             );
             return {
               address: bestPair.baseToken.address,
@@ -673,7 +636,7 @@ export class CommunityInvestorService
       } catch (error) {
         logger.warn(
           `[CommunityInvestorService] DexScreener search failed for ${cleanTicker}:`,
-          error,
+          error
         );
       }
     }
@@ -681,13 +644,13 @@ export class CommunityInvestorService
     // Known tokens on Ethereum
     else if (chain === SupportedChain.ETHEREUM) {
       const knownEthereumTokens: Record<string, string> = {
-        ETH: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", // WETH
-        USDC: "0xA0b86a33E6441c69De69b9A87e20b88dd75B61FC",
-        USDT: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        DAI: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-        LINK: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
-        UNI: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-        WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        ETH: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // WETH
+        USDC: '0xA0b86a33E6441c69De69b9A87e20b88dd75B61FC',
+        USDT: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+        DAI: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+        LINK: '0x514910771AF9Ca656af840dff83E8264EcF986CA',
+        UNI: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
+        WBTC: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',
       };
 
       if (knownEthereumTokens[cleanTicker]) {
@@ -701,26 +664,20 @@ export class CommunityInvestorService
       // Try to search using DexScreener for Ethereum
       try {
         const searchResults = await this.dexscreenerClient.search(cleanTicker, {
-          expires: "5m",
+          expires: '5m',
         });
-        if (
-          searchResults &&
-          searchResults.pairs &&
-          searchResults.pairs.length > 0
-        ) {
+        if (searchResults && searchResults.pairs && searchResults.pairs.length > 0) {
           const bestPair = searchResults.pairs
             .filter(
               (pair) =>
-                pair.chainId.toLowerCase() === "ethereum" &&
-                pair.baseToken.symbol.toUpperCase() === cleanTicker,
+                pair.chainId.toLowerCase() === 'ethereum' &&
+                pair.baseToken.symbol.toUpperCase() === cleanTicker
             )
-            .sort(
-              (a, b) => (b.liquidity?.usd || 0) - (a.liquidity?.usd || 0),
-            )[0];
+            .sort((a, b) => (b.liquidity?.usd || 0) - (a.liquidity?.usd || 0))[0];
 
           if (bestPair) {
             logger.info(
-              `[CommunityInvestorService] Found ${cleanTicker} via DexScreener on Ethereum: ${bestPair.baseToken.address}`,
+              `[CommunityInvestorService] Found ${cleanTicker} via DexScreener on Ethereum: ${bestPair.baseToken.address}`
             );
             return {
               address: bestPair.baseToken.address,
@@ -732,7 +689,7 @@ export class CommunityInvestorService
       } catch (error) {
         logger.warn(
           `[CommunityInvestorService] DexScreener search failed for ${cleanTicker} on Ethereum:`,
-          error,
+          error
         );
       }
     }
@@ -740,9 +697,9 @@ export class CommunityInvestorService
     // Known tokens on Base
     else if (chain === SupportedChain.BASE) {
       const knownBaseTokens: Record<string, string> = {
-        ETH: "0x4200000000000000000000000000000000000006", // Base ETH
-        USDC: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-        WETH: "0x4200000000000000000000000000000000000006",
+        ETH: '0x4200000000000000000000000000000000000006', // Base ETH
+        USDC: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+        WETH: '0x4200000000000000000000000000000000000006',
       };
 
       if (knownBaseTokens[cleanTicker]) {
@@ -756,26 +713,20 @@ export class CommunityInvestorService
       // Try to search using DexScreener for Base
       try {
         const searchResults = await this.dexscreenerClient.search(cleanTicker, {
-          expires: "5m",
+          expires: '5m',
         });
-        if (
-          searchResults &&
-          searchResults.pairs &&
-          searchResults.pairs.length > 0
-        ) {
+        if (searchResults && searchResults.pairs && searchResults.pairs.length > 0) {
           const bestPair = searchResults.pairs
             .filter(
               (pair) =>
-                pair.chainId.toLowerCase() === "base" &&
-                pair.baseToken.symbol.toUpperCase() === cleanTicker,
+                pair.chainId.toLowerCase() === 'base' &&
+                pair.baseToken.symbol.toUpperCase() === cleanTicker
             )
-            .sort(
-              (a, b) => (b.liquidity?.usd || 0) - (a.liquidity?.usd || 0),
-            )[0];
+            .sort((a, b) => (b.liquidity?.usd || 0) - (a.liquidity?.usd || 0))[0];
 
           if (bestPair) {
             logger.info(
-              `[CommunityInvestorService] Found ${cleanTicker} via DexScreener on Base: ${bestPair.baseToken.address}`,
+              `[CommunityInvestorService] Found ${cleanTicker} via DexScreener on Base: ${bestPair.baseToken.address}`
             );
             return {
               address: bestPair.baseToken.address,
@@ -787,14 +738,12 @@ export class CommunityInvestorService
       } catch (error) {
         logger.warn(
           `[CommunityInvestorService] DexScreener search failed for ${cleanTicker} on Base:`,
-          error,
+          error
         );
       }
     }
 
-    logger.warn(
-      `[CommunityInvestorService] Could not resolve ticker ${ticker} on chain ${chain}`,
-    );
+    logger.warn(`[CommunityInvestorService] Could not resolve ticker ${ticker} on chain ${chain}`);
     return null;
   }
 
@@ -802,7 +751,7 @@ export class CommunityInvestorService
    * Get current price for a token
    */
   async getCurrentPrice(chain: string, tokenAddress: string): Promise<number> {
-    logger.debug("getting current price", chain, tokenAddress);
+    logger.debug('getting current price', chain, tokenAddress);
     try {
       // Check cache first
       const cacheKey = `token:${chain}:${tokenAddress}:price`;
@@ -821,9 +770,9 @@ export class CommunityInvestorService
       }
 
       // Fetch fresh price
-      if (chain.toLowerCase() === "solana") {
+      if (chain.toLowerCase() === 'solana') {
         const price = await this.birdeyeClient.fetchPrice(tokenAddress, {
-          chain: "solana",
+          chain: 'solana',
         });
 
         // Cache the price
@@ -841,11 +790,8 @@ export class CommunityInvestorService
   /**
    * Determine if a token should be traded
    */
-  async shouldTradeToken(
-    chain: string,
-    tokenAddress: string,
-  ): Promise<boolean> {
-    logger.debug("shouldTradeToken", chain, tokenAddress);
+  async shouldTradeToken(chain: string, tokenAddress: string): Promise<boolean> {
+    logger.debug('shouldTradeToken', chain, tokenAddress);
     try {
       const tokenData = await this.getProcessedTokenData(chain, tokenAddress);
 
@@ -854,29 +800,19 @@ export class CommunityInvestorService
       // Get the key metrics
       const { tradeData, security, dexScreenerData } = tokenData;
 
-      if (
-        !dexScreenerData ||
-        !dexScreenerData.pairs ||
-        dexScreenerData.pairs.length === 0
-      ) {
+      if (!dexScreenerData || !dexScreenerData.pairs || dexScreenerData.pairs.length === 0) {
         return false;
       }
 
       const pair = dexScreenerData.pairs[0];
 
       // Check liquidity
-      if (
-        !pair.liquidity ||
-        pair.liquidity.usd < this.tradingConfig.minLiquidityUsd
-      ) {
+      if (!pair.liquidity || pair.liquidity.usd < this.tradingConfig.minLiquidityUsd) {
         return false;
       }
 
       // Check market cap
-      if (
-        !pair.marketCap ||
-        pair.marketCap > this.tradingConfig.maxMarketCapUsd
-      ) {
+      if (!pair.marketCap || pair.marketCap > this.tradingConfig.maxMarketCapUsd) {
         return false;
       }
 
@@ -892,10 +828,7 @@ export class CommunityInvestorService
 
       return true;
     } catch (error) {
-      logger.error(
-        `Error checking if token ${tokenAddress} should be traded:`,
-        error,
-      );
+      logger.error(`Error checking if token ${tokenAddress} should be traded:`, error);
       return false;
     }
   }
@@ -905,49 +838,39 @@ export class CommunityInvestorService
    */
   async getProcessedTokenData(
     chain: string,
-    tokenAddress: string,
+    tokenAddress: string
   ): Promise<ProcessedTokenData | null> {
-    logger.debug("getting processed token data", chain, tokenAddress);
+    logger.debug('getting processed token data', chain, tokenAddress);
     try {
       // Check cache first
       const cacheKey = `token:${chain}:${tokenAddress}:processed`;
-      const cachedData =
-        await this.runtime.getCache<ProcessedTokenData>(cacheKey);
+      const cachedData = await this.runtime.getCache<ProcessedTokenData>(cacheKey);
 
       if (cachedData) {
         return cachedData;
       }
 
       // Use token provider functionality to get complete token data
-      if (chain.toLowerCase() === "solana") {
+      if (chain.toLowerCase() === 'solana') {
         // Get DexScreener data
-        const dexScreenerData = await this.dexscreenerClient.search(
-          tokenAddress,
-          {
-            expires: "5m",
-          },
-        );
+        const dexScreenerData = await this.dexscreenerClient.search(tokenAddress, {
+          expires: '5m',
+        });
 
         // Try to get token data from Birdeye
         let tokenTradeData: TokenTradeData;
         let tokenSecurityData: TokenSecurityData;
 
         try {
-          tokenTradeData = await this.birdeyeClient.fetchTokenTradeData(
-            tokenAddress,
-            {
-              chain: "solana",
-              expires: "5m",
-            },
-          );
+          tokenTradeData = await this.birdeyeClient.fetchTokenTradeData(tokenAddress, {
+            chain: 'solana',
+            expires: '5m',
+          });
 
-          tokenSecurityData = await this.birdeyeClient.fetchTokenSecurity(
-            tokenAddress,
-            {
-              chain: "solana",
-              expires: "5m",
-            },
-          );
+          tokenSecurityData = await this.birdeyeClient.fetchTokenSecurity(tokenAddress, {
+            chain: 'solana',
+            expires: '5m',
+          });
         } catch (error) {
           logger.error(`Error fetching token data for ${tokenAddress}:`, error);
           return null;
@@ -956,26 +879,20 @@ export class CommunityInvestorService
         let tokenInfo: any;
 
         // Analyze holder distribution
-        const holderDistributionTrend =
-          await this.analyzeHolderDistribution(tokenTradeData);
+        const holderDistributionTrend = await this.analyzeHolderDistribution(tokenTradeData);
 
         // Try to get holder data if Helius client is available
-        let highValueHolders = [];
+        let highValueHolders: HighValueHolder[] = [];
         let highSupplyHoldersCount = 0;
 
         if (this.heliusClient) {
           try {
-            const holders = await this.heliusClient.fetchHolderList(
-              tokenAddress,
-              {
-                expires: "30m",
-              },
-            );
+            const holders = await this.heliusClient.fetchHolderList(tokenAddress, {
+              expires: '30m',
+            });
 
             // Calculate high value holders
-            const tokenPrice = Number.parseFloat(
-              tokenTradeData.price.toString(),
-            );
+            const tokenPrice = Number.parseFloat(tokenTradeData.price.toString());
             highValueHolders = holders
               .filter((holder) => {
                 const balance = Number.parseFloat(holder.balance);
@@ -984,24 +901,18 @@ export class CommunityInvestorService
               })
               .map((holder) => ({
                 holderAddress: holder.address,
-                balanceUsd: (
-                  Number.parseFloat(holder.balance) * tokenPrice
-                ).toFixed(2),
+                balanceUsd: (Number.parseFloat(holder.balance) * tokenPrice).toFixed(2),
               }));
 
             // Calculate high supply holders
-            const totalSupply = tokenInfo?.totalSupply || "0";
+            const totalSupply = tokenInfo?.totalSupply || '0';
             highSupplyHoldersCount = holders.filter((holder) => {
               const holderRatio =
-                Number.parseFloat(holder.balance) /
-                Number.parseFloat(totalSupply);
+                Number.parseFloat(holder.balance) / Number.parseFloat(totalSupply);
               return holderRatio > 0.02; // More than 2% of supply
             }).length;
           } catch (error) {
-            logger.warn(
-              `Error fetching holder data for ${tokenAddress}:`,
-              error,
-            );
+            logger.warn(`Error fetching holder data for ${tokenAddress}:`, error);
             // Continue without holder data
           }
         }
@@ -1012,22 +923,16 @@ export class CommunityInvestorService
         // Check if token is listed on DexScreener
         const isDexScreenerListed = dexScreenerData.pairs.length > 0;
         const isDexScreenerPaid = dexScreenerData.pairs.some(
-          (pair) => pair.boosts && pair.boosts.active > 0,
+          (pair) => pair.boosts && pair.boosts.active > 0
         );
 
         const processedData: ProcessedTokenData = {
           token: {
             address: tokenAddress,
-            name:
-              tokenInfo?.name ||
-              dexScreenerData.pairs[0]?.baseToken?.name ||
-              "",
-            symbol:
-              tokenInfo?.symbol ||
-              dexScreenerData.pairs[0]?.baseToken?.symbol ||
-              "",
+            name: tokenInfo?.name || dexScreenerData.pairs[0]?.baseToken?.name || '',
+            symbol: tokenInfo?.symbol || dexScreenerData.pairs[0]?.baseToken?.symbol || '',
             decimals: tokenInfo?.decimals || 9, // Default for Solana
-            logoURI: tokenInfo?.info?.imageThumbUrl || "",
+            logoURI: tokenInfo?.info?.imageThumbUrl || '',
           },
           security: tokenSecurityData,
           tradeData: tokenTradeData,
@@ -1041,19 +946,13 @@ export class CommunityInvestorService
         };
 
         // Cache the processed data
-        await this.runtime.setCache<ProcessedTokenData>(
-          cacheKey,
-          processedData,
-        ); // Cache for 5 minutes
+        await this.runtime.setCache<ProcessedTokenData>(cacheKey, processedData); // Cache for 5 minutes
 
         return processedData;
       }
       throw new Error(`Chain ${chain} not supported for processed token data`);
     } catch (error) {
-      logger.error(
-        `Error fetching processed token data for ${tokenAddress}:`,
-        error,
-      );
+      logger.error(`Error fetching processed token data for ${tokenAddress}:`, error);
       return null;
     }
   }
@@ -1061,22 +960,20 @@ export class CommunityInvestorService
   /**
    * Analyze holder distribution trend
    */
-  private async analyzeHolderDistribution(
-    tradeData: TokenTradeData,
-  ): Promise<string> {
-    logger.debug("analyzing holder distribution", tradeData);
+  private async analyzeHolderDistribution(tradeData: TokenTradeData): Promise<string> {
+    logger.debug('analyzing holder distribution', tradeData);
     // Define the time intervals to consider
     const intervals = [
       {
-        period: "30m",
+        period: '30m',
         change: tradeData.unique_wallet_30m_change_percent,
       },
-      { period: "1h", change: tradeData.unique_wallet_1h_change_percent },
-      { period: "2h", change: tradeData.unique_wallet_2h_change_percent },
-      { period: "4h", change: tradeData.unique_wallet_4h_change_percent },
-      { period: "8h", change: tradeData.unique_wallet_8h_change_percent },
+      { period: '1h', change: tradeData.unique_wallet_1h_change_percent },
+      { period: '2h', change: tradeData.unique_wallet_2h_change_percent },
+      { period: '4h', change: tradeData.unique_wallet_4h_change_percent },
+      { period: '8h', change: tradeData.unique_wallet_8h_change_percent },
       {
-        period: "24h",
+        period: '24h',
         change: tradeData.unique_wallet_24h_change_percent,
       },
     ];
@@ -1087,22 +984,21 @@ export class CommunityInvestorService
       .filter((change) => change !== null && change !== undefined) as number[];
 
     if (validChanges.length === 0) {
-      return "stable";
+      return 'stable';
     }
 
-    const averageChange =
-      validChanges.reduce((acc, curr) => acc + curr, 0) / validChanges.length;
+    const averageChange = validChanges.reduce((acc, curr) => acc + curr, 0) / validChanges.length;
 
     const increaseThreshold = 10; // e.g., average change > 10%
     const decreaseThreshold = -10; // e.g., average change < -10%
 
     if (averageChange > increaseThreshold) {
-      return "increasing";
+      return 'increasing';
     }
     if (averageChange < decreaseThreshold) {
-      return "decreasing";
+      return 'decreasing';
     }
-    return "stable";
+    return 'stable';
   }
 
   // ===================== SCORE MANAGER METHODS =====================
@@ -1110,11 +1006,8 @@ export class CommunityInvestorService
   /**
    * Update token performance data
    */
-  async updateTokenPerformance(
-    chain: string,
-    tokenAddress: string,
-  ): Promise<TokenPerformance> {
-    logger.debug("updating token performance", chain, tokenAddress);
+  async updateTokenPerformance(chain: string, tokenAddress: string): Promise<TokenPerformance> {
+    logger.debug('updating token performance', chain, tokenAddress);
     try {
       const tokenData = await this.getTokenOverview(chain, tokenAddress, true);
 
@@ -1147,10 +1040,7 @@ export class CommunityInvestorService
 
       return performance;
     } catch (error) {
-      logger.error(
-        `Error updating token performance for ${tokenAddress}:`,
-        error,
-      );
+      logger.error(`Error updating token performance for ${tokenAddress}:`, error);
       throw error;
     }
   }
@@ -1159,7 +1049,7 @@ export class CommunityInvestorService
    * Calculate risk score for a token
    */
   calculateRiskScore(token: TokenPerformance): number {
-    logger.debug("calculating risk score", token);
+    logger.debug('calculating risk score', token);
     let score = 50; // Base score
 
     // Adjust based on liquidity
@@ -1187,16 +1077,13 @@ export class CommunityInvestorService
   /**
    * Update entity metrics based on their recommendation performance
    */
-  async updateRecommenderMetrics(
-    entityId: UUID,
-    performance = 0,
-  ): Promise<void> {
-    logger.debug("updating recommender metrics", entityId, performance);
+  async updateRecommenderMetrics(entityId: UUID, performance = 0): Promise<void> {
+    logger.debug('updating recommender metrics', entityId, performance);
     const metrics = await this.getRecommenderMetrics(entityId);
 
     if (!metrics) {
       // Initialize metrics if they don't exist
-      await this.initializeRecommenderMetrics(entityId, "default");
+      await this.initializeRecommenderMetrics(entityId, 'default');
       return;
     }
 
@@ -1204,11 +1091,9 @@ export class CommunityInvestorService
     const updatedMetrics: RecommenderMetrics = {
       ...metrics,
       totalRecommendations: metrics.totalRecommendations + 1,
-      successfulRecs:
-        performance > 0 ? metrics.successfulRecs + 1 : metrics.successfulRecs,
+      successfulRecs: performance > 0 ? metrics.successfulRecs + 1 : metrics.successfulRecs,
       avgTokenPerformance:
-        (metrics.avgTokenPerformance * metrics.totalRecommendations +
-          performance) /
+        (metrics.avgTokenPerformance * metrics.totalRecommendations + performance) /
         (metrics.totalRecommendations + 1),
       trustScore: this.calculateTrustScore(metrics, performance),
     };
@@ -1229,19 +1114,15 @@ export class CommunityInvestorService
   /**
    * Calculate trust score based on metrics and new performance
    */
-  private calculateTrustScore(
-    metrics: RecommenderMetrics,
-    newPerformance: number,
-  ): number {
-    logger.debug("calculating trust score", metrics, newPerformance);
+  private calculateTrustScore(metrics: RecommenderMetrics, newPerformance: number): number {
+    logger.debug('calculating trust score', metrics, newPerformance);
     // Weight factors
     const HISTORY_WEIGHT = 0.7;
     const NEW_PERFORMANCE_WEIGHT = 0.3;
 
     // Calculate success rate
     const newSuccessRate =
-      (metrics.successfulRecs + (newPerformance > 0 ? 1 : 0)) /
-      (metrics.totalRecommendations + 1);
+      (metrics.successfulRecs + (newPerformance > 0 ? 1 : 0)) / (metrics.totalRecommendations + 1);
 
     // Calculate consistency (based on standard deviation of performance)
     // This is a simplified approach
@@ -1249,15 +1130,13 @@ export class CommunityInvestorService
 
     // Calculate new trust score
     const newTrustScore =
-      metrics.trustScore * HISTORY_WEIGHT +
-      (newPerformance > 0 ? 100 : 0) * NEW_PERFORMANCE_WEIGHT;
+      metrics.trustScore * HISTORY_WEIGHT + (newPerformance > 0 ? 100 : 0) * NEW_PERFORMANCE_WEIGHT;
 
     // Adjust based on success rate
     const successFactor = newSuccessRate * 100;
 
     // Combine scores with weights
-    const combinedScore =
-      newTrustScore * 0.6 + successFactor * 0.3 + consistencyScore * 0.1;
+    const combinedScore = newTrustScore * 0.6 + successFactor * 0.3 + consistencyScore * 0.1;
 
     // Clamp between 0-100
     return Math.max(0, Math.min(100, combinedScore));
@@ -1270,15 +1149,12 @@ export class CommunityInvestorService
    */
   private async getOrFetchTokenPerformance(
     tokenAddress: string,
-    chain: string,
+    chain: string
   ): Promise<TokenPerformance | null> {
-    logger.debug("getting or fetching token performance", tokenAddress, chain);
+    logger.debug('getting or fetching token performance', tokenAddress, chain);
     try {
       // Try to get from memory first
-      let tokenPerformance = await this.getTokenPerformance(
-        tokenAddress,
-        chain,
-      );
+      let tokenPerformance = await this.getTokenPerformance(tokenAddress, chain);
 
       // If not found, fetch from API
       if (!tokenPerformance) {
@@ -1308,10 +1184,7 @@ export class CommunityInvestorService
 
       return tokenPerformance;
     } catch (error) {
-      logger.error(
-        `Error fetching token performance for ${tokenAddress}:`,
-        error,
-      );
+      logger.error(`Error fetching token performance for ${tokenAddress}:`, error);
       return null;
     }
   }
@@ -1321,7 +1194,7 @@ export class CommunityInvestorService
    */
   private validateToken(token: TokenPerformance): boolean {
     // Skip validation for simulation tokens
-    if (token.address?.startsWith("sim_")) {
+    if (token.address?.startsWith('sim_')) {
       return true;
     }
 
@@ -1352,21 +1225,15 @@ export class CommunityInvestorService
     entityId: UUID,
     token: TokenPerformance,
     conviction: Conviction = Conviction.MEDIUM,
-    type: RecommendationType = RecommendationType.BUY,
+    type: RecommendationType = RecommendationType.BUY
   ): Promise<TokenRecommendation | null> {
-    logger.debug(
-      "creating token recommendation",
-      entityId,
-      token,
-      conviction,
-      type,
-    );
+    logger.debug('creating token recommendation', entityId, token, conviction, type);
     try {
       const recommendation: TokenRecommendation = {
         id: uuidv4() as UUID,
         entityId,
         chain: token.chain || this.tradingConfig.defaultChain,
-        tokenAddress: token.address || "",
+        tokenAddress: token.address || '',
         type,
         conviction,
         initialMarketCap: (token.initialMarketCap || 0).toString(),
@@ -1380,7 +1247,7 @@ export class CommunityInvestorService
         riskScore: this.calculateRiskScore(token),
         performanceScore: 0,
         metadata: {},
-        status: "ACTIVE",
+        status: 'ACTIVE',
         createdAt: new Date(),
         updatedAt: new Date(),
       };
@@ -1396,7 +1263,7 @@ export class CommunityInvestorService
 
       return recommendation;
     } catch (error) {
-      logger.error("Error creating token recommendation:", error);
+      logger.error('Error creating token recommendation:', error);
       return null;
     }
   }
@@ -1407,32 +1274,29 @@ export class CommunityInvestorService
   private calculateBuyAmount(
     entity: Entity,
     conviction: Conviction,
-    token: TokenPerformance,
+    token: TokenPerformance
   ): bigint {
-    logger.debug("calculating buy amount", entity, conviction, token);
+    logger.debug('calculating buy amount', entity, conviction, token);
     // Get entity trust score from metrics
     let trustScore = 50; // Default value
 
-    // Try to get actual metrics
-    const metricsPromise = this.getRecommenderMetrics(entity.id);
-    metricsPromise
-      .then((metrics) => {
-        if (metrics) {
-          trustScore = metrics.trustScore;
-        }
-      })
-      .catch((error) => {
-        logger.error(`Error getting entity metrics for ${entity.id}:`, error);
-      });
+    // Try to get actual metrics if entity has an ID
+    if (entity.id) {
+      const metricsPromise = this.getRecommenderMetrics(entity.id);
+      metricsPromise
+        .then((metrics) => {
+          if (metrics) {
+            trustScore = metrics.trustScore;
+          }
+        })
+        .catch((error) => {
+          logger.error(`Error getting entity metrics for ${entity.id}:`, error);
+        });
+    }
 
     // Get base amount from config
-    const {
-      baseAmount,
-      minAmount,
-      maxAmount,
-      trustScoreMultiplier,
-      convictionMultiplier,
-    } = this.tradingConfig.buyAmountConfig;
+    const { baseAmount, minAmount, maxAmount, trustScoreMultiplier, convictionMultiplier } =
+      this.tradingConfig.buyAmountConfig;
 
     // Calculate multipliers
     const trustMultiplier = 1 + (trustScore / 100) * trustScoreMultiplier;
@@ -1463,17 +1327,17 @@ export class CommunityInvestorService
     walletAddress: string,
     amount: bigint,
     price: string,
-    isSimulation: boolean,
+    isSimulation: boolean
   ): Promise<Position | null> {
     logger.debug(
-      "creating position",
+      'creating position',
       recommendationId,
       entityId,
       tokenAddress,
       walletAddress,
       amount,
       price,
-      isSimulation,
+      isSimulation
     );
     try {
       const position: Position = {
@@ -1485,8 +1349,8 @@ export class CommunityInvestorService
         entityId,
         recommendationId,
         initialPrice: price,
-        balance: "0",
-        status: "OPEN",
+        balance: '0',
+        status: 'OPEN',
         amount: amount.toString(),
         createdAt: new Date(),
       };
@@ -1496,7 +1360,7 @@ export class CommunityInvestorService
 
       return position;
     } catch (error) {
-      logger.error("Error creating position:", error);
+      logger.error('Error creating position:', error);
       return null;
     }
   }
@@ -1510,16 +1374,16 @@ export class CommunityInvestorService
     type: TransactionType,
     amount: bigint,
     price: number,
-    isSimulation: boolean,
+    isSimulation: boolean
   ): Promise<boolean> {
     logger.debug(
-      "recording transaction",
+      'recording transaction',
       positionId,
       tokenAddress,
       type,
       amount,
       price,
-      isSimulation,
+      isSimulation
     );
     try {
       const transaction: Transaction = {
@@ -1542,7 +1406,7 @@ export class CommunityInvestorService
 
       return true;
     } catch (error) {
-      logger.error("Error recording transaction:", error);
+      logger.error('Error recording transaction:', error);
       return false;
     }
   }
@@ -1551,20 +1415,17 @@ export class CommunityInvestorService
    * Get all positions for an entity
    */
   async getPositionsByRecommender(entityId: UUID): Promise<Position[]> {
-    logger.debug("getting positions by recommender", entityId);
+    logger.debug('getting positions by recommender', entityId);
     try {
-      const recommendations =
-        await this.getRecommendationsByRecommender(entityId);
+      const recommendations = await this.getRecommendationsByRecommender(entityId);
       const positions: Position[] = [];
 
       for (const recommendation of recommendations) {
-        const positionMatches = await this.getPositionsByToken(
-          recommendation.tokenAddress,
-        );
+        const positionMatches = await this.getPositionsByToken(recommendation.tokenAddress);
 
         // Filter for positions associated with this entity
         const entityPositions = positionMatches.filter(
-          (position) => position.entityId === entityId,
+          (position) => position.entityId === entityId
         );
 
         positions.push(...entityPositions);
@@ -1572,7 +1433,7 @@ export class CommunityInvestorService
 
       return positions;
     } catch (error) {
-      logger.error("Error getting positions by entity:", error);
+      logger.error('Error getting positions by entity:', error);
       return [];
     }
   }
@@ -1581,16 +1442,14 @@ export class CommunityInvestorService
    * Get all positions for a token
    */
   private async getPositionsByToken(tokenAddress: string): Promise<Position[]> {
-    logger.debug("getting positions by token", tokenAddress);
+    logger.debug('getting positions by token', tokenAddress);
     try {
       // This is a simplified implementation
       // In a real-world scenario, you'd query the database
       const positions = await this.getOpenPositionsWithBalance();
-      return positions.filter(
-        (position) => position.tokenAddress === tokenAddress,
-      );
+      return positions.filter((position) => position.tokenAddress === tokenAddress);
     } catch (error) {
-      logger.error("Error getting positions by token:", error);
+      logger.error('Error getting positions by token:', error);
       return [];
     }
   }
@@ -1599,17 +1458,14 @@ export class CommunityInvestorService
    * Get all transactions for a position
    */
   async getTransactionsByPosition(positionId: UUID): Promise<Transaction[]> {
-    logger.debug("getting transactions by position", positionId);
+    logger.debug('getting transactions by position', positionId);
     try {
       // Search for transactions with this position ID
       const query = `transactions for position ${positionId}`;
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        query,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, query);
 
       const memories = await this.runtime.searchMemories({
-        tableName: "transactions",
+        tableName: 'transactions',
         embedding,
         match_threshold: 0.7,
         count: 20,
@@ -1628,7 +1484,7 @@ export class CommunityInvestorService
 
       return transactions;
     } catch (error) {
-      logger.error("Error getting transactions by position:", error);
+      logger.error('Error getting transactions by position:', error);
       return [];
     }
   }
@@ -1637,17 +1493,14 @@ export class CommunityInvestorService
    * Get all transactions for a token
    */
   async getTransactionsByToken(tokenAddress: string): Promise<Transaction[]> {
-    logger.debug("getting transactions by token", tokenAddress);
+    logger.debug('getting transactions by token', tokenAddress);
     try {
       // Search for transactions with this token address
       const query = `transactions for token ${tokenAddress}`;
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        query,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, query);
 
       const memories = await this.runtime.searchMemories({
-        tableName: "transactions",
+        tableName: 'transactions',
         embedding,
         match_threshold: 0.7,
         count: 50,
@@ -1658,8 +1511,7 @@ export class CommunityInvestorService
       for (const memory of memories) {
         if (
           memory.content.transaction &&
-          (memory.content.transaction as Transaction).tokenAddress ===
-            tokenAddress
+          (memory.content.transaction as Transaction).tokenAddress === tokenAddress
         ) {
           transactions.push(memory.content.transaction as Transaction);
         }
@@ -1667,7 +1519,7 @@ export class CommunityInvestorService
 
       return transactions;
     } catch (error) {
-      logger.error("Error getting transactions by token:", error);
+      logger.error('Error getting transactions by token:', error);
       return [];
     }
   }
@@ -1676,7 +1528,7 @@ export class CommunityInvestorService
    * Get a position by ID
    */
   async getPosition(positionId: UUID): Promise<Position | null> {
-    logger.debug("getting position", positionId);
+    logger.debug('getting position', positionId);
     try {
       // Check cache first
       const cacheKey = `position:${positionId}`;
@@ -1688,13 +1540,10 @@ export class CommunityInvestorService
 
       // Search for position in memory
       const query = `position with ID ${positionId}`;
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        query,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, query);
 
       const memories = await this.runtime.searchMemories({
-        tableName: "positions",
+        tableName: 'positions',
         embedding,
         match_threshold: 0.7,
         count: 1,
@@ -1711,7 +1560,7 @@ export class CommunityInvestorService
 
       return null;
     } catch (error) {
-      logger.error("Error getting position:", error);
+      logger.error('Error getting position:', error);
       return null;
     }
   }
@@ -1719,20 +1568,15 @@ export class CommunityInvestorService
   /**
    * Get all recommendations by a entity
    */
-  async getRecommendationsByRecommender(
-    entityId: UUID,
-  ): Promise<TokenRecommendation[]> {
-    logger.debug("getting recommendations by recommender", entityId);
+  async getRecommendationsByRecommender(entityId: UUID): Promise<TokenRecommendation[]> {
+    logger.debug('getting recommendations by recommender', entityId);
     try {
       // Search for recommendations by this entity
       const query = `recommendations by entity ${entityId}`;
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        query,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, query);
 
       const memories = await this.runtime.searchMemories({
-        tableName: "recommendations",
+        tableName: 'recommendations',
         embedding,
         match_threshold: 0.7,
         count: 50,
@@ -1745,15 +1589,13 @@ export class CommunityInvestorService
           (memory.metadata as any).recommendation &&
           (memory.metadata as any).recommendation.entityId === entityId
         ) {
-          recommendations.push(
-            (memory.metadata as any).recommendation as TokenRecommendation,
-          );
+          recommendations.push((memory.metadata as any).recommendation as TokenRecommendation);
         }
       }
 
       return recommendations;
     } catch (error) {
-      logger.error("Error getting recommendations by entity:", error);
+      logger.error('Error getting recommendations by entity:', error);
       return [];
     }
   }
@@ -1762,7 +1604,7 @@ export class CommunityInvestorService
    * Close a position and update metrics
    */
   async closePosition(positionId: UUID): Promise<boolean> {
-    logger.debug("closing position", positionId);
+    logger.debug('closing position', positionId);
     try {
       const position = await this.getPosition(positionId);
       if (!position) {
@@ -1771,15 +1613,12 @@ export class CommunityInvestorService
       }
 
       // Update position status
-      position.status = "CLOSED";
+      position.status = 'CLOSED';
       position.closedAt = new Date();
 
       // Calculate final metrics
       const transactions = await this.getTransactionsByPosition(positionId);
-      const performance = await this.calculatePositionPerformance(
-        position,
-        transactions,
-      );
+      const performance = await this.calculatePositionPerformance(position, transactions);
 
       // Update entity metrics
       await this.updateRecommenderMetrics(position.entityId, performance);
@@ -1802,27 +1641,20 @@ export class CommunityInvestorService
    */
   private async calculatePositionPerformance(
     position: Position,
-    transactions: Transaction[],
+    transactions: Transaction[]
   ): Promise<number> {
-    logger.debug("calculating position performance", position, transactions);
+    logger.debug('calculating position performance', position, transactions);
     if (!transactions.length) return 0;
 
     const buyTxs = transactions.filter((t) => t.type === TransactionType.BUY);
     const sellTxs = transactions.filter((t) => t.type === TransactionType.SELL);
 
-    const totalBuyAmount = buyTxs.reduce(
-      (sum, tx) => sum + BigInt(tx.amount),
-      0n,
-    );
-    const _totalSellAmount = sellTxs.reduce(
-      (sum, tx) => sum + BigInt(tx.amount),
-      0n,
-    );
+    const totalBuyAmount = buyTxs.reduce((sum, tx) => sum + BigInt(tx.amount), 0n);
+    const _totalSellAmount = sellTxs.reduce((sum, tx) => sum + BigInt(tx.amount), 0n);
 
     position.amount = totalBuyAmount.toString();
 
-    const avgBuyPrice =
-      buyTxs.reduce((sum, tx) => sum + Number(tx.price), 0) / buyTxs.length;
+    const avgBuyPrice = buyTxs.reduce((sum, tx) => sum + Number(tx.price), 0) / buyTxs.length;
     const avgSellPrice = sellTxs.length
       ? sellTxs.reduce((sum, tx) => sum + Number(tx.price), 0) / sellTxs.length
       : await this.getCurrentPrice(position.chain, position.tokenAddress);
@@ -1836,13 +1668,13 @@ export class CommunityInvestorService
    * Store token performance data
    */
   private async storeTokenPerformance(token: TokenPerformance): Promise<void> {
-    logger.debug("storing token performance", token);
+    logger.debug('storing token performance', token);
     try {
       // Create memory object
       const memory: Memory = {
         id: uuidv4() as UUID,
         entityId: this.runtime.agentId,
-        roomId: "global" as UUID,
+        roomId: 'global' as UUID,
         content: {
           text: `Token performance data for ${token.symbol || token.address} on ${token.chain}`,
           token,
@@ -1851,23 +1683,17 @@ export class CommunityInvestorService
       };
 
       // Add embedding to memory
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        memory.content.text,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, memory.content.text);
       const memoryWithEmbedding = { ...memory, embedding };
 
       // Store in memory manager
-      await this.runtime.createMemory(memoryWithEmbedding, "tokens", true);
+      await this.runtime.createMemory(memoryWithEmbedding, 'tokens', true);
 
       // Also cache for quick access
       const cacheKey = `token:${token.chain}:${token.address}:performance`;
       await this.runtime.setCache<TokenPerformance>(cacheKey, token); // Cache for 5 minutes
     } catch (error) {
-      logger.error(
-        `Error storing token performance for ${token.address}:`,
-        error,
-      );
+      logger.error(`Error storing token performance for ${token.address}:`, error);
     }
   }
 
@@ -1875,13 +1701,13 @@ export class CommunityInvestorService
    * Store position data
    */
   private async storePosition(position: Position): Promise<void> {
-    logger.debug("storing position", position);
+    logger.debug('storing position', position);
     try {
       // Create memory object
       const memory: Memory = {
         id: uuidv4() as UUID,
         entityId: this.runtime.agentId,
-        roomId: "global" as UUID,
+        roomId: 'global' as UUID,
         content: {
           text: `Position data for token ${position.tokenAddress} by entity ${position.entityId}`,
           position,
@@ -1890,23 +1716,17 @@ export class CommunityInvestorService
       };
 
       // Add embedding to memory
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        memory.content.text,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, memory.content.text);
       const memoryWithEmbedding = { ...memory, embedding };
 
       // Store in memory manager
-      await this.runtime.createMemory(memoryWithEmbedding, "positions", true);
+      await this.runtime.createMemory(memoryWithEmbedding, 'positions', true);
 
       // Also cache for quick access
       const cacheKey = `position:${position.id}`;
       await this.runtime.setCache<Position>(cacheKey, position);
     } catch (error) {
-      logger.error(
-        `Error storing position for ${position.tokenAddress}:`,
-        error,
-      );
+      logger.error(`Error storing position for ${position.tokenAddress}:`, error);
     }
   }
 
@@ -1914,13 +1734,13 @@ export class CommunityInvestorService
    * Store transaction data
    */
   private async storeTransaction(transaction: Transaction): Promise<void> {
-    logger.debug("storing transaction", transaction);
+    logger.debug('storing transaction', transaction);
     try {
       // Create memory object
       const memory: Memory = {
         id: uuidv4() as UUID,
         entityId: this.runtime.agentId,
-        roomId: "global" as UUID,
+        roomId: 'global' as UUID,
         content: {
           text: `Transaction data for position ${transaction.positionId} token ${transaction.tokenAddress} ${transaction.type}`,
           transaction,
@@ -1929,18 +1749,11 @@ export class CommunityInvestorService
       };
 
       // Add embedding to memory
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        memory.content.text,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, memory.content.text);
       const memoryWithEmbedding = { ...memory, embedding };
 
       // Store in memory manager
-      await this.runtime.createMemory(
-        memoryWithEmbedding,
-        "transactions",
-        true,
-      );
+      await this.runtime.createMemory(memoryWithEmbedding, 'transactions', true);
 
       // Also cache transaction list for position
       const cacheKey = `position:${transaction.positionId}:transactions`;
@@ -1954,26 +1767,21 @@ export class CommunityInvestorService
         await this.runtime.setCache<Transaction[]>(cacheKey, [transaction]); // Cache for 5 minutes
       }
     } catch (error) {
-      logger.error(
-        `Error storing transaction for position ${transaction.positionId}:`,
-        error,
-      );
+      logger.error(`Error storing transaction for position ${transaction.positionId}:`, error);
     }
   }
 
   /**
    * Store token recommendation data
    */
-  private async storeTokenRecommendation(
-    recommendation: TokenRecommendation,
-  ): Promise<void> {
-    logger.debug("storing token recommendation", recommendation);
+  private async storeTokenRecommendation(recommendation: TokenRecommendation): Promise<void> {
+    logger.debug('storing token recommendation', recommendation);
     try {
       // Create memory object
       const memory: Memory = {
         id: uuidv4() as UUID,
         entityId: this.runtime.agentId,
-        roomId: "global" as UUID,
+        roomId: 'global' as UUID,
         content: {
           text: `Token recommendation for ${recommendation.tokenAddress} by entity ${recommendation.entityId}`,
           recommendation,
@@ -1982,46 +1790,31 @@ export class CommunityInvestorService
       };
 
       // Add embedding to memory
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        memory.content.text,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, memory.content.text);
       const memoryWithEmbedding = { ...memory, embedding };
 
       // Store in memory manager
-      await this.runtime.createMemory(
-        memoryWithEmbedding,
-        "recommendations",
-        true,
-      );
+      await this.runtime.createMemory(memoryWithEmbedding, 'recommendations', true);
 
       // Also cache for quick access
       const cacheKey = `recommendation:${recommendation.id}`;
-      await this.runtime.setCache<TokenRecommendation>(
-        cacheKey,
-        recommendation,
-      ); // Cache for 5 minutes
+      await this.runtime.setCache<TokenRecommendation>(cacheKey, recommendation); // Cache for 5 minutes
     } catch (error) {
-      logger.error(
-        `Error storing recommendation for ${recommendation.tokenAddress}:`,
-        error,
-      );
+      logger.error(`Error storing recommendation for ${recommendation.tokenAddress}:`, error);
     }
   }
 
   /**
    * Store entity metrics
    */
-  private async storeRecommenderMetrics(
-    metrics: RecommenderMetrics,
-  ): Promise<void> {
-    logger.debug("storing recommender metrics", metrics);
+  private async storeRecommenderMetrics(metrics: RecommenderMetrics): Promise<void> {
+    logger.debug('storing recommender metrics', metrics);
     try {
       // Create memory object
       const memory: Memory = {
         id: uuidv4() as UUID,
         entityId: this.runtime.agentId,
-        roomId: "global" as UUID,
+        roomId: 'global' as UUID,
         content: {
           text: `Recommender metrics for ${metrics.entityId}`,
           metrics,
@@ -2030,43 +1823,31 @@ export class CommunityInvestorService
       };
 
       // Add embedding to memory
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        memory.content.text,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, memory.content.text);
       const memoryWithEmbedding = { ...memory, embedding };
 
       // Store in memory manager
-      await this.runtime.createMemory(
-        memoryWithEmbedding,
-        "recommender_metrics",
-        true,
-      );
+      await this.runtime.createMemory(memoryWithEmbedding, 'recommender_metrics', true);
 
       // Also cache for quick access
       const cacheKey = `entity:${metrics.entityId}:metrics`;
       await this.runtime.setCache<RecommenderMetrics>(cacheKey, metrics); // Cache for 5 minutes
     } catch (error) {
-      logger.error(
-        `Error storing entity metrics for ${metrics.entityId}:`,
-        error,
-      );
+      logger.error(`Error storing entity metrics for ${metrics.entityId}:`, error);
     }
   }
 
   /**
    * Store entity metrics history
    */
-  private async storeRecommenderMetricsHistory(
-    history: RecommenderMetricsHistory,
-  ): Promise<void> {
-    logger.debug("storing recommender metrics history", history);
+  private async storeRecommenderMetricsHistory(history: RecommenderMetricsHistory): Promise<void> {
+    logger.debug('storing recommender metrics history', history);
     try {
       // Create memory object
       const memory: Memory = {
         id: uuidv4() as UUID,
         entityId: this.runtime.agentId,
-        roomId: "global" as UUID,
+        roomId: 'global' as UUID,
         content: {
           text: `Recommender metrics history for ${history.entityId}`,
           history,
@@ -2075,23 +1856,15 @@ export class CommunityInvestorService
       };
 
       // Add embedding to memory
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        memory.content.text,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, memory.content.text);
       const memoryWithEmbedding = { ...memory, embedding };
 
       // Store in memory manager
-      await this.runtime.createMemory(
-        memoryWithEmbedding,
-        "recommender_metrics_history",
-        true,
-      );
+      await this.runtime.createMemory(memoryWithEmbedding, 'recommender_metrics_history', true);
 
       // Also update history list in cache
       const cacheKey = `entity:${history.entityId}:history`;
-      const cachedHistory =
-        await this.runtime.getCache<RecommenderMetricsHistory[]>(cacheKey);
+      const cachedHistory = await this.runtime.getCache<RecommenderMetricsHistory[]>(cacheKey);
 
       if (cachedHistory) {
         const histories = cachedHistory as RecommenderMetricsHistory[];
@@ -2100,35 +1873,24 @@ export class CommunityInvestorService
         const recentHistories = histories
           .sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime())
           .slice(0, 10);
-        await this.runtime.setCache<RecommenderMetricsHistory[]>(
-          cacheKey,
-          recentHistories,
-        ); // Cache for 1 hour
+        await this.runtime.setCache<RecommenderMetricsHistory[]>(cacheKey, recentHistories); // Cache for 1 hour
       } else {
-        await this.runtime.setCache<RecommenderMetricsHistory[]>(cacheKey, [
-          history,
-        ]); // Cache for 1 hour
+        await this.runtime.setCache<RecommenderMetricsHistory[]>(cacheKey, [history]); // Cache for 1 hour
       }
     } catch (error) {
-      logger.error(
-        `Error storing entity metrics history for ${history.entityId}:`,
-        error,
-      );
+      logger.error(`Error storing entity metrics history for ${history.entityId}:`, error);
     }
   }
 
   /**
    * Get entity metrics
    */
-  async getRecommenderMetrics(
-    entityId: UUID,
-  ): Promise<RecommenderMetrics | null> {
-    logger.debug("getting recommender metrics", entityId);
+  async getRecommenderMetrics(entityId: UUID): Promise<RecommenderMetrics | null> {
+    logger.debug('getting recommender metrics', entityId);
     try {
       // Check cache first
       const cacheKey = `entity:${entityId}:metrics`;
-      const cachedMetrics =
-        await this.runtime.getCache<RecommenderMetrics>(cacheKey);
+      const cachedMetrics = await this.runtime.getCache<RecommenderMetrics>(cacheKey);
 
       if (cachedMetrics) {
         return cachedMetrics as RecommenderMetrics;
@@ -2136,13 +1898,10 @@ export class CommunityInvestorService
 
       // Search for metrics in memory
       const query = `entity metrics for entity ${entityId}`;
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        query,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, query);
 
       const memories = await this.runtime.searchMemories({
-        tableName: "recommender_metrics",
+        tableName: 'recommender_metrics',
         embedding,
         match_threshold: 0.7,
         count: 1,
@@ -2167,15 +1926,12 @@ export class CommunityInvestorService
   /**
    * Get entity metrics history
    */
-  async getRecommenderMetricsHistory(
-    entityId: UUID,
-  ): Promise<RecommenderMetricsHistory[]> {
-    logger.debug("getting recommender metrics history", entityId);
+  async getRecommenderMetricsHistory(entityId: UUID): Promise<RecommenderMetricsHistory[]> {
+    logger.debug('getting recommender metrics history', entityId);
     try {
       // Check cache first
       const cacheKey = `entity:${entityId}:history`;
-      const cachedHistory =
-        await this.runtime.getCache<RecommenderMetricsHistory[]>(cacheKey);
+      const cachedHistory = await this.runtime.getCache<RecommenderMetricsHistory[]>(cacheKey);
 
       if (cachedHistory) {
         return cachedHistory as RecommenderMetricsHistory[];
@@ -2183,13 +1939,10 @@ export class CommunityInvestorService
 
       // Search for history in memory
       const query = `entity metrics history for entity ${entityId}`;
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        query,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, query);
 
       const memories = await this.runtime.searchMemories({
-        tableName: "recommender_metrics_history",
+        tableName: 'recommender_metrics_history',
         embedding,
         match_threshold: 0.7,
         count: 10,
@@ -2200,32 +1953,23 @@ export class CommunityInvestorService
       for (const memory of memories) {
         if (
           memory.content.history &&
-          (memory.content.history as RecommenderMetricsHistory).entityId ===
-            entityId
+          (memory.content.history as RecommenderMetricsHistory).entityId === entityId
         ) {
-          historyEntries.push(
-            memory.content.history as RecommenderMetricsHistory,
-          );
+          historyEntries.push(memory.content.history as RecommenderMetricsHistory);
         }
       }
 
       // Sort by timestamp, newest first
       const sortedEntries = historyEntries.sort(
-        (a, b) => b.timestamp.getTime() - a.timestamp.getTime(),
+        (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
       );
 
       // Cache the history
-      await this.runtime.setCache<RecommenderMetricsHistory[]>(
-        cacheKey,
-        sortedEntries,
-      ); // Cache for 1 hour
+      await this.runtime.setCache<RecommenderMetricsHistory[]>(cacheKey, sortedEntries); // Cache for 1 hour
 
       return sortedEntries;
     } catch (error) {
-      logger.error(
-        `Error getting entity metrics history for ${entityId}:`,
-        error,
-      );
+      logger.error(`Error getting entity metrics history for ${entityId}:`, error);
       return [];
     }
   }
@@ -2233,11 +1977,8 @@ export class CommunityInvestorService
   /**
    * Initialize entity metrics
    */
-  async initializeRecommenderMetrics(
-    entityId: UUID,
-    platform: string,
-  ): Promise<void> {
-    logger.debug("initializing recommender metrics", entityId, platform);
+  async initializeRecommenderMetrics(entityId: UUID, platform: string): Promise<void> {
+    logger.debug('initializing recommender metrics', entityId, platform);
     try {
       const initialMetrics: RecommenderMetrics = {
         entityId,
@@ -2271,16 +2012,12 @@ export class CommunityInvestorService
   /**
    * Get token performance
    */
-  async getTokenPerformance(
-    tokenAddress: string,
-    chain: string,
-  ): Promise<TokenPerformance | null> {
-    logger.debug("getting token performance", tokenAddress, chain);
+  async getTokenPerformance(tokenAddress: string, chain: string): Promise<TokenPerformance | null> {
+    logger.debug('getting token performance', tokenAddress, chain);
     try {
       // Check cache first
       const cacheKey = `token:${chain}:${tokenAddress}:performance`;
-      const cachedToken =
-        await this.runtime.getCache<TokenPerformance>(cacheKey);
+      const cachedToken = await this.runtime.getCache<TokenPerformance>(cacheKey);
 
       if (cachedToken) {
         return cachedToken as TokenPerformance;
@@ -2288,13 +2025,10 @@ export class CommunityInvestorService
 
       // Search for token in memory
       const query = `token performance for ${tokenAddress}`;
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        query,
-      );
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, query);
 
       const memories = await this.runtime.searchMemories({
-        tableName: "tokens",
+        tableName: 'tokens',
         embedding,
         match_threshold: 0.7,
         count: 1,
@@ -2311,10 +2045,7 @@ export class CommunityInvestorService
 
       return null;
     } catch (error) {
-      logger.error(
-        `Error getting token performance for ${tokenAddress}:`,
-        error,
-      );
+      logger.error(`Error getting token performance for ${tokenAddress}:`, error);
       return null;
     }
   }
@@ -2323,26 +2054,22 @@ export class CommunityInvestorService
    * Get open positions with balance
    */
   async getOpenPositionsWithBalance(): Promise<PositionWithBalance[]> {
-    logger.debug("getting open positions with balance");
+    logger.debug('getting open positions with balance');
     try {
       // Check cache first
-      const cacheKey = "positions:open:with-balance";
-      const cachedPositions =
-        await this.runtime.getCache<PositionWithBalance[]>(cacheKey);
+      const cacheKey = 'positions:open:with-balance';
+      const cachedPositions = await this.runtime.getCache<PositionWithBalance[]>(cacheKey);
 
       if (cachedPositions) {
         return cachedPositions as PositionWithBalance[];
       }
 
       // Search for open positions in memory
-      const query = "open positions with balance";
-      const embedding = await this.runtime.useModel(
-        ModelType.TEXT_EMBEDDING,
-        query,
-      );
+      const query = 'open positions with balance';
+      const embedding = await this.runtime.useModel(ModelType.TEXT_EMBEDDING, query);
 
       const memories = await this.runtime.searchMemories({
-        tableName: "positions",
+        tableName: 'positions',
         embedding,
         match_threshold: 0.7,
         count: 50,
@@ -2355,11 +2082,11 @@ export class CommunityInvestorService
           const position = memory.content.position as Position;
 
           // Check if position is open
-          if (position.status === "OPEN") {
+          if (position.status === 'OPEN') {
             // Convert to PositionWithBalance
             positions.push({
               ...position,
-              balance: BigInt(position.balance || "0") as never,
+              balance: BigInt(position.balance || '0') as never,
             });
           }
         }
@@ -2370,7 +2097,7 @@ export class CommunityInvestorService
 
       return positions;
     } catch (error) {
-      logger.error("Error getting open positions with balance:", error);
+      logger.error('Error getting open positions with balance:', error);
       return [];
     }
   }
@@ -2379,7 +2106,7 @@ export class CommunityInvestorService
    * Get positions transactions
    */
   async getPositionsTransactions(positionIds: UUID[]): Promise<Transaction[]> {
-    logger.debug("getting positions transactions", positionIds);
+    logger.debug('getting positions transactions', positionIds);
     try {
       const allTransactions: Transaction[] = [];
 
@@ -2390,7 +2117,7 @@ export class CommunityInvestorService
 
       return allTransactions;
     } catch (error) {
-      logger.error("Error getting transactions for positions:", error);
+      logger.error('Error getting transactions for positions:', error);
       return [];
     }
   }
@@ -2399,7 +2126,7 @@ export class CommunityInvestorService
    * Get formatted portfolio report
    */
   async getFormattedPortfolioReport(entityId?: UUID): Promise<string> {
-    logger.debug("getting formatted portfolio report", entityId);
+    logger.debug('getting formatted portfolio report', entityId);
     try {
       // Get positions
       const positions = await this.getOpenPositionsWithBalance();
@@ -2410,7 +2137,7 @@ export class CommunityInvestorService
         : positions;
 
       if (filteredPositions.length === 0) {
-        return "No open positions found.";
+        return 'No open positions found.';
       }
 
       // Get tokens and transactions
@@ -2418,22 +2145,16 @@ export class CommunityInvestorService
       const tokenSet = new Set<string>();
 
       for (const position of filteredPositions) {
-        if (tokenSet.has(`${position.chain}:${position.tokenAddress}`))
-          continue;
+        if (tokenSet.has(`${position.chain}:${position.tokenAddress}`)) continue;
 
-        const token = await this.getTokenPerformance(
-          position.tokenAddress,
-          position.chain,
-        );
+        const token = await this.getTokenPerformance(position.tokenAddress, position.chain);
         if (token) tokens.push(token);
 
         tokenSet.add(`${position.chain}:${position.tokenAddress}`);
       }
 
       // Get transactions
-      const transactions = await this.getPositionsTransactions(
-        filteredPositions.map((p) => p.id),
-      );
+      const transactions = await this.getPositionsTransactions(filteredPositions.map((p) => p.id));
 
       // Format the report
       const report = formatFullReport(tokens, filteredPositions, transactions);
@@ -2446,41 +2167,32 @@ Total Unrealized P&L: ${report.totalUnrealizedPnL}
 Total P&L: ${report.totalPnL}
 
 Positions:
-${report.positionReports.join("\n")}
+${report.positionReports.join('\n')}
 
 Tokens:
-${report.tokenReports.join("\n")}
+${report.tokenReports.join('\n')}
             `.trim();
     } catch (error) {
-      logger.error("Error generating portfolio report:", error);
-      return "Error generating portfolio report.";
+      logger.error('Error generating portfolio report:', error);
+      return 'Error generating portfolio report.';
     }
   }
 
   async initialize(runtime: IAgentRuntime): Promise<void> {
-    logger.info("[CommunityInvestorService] Initializing...");
-    this.apiKeys.birdeye = runtime.getSetting("BIRDEYE_API_KEY") as
-      | string
-      | undefined;
-    this.apiKeys.moralis = runtime.getSetting("MORALIS_API_KEY") as
-      | string
-      | undefined;
+    logger.info('[CommunityInvestorService] Initializing...');
+    this.apiKeys.birdeye = runtime.getSetting('BIRDEYE_API_KEY') as string | undefined;
+    this.apiKeys.moralis = runtime.getSetting('MORALIS_API_KEY') as string | undefined;
     // Load the user registry
     await this.loadUserRegistry();
-    logger.info("[CommunityInvestorService] Initialized.");
+    logger.info('[CommunityInvestorService] Initialized.');
   }
 
   /**
    * Fetches token data from an external API.
    * Uses Birdeye and DexScreener for real market data.
    */
-  async getTokenAPIData(
-    address: string,
-    chain: SupportedChain,
-  ): Promise<TokenAPIData | null> {
-    logger.debug(
-      `[CommunityInvestorService] Fetching token API data for ${address} on ${chain}`,
-    );
+  async getTokenAPIData(address: string, chain: SupportedChain): Promise<TokenAPIData | null> {
+    logger.debug(`[CommunityInvestorService] Fetching token API data for ${address} on ${chain}`);
 
     try {
       let tokenData: TokenAPIData = {};
@@ -2488,33 +2200,32 @@ ${report.tokenReports.join("\n")}
       if (chain === SupportedChain.SOLANA) {
         // Fetch from Birdeye for Solana tokens
         try {
-          const [tokenOverview, price, security, tradeData, dexScreenerData] =
-            await Promise.all([
-              this.birdeyeClient.fetchTokenOverview(address, {
-                chain: "solana",
-                expires: "5m",
-              }),
-              this.birdeyeClient.fetchPrice(address, {
-                chain: "solana",
-                expires: "1m",
-              }),
-              this.birdeyeClient.fetchTokenSecurity(address, {
-                chain: "solana",
-                expires: "10m",
-              }),
-              this.birdeyeClient.fetchTokenTradeData(address, {
-                chain: "solana",
-                expires: "5m",
-              }),
-              this.dexscreenerClient.search(address, { expires: "5m" }),
-            ]);
+          const [tokenOverview, price, security, tradeData, dexScreenerData] = await Promise.all([
+            this.birdeyeClient.fetchTokenOverview(address, {
+              chain: 'solana',
+              expires: '5m',
+            }),
+            this.birdeyeClient.fetchPrice(address, {
+              chain: 'solana',
+              expires: '1m',
+            }),
+            this.birdeyeClient.fetchTokenSecurity(address, {
+              chain: 'solana',
+              expires: '10m',
+            }),
+            this.birdeyeClient.fetchTokenTradeData(address, {
+              chain: 'solana',
+              expires: '5m',
+            }),
+            this.dexscreenerClient.search(address, { expires: '5m' }),
+          ]);
 
           const dexPair = dexScreenerData.pairs?.[0];
 
           tokenData = {
             name: tokenOverview.name || dexPair?.baseToken?.name,
             symbol: tokenOverview.symbol || dexPair?.baseToken?.symbol,
-            currentPrice: price || parseFloat(dexPair?.priceUsd || "0"),
+            currentPrice: price || parseFloat(dexPair?.priceUsd || '0'),
             liquidity: dexPair?.liquidity?.usd || 0,
             marketCap: dexPair?.marketCap || tradeData.market || 0,
             isKnownScam: false, // Would need additional scam detection logic
@@ -2590,22 +2301,19 @@ ${report.tokenReports.join("\n")}
         } catch (error) {
           logger.warn(
             `[CommunityInvestorService] Error fetching Solana token data for ${address}:`,
-            error,
+            error
           );
 
           // Fallback to DexScreener only
           try {
-            const dexScreenerData = await this.dexscreenerClient.search(
-              address,
-              { expires: "5m" },
-            );
+            const dexScreenerData = await this.dexscreenerClient.search(address, { expires: '5m' });
             const dexPair = dexScreenerData.pairs?.[0];
 
             if (dexPair) {
               tokenData = {
                 name: dexPair.baseToken.name,
                 symbol: dexPair.baseToken.symbol,
-                currentPrice: parseFloat(dexPair.priceUsd || "0"),
+                currentPrice: parseFloat(dexPair.priceUsd || '0'),
                 liquidity: dexPair.liquidity?.usd || 0,
                 marketCap: dexPair.marketCap || 0,
                 isKnownScam: false, // Dexscreener doesn't directly provide this
@@ -2613,7 +2321,7 @@ ${report.tokenReports.join("\n")}
               // No extensive history from this fallback, but it's better than nothing
             } else {
               logger.debug(
-                `[CommunityInvestorService] DexScreener found no pair for ${address} after Birdeye failure.`,
+                `[CommunityInvestorService] DexScreener found no pair for ${address} after Birdeye failure.`
               );
               // Explicitly return null if DexScreener also fails for Solana
               return null;
@@ -2621,31 +2329,27 @@ ${report.tokenReports.join("\n")}
           } catch (fallbackError) {
             logger.error(
               `[CommunityInvestorService] Fallback DexScreener search also failed for ${address}:`,
-              fallbackError,
+              fallbackError
             );
             return null; // Return null on fallback failure too
           }
         }
-      } else if (
-        chain === SupportedChain.ETHEREUM ||
-        chain === SupportedChain.BASE
-      ) {
+      } else if (chain === SupportedChain.ETHEREUM || chain === SupportedChain.BASE) {
         // For Ethereum and Base, use DexScreener as primary source
         try {
           const dexScreenerData = await this.dexscreenerClient.search(address, {
-            expires: "5m",
+            expires: '5m',
           });
-          const chainFilter =
-            chain === SupportedChain.ETHEREUM ? "ethereum" : "base";
+          const chainFilter = chain === SupportedChain.ETHEREUM ? 'ethereum' : 'base';
           const dexPair = dexScreenerData.pairs?.find(
-            (pair) => pair.chainId.toLowerCase() === chainFilter,
+            (pair) => pair.chainId.toLowerCase() === chainFilter
           );
 
           if (dexPair) {
             tokenData = {
               name: dexPair.baseToken.name,
               symbol: dexPair.baseToken.symbol,
-              currentPrice: parseFloat(dexPair.priceUsd || "0"),
+              currentPrice: parseFloat(dexPair.priceUsd || '0'),
               liquidity: dexPair.liquidity?.usd || 0,
               marketCap: dexPair.marketCap || 0,
               isKnownScam: false,
@@ -2653,53 +2357,44 @@ ${report.tokenReports.join("\n")}
 
             // Extract price history from DexScreener price changes
             const now = Date.now();
-            const currentPrice = parseFloat(dexPair.priceUsd || "0");
+            const currentPrice = parseFloat(dexPair.priceUsd || '0');
 
             tokenData.priceHistory = [
               {
                 timestamp: now - 24 * 60 * 60 * 1000,
-                price:
-                  currentPrice / (1 + (dexPair.priceChange?.h24 || 0) / 100),
+                price: currentPrice / (1 + (dexPair.priceChange?.h24 || 0) / 100),
               },
               {
                 timestamp: now - 6 * 60 * 60 * 1000,
-                price:
-                  currentPrice / (1 + (dexPair.priceChange?.h6 || 0) / 100),
+                price: currentPrice / (1 + (dexPair.priceChange?.h6 || 0) / 100),
               },
               {
                 timestamp: now - 1 * 60 * 60 * 1000,
-                price:
-                  currentPrice / (1 + (dexPair.priceChange?.h1 || 0) / 100),
+                price: currentPrice / (1 + (dexPair.priceChange?.h1 || 0) / 100),
               },
               {
                 timestamp: now - 5 * 60 * 1000,
-                price:
-                  currentPrice / (1 + (dexPair.priceChange?.m5 || 0) / 100),
+                price: currentPrice / (1 + (dexPair.priceChange?.m5 || 0) / 100),
               },
               { timestamp: now, price: currentPrice },
             ].filter((p) => p.price > 0);
 
             if (tokenData.priceHistory.length > 0) {
-              tokenData.ath = Math.max(
-                ...tokenData.priceHistory.map((p) => p.price),
-              );
-              tokenData.atl = Math.min(
-                ...tokenData.priceHistory.map((p) => p.price),
-              );
+              tokenData.ath = Math.max(...tokenData.priceHistory.map((p) => p.price));
+              tokenData.atl = Math.min(...tokenData.priceHistory.map((p) => p.price));
             }
 
             // Simple scam detection for Ethereum/Base tokens
             const hasRugPullPattern =
               (dexPair.priceChange?.h24 || 0) < -90 || // 90% drop in 24h
-              ((dexPair.volume?.h24 || 0) < 1000 &&
-                (dexPair.marketCap || 0) > 100000); // Low volume but high market cap
+              ((dexPair.volume?.h24 || 0) < 1000 && (dexPair.marketCap || 0) > 100000); // Low volume but high market cap
 
             tokenData.isKnownScam = hasRugPullPattern;
           }
         } catch (error) {
           logger.error(
             `[CommunityInvestorService] Error fetching ${chain} token data for ${address}:`,
-            error,
+            error
           );
           return null;
         }
@@ -2724,13 +2419,13 @@ ${report.tokenReports.join("\n")}
           tokenData.atl = tokenData.currentPrice * 0.9; // Assume current price is close to ATL if unknown
         }
         logger.debug(
-          `[CommunityInvestorService] Successfully fetched token data for ${tokenData.symbol || address} (${address})`,
+          `[CommunityInvestorService] Successfully fetched token data for ${tokenData.symbol || address} (${address})`
         );
         return tokenData;
       } else if (chain !== SupportedChain.SOLANA) {
         // If not SOLANA and tokenData is still empty (e.g. ETH/BASE failed)
         logger.warn(
-          `[CommunityInvestorService] Failed to fetch token data for ${address} on ${chain} after all attempts.`,
+          `[CommunityInvestorService] Failed to fetch token data for ${address} on ${chain} after all attempts.`
         );
         return null;
       }
@@ -2741,7 +2436,7 @@ ${report.tokenReports.join("\n")}
     } catch (error) {
       logger.error(
         `[CommunityInvestorService] Unexpected error fetching token API data for ${address}:`,
-        error,
+        error
       );
       return null;
     }
@@ -2749,12 +2444,12 @@ ${report.tokenReports.join("\n")}
 
   async isLikelyScamOrRug(
     tokenData: TokenAPIData,
-    recommendationTimestamp: number,
+    recommendationTimestamp: number
   ): Promise<boolean> {
     // Check if already flagged as scam
     if (tokenData.isKnownScam) {
       logger.warn(
-        `[CommunityInvestorService] Token ${tokenData.symbol} already flagged as known scam`,
+        `[CommunityInvestorService] Token ${tokenData.symbol} already flagged as known scam`
       );
       return true;
     }
@@ -2764,14 +2459,10 @@ ${report.tokenReports.join("\n")}
 
     // 1. Price drop analysis
     const pricesPostRecommendation =
-      tokenData.priceHistory?.filter(
-        (p) => p.timestamp > recommendationTimestamp,
-      ) || [];
+      tokenData.priceHistory?.filter((p) => p.timestamp > recommendationTimestamp) || [];
 
     if (pricesPostRecommendation.length > 1) {
-      const peakPricePostRec = Math.max(
-        ...pricesPostRecommendation.map((p) => p.price),
-      );
+      const peakPricePostRec = Math.max(...pricesPostRecommendation.map((p) => p.price));
       const lastKnownPricePostRec =
         pricesPostRecommendation[pricesPostRecommendation.length - 1].price;
       const currentPrice = tokenData.currentPrice || 0;
@@ -2783,7 +2474,7 @@ ${report.tokenReports.join("\n")}
         currentPrice < peakPricePostRec * 0.1
       ) {
         warnings.push(
-          `Severe price drop: >90% from peak ($${peakPricePostRec.toFixed(6)} to $${currentPrice.toFixed(6)})`,
+          `Severe price drop: >90% from peak ($${peakPricePostRec.toFixed(6)} to $${currentPrice.toFixed(6)})`
         );
         riskScore += 40;
       }
@@ -2794,7 +2485,7 @@ ${report.tokenReports.join("\n")}
         currentPrice < peakPricePostRec * 0.3
       ) {
         warnings.push(
-          `Major price drop: >70% from peak ($${peakPricePostRec.toFixed(6)} to $${currentPrice.toFixed(6)})`,
+          `Major price drop: >70% from peak ($${peakPricePostRec.toFixed(6)} to $${currentPrice.toFixed(6)})`
         );
         riskScore += 25;
       }
@@ -2810,22 +2501,18 @@ ${report.tokenReports.join("\n")}
       // Extremely low liquidity ratio (<0.5%)
       if (liquidityRatio < 0.005) {
         warnings.push(
-          `Extremely low liquidity ratio: ${(liquidityRatio * 100).toFixed(2)}% (Liquidity: $${liquidity.toFixed(0)}, MC: $${marketCap.toFixed(0)})`,
+          `Extremely low liquidity ratio: ${(liquidityRatio * 100).toFixed(2)}% (Liquidity: $${liquidity.toFixed(0)}, MC: $${marketCap.toFixed(0)})`
         );
         riskScore += 30;
       }
       // Very low liquidity ratio (<1%)
       else if (liquidityRatio < 0.01) {
-        warnings.push(
-          `Very low liquidity ratio: ${(liquidityRatio * 100).toFixed(2)}%`,
-        );
+        warnings.push(`Very low liquidity ratio: ${(liquidityRatio * 100).toFixed(2)}%`);
         riskScore += 20;
       }
       // Low liquidity ratio (<2%)
       else if (liquidityRatio < 0.02) {
-        warnings.push(
-          `Low liquidity ratio: ${(liquidityRatio * 100).toFixed(2)}%`,
-        );
+        warnings.push(`Low liquidity ratio: ${(liquidityRatio * 100).toFixed(2)}%`);
         riskScore += 10;
       }
     }
@@ -2843,7 +2530,7 @@ ${report.tokenReports.join("\n")}
         riskScore += 10;
       }
     } else {
-      warnings.push("No liquidity data available");
+      warnings.push('No liquidity data available');
       riskScore += 15;
     }
 
@@ -2852,7 +2539,7 @@ ${report.tokenReports.join("\n")}
       // If market cap seems unrealistically high compared to liquidity
       if (marketCap > 1000000 && liquidity < 10000) {
         warnings.push(
-          `Suspicious MC/Liquidity: MC $${marketCap.toFixed(0)} vs Liquidity $${liquidity.toFixed(0)}`,
+          `Suspicious MC/Liquidity: MC $${marketCap.toFixed(0)} vs Liquidity $${liquidity.toFixed(0)}`
         );
         riskScore += 25;
       }
@@ -2872,22 +2559,17 @@ ${report.tokenReports.join("\n")}
 
       if (priceChanges.length > 0) {
         const avgVolatility =
-          priceChanges.reduce((sum, change) => sum + change, 0) /
-          priceChanges.length;
+          priceChanges.reduce((sum, change) => sum + change, 0) / priceChanges.length;
         const maxChange = Math.max(...priceChanges);
 
         // Extreme volatility patterns
         if (maxChange > 200) {
           // >200% price change in one period
-          warnings.push(
-            `Extreme volatility: ${maxChange.toFixed(1)}% max change`,
-          );
+          warnings.push(`Extreme volatility: ${maxChange.toFixed(1)}% max change`);
           riskScore += 20;
         } else if (avgVolatility > 50) {
           // Average >50% volatility
-          warnings.push(
-            `High volatility: ${avgVolatility.toFixed(1)}% average change`,
-          );
+          warnings.push(`High volatility: ${avgVolatility.toFixed(1)}% average change`);
           riskScore += 10;
         }
       }
@@ -2909,15 +2591,15 @@ ${report.tokenReports.join("\n")}
     const isLikelyRug = riskScore >= 50; // Threshold for rug pull classification
 
     if (warnings.length > 0) {
-      const logLevel = isLikelyRug ? "warn" : "debug";
+      const logLevel = isLikelyRug ? 'warn' : 'debug';
       logger[logLevel](
-        `[CommunityInvestorService] Token ${tokenData.symbol} risk analysis (Score: ${riskScore}/100): ${warnings.join("; ")}`,
+        `[CommunityInvestorService] Token ${tokenData.symbol} risk analysis (Score: ${riskScore}/100): ${warnings.join('; ')}`
       );
     }
 
     if (isLikelyRug) {
       logger.warn(
-        `[CommunityInvestorService] Token ${tokenData.symbol} classified as likely scam/rug (Risk Score: ${riskScore}/100)`,
+        `[CommunityInvestorService] Token ${tokenData.symbol} classified as likely scam/rug (Risk Score: ${riskScore}/100)`
       );
     }
 
@@ -2926,108 +2608,82 @@ ${report.tokenReports.join("\n")}
 
   async evaluateRecommendationPerformance(
     recommendation: Recommendation,
-    tokenData: TokenAPIData,
+    tokenData: TokenAPIData
   ): Promise<RecommendationMetric> {
     logger.debug(
-      `[CommunityInvestorService] Evaluating performance for rec ID: ${recommendation.id}`,
+      `[CommunityInvestorService] Evaluating performance for rec ID: ${recommendation.id}`
     );
     const metric: RecommendationMetric = {
       evaluationTimestamp: Date.now(),
-      isScamOrRug: await this.isLikelyScamOrRug(
-        tokenData,
-        recommendation.timestamp,
-      ),
-      notes: "",
+      isScamOrRug: await this.isLikelyScamOrRug(tokenData, recommendation.timestamp),
+      notes: '',
     };
     const priceAtRec =
       recommendation.priceAtRecommendation ||
-      tokenData.priceHistory?.find(
-        (p) => p.timestamp >= recommendation.timestamp,
-      )?.price ||
+      tokenData.priceHistory?.find((p) => p.timestamp >= recommendation.timestamp)?.price ||
       tokenData.currentPrice ||
       0;
     const pricesAfterRec =
-      tokenData.priceHistory?.filter(
-        (p) => p.timestamp > recommendation.timestamp,
-      ) || [];
+      tokenData.priceHistory?.filter((p) => p.timestamp > recommendation.timestamp) || [];
 
     if (metric.isScamOrRug) {
-      if (recommendation.recommendationType === "BUY") {
+      if (recommendation.recommendationType === 'BUY') {
         metric.potentialProfitPercent = -99;
-        metric.notes =
-          "Token identified as likely scam/rug pull after BUY recommendation.";
+        metric.notes = 'Token identified as likely scam/rug pull after BUY recommendation.';
       }
-      if (recommendation.recommendationType === "SELL") {
+      if (recommendation.recommendationType === 'SELL') {
         metric.avoidedLossPercent = 99;
         metric.notes =
-          "Criticism/SELL recommendation was correct; token identified as likely scam/rug pull.";
+          'Criticism/SELL recommendation was correct; token identified as likely scam/rug pull.';
       }
       logger.debug(
-        `[CommunityInvestorService] Rec ${recommendation.id} (Scam/Rug): Performance ${metric.potentialProfitPercent || metric.avoidedLossPercent}%`,
+        `[CommunityInvestorService] Rec ${recommendation.id} (Scam/Rug): Performance ${metric.potentialProfitPercent || metric.avoidedLossPercent}%`
       );
       return metric;
     }
 
     if (pricesAfterRec.length === 0) {
       metric.notes =
-        "No significant price data available after recommendation time to evaluate performance yet.";
-      if (
-        tokenData.currentPrice &&
-        tokenData.currentPrice !== priceAtRec &&
-        priceAtRec > 0
-      ) {
-        const currentPerformance =
-          ((tokenData.currentPrice - priceAtRec) / priceAtRec) * 100;
-        if (recommendation.recommendationType === "BUY")
+        'No significant price data available after recommendation time to evaluate performance yet.';
+      if (tokenData.currentPrice && tokenData.currentPrice !== priceAtRec && priceAtRec > 0) {
+        const currentPerformance = ((tokenData.currentPrice - priceAtRec) / priceAtRec) * 100;
+        if (recommendation.recommendationType === 'BUY')
           metric.potentialProfitPercent = currentPerformance;
-        if (recommendation.recommendationType === "SELL")
+        if (recommendation.recommendationType === 'SELL')
           metric.avoidedLossPercent = -currentPerformance;
-        metric.notes =
-          "Evaluated based on current price vs price at recommendation.";
+        metric.notes = 'Evaluated based on current price vs price at recommendation.';
       } else if (
         priceAtRec === 0 &&
         tokenData.currentPrice &&
         tokenData.currentPrice > 0 &&
-        recommendation.recommendationType === "BUY"
+        recommendation.recommendationType === 'BUY'
       ) {
         metric.potentialProfitPercent = Infinity; // Bought at 0, price is now > 0
-        metric.notes =
-          "Token acquired at effectively zero cost and now has value.";
+        metric.notes = 'Token acquired at effectively zero cost and now has value.';
       } else if (
         priceAtRec > 0 &&
         tokenData.currentPrice === 0 &&
-        recommendation.recommendationType === "SELL"
+        recommendation.recommendationType === 'SELL'
       ) {
         metric.avoidedLossPercent = 100; // Sold before it went to zero
-        metric.notes = "Token value went to zero after sell recommendation.";
+        metric.notes = 'Token value went to zero after sell recommendation.';
       }
       logger.debug(
-        `[CommunityInvestorService] Rec ${recommendation.id} (No prices after): Performance ${metric.potentialProfitPercent || metric.avoidedLossPercent}%`,
+        `[CommunityInvestorService] Rec ${recommendation.id} (No prices after): Performance ${metric.potentialProfitPercent || metric.avoidedLossPercent}%`
       );
       return metric;
     }
-    const peakPriceAfterRec = Math.max(
-      ...pricesAfterRec.map((p) => p.price),
-      priceAtRec,
-    );
-    const troughPriceAfterRec = Math.min(
-      ...pricesAfterRec.map((p) => p.price),
-      priceAtRec,
-    );
+    const peakPriceAfterRec = Math.max(...pricesAfterRec.map((p) => p.price), priceAtRec);
+    const troughPriceAfterRec = Math.min(...pricesAfterRec.map((p) => p.price), priceAtRec);
 
-    if (recommendation.recommendationType === "BUY") {
+    if (recommendation.recommendationType === 'BUY') {
       if (priceAtRec > 0) {
         if (peakPriceAfterRec > priceAtRec) {
-          metric.potentialProfitPercent =
-            ((peakPriceAfterRec - priceAtRec) / priceAtRec) * 100;
+          metric.potentialProfitPercent = ((peakPriceAfterRec - priceAtRec) / priceAtRec) * 100;
           metric.notes = `Potential profit to peak of $${peakPriceAfterRec.toFixed(4)} from $${priceAtRec.toFixed(4)}.`;
         } else {
-          const lossPrice = Math.min(
-            tokenData.currentPrice || 0,
-            troughPriceAfterRec,
-          );
-          metric.potentialProfitPercent =
-            ((lossPrice - priceAtRec) / priceAtRec) * 100;
+          const lossPrice = Math.min(tokenData.currentPrice || 0, troughPriceAfterRec);
+          metric.potentialProfitPercent = ((lossPrice - priceAtRec) / priceAtRec) * 100;
           metric.notes = `No profitable exit; current/trough price $${lossPrice.toFixed(4)} vs buy $${priceAtRec.toFixed(4)}.`;
         }
       } else {
@@ -3035,19 +2691,14 @@ ${report.tokenReports.join("\n")}
         metric.potentialProfitPercent = peakPriceAfterRec > 0 ? Infinity : 0; // Effectively infinite profit if price rose
         metric.notes = `Bought at effectively zero, peak price $${peakPriceAfterRec.toFixed(4)}.`;
       }
-    } else if (recommendation.recommendationType === "SELL") {
+    } else if (recommendation.recommendationType === 'SELL') {
       if (priceAtRec > 0) {
         if (troughPriceAfterRec < priceAtRec) {
-          metric.avoidedLossPercent =
-            ((priceAtRec - troughPriceAfterRec) / priceAtRec) * 100;
+          metric.avoidedLossPercent = ((priceAtRec - troughPriceAfterRec) / priceAtRec) * 100;
           metric.notes = `Avoided loss as price dropped to $${troughPriceAfterRec.toFixed(4)} from $${priceAtRec.toFixed(4)}.`;
         } else {
-          const missedProfitPrice = Math.max(
-            tokenData.currentPrice || 0,
-            peakPriceAfterRec,
-          );
-          metric.avoidedLossPercent =
-            ((priceAtRec - missedProfitPrice) / priceAtRec) * 100;
+          const missedProfitPrice = Math.max(tokenData.currentPrice || 0, peakPriceAfterRec);
+          metric.avoidedLossPercent = ((priceAtRec - missedProfitPrice) / priceAtRec) * 100;
           metric.notes = `Missed potential gains; price rose/stayed above $${priceAtRec.toFixed(4)}, reaching $${missedProfitPrice.toFixed(4)}.`;
         }
       } else {
@@ -3057,7 +2708,7 @@ ${report.tokenReports.join("\n")}
       }
     }
     logger.debug(
-      `[CommunityInvestorService] Rec ${recommendation.id}: Performance ${metric.potentialProfitPercent || metric.avoidedLossPercent}%`,
+      `[CommunityInvestorService] Rec ${recommendation.id}: Performance ${metric.potentialProfitPercent || metric.avoidedLossPercent}%`
     );
     return metric;
   }
@@ -3070,15 +2721,15 @@ ${report.tokenReports.join("\n")}
     return Math.max(0.1, 1 - (ageInMonths / this.RECENCY_WEIGHT_MONTHS) * 0.9);
   }
 
-  getConvictionWeight(conviction: Recommendation["conviction"]): number {
+  getConvictionWeight(conviction: Recommendation['conviction']): number {
     switch (conviction) {
-      case "HIGH":
+      case 'HIGH':
         return 1.5;
-      case "MEDIUM":
+      case 'MEDIUM':
         return 1.0;
-      case "LOW":
+      case 'LOW':
         return 0.5;
-      case "NONE":
+      case 'NONE':
       default:
         return 0.25;
     }
@@ -3087,217 +2738,275 @@ ${report.tokenReports.join("\n")}
   async calculateUserTrustScore(
     userId: UUID,
     runtime: IAgentRuntime,
-    _worldId?: UUID, // _worldId from task is no longer needed here for component lookup
-  ): Promise<void> {
+    _worldId?: UUID
+  ): Promise<number> {
+    // Matches interface now
     logger.info(
-      `[CommunityInvestorService] Starting calculateUserTrustScore for user ${userId} (components in world/room: ${this.componentWorldId})`,
+      `[CommunityInvestorService] Starting calculateUserTrustScore for user ${userId} (components in world/room: ${this.componentWorldId})`
     );
-    // Always use the plugin-specific consistent worldId for user trust profiles.
-    // const userProfileWorldId = runtime.agentId as UUID; // Old way
-    const userProfileWorldId = this.componentWorldId;
-    const userProfileRoomId = this.componentRoomId; // Consistent room for components
-
-    this.registerUser(userId);
-
-    // Ensure the plugin's specific world (for storing components) exists
-    try {
-      await runtime.ensureWorldExists({
-        id: userProfileWorldId,
-        name: `Social Alpha Global World (Agent: ${runtime.agentId})`,
-        agentId: runtime.agentId,
-        serverId: TRUST_LEADERBOARD_WORLD_SEED, // Use the seed as a serverId for uniqueness
-        metadata: { plugin_managed: true },
-      });
-      logger.debug(
-        `[CommunityInvestorService] Ensured plugin component world ${userProfileWorldId} exists.`,
-      );
-    } catch (error) {
-      logger.warn(
-        `[CommunityInvestorService] Error ensuring plugin component world ${userProfileWorldId} (continuing operation): ${error}`,
-      );
-    }
 
     const componentResult = await runtime.getComponent(
       userId,
       TRUST_MARKETPLACE_COMPONENT_TYPE,
-      userProfileWorldId, // Use the consistent worldId
-      runtime.agentId,
+      this.componentWorldId,
+      runtime.agentId!
     );
-    let userProfile: UserTrustProfile;
-    let isNewProfile = false;
 
-    if (componentResult?.data) {
-      userProfile = componentResult.data as UserTrustProfile;
-      logger.info(
-        `[CommunityInvestorService] Found existing profile for user ${userId}. Last calculated: ${new Date(userProfile.lastTrustScoreCalculationTimestamp).toISOString()}`,
-      );
-      if (!Array.isArray(userProfile.recommendations)) {
-        logger.warn(
-          `[calculateUserTrustScore] User ${userId} profile recommendations was not an array. Initializing.`,
-        );
-        userProfile.recommendations = [];
-      }
-    } else {
-      logger.info(
-        `[CommunityInvestorService] No profile component found for ${userId}, initializing new one.`,
-      );
-      userProfile = {
-        version: "1.0.0",
-        userId,
+    if (!componentResult) {
+      // Create new profile for user
+      const newProfile: UserTrustProfile = {
+        version: '1.0.0',
+        userId: userId,
         trustScore: 0,
-        lastTrustScoreCalculationTimestamp: 0,
+        lastTrustScoreCalculationTimestamp: Date.now(),
         recommendations: [],
       };
-      isNewProfile = true;
+
+      await runtime.createComponent({
+        id: userId, // Use userId as component ID
+        entityId: userId,
+        agentId: runtime.agentId!,
+        worldId: this.componentWorldId,
+        roomId: this.componentRoomId,
+        sourceEntityId: runtime.agentId!,
+        type: TRUST_MARKETPLACE_COMPONENT_TYPE,
+        createdAt: Date.now(),
+        data: newProfile as any,
+      });
+
+      this.registerUser(userId);
+      logger.info(
+        `[CommunityInvestorService] User ${userId} trust score is now: 0.00. Profile marked for update.`
+      );
+      return 0; // Return 0 for new user
     }
 
-    let totalWeightedScore = 0,
-      totalWeight = 0;
-    let profileActuallyModified = false;
+    const userProfile = componentResult.data as unknown as UserTrustProfile;
 
+    // Ensure recommendations array exists
+    if (!Array.isArray(userProfile.recommendations)) {
+      logger.warn(
+        `[calculateUserTrustScore] User ${userId} profile recommendations was not an array. Initializing.`
+      );
+      userProfile.recommendations = [];
+    }
+
+    // Re-evaluate metrics for recommendations that need it
+    let metricsUpdated = false;
     for (const rec of userProfile.recommendations) {
-      const shouldReEvaluate =
-        !rec.metrics ||
-        !rec.metrics.evaluationTimestamp ||
-        Date.now() - rec.metrics.evaluationTimestamp >
-          this.METRIC_REFRESH_INTERVAL;
-
-      if (shouldReEvaluate) {
-        if (!rec.tokenAddress || !rec.chain) {
-          logger.warn(
-            `[calculateUserTrustScore] Rec ${rec.id} for user ${userId} missing address/chain. Skipping metric evaluation.`,
-          );
-          continue;
-        }
-        const tokenData = await this.getTokenAPIData(
-          rec.tokenAddress,
-          rec.chain,
-        );
-        if (tokenData) {
-          rec.metrics = await this.evaluateRecommendationPerformance(
-            rec,
-            tokenData,
-          );
-          if (
-            rec.priceAtRecommendation === undefined ||
-            rec.priceAtRecommendation === null
-          ) {
-            rec.priceAtRecommendation =
-              tokenData.priceHistory?.find((p) => p.timestamp >= rec.timestamp)
-                ?.price ?? tokenData.currentPrice;
-          }
-          profileActuallyModified = true;
-        } else {
-          logger.warn(
-            `[calculateUserTrustScore] No token data for ${rec.tokenAddress} (rec ${rec.id}, user ${userId}) to update metrics.`,
-          );
-          // Not continuing here, will use existing metrics if any, or result in 0 perf score if metrics remain undefined
-        }
-      }
-
-      if (!rec.metrics) {
-        // If still no metrics after attempt (e.g. tokenData was null)
+      if (!rec.tokenAddress || !rec.chain) {
         logger.warn(
-          `[calculateUserTrustScore] Rec ${rec.id} for user ${userId} still has no metrics. It will not contribute to score.`,
+          `[calculateUserTrustScore] Rec ${rec.id} for user ${userId} missing address/chain. Skipping metric evaluation.`
         );
         continue;
       }
 
-      const weight =
-        this.getRecencyWeight(rec.timestamp) *
-        this.getConvictionWeight(rec.conviction);
-      let perfScore = 0;
-      if (rec.recommendationType === "BUY") {
-        perfScore = rec.metrics.potentialProfitPercent || 0;
-        if (rec.metrics.isScamOrRug) perfScore = -100;
+      // Check if metrics need re-evaluation
+      const needsReEval =
+        !rec.metrics ||
+        !rec.metrics.evaluationTimestamp ||
+        Date.now() - rec.metrics.evaluationTimestamp > this.METRIC_REFRESH_INTERVAL;
+
+      if (needsReEval) {
+        try {
+          const tokenData = await this.getTokenAPIData(
+            rec.tokenAddress,
+            rec.chain as SupportedChain
+          );
+          if (!tokenData) {
+            logger.warn(
+              `[calculateUserTrustScore] No token data for ${rec.tokenAddress} (rec ${rec.id}, user ${userId}) to update metrics.`
+            );
+            continue;
+          }
+
+          const newMetric = await this.evaluateRecommendationPerformance(rec, tokenData);
+          rec.metrics = newMetric;
+          metricsUpdated = true;
+          logger.debug(
+            `[calculateUserTrustScore] Updated metrics for rec ${rec.id}, user ${userId}: ${JSON.stringify(newMetric)}`
+          );
+        } catch (error) {
+          logger.error(
+            `[calculateUserTrustScore] Error updating metrics for rec ${rec.id}, user ${userId}:`,
+            error
+          );
+        }
       } else {
-        // SELL type
-        perfScore = rec.metrics.avoidedLossPercent || 0;
-        if (rec.metrics.isScamOrRug) perfScore = 100;
+        logger.debug(
+          `[calculateUserTrustScore] Rec ${rec.id} for user ${userId} has fresh metrics, skipping re-evaluation.`
+        );
       }
-      totalWeightedScore += Math.max(-100, Math.min(100, perfScore)) * weight;
-      totalWeight += weight;
+
+      if (!rec.metrics) {
+        logger.warn(
+          `[calculateUserTrustScore] Rec ${rec.id} for user ${userId} still has no metrics. It will not contribute to score.`
+        );
+      }
     }
 
-    const newTrustScore =
-      totalWeight > 0
-        ? Math.max(-100, Math.min(100, totalWeightedScore / totalWeight))
-        : 0;
-    // Update only if score changed significantly, metrics were updated, or it's a new profile
-    if (
-      Math.abs(userProfile.trustScore - newTrustScore) > 0.01 ||
-      profileActuallyModified ||
-      isNewProfile
-    ) {
-      userProfile.trustScore = newTrustScore;
-      profileActuallyModified = true;
-    }
+    // Calculate new trust score from profile
+    const { trustScore: updatedScore } = this.calculateNewScoreFromProfile(userProfile);
+
+    userProfile.trustScore = updatedScore;
     userProfile.lastTrustScoreCalculationTimestamp = Date.now();
 
-    if (profileActuallyModified) {
-      logger.info(
-        `[CommunityInvestorService] User ${userId} trust score is now: ${userProfile.trustScore.toFixed(2)}. Profile marked for update.`,
-      );
-      if (componentResult && !isNewProfile) {
-        logger.info(
-          `[CommunityInvestorService] Attempting to UPDATE component ${componentResult.id} for user ${userId} in world/room ${userProfileWorldId}`,
-        );
-        await runtime
-          .updateComponent({ ...componentResult, data: userProfile })
-          .then(() =>
-            logger.info(
-              `[CommunityInvestorService] Successfully UPDATED component ${componentResult.id} for user ${userId} in world/room ${userProfileWorldId}`,
-            ),
-          )
-          .catch((err) =>
-            logger.error(
-              `[CommunityInvestorService] FAILED to UPDATE component ${componentResult.id} for user ${userId}:`,
-              err,
-            ),
-          );
-      } else {
-        const newComponentId = componentResult?.id || asUUID(uuidv4()); // Reuse ID if component was created in this call
-        logger.info(
-          `[CommunityInvestorService] Attempting to CREATE component ${newComponentId} for user ${userId} (isNewProfile: ${isNewProfile}, componentResult existed: ${!!componentResult})`,
-        );
-        await runtime
-          .createComponent({
-            id: newComponentId,
-            entityId: userId,
-            agentId: runtime.agentId,
-            worldId: userProfileWorldId, // Consistent worldId
-            roomId: userProfileRoomId, // Consistent roomId for the component
-            sourceEntityId: runtime.agentId,
-            type: TRUST_MARKETPLACE_COMPONENT_TYPE,
-            createdAt: Date.now(),
-            data: userProfile,
-          })
-          .then(() =>
-            logger.info(
-              `[CommunityInvestorService] Successfully CREATED component ${newComponentId} for user ${userId} in world/room ${userProfileWorldId}`,
-            ),
-          )
-          .catch((err) =>
-            logger.error(
-              `[CommunityInvestorService] FAILED to CREATE component ${newComponentId} for user ${userId}:`,
-              err,
-            ),
-          );
-      }
-    } else {
-      logger.debug(
-        `[CommunityInvestorService] User ${userId} trust score and metrics are up-to-date. No component update needed.`,
-      );
+    // Update the component
+    await runtime.updateComponent({
+      ...componentResult,
+      data: userProfile as any,
+    });
+
+    this.registerUser(userId);
+    logger.info(
+      `[CommunityInvestorService] User ${userId} trust score is now: ${updatedScore.toFixed(2)}. Profile updated.`
+    );
+
+    return updatedScore;
+  }
+
+  /**
+   * Calculate trust score from user profile recommendations
+   */
+  private calculateNewScoreFromProfile(userProfile: UserTrustProfile): { trustScore: number } {
+    const recommendations = userProfile.recommendations || [];
+
+    if (recommendations.length === 0) {
+      return { trustScore: 0 };
     }
+
+    // Aggregate metrics across all recommendations
+    const aggregatedMetrics = {
+      totalCalls: recommendations.length,
+      profitableCalls: 0,
+      totalProfit: 0,
+      totalWeightedProfit: 0,
+      totalWeight: 0,
+      profits: [] as number[],
+      rugPromotions: 0,
+      goodCalls: 0,
+    };
+
+    // Process each recommendation
+    for (const rec of recommendations) {
+      if (!rec.metrics) continue;
+
+      // Get performance value
+      let performance = 0;
+      const potentialProfit = rec.metrics.potentialProfitPercent || 0;
+
+      // Detect rugs based on extreme price drops
+      const isLikelyRug = rec.metrics.isScamOrRug || potentialProfit <= -80;
+
+      if (isLikelyRug) {
+        // Count rug promotions
+        if (rec.recommendationType === 'BUY') {
+          aggregatedMetrics.rugPromotions++;
+          performance = -100; // Heavy penalty
+        } else if (rec.recommendationType === 'SELL') {
+          // Good warning about a rug
+          aggregatedMetrics.goodCalls++;
+          performance = rec.metrics.avoidedLossPercent || 50;
+        }
+      } else if (rec.recommendationType === 'BUY') {
+        performance = potentialProfit;
+        if (performance > 20) {
+          aggregatedMetrics.goodCalls++;
+        }
+      } else if (rec.recommendationType === 'SELL') {
+        performance = rec.metrics.avoidedLossPercent || 0;
+        // Good warning if token subsequently dropped significantly
+        if (potentialProfit < -30) {
+          aggregatedMetrics.goodCalls++;
+        }
+      }
+
+      // Apply weights for weighted average
+      const recencyWeight = this.getRecencyWeight(rec.timestamp);
+      const convictionWeight = this.getConvictionWeight(rec.conviction);
+      const totalRecWeight = recencyWeight * convictionWeight;
+
+      aggregatedMetrics.totalWeightedProfit += performance * totalRecWeight;
+      aggregatedMetrics.totalWeight += totalRecWeight;
+      aggregatedMetrics.totalProfit += performance;
+      aggregatedMetrics.profits.push(performance);
+
+      if (performance > 0) {
+        aggregatedMetrics.profitableCalls++;
+      }
+    }
+
+    // Calculate metrics for balanced trust score
+    const winRate = aggregatedMetrics.profitableCalls / aggregatedMetrics.totalCalls;
+    const averageProfit = aggregatedMetrics.totalProfit / aggregatedMetrics.totalCalls;
+
+    // Calculate consistency (standard deviation)
+    const profitMean = averageProfit;
+    const variance =
+      aggregatedMetrics.profits.reduce((sum, p) => sum + Math.pow(p - profitMean, 2), 0) /
+      aggregatedMetrics.profits.length;
+    const stdDev = Math.sqrt(variance);
+    const consistency = stdDev > 0 ? Math.max(0, 1 - stdDev / 100) : 1;
+
+    // Simple Sharpe ratio (return / risk)
+    const sharpeRatio = stdDev > 0 ? averageProfit / stdDev : 0;
+
+    // Alpha (simplified - performance vs average)
+    const marketAverage = 0; // Assume market average is 0 for simplicity
+    const alpha = averageProfit - marketAverage;
+
+    // Create metrics object compatible with TrustScoreResult
+    const metrics = {
+      totalCalls: aggregatedMetrics.totalCalls,
+      profitableCalls: aggregatedMetrics.profitableCalls,
+      averageProfit,
+      winRate,
+      sharpeRatio,
+      alpha,
+      volumePenalty: 0, // Not used in balanced calculator
+      consistency,
+    };
+
+    // Get user's "archetype" - could be based on their history or default
+    // For now, we'll estimate based on their performance
+    let archetype = 'newbie'; // Default
+    if (winRate > 0.7 && averageProfit > 30) {
+      archetype = 'elite_analyst';
+    } else if (winRate > 0.6 && averageProfit > 15) {
+      archetype = 'skilled_trader';
+    } else if (winRate > 0.5) {
+      archetype = 'technical_analyst';
+    } else if (aggregatedMetrics.rugPromotions > aggregatedMetrics.totalCalls * 0.5) {
+      archetype = 'rug_promoter';
+    } else if (aggregatedMetrics.totalCalls > 50 && winRate < 0.3) {
+      archetype = 'bot_spammer';
+    }
+
+    // Calculate balanced trust score
+    const trustScore = this.balancedTrustCalculator.calculateBalancedTrustScore(
+      metrics,
+      archetype,
+      aggregatedMetrics.rugPromotions,
+      aggregatedMetrics.goodCalls,
+      aggregatedMetrics.totalCalls
+    );
+
+    logger.debug(
+      `[calculateNewScoreFromProfile] User ${userProfile.userId}: ` +
+        `archetype=${archetype}, winRate=${(winRate * 100).toFixed(1)}%, ` +
+        `avgProfit=${averageProfit.toFixed(1)}%, trustScore=${trustScore.toFixed(1)}`
+    );
+
+    return { trustScore };
   }
 
   // --- Task Worker Execution --- (Could be in a separate tasks.ts file)
   private async executeProcessTradeDecision(
     options: { recommendationId: UUID; userId: UUID },
-    task: Task,
+    task: Task
   ): Promise<void> {
     logger.info(
-      `[CommunityInvestorService] Task Worker: Processing rec: ${options.recommendationId}, user: ${options.userId}`,
+      `[CommunityInvestorService] Task Worker: Processing rec: ${options.recommendationId}, user: ${options.userId}`
     );
     const { recommendationId, userId } = options;
     const runtime = this.runtime;
@@ -3306,24 +3015,22 @@ ${report.tokenReports.join("\n")}
       userId,
       TRUST_MARKETPLACE_COMPONENT_TYPE,
       userProfileWorldId,
-      runtime.agentId,
+      runtime.agentId
     );
 
     if (!componentResult?.data) {
       logger.error(
-        `Task Worker: UserProfile component not found for user ${userId}. Deleting task.`,
+        `Task Worker: UserProfile component not found for user ${userId}. Deleting task.`
       );
       await runtime.deleteTask(task.id as UUID);
       return;
     }
-    const userProfile = componentResult.data as UserTrustProfile;
-    let recommendation = userProfile.recommendations.find(
-      (r) => r.id === recommendationId,
-    );
+    const userProfile = componentResult.data as unknown as UserTrustProfile;
+    let recommendation = userProfile.recommendations.find((r) => r.id === recommendationId);
 
     if (!recommendation) {
       logger.error(
-        `Task Worker: Rec ${recommendationId} not found in profile for user ${userId}. Deleting task.`,
+        `Task Worker: Rec ${recommendationId} not found in profile for user ${userId}. Deleting task.`
       );
       await runtime.deleteTask(task.id as UUID);
       return;
@@ -3339,7 +3046,7 @@ ${report.tokenReports.join("\n")}
       )
     ) {
       logger.info(
-        `Task Worker: Rec ${recommendationId} already fully processed & not in cooldown. Deleting task.`,
+        `Task Worker: Rec ${recommendationId} already fully processed & not in cooldown. Deleting task.`
       );
       await runtime.deleteTask(task.id as UUID);
       return;
@@ -3353,22 +3060,20 @@ ${report.tokenReports.join("\n")}
       userId,
       TRUST_MARKETPLACE_COMPONENT_TYPE,
       userProfileWorldId,
-      runtime.agentId,
+      runtime.agentId
     );
     if (!updatedComponent?.data) {
       logger.error(
-        `Task Worker: Profile for ${userId} disappeared after score recalc. Deleting task.`,
+        `Task Worker: Profile for ${userId} disappeared after score recalc. Deleting task.`
       );
       await runtime.deleteTask(task.id as UUID);
       return;
     }
-    const updatedUserProfile = updatedComponent.data as UserTrustProfile;
+    const updatedUserProfile = updatedComponent.data as unknown as UserTrustProfile;
     const finalTrustScore = updatedUserProfile.trustScore;
     // Refresh recommendation from potentially updated profile data
     recommendation =
-      updatedUserProfile.recommendations.find(
-        (r) => r.id === recommendationId,
-      ) || recommendation;
+      updatedUserProfile.recommendations.find((r) => r.id === recommendationId) || recommendation;
 
     // Check cooldown again, as calculateUserTrustScore might take time
     const now = Date.now();
@@ -3378,117 +3083,106 @@ ${report.tokenReports.join("\n")}
         this.USER_TRADE_COOLDOWN_HOURS * 3600000
     ) {
       logger.info(
-        `Task Worker: User ${userId} on trade cooldown (post-score update). Holding on rec ${recommendationId}.`,
+        `Task Worker: User ${userId} on trade cooldown (post-score update). Holding on rec ${recommendationId}.`
       );
       if (recommendation) {
         recommendation.processedForTradeDecision = false; // Keep it false so it can be picked for a real decision later
       } else {
-        logger.error(
-          "Task Worker: Rec null after profile refresh in cooldown check.",
-        );
+        logger.error('Task Worker: Rec null after profile refresh in cooldown check.');
       }
       await runtime.updateComponent({
         ...updatedComponent,
-        data: updatedUserProfile,
+        data: updatedUserProfile as any,
       });
       await runtime.deleteTask(task.id as UUID);
       return;
     }
 
     let decisionMade = false;
-    if (recommendation.recommendationType === "BUY") {
+    if (recommendation.recommendationType === 'BUY') {
       if (finalTrustScore > this.POSITIVE_TRADE_THRESHOLD) {
         logger.info(
-          `Task Worker: SIMULATING BUY for rec ${recommendationId}. User ${userId}, Score: ${finalTrustScore.toFixed(2)}`,
+          `Task Worker: SIMULATING BUY for rec ${recommendationId}. User ${userId}, Score: ${finalTrustScore.toFixed(2)}`
         );
         updatedUserProfile.lastTradeDecisionMadeTimestamp = now;
         decisionMade = true;
       } else {
         logger.info(
-          `Task Worker: HOLDING on BUY rec ${recommendationId}. User ${userId}, Score: ${finalTrustScore.toFixed(2)}, Threshold: >${this.POSITIVE_TRADE_THRESHOLD})`,
+          `Task Worker: HOLDING on BUY rec ${recommendationId}. User ${userId}, Score: ${finalTrustScore.toFixed(2)}, Threshold: >${this.POSITIVE_TRADE_THRESHOLD})`
         );
       }
     } else {
       // SELL type
       if (finalTrustScore > this.POSITIVE_TRADE_THRESHOLD) {
         logger.info(
-          `Task Worker: ACKNOWLEDGING VALID SELL/CRITICISM for rec ${recommendationId}. User ${userId}, Score: ${finalTrustScore.toFixed(2)}`,
+          `Task Worker: ACKNOWLEDGING VALID SELL/CRITICISM for rec ${recommendationId}. User ${userId}, Score: ${finalTrustScore.toFixed(2)}`
         );
         updatedUserProfile.lastTradeDecisionMadeTimestamp = now;
         decisionMade = true;
       } else if (finalTrustScore < -this.NEUTRAL_MARGIN) {
         logger.info(
-          `Task Worker: IGNORING POTENTIAL FUD SELL/CRITICISM for rec ${recommendationId}. User ${userId}, Score: ${finalTrustScore.toFixed(2)} (Threshold for FUD: <${-this.NEUTRAL_MARGIN})`,
+          `Task Worker: IGNORING POTENTIAL FUD SELL/CRITICISM for rec ${recommendationId}. User ${userId}, Score: ${finalTrustScore.toFixed(2)} (Threshold for FUD: <${-this.NEUTRAL_MARGIN})`
         );
       } else {
         logger.info(
-          `Task Worker: NOTING SELL/CRITICISM for rec ${recommendationId}. User ${userId}, Score: ${finalTrustScore.toFixed(2)}`,
+          `Task Worker: NOTING SELL/CRITICISM for rec ${recommendationId}. User ${userId}, Score: ${finalTrustScore.toFixed(2)}`
         );
       }
     }
 
-    const recToUpdate = updatedUserProfile.recommendations.find(
-      (r) => r.id === recommendationId,
-    );
+    const recToUpdate = updatedUserProfile.recommendations.find((r) => r.id === recommendationId);
     if (recToUpdate) {
       recToUpdate.processedForTradeDecision = true; // Now it's fully processed for a trade decision cycle
     } else {
       logger.error(
-        `[CommunityInvestorService] Task Worker: Could not find rec ${recommendationId} in updated profile to mark as processed.`,
+        `[CommunityInvestorService] Task Worker: Could not find rec ${recommendationId} in updated profile to mark as processed.`
       );
     }
 
     await runtime.updateComponent({
       ...updatedComponent,
-      data: updatedUserProfile,
+      data: updatedUserProfile as any,
     });
     await runtime.deleteTask(task.id as UUID);
     logger.info(
-      `Task Worker: Finished trade decision for rec ${recommendationId}. User: ${userId}. Made Sim Trade: ${decisionMade}`,
+      `Task Worker: Finished trade decision for rec ${recommendationId}. User: ${userId}. Made Sim Trade: ${decisionMade}`
     );
   }
 
   private registerTaskWorkers(runtime: IAgentRuntime): void {
     runtime.registerTaskWorker({
-      name: "PROCESS_TRADE_DECISION",
+      name: 'PROCESS_TRADE_DECISION',
       execute: async (_runtime, options, task) =>
-        this.executeProcessTradeDecision(
-          options as { recommendationId: UUID; userId: UUID },
-          task,
-        ),
+        this.executeProcessTradeDecision(options as { recommendationId: UUID; userId: UUID }, task),
     });
-    logger.info(
-      "[CommunityInvestorService] Registered PROCESS_TRADE_DECISION task worker.",
-    );
+    logger.info('[CommunityInvestorService] Registered PROCESS_TRADE_DECISION task worker.');
   }
 
-  async getLeaderboardData(
-    runtime: IAgentRuntime,
-  ): Promise<LeaderboardEntry[]> {
-    logger.info("[CommunityInvestorService] getLeaderboardData called");
+  async getLeaderboardData(runtime: IAgentRuntime): Promise<LeaderboardEntry[]> {
+    logger.info('[CommunityInvestorService] getLeaderboardData called');
     const leaderboardEntries: LeaderboardEntry[] = [];
     // Use the consistent componentWorldId for fetching profiles
     const worldIdForComponents = this.componentWorldId;
 
     // Use the user registry to get all users who have made recommendations
     logger.info(
-      `[CommunityInvestorService] Preparing leaderboard from world ${worldIdForComponents}. Checking ${this.userRegistry.size} registered users from userRegistry: [${Array.from(this.userRegistry).join(", ")}]`,
+      `[CommunityInvestorService] Preparing leaderboard from world ${worldIdForComponents}. Checking ${this.userRegistry.size} registered users from userRegistry: [${Array.from(this.userRegistry).join(', ')}]`
     );
 
     for (const userId of this.userRegistry) {
       logger.debug(
-        `[CommunityInvestorService] Leaderboard: Processing registered user ${userId} from world ${worldIdForComponents}`,
+        `[CommunityInvestorService] Leaderboard: Processing registered user ${userId} from world ${worldIdForComponents}`
       );
       try {
         const component = await runtime.getComponent(
           userId,
           TRUST_MARKETPLACE_COMPONENT_TYPE,
           worldIdForComponents, // Use consistent worldId
-          runtime.agentId,
+          runtime.agentId!
         );
 
         if (component?.data) {
-          const profileData = component.data as TrustMarketplaceComponentData;
+          const profileData = component.data as unknown as TrustMarketplaceComponentData;
           const entityDetails = await runtime.getEntityById(component.entityId);
 
           const recommendations = Array.isArray(profileData.recommendations)
@@ -3497,30 +3191,29 @@ ${report.tokenReports.join("\n")}
 
           leaderboardEntries.push({
             userId: component.entityId,
-            username:
-              entityDetails?.names?.[0] || component.entityId.toString(),
+            username: entityDetails?.names?.[0] || component.entityId.toString(),
             trustScore: profileData.trustScore || 0,
             recommendations: recommendations,
           });
 
           logger.debug(
-            `[CommunityInvestorService] Added user ${userId} to leaderboard with score ${profileData.trustScore}`,
+            `[CommunityInvestorService] Added user ${userId} to leaderboard with score ${profileData.trustScore}`
           );
         } else {
           logger.debug(
-            `[CommunityInvestorService] Leaderboard: No profile component found for registered user ${userId}`,
+            `[CommunityInvestorService] Leaderboard: No profile component found for registered user ${userId}`
           );
         }
       } catch (error) {
         logger.error(
           `[CommunityInvestorService] Leaderboard: Error fetching profile component for user ${userId}:`,
-          error,
+          error
         );
       }
     }
 
     logger.info(
-      `[CommunityInvestorService] Leaderboard: Found ${leaderboardEntries.length} users with profiles to include.`,
+      `[CommunityInvestorService] Leaderboard: Found ${leaderboardEntries.length} users with profiles to include.`
     );
 
     // Sort by trust score and add ranks
@@ -3530,7 +3223,7 @@ ${report.tokenReports.join("\n")}
       rank: index + 1,
     }));
     logger.info(
-      `[CommunityInvestorService] Leaderboard generated with ${rankedLeaderboard.length} entries.`,
+      `[CommunityInvestorService] Leaderboard generated with ${rankedLeaderboard.length} entries.`
     );
     return rankedLeaderboard;
   }
@@ -3541,11 +3234,11 @@ ${report.tokenReports.join("\n")}
     this.userRegistry.add(userId);
     if (this.userRegistry.size > originalSize) {
       logger.info(
-        `[CommunityInvestorService] User ${userId} ADDED to registry. New size: ${this.userRegistry.size}. Registry now: [${Array.from(this.userRegistry).join(", ")}]`,
+        `[CommunityInvestorService] User ${userId} ADDED to registry. New size: ${this.userRegistry.size}. Registry now: [${Array.from(this.userRegistry).join(', ')}]`
       );
     } else {
       logger.debug(
-        `[CommunityInvestorService] User ${userId} already in registry. Size: ${this.userRegistry.size}`,
+        `[CommunityInvestorService] User ${userId} already in registry. Size: ${this.userRegistry.size}`
       );
     }
     // Persist this to a cache using a key namespaced by the plugin's world ID
@@ -3554,14 +3247,14 @@ ${report.tokenReports.join("\n")}
       .setCache(registryCacheKey, Array.from(this.userRegistry))
       .then(() =>
         logger.debug(
-          `[CommunityInvestorService] User registry cache updated for user ${userId} at key ${registryCacheKey}.`,
-        ),
+          `[CommunityInvestorService] User registry cache updated for user ${userId} at key ${registryCacheKey}.`
+        )
       )
       .catch((err) =>
         logger.error(
           `[CommunityInvestorService] FAILED to update user registry cache for ${userId} at key ${registryCacheKey}:`,
-          err,
-        ),
+          err
+        )
       );
   }
 
@@ -3573,17 +3266,17 @@ ${report.tokenReports.join("\n")}
       if (cached && Array.isArray(cached)) {
         this.userRegistry = new Set(cached);
         logger.info(
-          `[CommunityInvestorService] Loaded ${this.userRegistry.size} users from registry cache at key ${registryCacheKey}. Users: [${Array.from(this.userRegistry).join(", ")}]`,
+          `[CommunityInvestorService] Loaded ${this.userRegistry.size} users from registry cache at key ${registryCacheKey}. Users: [${Array.from(this.userRegistry).join(', ')}]`
         );
       } else {
         logger.info(
-          `[CommunityInvestorService] No user registry found in cache at key ${registryCacheKey}, starting fresh.`,
+          `[CommunityInvestorService] No user registry found in cache at key ${registryCacheKey}, starting fresh.`
         );
       }
     } catch (error) {
       logger.warn(
         `[CommunityInvestorService] Failed to load user registry from cache at key ${registryCacheKey}:`,
-        error,
+        error
       );
     }
   }
@@ -3597,11 +3290,11 @@ ${report.tokenReports.join("\n")}
         serverId: TRUST_LEADERBOARD_WORLD_SEED,
         metadata: {
           plugin_managed: true,
-          description: "World context for CommunityInvestor plugin components",
+          description: 'World context for CommunityInvestor plugin components',
         },
       });
       logger.info(
-        `[CommunityInvestorService] Ensured plugin component world ${this.componentWorldId} exists.`,
+        `[CommunityInvestorService] Ensured plugin component world ${this.componentWorldId} exists.`
       );
 
       await this.runtime.ensureRoomExists({
@@ -3610,22 +3303,394 @@ ${report.tokenReports.join("\n")}
         worldId: this.componentWorldId,
         agentId: this.runtime.agentId,
         channelId: TRUST_LEADERBOARD_WORLD_SEED,
-        source: "plugin_internal",
+        source: 'plugin_internal',
         type: ChannelType.API, // Use API as fallback channel type
         metadata: {
           plugin_managed: true,
-          description: "Room context for CommunityInvestor plugin components",
+          description: 'Room context for CommunityInvestor plugin components',
         },
       });
       logger.info(
-        `[CommunityInvestorService] Ensured plugin component room ${this.componentRoomId} in world ${this.componentWorldId} exists.`,
+        `[CommunityInvestorService] Ensured plugin component room ${this.componentRoomId} in world ${this.componentWorldId} exists.`
       );
     } catch (error) {
       logger.error(
         `[CommunityInvestorService] FAILED to ensure plugin component world/room context (ID: ${this.componentWorldId}):`,
-        error,
+        error
       );
       // Depending on the severity, you might want to throw this error or handle it
+    }
+  }
+
+  // ===================== NEW CORE PROCESSING LOGIC =====================
+
+  /**
+   * Processes a batch of historical messages, intended to be called from a script.
+   */
+  async processHistoricalData(batch: {
+    fileId: string;
+    batchIndex: number;
+    messages: any[];
+    userMap: Record<string, string>;
+  }): Promise<any[]> {
+    logger.info(`[Service] Processing historical batch ${batch.fileId}_${batch.batchIndex}`);
+    const { messages, userMap } = batch;
+
+    const contextText = ''; // Historical data processing might not have sequential context in the same way
+    const messagesText = messages
+      .map((msg, idx) => `[${idx}] ${userMap[msg.uid] || msg.uid}: ${msg.content}`)
+      .join('\n');
+
+    const { systemPrompt, userPrompt } = this.buildExtractionPrompts(
+      contextText,
+      messagesText,
+      messages.length,
+      'Multiple Users'
+    );
+
+    try {
+      const response = await this.runtime.useModel(ModelType.TEXT_LARGE, {
+        prompt: `${systemPrompt}\n${userPrompt}`,
+        response_format: { type: 'json_object' },
+      });
+
+      const parsed = parseJSONObjectFromText(response) as { recommendations: any[] } | null;
+
+      if (!parsed?.recommendations || parsed.recommendations.length === 0) {
+        logger.debug(
+          `[Service] No recommendations extracted from historical batch ${batch.fileId}_${batch.batchIndex}.`
+        );
+        return [];
+      }
+
+      const callsByUserId = new Map<UUID, { messages: any[]; recommendations: any[] }>();
+
+      for (const rec of parsed.recommendations) {
+        const message = messages[rec.messageIndex];
+        if (!message) continue;
+        const userId = asUUID(createUniqueUuid(this.runtime, message.uid));
+        if (!callsByUserId.has(userId)) {
+          callsByUserId.set(userId, { messages: [], recommendations: [] });
+        }
+        callsByUserId.get(userId)?.messages.push(message);
+        callsByUserId.get(userId)?.recommendations.push(rec);
+      }
+
+      for (const [userId, data] of callsByUserId.entries()) {
+        await this.updateProfileWithRecommendations(userId, data.messages, data.recommendations);
+      }
+
+      // This is a placeholder for any data you might want to return from the script
+      return parsed.recommendations;
+    } catch (error) {
+      logger.error(
+        `[Service] Error processing historical batch ${batch.fileId}_${batch.batchIndex}:`,
+        error
+      );
+      return [];
+    }
+  }
+
+  /**
+   * Main entry point for processing a single, real-time message from the event handler.
+   */
+  async processIncomingMessage(message: {
+    id?: UUID;
+    userId: UUID;
+    roomId: UUID;
+    text: string;
+    timestamp: number;
+    username?: string;
+  }): Promise<void> {
+    const { userId, roomId, text, timestamp, id, username } = message;
+    const messageId = id || asUUID(createUniqueUuid(this.runtime, `${userId}-${timestamp}`));
+
+    // 1. Get context
+    const recentMessages = await this.runtime.getMemories({
+      tableName: 'messages',
+      roomId: roomId,
+      count: 10, // Fetch recent messages for context
+      unique: false,
+    });
+
+    const contextText = recentMessages
+      .map((msg) => `${msg.content?.name || msg.entityId.toString()}: ${msg.content?.text || ''}`)
+      .join('\n');
+    const messagesText = `[0] ${username || userId}: ${text}`;
+
+    // 2. Call LLM for analysis
+    const { systemPrompt, userPrompt } = this.buildExtractionPrompts(
+      contextText,
+      messagesText,
+      1,
+      username || userId.toString()
+    );
+
+    try {
+      const response = await this.runtime.useModel(ModelType.TEXT_LARGE, {
+        prompt: `${systemPrompt}\n${userPrompt}`,
+        response_format: { type: 'json_object' },
+      });
+
+      const parsed = parseJSONObjectFromText(response) as { recommendations: any[] } | null;
+
+      if (!parsed?.recommendations || parsed.recommendations.length === 0) {
+        logger.debug(`[Service] No recommendations extracted from message ${messageId}.`);
+        return;
+      }
+      const messageForUpdate = {
+        id: messageId,
+        content: text,
+        uid: userId,
+        ts: new Date(timestamp).toISOString(),
+      };
+      // 3. Process the extracted recommendations and update user profile
+      await this.updateProfileWithRecommendations(
+        userId,
+        [messageForUpdate],
+        parsed.recommendations
+      );
+    } catch (e) {
+      logger.error(`[Service] Error processing incoming message for user ${userId}:`, e);
+    }
+  }
+
+  /**
+   * Builds the system and user prompts for the recommendation extraction LLM call.
+   */
+  private buildExtractionPrompts(
+    contextText: string,
+    messagesText: string,
+    batchSize: number,
+    senderName: string
+  ) {
+    const systemPrompt = `You are an expert crypto analyst specializing in Discord trading signal extraction. Your goal is to identify crypto-related trading signals, calls, recommendations, or sentiment from messages.
+
+🎯 WHAT COUNTS AS A TRADING SIGNAL:
+• Direct trading advice: "buy X", "sell Y", "hold Z"
+• Token mentions with $ symbol: $SOL, $PEPE, $DOGE, etc.
+• Contract addresses posted for token discovery
+• Price predictions: "X going to moon", "Y will dump"
+• Market sentiment: "bullish on X", "bearish on Y"
+• Technical analysis mentions
+• FUD or criticism about specific tokens/projects
+• Trading intent: "I'm buying X", "waiting for dip"
+• Token performance discussion
+
+🚫 WHAT TO EXCLUDE:
+• Rick bot automated messages (User ID: 1081815963990761542)
+• Generic DAO/protocol discussion without specific tokens
+• Users with "*bot" in username
+• Messages about "mintable" (it's a property, not a token)
+• General crypto news without specific token focus
+
+🔤 CRYPTO SLANG DICTIONARY:
+• fsh = full stack hitler (derogatory)
+• dca = dollar cost averaging
+• ath = all time high
+• atl = all time low
+• mcap = market cap
+• ser = sir
+• ngmi = not gonna make it
+• wagmi = we're all gonna make it
+• wen = when
+• gm = good morning
+• ser = sir
+
+⚠️ CRITICAL OUTPUT REQUIREMENTS:
+- Return JSON with "recommendations" array
+- EXACTLY ${batchSize} objects (messageIndex 0 to ${batchSize - 1})
+- Every object MUST include ALL required fields
+
+REQUIRED JSON SCHEMA:
+{
+  "recommendations": [
+    {
+      "messageIndex": 0,
+      "isCall": true,
+      "tokenMentioned": "SOL",
+      "nameMentioned": "",
+      "caMentioned": "",
+      "chain": "solana",
+      "sentiment": "positive",
+      "conviction": "medium",
+      "llmReasoning": "User mentioned buying $SOL with medium confidence"
+    }
+  ]
+}
+
+FIELD REQUIREMENTS:
+• messageIndex: 0 to ${batchSize - 1}
+• isCall: true/false
+• tokenMentioned: ticker without $ (or "" if none)
+• nameMentioned: full token name (or "" if none)  
+• caMentioned: contract address (or "" if none)
+• chain: "solana", "ethereum", "bitcoin", "base", "unknown"
+• sentiment: "positive", "negative", "neutral"
+• conviction: "high", "medium", "low", "neutral"
+• llmReasoning: 1-2 sentence explanation
+
+VALIDATION RULES:
+• If isCall=true: At least ONE of tokenMentioned, nameMentioned, or caMentioned must be non-empty
+• If isCall=false: ALL three can be empty
+• sentiment "bullish"→"positive", "bearish"→"negative"
+• Be VERY generous with extraction - include borderline cases`;
+
+    const userPrompt = `
+RECENT CONTEXT:
+${contextText}
+
+🔍 ANALYZE THESE ${batchSize} MESSAGES FOR TRADING SIGNALS:
+${messagesText}
+
+📋 EXTRACTION RULES:
+1. Look for contract addresses: long alphanumeric strings (32-44 chars for Solana, 0x+40 chars for ETH/Base)
+2. Extract ANY token mentions: $BTC, $ETH, $SOL, $PEPE, etc.
+3. Capture trading sentiment and conviction level
+4. Include FUD, criticism, or warnings about tokens
+5. Be generous - include subtle references
+6. MUST return EXACTLY ${batchSize} results
+
+Examples that SHOULD be extracted:
+- "the dev is a CA spammer so we dont know where it could go from here" → negative sentiment about a project
+- "Dqyrmg6y7QFhsbCgpkNwnp8wFMs81z3ToPACYAipump is this legit?" → contract address inquiry
+- "I will wait for retrace to enter" → trading intent
+- "$SOL looking good" → positive sentiment
+- "most ai stuff are getting a dump" → negative sentiment on AI tokens
+- Contract addresses without context → neutral discovery
+
+RESPOND WITH VALID JSON CONTAINING EXACTLY ${batchSize} RECOMMENDATION OBJECTS:`;
+    return { systemPrompt, userPrompt };
+  }
+
+  /**
+   * Updates a user's profile with new recommendations extracted from a message batch.
+   */
+  private async updateProfileWithRecommendations(
+    userId: UUID,
+    messagesInBatch: any[], // The original messages that were analyzed
+    recommendationsFromLlm: any[] // The raw recommendations from the LLM
+  ) {
+    const component = await this.runtime.getComponent(
+      userId,
+      TRUST_MARKETPLACE_COMPONENT_TYPE,
+      this.componentWorldId,
+      this.runtime.agentId!
+    );
+
+    let userProfile: UserTrustProfile;
+    if (!component?.data) {
+      userProfile = {
+        version: '1.0.0',
+        userId,
+        trustScore: 0,
+        lastTrustScoreCalculationTimestamp: Date.now(),
+        recommendations: [],
+      };
+    } else {
+      userProfile = component.data as unknown as UserTrustProfile;
+      if (!Array.isArray(userProfile.recommendations)) userProfile.recommendations = [];
+    }
+
+    let profileUpdated = false;
+    for (const rec of recommendationsFromLlm) {
+      // Skip if not a call or no token information provided
+      if (!rec.isCall || rec.sentiment === 'neutral') {
+        continue;
+      }
+
+      // Check if we have at least one token identifier
+      const hasTokenMention = rec.tokenMentioned?.trim() && rec.tokenMentioned !== 'N/A';
+      const hasNameMention = rec.nameMentioned?.trim();
+      const hasContractAddress = rec.caMentioned?.trim();
+
+      if (!hasTokenMention && !hasNameMention && !hasContractAddress) {
+        continue;
+      }
+
+      const originalMessage = messagesInBatch[rec.messageIndex];
+      if (!originalMessage) continue;
+
+      // Try to resolve token, preferring contract address, then ticker, then name
+      let resolvedToken = null;
+
+      if (hasContractAddress) {
+        // For contract addresses, use them directly
+        resolvedToken = {
+          address: rec.caMentioned,
+          chain: (rec.chain as SupportedChain) || SupportedChain.SOLANA,
+          ticker: rec.tokenMentioned || rec.nameMentioned || rec.caMentioned.slice(0, 8),
+        };
+      } else if (hasTokenMention) {
+        resolvedToken = await this.resolveTicker(
+          rec.tokenMentioned,
+          (rec.chain as SupportedChain) || SupportedChain.SOLANA
+        );
+      } else if (hasNameMention) {
+        resolvedToken = await this.resolveTicker(
+          rec.nameMentioned,
+          (rec.chain as SupportedChain) || SupportedChain.SOLANA
+        );
+      }
+
+      if (!resolvedToken) {
+        logger.warn(
+          `[Service] Could not resolve token for: "${rec.tokenMentioned || rec.nameMentioned || rec.caMentioned}". Skipping.`
+        );
+        continue;
+      }
+
+      const newRecommendation: Recommendation = {
+        id: asUUID(uuidv4()),
+        userId: userId,
+        messageId: originalMessage.id,
+        timestamp: new Date(originalMessage.ts).getTime(),
+        tokenTicker: resolvedToken.ticker,
+        tokenAddress: resolvedToken.address,
+        chain: resolvedToken.chain,
+        recommendationType: rec.sentiment === 'positive' ? 'BUY' : 'SELL',
+        conviction: rec.conviction as Conviction,
+        rawMessageQuote: originalMessage.content,
+        priceAtRecommendation: 0,
+        processedForTradeDecision: false,
+      };
+
+      userProfile.recommendations.unshift(newRecommendation);
+      profileUpdated = true;
+
+      logger.info(
+        `[Service] Added ${rec.sentiment.toUpperCase()} recommendation for ${resolvedToken.ticker} from user ${userId}`
+      );
+
+      await this.runtime.createTask({
+        name: 'PROCESS_TRADE_DECISION',
+        description: `Process trade decision for rec ${newRecommendation.id}`,
+        metadata: { recommendationId: newRecommendation.id, userId },
+        tags: ['socialAlpha', 'tradeDecision'],
+        roomId: this.componentRoomId,
+        worldId: this.componentWorldId,
+        entityId: userId,
+      });
+    }
+
+    if (profileUpdated) {
+      if (component) {
+        await this.runtime.updateComponent({ ...component, data: userProfile as any });
+      } else {
+        const newComponentId = asUUID(createUniqueUuid(this.runtime, userId.toString()));
+        await this.runtime.createComponent({
+          id: newComponentId,
+          entityId: userId,
+          agentId: this.runtime.agentId!,
+          worldId: this.componentWorldId,
+          roomId: this.componentRoomId,
+          sourceEntityId: this.runtime.agentId!,
+          type: TRUST_MARKETPLACE_COMPONENT_TYPE,
+          createdAt: Date.now(),
+          data: userProfile as any,
+        });
+      }
+      await this.calculateUserTrustScore(userId, this.runtime);
     }
   }
 }

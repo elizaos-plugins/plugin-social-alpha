@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "a362fd78-4e00-4207-bbac-70ab397e8936",
+    "originalMessageId": "1312175134659969046",
+    "userId": "1162569240155529287",
+    "username": "AnimePlace",
+    "timestamp": 1732917331138,
+    "content": "DwfWRDd4w8g8xvnLqcKqcEpdPPdYK18p2zPiUHhPpump Morty meta",
+    "caMentioned": "DwfWRDd4w8g8xvnLqcKqcEpdPPdYK18p2zPiUHhPpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "dbabc17b-8728-43cb-829e-939c2cd7af0f",
+    "originalMessageId": "1312175802531709030",
+    "userId": "964897234896445461",
+    "username": "`RNK 🪽",
+    "timestamp": 1732917490371,
+    "content": ".dp DW5rm1svtH6GHTfGqf5xJcy3BjtjCRx5oHprG6ZCnrGw",
+    "caMentioned": "DW5rm1svtH6GHTfGqf5xJcy3BjtjCRx5oHprG6ZCnrGw",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "4efa8b41-88bd-4bd4-ac01-08208719bce6",
+    "originalMessageId": "1312175904138592391",
+    "userId": "813526297379995690",
+    "username": "Artego",
+    "timestamp": 1732917514596,
+    "content": "7herfqb6pa31v1at1vjduh2edca4v2a5eprmsfxefs7c",
+    "caMentioned": "7herfqb6pa31v1at1vjduh2edca4v2a5eprmsfxefs7c",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "d58f8997-f581-40f2-bc35-c39849b6960d",
+    "originalMessageId": "1310868872311865385",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1732605893925,
+    "content": "Guys, since wuen are we watching github stars 😂 ubc 💥",
+    "tokenMentioned": "UBC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions UBC in a positive context, implying a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "749ed3f8-1956-4bf6-9d54-db1ba73f9619",
+    "originalMessageId": "1310869012543967253",
+    "userId": "904586441823244310",
+    "username": "andré (skott)",
+    "timestamp": 1732605927359,
+    "content": "since ubc",
+    "tokenMentioned": "UBC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions UBC, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "d0f98441-7879-4d12-bc86-95d0aee158b5",
+    "originalMessageId": "1310869027534540855",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1732605930933,
+    "content": "ubc made us",
+    "tokenMentioned": "UBC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions UBC, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "37803e74-76a9-42a0-ae61-ebbc037b9c35",
+    "originalMessageId": "1310869928743534655",
+    "userId": "1244324072264040450",
+    "username": "David.joanou",
+    "timestamp": 1732606145798,
+    "content": "Abc123def456ghi789jkl101112mno131415pqr161718pump",
+    "caMentioned": "Abc123def456ghi789jkl101112mno131415pqr161718pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  }
+]

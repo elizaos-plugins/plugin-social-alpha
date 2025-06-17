@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "8e78d289-dcee-45d8-9908-c7b5de625c09",
+    "originalMessageId": "1323198577157083160",
+    "userId": "1273408965316972655",
+    "username": "goatedonthesticks",
+    "timestamp": 1735545524635,
+    "content": "Sigil",
+    "tokenMentioned": "Sigil",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions 'Sigil', indicating interest or attention towards this token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "833b9d43-4943-4a7a-a74c-2765f6ef41ca",
+    "originalMessageId": "1323198820884025374",
+    "userId": "917560931674902588",
+    "username": "Jaba",
+    "timestamp": 1735545582744,
+    "content": "SOLENGGGGGGGGGGGGGGGGGG",
+    "tokenMentioned": "SOLENG",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is excited about SOLENG, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "baa07d6e-3393-4af3-9c58-b9512cf77dff",
+    "originalMessageId": "1323198870334869534",
+    "userId": "917560931674902588",
+    "username": "Jaba",
+    "timestamp": 1735545594534,
+    "content": "ON THE MOVE",
+    "tokenMentioned": "SOLENG",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User indicates that SOLENG is 'on the move', suggesting positive momentum.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  }
+]

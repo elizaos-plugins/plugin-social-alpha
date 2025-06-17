@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "fe2fb368-dc8d-490d-a294-57759fb2cd41",
+    "originalMessageId": "1311900014141767691",
+    "userId": "1075144835641647194",
+    "username": "CmdNFT",
+    "timestamp": 1732851737295,
+    "content": "7cns514oA8ZsoT8fsmLo4QbRmP1A531bjptvuM8Dpump",
+    "caMentioned": "7cns514oA8ZsoT8fsmLo4QbRmP1A531bjptvuM8Dpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "f47458b9-474e-4136-a4d4-f3db19a62c7f",
+    "originalMessageId": "1311900213627322418",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1732851784856,
+    "content": "$MTARD showing weakness when it should have shown strength\nPivoting those funds to AI16Z",
+    "tokenMentioned": "AI16Z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is reallocating funds from MTARD to AI16Z, indicating a positive sentiment towards AI16Z.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "56348e19-a3ae-49ef-8fe6-15d9dad5936b",
+    "originalMessageId": "1311900435883229197",
+    "userId": "1075144835641647194",
+    "username": "CmdNFT",
+    "timestamp": 1732851837846,
+    "content": "i think $ic could run",
+    "tokenMentioned": "IC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests that $ic could perform well, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  }
+]

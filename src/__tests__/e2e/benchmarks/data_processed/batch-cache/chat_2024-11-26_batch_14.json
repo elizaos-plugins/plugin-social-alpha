@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "b1df525c-bf44-4fa3-9ee2-9fed87a13dd3",
+    "originalMessageId": "1310951693877514291",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1732625640125,
+    "content": "2xbbcmuUpY1p5319DsyVgYNuQjUxUzTSRLoA7rAFpump now bond my sussy",
+    "caMentioned": "2xbbcmuUpY1p5319DsyVgYNuQjUxUzTSRLoA7rAFpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  }
+]

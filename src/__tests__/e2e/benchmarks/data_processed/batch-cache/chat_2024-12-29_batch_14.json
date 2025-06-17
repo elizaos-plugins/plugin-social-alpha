@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "73fd1805-c4fc-415f-b2ba-6aca1ccf33be",
+    "originalMessageId": "1322915822389170347",
+    "userId": "306081951331123200",
+    "username": "heaven5784",
+    "timestamp": 1735478110645,
+    "content": "8i51XNNpGaKaj4G4nDdmQh95v4FKAxw8mhtaRoKd9tE8",
+    "caMentioned": "8i51XNNpGaKaj4G4nDdmQh95v4FKAxw8mhtaRoKd9tE8",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "9fdb751b-64f4-43c5-a5c9-f6fde579e131",
+    "originalMessageId": "1322915954220339261",
+    "userId": "253190775406329858",
+    "username": "StealthRazerFTW",
+    "timestamp": 1735478142076,
+    "content": "7BR6YQupV2STMYpVwCmSpxCfgEfvJvACj1QXUrNYRAUD",
+    "caMentioned": "7BR6YQupV2STMYpVwCmSpxCfgEfvJvACj1QXUrNYRAUD",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "a7a77954-0edf-4f11-bd0c-07a9bb599ed8",
+    "originalMessageId": "1322916842192502854",
+    "userId": "253190775406329858",
+    "username": "StealthRazerFTW",
+    "timestamp": 1735478353785,
+    "content": "HdkPQfhUhtew1wPH5hp33q9AJcC2XmAqWJNRLj5fpump",
+    "caMentioned": "HdkPQfhUhtew1wPH5hp33q9AJcC2XmAqWJNRLj5fpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  }
+]

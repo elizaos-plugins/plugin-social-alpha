@@ -1,0 +1,48 @@
+[
+  {
+    "callId": "2e83bb87-1ec5-406c-aa68-fb5c4c7a38fa",
+    "originalMessageId": "1310934839062691860",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1732621621624,
+    "content": "pawg has 0 creator fee easy to jeet",
+    "tokenMentioned": "PAWG",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User suggests PAWG has no creator fee making it easy to sell quickly",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "7c51f551-35c4-4ba7-b601-2c170cbeade1",
+    "originalMessageId": "1310938779355316274",
+    "userId": "732087860571668510",
+    "username": "Noname $ai16z",
+    "timestamp": 1732622561063,
+    "content": "Solana is fucking nuking rn 😑",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User indicates Solana is dropping significantly",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "ef73339a-810f-45f9-aca2-d837f1e9f804",
+    "originalMessageId": "1310940377553047664",
+    "userId": "120322824614182912",
+    "username": "CJ",
+    "timestamp": 1732622942103,
+    "content": "remember pawg's christmas tree chart at 5m once people could sell",
+    "tokenMentioned": "PAWG",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User references PAWG's historical price action in a negative context",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-26"
+  }
+]

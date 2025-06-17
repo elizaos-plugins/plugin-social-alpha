@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "87db2a80-7483-4660-b59b-7b3d8954d725",
+    "originalMessageId": "1311527598500745289",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1732762946487,
+    "content": "did $zEAi rug or not?",
+    "tokenMentioned": "zEAi",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User is questioning if $zEAi has rugged, indicating negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "75a6bffa-00b2-4008-82ac-5e0093ec0ace",
+    "originalMessageId": "1311529114296909884",
+    "userId": "237220038556254208",
+    "username": "snorlax",
+    "timestamp": 1732763307881,
+    "content": "7xEXfRkHBVNuGimgrfvH8mhrK7E9eNiazv3KhstFpump\nthis looks kinda cool",
+    "caMentioned": "7xEXfRkHBVNuGimgrfvH8mhrK7E9eNiazv3KhstFpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "615d8251-39c2-43fe-a26c-b1d0e0bc41cf",
+    "originalMessageId": "1311530100839415829",
+    "userId": "1162569240155529287",
+    "username": "AnimePlace",
+    "timestamp": 1732763543091,
+    "content": "BDXUjE5dWUQA1xiCKue1JJjPtVFFukrq6quMuMPWpump",
+    "caMentioned": "BDXUjE5dWUQA1xiCKue1JJjPtVFFukrq6quMuMPWpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  }
+]

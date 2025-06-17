@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "91d85c6d-df9d-4566-92b7-6f7594e6f10c",
+    "originalMessageId": "1312031046690148362",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1732882977889,
+    "content": "got something for u 2jwBae6reYZrhPAWNXinPKMdxM6UtNzmKsgFAb3kpump",
+    "caMentioned": "2jwBae6reYZrhPAWNXinPKMdxM6UtNzmKsgFAb3kpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "c73d58d4-d3bf-432a-b449-a51b67f6a0a3",
+    "originalMessageId": "1312031822515011584",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1732883162860,
+    "content": "anyone down for a pool party? : 7TRiNzWxLsghU1ZJPMxWAmQQ6iLFspo9RpQp1jySpump",
+    "caMentioned": "7TRiNzWxLsghU1ZJPMxWAmQQ6iLFspo9RpQp1jySpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  }
+]

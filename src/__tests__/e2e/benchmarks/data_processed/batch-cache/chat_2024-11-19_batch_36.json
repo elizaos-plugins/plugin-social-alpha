@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "a2f93aa4-9951-4c02-97c2-b8a79ec4e57d",
+    "originalMessageId": "1308487630912229397",
+    "userId": "326610960179789825",
+    "username": "Sneak",
+    "timestamp": 1732038161734,
+    "content": "79HZeHkX9A5WfBg72ankd1ppTXGepoSGpmkxW63wsrHY",
+    "caMentioned": "79HZeHkX9A5WfBg72ankd1ppTXGepoSGpmkxW63wsrHY",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "377579e2-9ecd-41af-8058-eec6c2239d8d",
+    "originalMessageId": "1308488225869926401",
+    "userId": "238086587873886220",
+    "username": "MasoRich",
+    "timestamp": 1732038303583,
+    "content": ".dp 79HZeHkX9A5WfBg72ankd1ppTXGepoSGpmkxW63wsrHY",
+    "caMentioned": "79HZeHkX9A5WfBg72ankd1ppTXGepoSGpmkxW63wsrHY",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "4924fa1b-f667-4bfd-87c2-d841082101df",
+    "originalMessageId": "1308488277808119962",
+    "userId": "243191333047500800",
+    "username": "SamK",
+    "timestamp": 1732038315966,
+    "content": "What's the Alpha on $GODS guys GEVqugYZESSzZaYU6SKdpW6znCCEtH7aoSTzPHbqpump",
+    "tokenMentioned": "GODS",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is inquiring about the token GODS, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "be0f5b84-dda4-41ac-8151-93386d469abb",
+    "originalMessageId": "1308488521933258855",
+    "userId": "151108920151244800",
+    "username": "Gavin",
+    "timestamp": 1732038374170,
+    "content": "Ansem RT about $MCAIFEE @2M and no one notices",
+    "tokenMentioned": "MCAIFEE",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions $MCAIFEE at a specific price, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-19"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "ae5500f7-477f-41fe-838e-c257f254617d",
+    "originalMessageId": "1315259027038535750",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733652588377,
+    "content": "TEREZA GOINGGGGG",
+    "tokenMentioned": "Tereza",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is expressing excitement about Tereza, implying positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "b0c4fd98-a127-4ce9-a339-fa300aecec98",
+    "originalMessageId": "1315261382379175937",
+    "userId": "832664669755146290",
+    "username": "0xSimpleFarmer",
+    "timestamp": 1733653149934,
+    "content": "dip on $kAia overnight , roapmap for the week includes , kAia live stream on sankotv , direct kAia live chat UI release , and SP community DAO release : 420.69 SOL ( who will buy kAia with a portion of funds raised as a rev source )",
+    "tokenMentioned": "kAia",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a dip on $kAia and upcoming roadmap events, indicating interest and potential positive sentiment.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "2ffd1791-fc97-4b3f-a273-5eb9c7024180",
+    "originalMessageId": "1315263644568911912",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733653689282,
+    "content": "retarded dave flying",
+    "tokenMentioned": "retarded dave",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions 'retarded dave flying', indicating positive sentiment towards the token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  }
+]

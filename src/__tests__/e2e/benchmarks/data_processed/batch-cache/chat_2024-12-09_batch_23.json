@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "2a88c403-0bd1-4696-989b-6f6b6de3d185",
+    "originalMessageId": "1315751742276767754",
+    "userId": "1100907083647430756",
+    "username": "Socrate",
+    "timestamp": 1733770060844,
+    "content": "Could've made that holding ZODs.",
+    "tokenMentioned": "ZODs",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests holding ZODs could have been profitable.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "36be923c-c28f-4f13-8385-230d4f54561d",
+    "originalMessageId": "1315751813433135236",
+    "userId": "872152422938730566",
+    "username": "Chambriar",
+    "timestamp": 1733770077809,
+    "content": "Dev sold",
+    "tokenMentioned": "HomeAI",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User indicates the developer sold, implying a negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "bebd9127-3697-4ee7-b514-e306b1bdd3a7",
+    "originalMessageId": "1315752823194910851",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1733770318555,
+    "content": "initial sol i got out 😦",
+    "tokenMentioned": "SOL",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User mentions taking initial SOL out, indicating a trade action.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-09"
+  },
+  {
+    "callId": "ff61f358-9061-4ca2-b32b-9d1d8d42c537",
+    "originalMessageId": "1315753199554269228",
+    "userId": "238086587873886220",
+    "username": "MasoRich",
+    "timestamp": 1733770408286,
+    "content": "i aped .2 in homai for culture but i knew it was a scam cause who needs eliza framework in their home and how could you get that hardware done in less than 5 weeks",
+    "tokenMentioned": "HomeAI",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User admits to aping into HomeAI despite suspecting it was a scam.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-09"
+  }
+]

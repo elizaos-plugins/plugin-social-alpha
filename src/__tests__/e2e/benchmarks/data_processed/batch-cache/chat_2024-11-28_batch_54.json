@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "d16c1ca1-2c58-4f7a-96b7-00613e12c517",
+    "originalMessageId": "1311803028545998928",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1732828614127,
+    "content": "iNpCLMVmrFFm6GmUc8Z67L5ze1WQzLzgLxbE4SRpump",
+    "caMentioned": "iNpCLMVmrFFm6GmUc8Z67L5ze1WQzLzgLxbE4SRpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "abb7f828-3376-4093-aed8-4fafcd717c6c",
+    "originalMessageId": "1311803116223463424",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1732828635031,
+    "content": "iNpCLMVmrFFm6GmUc8Z67L5ze1WQzLzgLxbE4SRpump",
+    "caMentioned": "iNpCLMVmrFFm6GmUc8Z67L5ze1WQzLzgLxbE4SRpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "1960489e-e184-43f5-96ac-489e3eaa2b65",
+    "originalMessageId": "1311803152286089298",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1732828643629,
+    "content": ".dp iNpCLMVmrFFm6GmUc8Z67L5ze1WQzLzgLxbE4SRpump",
+    "caMentioned": "iNpCLMVmrFFm6GmUc8Z67L5ze1WQzLzgLxbE4SRpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "8981d80e-aeff-49a3-984c-209b2532771e",
+    "originalMessageId": "1311803457945993342",
+    "userId": "461750203620524042",
+    "username": "eman8n",
+    "timestamp": 1732828716504,
+    "content": "if you didn't enter $SITCOM i think there might be an entry comin up",
+    "tokenMentioned": "SITCOM",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests there might be an entry opportunity for $SITCOM.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  }
+]

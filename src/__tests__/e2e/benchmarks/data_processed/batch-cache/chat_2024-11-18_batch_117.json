@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "731b85b0-faee-4934-b92f-4b9ced3baf48",
+    "originalMessageId": "1308237963766923346",
+    "userId": "211176844706185227",
+    "username": "litn",
+    "timestamp": 1731978636448,
+    "content": "TNSR is going to 0",
+    "tokenMentioned": "TNSR",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User predicts TNSR will go to zero, indicating negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-18"
+  },
+  {
+    "callId": "a1726f50-ac86-4a8f-bf43-bac8859609cd",
+    "originalMessageId": "1308238567268548661",
+    "userId": "928695383650078791",
+    "username": "Pmore",
+    "timestamp": 1731978780334,
+    "content": "C3VaDAABx2wNb7aotqeUPhPdNsWvJhUQXWPAnjsApNRV",
+    "caMentioned": "C3VaDAABx2wNb7aotqeUPhPdNsWvJhUQXWPAnjsApNRV",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-18"
+  }
+]

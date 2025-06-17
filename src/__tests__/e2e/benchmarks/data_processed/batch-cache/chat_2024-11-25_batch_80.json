@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "fc39c893-5ae6-4b23-91ba-db67423275f3",
+    "originalMessageId": "1310829574140985365",
+    "userId": "1292814656506826782",
+    "username": "soly",
+    "timestamp": 1732596524511,
+    "content": "GEVqugYZESSzZaYU6SKdpW6znCCEtH7aoSTzPHbqpump",
+    "caMentioned": "GEVqugYZESSzZaYU6SKdpW6znCCEtH7aoSTzPHbqpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "add3243c-cb7c-458c-9e05-381f552152c6",
+    "originalMessageId": "1310829624871223387",
+    "userId": "1158224225178505337",
+    "username": "zilyx - noob crypto",
+    "timestamp": 1732596536606,
+    "content": "X4 from my call on ubc",
+    "tokenMentioned": "UBC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is claiming a positive return on UBC, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "f40a4177-7415-4b5f-a83a-e15de429bc5e",
+    "originalMessageId": "1310830773338636350",
+    "userId": "209724094394925059",
+    "username": "Ponzi",
+    "timestamp": 1732596810422,
+    "content": "maybe someone big asked him to fud for lower entry",
+    "tokenMentioned": "UBC",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User suggests someone might have spread FUD for a lower entry, indicating a negative sentiment towards the action.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "c40cc6bd-213d-42a0-b224-453de600b61e",
+    "originalMessageId": "1310831093326286870",
+    "userId": "1084869837072904193",
+    "username": "Kojo",
+    "timestamp": 1732596886713,
+    "content": "8NQ2HcFBw5oY9wQVrPVnZtQvmeH1atWayH72ErLP2Dcc",
+    "caMentioned": "8NQ2HcFBw5oY9wQVrPVnZtQvmeH1atWayH72ErLP2Dcc",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  }
+]

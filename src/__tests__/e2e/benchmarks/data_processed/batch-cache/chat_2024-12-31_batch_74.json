@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "c1d63aa4-ebec-4b3f-97ba-0b87e0788f41",
+    "originalMessageId": "1323745309360394281",
+    "userId": "1088924200737185863",
+    "username": "TheHammer",
+    "timestamp": 1735675875750,
+    "content": "taking a break from the webdev and doing some degening new to these trenches what are some good buys, just got some shaw, my solana bags are pretty lame more of evm guy myself so want to diversify some shit lol",
+    "tokenMentioned": "SHAW",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions buying SHAW, indicating interest in the token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-31"
+  },
+  {
+    "callId": "2a342c81-5565-407c-9710-87a8b335e19f",
+    "originalMessageId": "1323745764996026419",
+    "userId": "882167185806594108",
+    "username": "Nubby",
+    "timestamp": 1735675984382,
+    "content": "im going to buy smore on vector.fun hopefully more people join there idk how tf it works lol",
+    "tokenMentioned": "SMORE",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses intent to buy SMORE on vector.fun.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-31"
+  },
+  {
+    "callId": "837b28ee-0b5a-4810-b25b-73c8bb0c97b4",
+    "originalMessageId": "1323746136313434183",
+    "userId": "964897234896445461",
+    "username": "`RNK 🪽",
+    "timestamp": 1735676072911,
+    "content": "CqYM3eUQnppnQtPNcHWYdN9tgb5ePnuBpSxkiFDupump",
+    "caMentioned": "CqYM3eUQnppnQtPNcHWYdN9tgb5ePnuBpSxkiFDupump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-31"
+  },
+  {
+    "callId": "fcc47441-a544-4e20-bf4b-9368df9b761a",
+    "originalMessageId": "1323746540690473072",
+    "userId": "938192849873285173",
+    "username": "Tony",
+    "timestamp": 1735676169322,
+    "content": "wsNQ1XUnkxerKLxekEQaz8aJyWzzZrup6ZNinV3pump",
+    "caMentioned": "wsNQ1XUnkxerKLxekEQaz8aJyWzzZrup6ZNinV3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-31"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "8f232340-6d11-4a71-a142-5f24ee4bcfa7",
+    "originalMessageId": "1309001724467613777",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1732160731189,
+    "content": "$AICZ - Only a matter of time",
+    "tokenMentioned": "AICZ",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is bullish on AICZ, suggesting it will increase in value.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "704aa62d-fdd8-4c05-bdf8-e9fa01b2b53a",
+    "originalMessageId": "1309004575088447548",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1732161410830,
+    "content": "$AICZ gnna bust out",
+    "tokenMentioned": "AICZ",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is bullish on AICZ, suggesting it will increase in value.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "e7f172e2-22e7-4997-ac85-70268d4e8a8d",
+    "originalMessageId": "1309005474196094976",
+    "userId": "511282652842557449",
+    "username": "Guts",
+    "timestamp": 1732161625194,
+    "content": "9T6owj9NLBh5qUJtmp5y2qAKPckdpbAEHjmACamTgCaP",
+    "caMentioned": "9T6owj9NLBh5qUJtmp5y2qAKPckdpbAEHjmACamTgCaP",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  }
+]

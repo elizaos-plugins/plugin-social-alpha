@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "73bd3964-46f7-4b3c-bc90-c4afc78ba649",
+    "originalMessageId": "1308923723323015290",
+    "userId": "361346762159554580",
+    "username": "SourceDegen",
+    "timestamp": 1732142134267,
+    "content": "7rRfJ5tdUjFPCWZRyYM7UNnfrpK1dqwzfpMYDknspump",
+    "caMentioned": "7rRfJ5tdUjFPCWZRyYM7UNnfrpK1dqwzfpMYDknspump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "6ca45bd6-bb02-4952-bdd6-b67a48e4dbf1",
+    "originalMessageId": "1308924759949709435",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1732142381418,
+    "content": "Ive seen the SHEESH community. I know Aiden. Big big bullish\n\nEMzSUfXSVKtFKXRiX8pu1DFhujPu9g4hDz9Lisqkpump",
+    "caMentioned": "EMzSUfXSVKtFKXRiX8pu1DFhujPu9g4hDz9Lisqkpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is bullish on the token associated with the contract address.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "704febfc-97b0-48b9-8be7-4874f229568c",
+    "originalMessageId": "1308925512248332289",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1732142560780,
+    "content": "WEB4 could rock\n\n5t5jxx6GCv2hnjzwUuYKjMc1pHcFVwAdq9DrgBjepump",
+    "caMentioned": "5t5jxx6GCv2hnjzwUuYKjMc1pHcFVwAdq9DrgBjepump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "f846477f-ee24-4d0e-a565-af2186230a88",
+    "originalMessageId": "1308926868585447505",
+    "userId": "1054146717546725407",
+    "username": "Shilliam",
+    "timestamp": 1732142884156,
+    "content": "EMzSUfXSVKtFKXRiX8pu1DFhujPu9g4hDz9Lisqkpump",
+    "caMentioned": "EMzSUfXSVKtFKXRiX8pu1DFhujPu9g4hDz9Lisqkpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  }
+]

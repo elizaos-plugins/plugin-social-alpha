@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "ed89170b-0f26-4f38-944f-4a31d555f52d",
+    "originalMessageId": "1323397475096203336",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1735592945599,
+    "content": "This is alpha!\n\nThe current swarm the SYMX dev is working on focuses on Robust Adversarial Perturbation (RAP). These AI agents collaborate to identify vulnerabilities in machine learning models, simulate adversarial attacks, and develop robust defenses. This ensures that AI systems remain secure, reliable, and resilient against real-world threats.\n\n.X SYMX",
+    "tokenMentioned": "SYMX",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions SYMX and describes its development focus, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "4743f4fe-01be-4ea2-a408-4c6c0dc77da2",
+    "originalMessageId": "1323397869381877839",
+    "userId": "1319447861078917171",
+    "username": "Stan",
+    "timestamp": 1735593039604,
+    "content": "8BQdCZt4hdbbn62bYgN2LrFf2pvMeZt8xaqZqHN3pump",
+    "caMentioned": "8BQdCZt4hdbbn62bYgN2LrFf2pvMeZt8xaqZqHN3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "fcc59469-219e-4b07-b48c-e35c94529f4b",
+    "originalMessageId": "1323398314237890620",
+    "userId": "1319447861078917171",
+    "username": "Stan",
+    "timestamp": 1735593145666,
+    "content": "Just check it out\n\n8BQdCZt4hdbbn62bYgN2LrFf2pvMeZt8xaqZqHN3pump",
+    "caMentioned": "8BQdCZt4hdbbn62bYgN2LrFf2pvMeZt8xaqZqHN3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "2f5e6bf2-6c12-45e6-b7c8-3e6fb58eee3a",
+    "originalMessageId": "1323399120513138768",
+    "userId": "1269318903981539332",
+    "username": "Zynxia",
+    "timestamp": 1735593337897,
+    "content": "I printed off symx",
+    "tokenMentioned": "SYMX",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses positive sentiment about SYMX.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-30"
+  }
+]

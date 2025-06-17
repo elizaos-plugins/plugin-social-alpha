@@ -1,0 +1,63 @@
+
+=========================================
+🔎 Data Analysis Report
+=========================================
+Generated at: 2025-06-09T00:19:46.427Z
+
+--- Overview ---
+Total Calls Extracted: 7537
+Total Unique Tokens:   766
+Total Unique Callers:  592
+
+--- Distributions ---
+
+Sentiment:
+  - positive: 4284
+  - negative: 920
+  - neutral: 2333
+
+Conviction:
+  - high: 1747
+  - medium: 3713
+  - low: 2076
+  - neutral: 1
+
+Certainty:
+  - high: 3731
+  - medium: 3575
+  - low: 231
+
+Chain:
+  - unknown: 2641
+  - solana: 4833
+  - bitcoin: 39
+  - ethereum: 23
+  - base: 1
+
+--- Leaderboards ---
+
+Top 10 Callers:
+  1. luans2992 (370369452463620106): 335 calls
+  2. Quanatee (744104000231702580): 270 calls
+  3. andré (skott) (904586441823244310): 262 calls
+  4. Antagonist.sats (831476829608738866): 248 calls
+  5. ZO (695719769541705779): 245 calls
+  6. Zodiac (350955967955075082): 176 calls
+  7. JupTengE (394408039048019968): 166 calls
+  8. Pmore (928695383650078791): 160 calls
+  9. Prime (816123544504762391): 156 calls
+  10. Hat (891993930651021313): 143 calls
+
+Top 10 Tokens:
+  1. AI16Z: 886 mentions
+  2. ai16z: 859 mentions
+  3. COBIE: 416 mentions
+  4. AROK: 406 mentions
+  5. AILON: 399 mentions
+  6. HONEY: 286 mentions
+  7. SCHIFF: 210 mentions
+  8. DEGENAI: 185 mentions
+  9. SHAW: 180 mentions
+  10. GRIN: 160 mentions
+
+=========================================

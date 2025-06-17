@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "2bd42930-870d-4fb5-9911-e5477df38e73",
+    "originalMessageId": "1312576127813943418",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1733012935356,
+    "content": ".c fyi2jqurxgv8zadzlz9efrwqvr8xjuxjvplauw4pa9ep",
+    "caMentioned": "fyi2jqurxgv8zadzlz9efrwqvr8xjuxjvplauw4pa9ep",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-30"
+  },
+  {
+    "callId": "1a4387df-d9a4-487f-ace5-26fc52babb25",
+    "originalMessageId": "1312577711138672672",
+    "userId": "1162569240155529287",
+    "username": "AnimePlace",
+    "timestamp": 1733013312850,
+    "content": "HAAS?",
+    "tokenMentioned": "HAAS",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User is discussing HAAS, indicating interest or involvement.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-30"
+  },
+  {
+    "callId": "a17f7aaf-c32d-47f2-93bb-5698ee0e8e03",
+    "originalMessageId": "1312578421427273748",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733013482196,
+    "content": "HAAS is on discount.",
+    "tokenMentioned": "HAAS",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions HAAS being on discount, implying a buying opportunity.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-30"
+  },
+  {
+    "callId": "99a4c997-b217-4e92-9461-e2ee6326f7ae",
+    "originalMessageId": "1312578967706009644",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733013612439,
+    "content": "You've got my SOL when it's ready!",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses intent to invest in a project once ready.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-30"
+  }
+]

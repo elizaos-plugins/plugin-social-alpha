@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "b2949c0d-b53e-4fdf-8bc9-304bed000d3d",
+    "originalMessageId": "1313955575054336000",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733341821207,
+    "content": "This is JR JR shMZAwY3xsKcenhvJkAyp8w1LU4YBYT5GZ412ropump",
+    "caMentioned": "shMZAwY3xsKcenhvJkAyp8w1LU4YBYT5GZ412ropump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User mentions a specific contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "06a93f01-8a43-493b-8038-d8ad26e36818",
+    "originalMessageId": "1313955616317767680",
+    "userId": "217387490703572992",
+    "username": "hellomoto",
+    "timestamp": 1733341831045,
+    "content": ".cc shMZAwY3xsKcenhvJkAyp8w1LU4YBYT5GZ412ropump 1m",
+    "caMentioned": "shMZAwY3xsKcenhvJkAyp8w1LU4YBYT5GZ412ropump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User mentions a specific contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "166b3a90-c265-40ad-b8c2-5063c16e3304",
+    "originalMessageId": "1313956298748072011",
+    "userId": "628939577356451840",
+    "username": "Vegeta",
+    "timestamp": 1733341993749,
+    "content": "9gjGVTiJVQPE9jGfLvwCKYd1Bi3kVTwxLM4UUkJGxAcN",
+    "caMentioned": "9gjGVTiJVQPE9jGfLvwCKYd1Bi3kVTwxLM4UUkJGxAcN",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "e6c3edbc-15df-4b05-9253-bb292b796bda",
+    "originalMessageId": "1313962628808445972",
+    "userId": "217387490703572992",
+    "username": "hellomoto",
+    "timestamp": 1733343502953,
+    "content": ".cc shMZAwY3xsKcenhvJkAyp8w1LU4YBYT5GZ412ropump 1m",
+    "caMentioned": "shMZAwY3xsKcenhvJkAyp8w1LU4YBYT5GZ412ropump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User mentions a specific contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  }
+]

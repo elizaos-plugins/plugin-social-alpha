@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "6227987b-042e-46ef-a6c3-251acdf1d9b8",
+    "originalMessageId": "1311491447282733067",
+    "userId": "531121861111840811",
+    "username": "MYSA",
+    "timestamp": 1732754327365,
+    "content": "CRVidEDtEUTYZisCxBZkpELzhQc9eauMLR3FWg74tReL his wallet is public search on X",
+    "caMentioned": "CRVidEDtEUTYZisCxBZkpELzhQc9eauMLR3FWg74tReL",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "0fb5741f-6291-4bec-a86c-312d050ef7a6",
+    "originalMessageId": "1311492437515960350",
+    "userId": "964897234896445461",
+    "username": "`RNK 🪽",
+    "timestamp": 1732754563455,
+    "content": "UOS dev 2sol worth 200k on zodiac \n\nthis is why i don't want to leave crypto 😂",
+    "tokenMentioned": "UOS",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is discussing the value of UOS in relation to Zodiac, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "a1c393d0-a346-4334-b5b8-1db6b3244bcb",
+    "originalMessageId": "1311492881013276744",
+    "userId": "957181674087673866",
+    "username": "Zumbakafeo",
+    "timestamp": 1732754669193,
+    "content": "already in i aped 1 sol at 30 k",
+    "tokenMentioned": "unknown",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User states they aped into a token at a specific price, indicating a call.",
+    "certainty": "low",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "1fc9203d-2e58-4fb4-98c8-ecb5d39870d4",
+    "originalMessageId": "1311493701859676203",
+    "userId": "732233120891404320",
+    "username": "ayoob",
+    "timestamp": 1732754864898,
+    "content": "6WWMs4bpQXdgUAcyqba8ZD2GEfJx8ZVtGouAGj28pump\n\nanyone seen this?",
+    "caMentioned": "6WWMs4bpQXdgUAcyqba8ZD2GEfJx8ZVtGouAGj28pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  }
+]

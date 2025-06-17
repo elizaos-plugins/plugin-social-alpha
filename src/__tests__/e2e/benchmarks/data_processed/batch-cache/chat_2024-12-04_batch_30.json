@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "8215db44-2c3c-4362-b4c3-6a356a2adc29",
+    "originalMessageId": "1313912243124961401",
+    "userId": "238086587873886220",
+    "username": "MasoRich",
+    "timestamp": 1733331490070,
+    "content": "i'm going broke(agi)",
+    "tokenMentioned": "AGI",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User mentions going broke with AGI, implying a negative sentiment towards the token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "5903030f-cd0f-4487-a990-dde15928412c",
+    "originalMessageId": "1313913395023577169",
+    "userId": "1226743509004980335",
+    "username": "ricky",
+    "timestamp": 1733331764704,
+    "content": ":ai16z:",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions ai16z, indicating a reference to a specific token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "cbee25e4-8b39-4026-8763-3afaac60616d",
+    "originalMessageId": "1313913787266367498",
+    "userId": "365658034749440000",
+    "username": "Tony Serrano",
+    "timestamp": 1733331858222,
+    "content": "bitcoin please save us",
+    "nameMentioned": "Bitcoin",
+    "tokenMentioned": "BTC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User is expressing hope that Bitcoin will improve their situation, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "60af7b54-60a5-45e2-8f63-b079c0065e35",
+    "originalMessageId": "1313915543010672641",
+    "userId": "1244324072264040450",
+    "username": "David.joanou",
+    "timestamp": 1733332276824,
+    "content": ".dp CKWxsXsJ85H7cTRgbbUwYrg3UMWx1Cbis3PwNbMipump",
+    "caMentioned": "CKWxsXsJ85H7cTRgbbUwYrg3UMWx1Cbis3PwNbMipump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  }
+]

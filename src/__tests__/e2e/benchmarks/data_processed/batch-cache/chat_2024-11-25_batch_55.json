@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "f920cd3b-736f-4449-9ff7-e6eb1b4d39d8",
+    "originalMessageId": "1310746362295357502",
+    "userId": "218464496845324289",
+    "username": "firekid",
+    "timestamp": 1732576685261,
+    "content": "if you all just stay quiet for a second, we can help the man even through the process of creation, we can do this all over again properly",
+    "caMentioned": "0x368f7089c48ade5f59924ebfa5f249fa2ef181dc",
+    "chain": "ethereum",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "d319e8df-368e-43a1-ac4f-61db0a57379f",
+    "originalMessageId": "1310746917940105298",
+    "userId": "688810691293216803",
+    "username": "NLR",
+    "timestamp": 1732576817737,
+    "content": "I have one, it is called UBC for Universal Basic Compute: 0xB7C35716a1aFDCF78a71f1D772f8753e40CFb726",
+    "caMentioned": "0xB7C35716a1aFDCF78a71f1D772f8753e40CFb726",
+    "chain": "ethereum",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  }
+]

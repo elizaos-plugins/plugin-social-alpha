@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "0bd421f5-e3d0-42bc-971b-f1b257f81d95",
+    "originalMessageId": "1310953939469991988",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1732626175516,
+    "content": "ubc 2.0 hoping",
+    "tokenMentioned": "UBC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is hoping for a new version of UBC, indicating interest in a similar token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "d4e12d7c-cabc-4ec1-9f02-c64952b096db",
+    "originalMessageId": "1310954538106355792",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1732626318242,
+    "content": "As a reward we get to ape into this\n\n2xbbcmuUpY1p5319DsyVgYNuQjUxUzTSRLoA7rAFpump",
+    "caMentioned": "2xbbcmuUpY1p5319DsyVgYNuQjUxUzTSRLoA7rAFpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is suggesting to invest in the token associated with the contract address.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  }
+]

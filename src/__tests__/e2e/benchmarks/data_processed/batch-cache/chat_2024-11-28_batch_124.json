@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "8b959897-4359-4bf9-9e20-a0c7493c912c",
+    "originalMessageId": "1311948993466728468",
+    "userId": "846163082627776533",
+    "username": "0xzann",
+    "timestamp": 1732863414876,
+    "content": "9c1Hih3SbBJLQomEFxHtcRm4DuYQHi6SBdZgUHWYpump  aped ?",
+    "caMentioned": "9c1Hih3SbBJLQomEFxHtcRm4DuYQHi6SBdZgUHWYpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "f6230ad9-0669-4ce3-8c7a-80449a9044f0",
+    "originalMessageId": "1311950111286493235",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1732863681385,
+    "content": "Whoever threw this in here I'm aping with ya lol 9c1Hih3SbBJLQomEFxHtcRm4DuYQHi6SBdZgUHWYpump",
+    "caMentioned": "9c1Hih3SbBJLQomEFxHtcRm4DuYQHi6SBdZgUHWYpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is expressing intent to invest in the token associated with the contract address.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  }
+]

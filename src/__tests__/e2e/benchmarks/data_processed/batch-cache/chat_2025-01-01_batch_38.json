@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "b6d58240-1059-4ad8-abf2-121b9221ef51",
+    "originalMessageId": "1324012617655779358",
+    "userId": "767798692740071426",
+    "username": "jotarokujo.btc",
+    "timestamp": 1735739607014,
+    "content": "thanks @anon for the entry on Miku 5m level",
+    "tokenMentioned": "MIKU",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions throwing 50 SOL on Miku, indicating a positive sentiment towards Miku.",
+    "certainty": "medium",
+    "fileSource": "chat_2025-01-01"
+  },
+  {
+    "callId": "730c03a1-135c-4c00-b82c-34e6e2eef77d",
+    "originalMessageId": "1324012889417449493",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1735739671807,
+    "content": "48BVWSkY5XxZ9HwaKet2kAYvjP9gPviUmm8Xg2EKCLNx",
+    "caMentioned": "48BVWSkY5XxZ9HwaKet2kAYvjP9gPviUmm8Xg2EKCLNx",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2025-01-01"
+  },
+  {
+    "callId": "d27fe6ca-e351-42bd-989f-425f29085dfe",
+    "originalMessageId": "1324013208146673705",
+    "userId": "767798692740071426",
+    "username": "jotarokujo.btc",
+    "timestamp": 1735739747798,
+    "content": "imagine $MIKU show on twitch",
+    "tokenMentioned": "MIKU",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User imagines a show for Miku, indicating interest and positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2025-01-01"
+  },
+  {
+    "callId": "993d643e-a42f-4539-9587-9825d8393ec1",
+    "originalMessageId": "1324013259015192617",
+    "userId": "183431572467351552",
+    "username": "Malion",
+    "timestamp": 1735739759926,
+    "content": "MIKU now top for smart money buys",
+    "tokenMentioned": "MIKU",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User states MIKU is top for smart money buys, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2025-01-01"
+  }
+]

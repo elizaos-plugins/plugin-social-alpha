@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "44a17700-2ae8-4d62-b0fc-57dbecd3351c",
+    "originalMessageId": "1316509914751041607",
+    "userId": "980831293132652574",
+    "username": "Zoroaark",
+    "timestamp": 1733950823248,
+    "content": "ai16z nfts still cheap. easy can go to 10SOLANA, zerebro nfts 5sol lol",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is bullish on ai16z NFTs, expecting them to increase in value.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-11"
+  },
+  {
+    "callId": "8822eb49-74d9-4941-95f1-8c9e98577af8",
+    "originalMessageId": "1316510178606055485",
+    "userId": "1262579683778625548",
+    "username": "Xi",
+    "timestamp": 1733950886156,
+    "content": "AusEwNU5t4UK8yCAaCq32G1ZH1WCq6Wh8JP1JvuQhXNH",
+    "caMentioned": "AusEwNU5t4UK8yCAaCq32G1ZH1WCq6Wh8JP1JvuQhXNH",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-11"
+  },
+  {
+    "callId": "e0491447-c148-40d9-9ca6-ecbe72ed72af",
+    "originalMessageId": "1316510631951732759",
+    "userId": "832664669755146290",
+    "username": "0xSimpleFarmer",
+    "timestamp": 1733950994242,
+    "content": "9gmu8RPfNLXNKfDVZ3rR2tUXzeppFFuaNFtRPgUCx4mi",
+    "caMentioned": "9gmu8RPfNLXNKfDVZ3rR2tUXzeppFFuaNFtRPgUCx4mi",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-11"
+  },
+  {
+    "callId": "a6a967ee-2f16-4585-9dc0-1122d4372cb0",
+    "originalMessageId": "1316510765565481010",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1733951026098,
+    "content": "ABHQGzXNoRbJ1sjUsCJ2TmTAo1uMx4EUpV1qYiSVpump",
+    "caMentioned": "ABHQGzXNoRbJ1sjUsCJ2TmTAo1uMx4EUpV1qYiSVpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-11"
+  }
+]

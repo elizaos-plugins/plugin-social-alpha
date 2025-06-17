@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "a16356c0-85dc-40f9-93f9-33d982f615fe",
+    "originalMessageId": "1313881660751872032",
+    "userId": "108121781537079296",
+    "username": "herby",
+    "timestamp": 1733324198664,
+    "content": "B2GoHwUP5zdPb7NhmvS8fVWcW7AkFE3KD3Rns12Mcpe4",
+    "caMentioned": "B2GoHwUP5zdPb7NhmvS8fVWcW7AkFE3KD3Rns12Mcpe4",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "98368bc1-97d4-4669-8ddf-39375f47a6b0",
+    "originalMessageId": "1313882097353752660",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1733324302758,
+    "content": "Probably going a lot higher from here\n\nHeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+    "caMentioned": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  }
+]

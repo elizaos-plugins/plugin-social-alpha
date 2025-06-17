@@ -1,0 +1,173 @@
+[
+  {
+    "callId": "80e4b1a2-46ce-4fb5-96cd-3b601df40817",
+    "originalMessageId": "1300172868247752895",
+    "userId": "1006628736763969650",
+    "username": "lonnad",
+    "timestamp": 1730055767834,
+    "content": "FARTBOOK doing well",
+    "tokenMentioned": "FARTBOOK",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions FARTBOOK token performing well.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "FotQdDFbeHME1ApAVM7KGVxXJv9TpgqNs8ppbaUppump",
+      "symbol": "FARTBOOK",
+      "name": "FartbookAI",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.00002077,
+      "calledPriceTimestamp": 1730055767834,
+      "bestPrice": 0.00002482753081428131,
+      "bestPriceTimestamp": 1732215767834,
+      "worstPrice": 0.000019817690178091528,
+      "worstPriceTimestamp": 1730055767834,
+      "idealProfitLoss": 0.000004057530814281312,
+      "idealProfitLossPercent": 19.535535937801214,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438759140
+  },
+  {
+    "callId": "f14e84d0-15a9-4725-af39-c15ffc932654",
+    "originalMessageId": "1300174599618691103",
+    "userId": "1006628736763969650",
+    "username": "lonnad",
+    "timestamp": 1730056180625,
+    "content": "https://dexscreener.com/solana/buhystoui9axvjff1k3n9b3vpftnrjxmgwqamcusofyl",
+    "tokenMentioned": "FARTBOOK",
+    "caMentioned": "buhystoui9axvjff1k3n9b3vpftnrjxmgwqamcusofyl",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User provides a link to FARTBOOK token on DEXScreener.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "FotQdDFbeHME1ApAVM7KGVxXJv9TpgqNs8ppbaUppump",
+      "symbol": "FARTBOOK",
+      "name": "FartbookAI",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000020778049866758936,
+      "calledPriceTimestamp": 1730056180625,
+      "bestPrice": 0.000023796645310093105,
+      "bestPriceTimestamp": 1730488180625,
+      "worstPrice": 0.00001979922166327616,
+      "worstPriceTimestamp": 1731179380625,
+      "idealProfitLoss": 9.788282034827772e-7,
+      "idealProfitLossPercent": 4.710876187898281,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438762372
+  },
+  {
+    "callId": "4cc758ed-7a4d-42e8-9290-427cd7f7de21",
+    "originalMessageId": "1300175682927591494",
+    "userId": "1006628736763969650",
+    "username": "lonnad",
+    "timestamp": 1730056438906,
+    "content": "it's a memecoin lol \nthey worked on fartbook together apparently",
+    "tokenMentioned": "FARTBOOK",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User confirms FARTBOOK is a memecoin.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "FotQdDFbeHME1ApAVM7KGVxXJv9TpgqNs8ppbaUppump",
+      "symbol": "FARTBOOK",
+      "name": "FartbookAI",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000020778049866758936,
+      "calledPriceTimestamp": 1730056438906,
+      "bestPrice": 0.000023737416168485073,
+      "bestPriceTimestamp": 1731525238906,
+      "worstPrice": 0.000018409717157160784,
+      "worstPriceTimestamp": 1732475638906,
+      "idealProfitLoss": 0.0000023683327095981516,
+      "idealProfitLossPercent": 11.398243457809047,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438758700
+  },
+  {
+    "callId": "56f38ccf-a5d6-4711-84ce-fc3d2d27d790",
+    "originalMessageId": "1300175919054327922",
+    "userId": "218464496845324289",
+    "username": "firekid",
+    "timestamp": 1730056495203,
+    "content": "he is dumping it",
+    "tokenMentioned": "FARTBOOK",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User suggests someone is dumping FARTBOOK.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "FotQdDFbeHME1ApAVM7KGVxXJv9TpgqNs8ppbaUppump",
+      "symbol": "FARTBOOK",
+      "name": "FartbookAI",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000020778049866758936,
+      "calledPriceTimestamp": 1730056495203,
+      "bestPrice": 0.000022478337641251814,
+      "bestPriceTimestamp": 1731179695203,
+      "worstPrice": 0.00001974201977502699,
+      "worstPriceTimestamp": 1730056495203,
+      "idealProfitLoss": 0.0000010360300917319473,
+      "idealProfitLossPercent": 4.986175788274554,
+      "windowDays": 14
+    },
+    "enrichedAt": 1749438758635
+  },
+  {
+    "callId": "48f104b5-c526-495b-929a-a307b209234e",
+    "originalMessageId": "1300175999970840718",
+    "userId": "218464496845324289",
+    "username": "firekid",
+    "timestamp": 1730056514495,
+    "content": "so unless you believe the creator of project89 created a meme to dump on you, then its larp",
+    "tokenMentioned": "FARTBOOK",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User suggests FARTBOOK might be a scam.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "FotQdDFbeHME1ApAVM7KGVxXJv9TpgqNs8ppbaUppump",
+      "symbol": "FARTBOOK",
+      "name": "FartbookAI",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000020778049866758936,
+      "calledPriceTimestamp": 1730056514495,
+      "bestPrice": 0.000021015247789905742,
+      "bestPriceTimestamp": 1730056514495,
+      "worstPrice": 0.00001879259762974366,
+      "worstPriceTimestamp": 1730574914495,
+      "idealProfitLoss": 0.0000019854522370152772,
+      "idealProfitLossPercent": 9.555527346152134,
+      "windowDays": 14
+    },
+    "enrichedAt": 1749438758589
+  }
+]

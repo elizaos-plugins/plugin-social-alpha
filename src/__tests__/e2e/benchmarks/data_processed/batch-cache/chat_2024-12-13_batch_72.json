@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "5b8a86bb-a65b-4766-a48d-ab2c2d29d6ab",
+    "originalMessageId": "1317351563588796509",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1734151487968,
+    "content": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+    "caMentioned": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "19a07b88-6e03-4a8b-a480-8cee58770f4d",
+    "originalMessageId": "1317351766039465984",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1734151536236,
+    "content": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump",
+    "caMentioned": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "e8da2959-49fc-4d68-8151-34ade5d09c2f",
+    "originalMessageId": "1317352666841616445",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1734151751004,
+    "content": "I'll post it again in case you missed it\n\nHeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+    "caMentioned": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "37eba177-374d-44c3-aaee-71efb7005bdb",
+    "originalMessageId": "1311803737857331210",
+    "userId": "461750203620524042",
+    "username": "eman8n",
+    "timestamp": 1732828783240,
+    "content": "$RANDY !!!!!!!!!!!!!!!",
+    "tokenMentioned": "RANDY",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is excited about $RANDY, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "9c6adbba-09b4-4dba-b715-979d1f77fef9",
+    "originalMessageId": "1311804224455184448",
+    "userId": "891993930651021313",
+    "username": "Hat",
+    "timestamp": 1732828899254,
+    "content": "iNpCLMVmrFFm6GmUc8Z67L5ze1WQzLzgLxbE4SRpump",
+    "caMentioned": "iNpCLMVmrFFm6GmUc8Z67L5ze1WQzLzgLxbE4SRpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "887bfee9-a322-4b92-9b19-4bc4a756dffc",
+    "originalMessageId": "1311804391837139014",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1732828939161,
+    "content": "iNpCLMVmrFFm6GmUc8Z67L5ze1WQzLzgLxbE4SRpump",
+    "caMentioned": "iNpCLMVmrFFm6GmUc8Z67L5ze1WQzLzgLxbE4SRpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "cd945305-bc27-46ef-8cd2-60ed53f3c23b",
+    "originalMessageId": "1311804992100896810",
+    "userId": "891993930651021313",
+    "username": "Hat",
+    "timestamp": 1732829082275,
+    "content": "4Cgmi2PBScw2iMYaMwqnuJcHnp7ragbgQb3ZBKkupump",
+    "caMentioned": "4Cgmi2PBScw2iMYaMwqnuJcHnp7ragbgQb3ZBKkupump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  }
+]

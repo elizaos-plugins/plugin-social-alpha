@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "65975a2f-2a6a-42b4-961c-d81fe8ecf7fa",
+    "originalMessageId": "1322617457697095800",
+    "userId": "724150556318498869",
+    "username": "OVT",
+    "timestamp": 1735406974959,
+    "content": "Anyone held this from two days ago??\n\n\nCreiuhfwdWCN5mJbMJtA9bBpYQrQF2tCBuZwSPWfpump",
+    "caMentioned": "CreiuhfwdWCN5mJbMJtA9bBpYQrQF2tCBuZwSPWfpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "730a1bea-2682-46b0-a3fc-b9f59bc4d44c",
+    "originalMessageId": "1322619482400882688",
+    "userId": "1100907083647430756",
+    "username": "Socrate",
+    "timestamp": 1735407457686,
+    "content": "buy goatse or he will block u :kekw:",
+    "tokenMentioned": "Goatse",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests buying Goatse to avoid being blocked, implying a call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "91e0bd60-8b57-4903-895b-f45b674b7ab8",
+    "originalMessageId": "1322619584523669545",
+    "userId": "724150556318498869",
+    "username": "OVT",
+    "timestamp": 1735407482034,
+    "content": "I hold some goatse and goatagi m, double goat protection",
+    "tokenMentioned": "Goatse",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions holding Goatse and Goatagi, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  }
+]

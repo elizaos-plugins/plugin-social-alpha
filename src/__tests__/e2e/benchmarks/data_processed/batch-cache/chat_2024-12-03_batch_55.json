@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "0dc55803-effe-4cf5-bbaf-3707ef93caa2",
+    "originalMessageId": "1313627915753095300",
+    "userId": "1226743509004980335",
+    "username": "ricky",
+    "timestamp": 1733263701142,
+    "content": "also plz send some supply to the ai16z DOA",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is suggesting sending supply to ai16z DOA, indicating a positive sentiment towards ai16z.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "9bf20304-d9ae-48b7-add6-3ccd142ae507",
+    "originalMessageId": "1313628375541092386",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1733263810764,
+    "content": "27yzfJSNvYLBjgSNbMyXMMUWzx6T9q4B9TP8Jt8MZ9mL",
+    "caMentioned": "27yzfJSNvYLBjgSNbMyXMMUWzx6T9q4B9TP8Jt8MZ9mL",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "d586e1c6-bef4-45ab-9a29-166729f8e655",
+    "originalMessageId": "1313628733604626452",
+    "userId": "816323354474709053",
+    "username": "Cinnamoon",
+    "timestamp": 1733263896133,
+    "content": ".dp 76FkLxRXRNHj1EApRh1CZ64wh3oHj2U4x46sjmqTpump",
+    "caMentioned": "76FkLxRXRNHj1EApRh1CZ64wh3oHj2U4x46sjmqTpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "efc9cd4d-057d-4c9c-9e50-9fe83fc99491",
+    "originalMessageId": "1313629167228682352",
+    "userId": "1226743509004980335",
+    "username": "ricky",
+    "timestamp": 1733263999517,
+    "content": "@VEGA please remember to send supply to the ai16z DOA for using their tech. big stamp of approval for the project as well - mutually beneficially",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests sending supply to ai16z DOA, indicating a positive sentiment towards ai16z.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  }
+]

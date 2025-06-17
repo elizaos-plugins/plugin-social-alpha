@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "2a9d53b9-9dc5-4e85-9015-eb2b70906ea5",
+    "originalMessageId": "1313875921064824944",
+    "userId": "893420956721242154",
+    "username": "Mike Brewder",
+    "timestamp": 1733322830216,
+    "content": "Aping 10 sol in each on",
+    "tokenMentioned": "unknown",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is planning to invest in multiple tokens.",
+    "certainty": "low",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "7d87e310-3c83-4229-b74b-db22daff1477",
+    "originalMessageId": "1313876631831445575",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733322999676,
+    "content": "kAia absolutely shredding today",
+    "tokenMentioned": "kAia",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is bullish on kAia.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "e9fa98b2-b24a-4ec7-984e-9fccf6577ff1",
+    "originalMessageId": "1313876736307494943",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1733323024585,
+    "content": "@Doc Psych 🧡🟧🚀 Will it be a vvaifu launch with 5% allo to ai16z dao?",
+    "tokenMentioned": "vvaifu",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is discussing a potential launch involving vvaifu and ai16z dao.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "1e4cceb3-b3f0-480f-ba99-4afe333a4716",
+    "originalMessageId": "1313876882105565204",
+    "userId": "251706420251066368",
+    "username": "napvez",
+    "timestamp": 1733323059346,
+    "content": "vvaifu does an auto 5% to the dao if you click the option",
+    "tokenMentioned": "vvaifu",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions vvaifu's auto allocation to the dao.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  }
+]

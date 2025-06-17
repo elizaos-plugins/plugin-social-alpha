@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "1c3267bf-6bbb-45ae-834a-b7b764818927",
+    "originalMessageId": "1315227190320824341",
+    "userId": "892620557575659520",
+    "username": "Bray",
+    "timestamp": 1733644997912,
+    "content": "x1EZ8YFVEaKopG7nfPmbhYHiwv81v9fZwHZUWeqpump",
+    "caMentioned": "x1EZ8YFVEaKopG7nfPmbhYHiwv81v9fZwHZUWeqpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "bea37237-6dfd-499b-b5b0-b53b874bdb02",
+    "originalMessageId": "1315227970390069308",
+    "userId": "372064931681533962",
+    "username": "Veki",
+    "timestamp": 1733645183895,
+    "content": ".dp C9pux5DxDxQva2sgMGjAqQvjCjgm9KeF5gou6Fppump",
+    "caMentioned": "C9pux5DxDxQva2sgMGjAqQvjCjgm9KeF5gou6Fppump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "31be523d-e3da-4ea0-bdcf-171710416ffd",
+    "originalMessageId": "1315239671566962748",
+    "userId": "754929499031994478",
+    "username": "shinji",
+    "timestamp": 1733647973673,
+    "content": "6fYLNrp7ymmNy2kJnqJNFDpbSkyzQdS6i4kwfe5kpump",
+    "caMentioned": "6fYLNrp7ymmNy2kJnqJNFDpbSkyzQdS6i4kwfe5kpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "a15e0fe5-5c8f-450b-b74a-dc7865ea19cc",
+    "originalMessageId": "1315239855504097334",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733648017527,
+    "content": "For Tereza, Im pretty overweight too 9sqa899GR5UqAusC4nikGKRiVxi2d9MsNJcKLfAKpump",
+    "caMentioned": "9sqa899GR5UqAusC4nikGKRiVxi2d9MsNJcKLfAKpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-08"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "ff65b764-501e-4364-837d-8939966881f5",
+    "originalMessageId": "1322837948705538098",
+    "userId": "481898401433255957",
+    "username": "EddyTheHead",
+    "timestamp": 1735459544112,
+    "content": "3kD5DN4bbA3nykb1abjS66VF7cYZkKdirX8bZ6ShJjBB",
+    "caMentioned": "3kD5DN4bbA3nykb1abjS66VF7cYZkKdirX8bZ6ShJjBB",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "84629abe-0cb5-4eec-9691-f066a107d40a",
+    "originalMessageId": "1322838570636939315",
+    "userId": "917560931674902588",
+    "username": "Jaba",
+    "timestamp": 1735459692392,
+    "content": "7RQuXBYpJv4MnGBBjnf6X4qJVQnemR7HpAuzJCQapump",
+    "caMentioned": "7RQuXBYpJv4MnGBBjnf6X4qJVQnemR7HpAuzJCQapump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "2d9cc85d-9434-47ca-8003-b301638d51cb",
+    "originalMessageId": "1322838837470171137",
+    "userId": "1317157255271157973",
+    "username": "Pilgu",
+    "timestamp": 1735459756010,
+    "content": "Cool im gonna ape",
+    "tokenMentioned": "Shibori",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses intent to buy Shibori, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "6169f039-52ff-4247-ac2e-50cedf97a5c8",
+    "originalMessageId": "1322839123039354920",
+    "userId": "917560931674902588",
+    "username": "Jaba",
+    "timestamp": 1735459824095,
+    "content": "dev says dont buy and everyone apes",
+    "tokenMentioned": "Shibori",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions that despite the dev's warning, people are buying Shibori, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  }
+]

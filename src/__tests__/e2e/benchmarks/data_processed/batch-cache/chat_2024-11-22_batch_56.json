@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "101aac24-55fe-4947-abc1-c7b0cc308f64",
+    "originalMessageId": "1309677990979833967",
+    "userId": "732641521563598941",
+    "username": "JacksonINU",
+    "timestamp": 1732321965690,
+    "content": "https://pump.fun/coin/HW9HY9vnWZCrBtdpLt4XAhaa6k1SZrUKV3kUH5Efpump this look kinda cool , dunno if safe",
+    "caMentioned": "HW9HY9vnWZCrBtdpLt4XAhaa6k1SZrUKV3kUH5Efpump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is considering a token linked to a contract address, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "3408f25a-acf1-483f-aa5e-d1fc2ef1729c",
+    "originalMessageId": "1309678141031059476",
+    "userId": "365658034749440000",
+    "username": "Tony Serrano",
+    "timestamp": 1732322001465,
+    "content": "we thinking $lea goes any higher?",
+    "tokenMentioned": "LEA",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is questioning the potential of $LEA, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "d36892b8-a294-4ac9-9cbd-20a4288dc55b",
+    "originalMessageId": "1309678850820669522",
+    "userId": "351234767821471745",
+    "username": "die",
+    "timestamp": 1732322170692,
+    "content": "FQ1tyso61AH1tzodyJfSwmzsD3GToybbRNoZxUBz21p8",
+    "caMentioned": "FQ1tyso61AH1tzodyJfSwmzsD3GToybbRNoZxUBz21p8",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "2b0d4e90-6d47-4449-991d-d2dba966bc2f",
+    "originalMessageId": "1309678872106766349",
+    "userId": "276783063843995649",
+    "username": "IceBergx1",
+    "timestamp": 1732322175767,
+    "content": "C3VaDAABx2wNb7aotqeUPhPdNsWvJhUQXWPAnjsApNRV",
+    "caMentioned": "C3VaDAABx2wNb7aotqeUPhPdNsWvJhUQXWPAnjsApNRV",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  }
+]

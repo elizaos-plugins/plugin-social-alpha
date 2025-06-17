@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "e52c9d24-8b0e-4460-8e52-f1c419d848e3",
+    "originalMessageId": "1312022388535328798",
+    "userId": "813526297379995690",
+    "username": "Artego",
+    "timestamp": 1732880913624,
+    "content": "INFO:\n\n**DEX paid, I AS DEV BOUGHT BACK, SENT 5% TO AI16Z DAO\n\nInitial buy and sell was to shake the bots out!**",
+    "tokenMentioned": "AI16Z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a buyback and DAO contribution for AI16Z, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "2c608d2d-2e4b-48cb-9780-8e56870bb4bc",
+    "originalMessageId": "1312022867692752939",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1732881027864,
+    "content": ".dp CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "caMentioned": "CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "112b43f1-0898-4e01-919b-1b1b387310e8",
+    "originalMessageId": "1312023126976237640",
+    "userId": "964897234896445461",
+    "username": "`RNK 🪽",
+    "timestamp": 1732881089682,
+    "content": "tbh the plan of dev failed. he didn't dumped all so I had to get out with 2sol loss.",
+    "tokenMentioned": "Chad Claus",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User expresses negative sentiment due to a failed plan by the dev.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "acdc74f3-644f-40d9-8eec-9e25f900ccee",
+    "originalMessageId": "1312023277350420511",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1732881125534,
+    "content": "https://pump.fun/coin/CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "caMentioned": "CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  }
+]

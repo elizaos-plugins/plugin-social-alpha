@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "fdde57c3-14f5-49fd-a13c-22a295a1afdf",
+    "originalMessageId": "1317540157603319830",
+    "userId": "1162569240155529287",
+    "username": "AnimePlace",
+    "timestamp": 1734196452285,
+    "content": "griffain might enter bigly",
+    "tokenMentioned": "Griffain",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is considering a large entry into Griffain, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-14"
+  },
+  {
+    "callId": "2ec31e51-677d-44f0-9923-a485333ed676",
+    "originalMessageId": "1317540205569376257",
+    "userId": "387339291270971395",
+    "username": "anon",
+    "timestamp": 1734196463721,
+    "content": "yea griffain might be a safe 2-3",
+    "tokenMentioned": "Griffain",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests Griffain might be a safe investment, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-14"
+  },
+  {
+    "callId": "7830a463-e485-4c89-b226-52dfd464e348",
+    "originalMessageId": "1317540719342256198",
+    "userId": "1100907083647430756",
+    "username": "Socrate",
+    "timestamp": 1734196586214,
+    "content": ".dp wUQhijRXyeGKqF9i2Z9fS39n5eKnjeTLSA9YoXZpump",
+    "caMentioned": "wUQhijRXyeGKqF9i2Z9fS39n5eKnjeTLSA9YoXZpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-14"
+  },
+  {
+    "callId": "fc802669-fef6-4ed2-8936-0cdcbb45c741",
+    "originalMessageId": "1317540851571757087",
+    "userId": "816616233843032076",
+    "username": "Tren",
+    "timestamp": 1734196617740,
+    "content": "Website for this has a lot of work put in. Interesting concept \"soul bound\" AI. Most of the bundles are out.\n\nX. FzkPU1AoYLZxDkHQad5K7dkey6cJXcaYzu5ZfgP5pump",
+    "caMentioned": "FzkPU1AoYLZxDkHQad5K7dkey6cJXcaYzu5ZfgP5pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-14"
+  }
+]

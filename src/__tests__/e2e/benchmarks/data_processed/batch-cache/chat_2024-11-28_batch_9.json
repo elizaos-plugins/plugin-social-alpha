@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "bd52c8f8-9878-4392-a830-798ef94d8e1d",
+    "originalMessageId": "1311629375480795178",
+    "userId": "810317995486347274",
+    "username": "Elvis",
+    "timestamp": 1732787212010,
+    "content": "HanGGCLTUagsf7hKoBhsHUpZow5n4ogGkNAdkpUHpump",
+    "caMentioned": "HanGGCLTUagsf7hKoBhsHUpZow5n4ogGkNAdkpUHpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "f49679e9-030c-4366-a58b-7faf50ee844c",
+    "originalMessageId": "1311631628350656574",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1732787749136,
+    "content": "72oWfk6iLECcUpwrQJN1cHMcCqcAJxP9dEaLkbnUpump",
+    "caMentioned": "72oWfk6iLECcUpwrQJN1cHMcCqcAJxP9dEaLkbnUpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  }
+]

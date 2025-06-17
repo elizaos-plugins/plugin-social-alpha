@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "b4c01fdf-8f22-46e4-b0df-c217690d6a54",
+    "originalMessageId": "1309488004477354047",
+    "userId": "1300900247249358861",
+    "username": "0xbubs",
+    "timestamp": 1732276669378,
+    "content": "nfa. 3cMePf7PBbcnrcwxS1QrusCmvupCkuvzmt5kmaf7pTA5",
+    "caMentioned": "3cMePf7PBbcnrcwxS1QrusCmvupCkuvzmt5kmaf7pTA5",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "f725c716-44f3-45d9-ad79-5ae9a25b6574",
+    "originalMessageId": "1309489287624003694",
+    "userId": "807727820355797062",
+    "username": "The Prophet",
+    "timestamp": 1732276975304,
+    "content": "2Tr3i2qjSPUb7e7BSFWTq7gsRzJEnYBKc7wRAYu3pump",
+    "caMentioned": "2Tr3i2qjSPUb7e7BSFWTq7gsRzJEnYBKc7wRAYu3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "077b5495-f413-4a49-a701-8355c9a3b566",
+    "originalMessageId": "1309492853134594110",
+    "userId": "700135316505362442",
+    "username": "Jets",
+    "timestamp": 1732277825388,
+    "content": "Zerebro shilled a ticker - $SIMPYO (search twitter and see, can't link here), it didn't exist, pumpfun created one, sent half to zerebros wallet, dev abandonded but OG zerebro wallets are in\n\nFqE5BcsghkGoM3nsGvfHWSDvVz8fcE4xpvV2Lt9Gpump",
+    "tokenMentioned": "SIMPYO",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentioned a token created by pumpfun, implying a call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-22"
+  }
+]

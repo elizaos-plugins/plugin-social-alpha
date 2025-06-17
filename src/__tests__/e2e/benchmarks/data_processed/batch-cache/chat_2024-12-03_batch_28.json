@@ -1,0 +1,49 @@
+[
+  {
+    "callId": "24ea1dbf-af8c-48c5-991a-e3efe4cf92bf",
+    "originalMessageId": "1313521343739859047",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1733238292394,
+    "content": "happy rugging and I think btc is gonna rip",
+    "nameMentioned": "Bitcoin",
+    "tokenMentioned": "BTC",
+    "chain": "bitcoin",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is bullish on BTC, suggesting it will go up.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "62c42073-281a-4734-a41a-1c8838a9966d",
+    "originalMessageId": "1313521492960477307",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733238327971,
+    "content": "Aped MSTX calls hard on market open LFG",
+    "tokenMentioned": "MSTX",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is bullish on MSTX, having bought it at market open.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "68b609c1-7808-42c9-b181-faf230ba572a",
+    "originalMessageId": "1313521540092133426",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1733238339208,
+    "content": "btc don't do what everyone expects. looks likegeneral expectation is down so prepare for up",
+    "nameMentioned": "Bitcoin",
+    "tokenMentioned": "BTC",
+    "chain": "bitcoin",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests BTC will go up contrary to general expectations.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  }
+]

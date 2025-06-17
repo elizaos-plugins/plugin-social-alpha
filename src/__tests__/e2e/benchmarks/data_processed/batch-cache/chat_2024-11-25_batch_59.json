@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "c18e725b-c531-475c-b8b5-f71d545ad7ef",
+    "originalMessageId": "1310752619827826698",
+    "userId": "801155277227294760",
+    "username": "martinz",
+    "timestamp": 1732578177173,
+    "content": "In the meantime - whatever happened to MIRU?\nCvm5ixwXP9NWxme92CMgGdDNVhsCzzJMv3beigDspump",
+    "caMentioned": "Cvm5ixwXP9NWxme92CMgGdDNVhsCzzJMv3beigDspump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "480d13c5-82cc-475e-bd56-1a7e733e582d",
+    "originalMessageId": "1310752959885213779",
+    "userId": "120322824614182912",
+    "username": "CJ",
+    "timestamp": 1732578258249,
+    "content": "firekid didn't get in on simba at the 10k bottom post bonding",
+    "tokenMentioned": "Simba",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User mentions not getting in on Simba at a low price, implying a missed opportunity.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-25"
+  }
+]

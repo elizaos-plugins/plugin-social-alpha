@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "fdb22ed8-af84-47f4-9436-9ced813ab022",
+    "originalMessageId": "1316502578099523605",
+    "userId": "1262579683778625548",
+    "username": "Xi",
+    "timestamp": 1733949074054,
+    "content": "5BToY6r31mJjwrwhtHSBbRpyoyapMZCAomLeaNDRpump",
+    "caMentioned": "5BToY6r31mJjwrwhtHSBbRpyoyapMZCAomLeaNDRpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-11"
+  },
+  {
+    "callId": "e2b35908-3332-416d-98fa-a4d4af9bd3da",
+    "originalMessageId": "1316503627497734245",
+    "userId": "211176844706185227",
+    "username": "litn",
+    "timestamp": 1733949324250,
+    "content": "anyway $sp mcap is 185k and looks horrible. I just did some research and I will be waiting and seeing with the dao, will not ape in on public",
+    "tokenMentioned": "SP",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User is expressing negative sentiment about $SP, indicating they will not invest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-11"
+  },
+  {
+    "callId": "bfe87e90-d30e-483b-9331-bbba1842b63b",
+    "originalMessageId": "1316504035536408608",
+    "userId": "832664669755146290",
+    "username": "0xSimpleFarmer",
+    "timestamp": 1733949421534,
+    "content": "lol cap , this is just SP on sol , SP is on sanko chain and has close to 3 mil being on a layer 3 network , nice fud though",
+    "tokenMentioned": "SP",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is countering FUD about SP, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-11"
+  },
+  {
+    "callId": "b5532d5f-412b-41a7-b7cf-8a8462b6f019",
+    "originalMessageId": "1316504127865491538",
+    "userId": "1262579683778625548",
+    "username": "Xi",
+    "timestamp": 1733949443547,
+    "content": "5BToY6r31mJjwrwhtHSBbRpyoyapMZCAomLeaNDRpump",
+    "caMentioned": "5BToY6r31mJjwrwhtHSBbRpyoyapMZCAomLeaNDRpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-11"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "8a891fea-3627-47a7-9b38-08f7a34d90ae",
+    "originalMessageId": "1314360030354473071",
+    "userId": "503630344986165258",
+    "username": "velja",
+    "timestamp": 1733438250865,
+    "content": "i got it from todays trade ( sad bunny ),  even tho i said leave and that its rug and scam before it happend .Multiple times",
+    "nameMentioned": "sad bunny",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User is warning about a rug pull on 'sad bunny'.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-05"
+  },
+  {
+    "callId": "cc1b9fc7-7c24-4256-bafd-d8444fd403e6",
+    "originalMessageId": "1314360058238468179",
+    "userId": "964897234896445461",
+    "username": "`RNK 🪽",
+    "timestamp": 1733438257513,
+    "content": "AM84n1iLdxgVTAyENBcLdjXoyvjentTbu5Q6EpKV1PeG",
+    "caMentioned": "AM84n1iLdxgVTAyENBcLdjXoyvjentTbu5Q6EpKV1PeG",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-05"
+  },
+  {
+    "callId": "aafeff11-2878-4cba-99e7-84b28c330d03",
+    "originalMessageId": "1314362247765819413",
+    "userId": "816616233843032076",
+    "username": "Tren",
+    "timestamp": 1733438779537,
+    "content": "7wM4MnbsPsG95A3WhZgbrPWvMtydKmJjqKr2ZVJVpump",
+    "caMentioned": "7wM4MnbsPsG95A3WhZgbrPWvMtydKmJjqKr2ZVJVpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-05"
+  },
+  {
+    "callId": "1b0f84b5-31d8-4475-85dc-424abadd45ba",
+    "originalMessageId": "1314362627404726322",
+    "userId": "732087860571668510",
+    "username": "Noname $ai16z",
+    "timestamp": 1733438870050,
+    "content": "CEyqpXcqxSYxJEZY91HurPKErPZsKK9ggJQrNmWLpump",
+    "caMentioned": "CEyqpXcqxSYxJEZY91HurPKErPZsKK9ggJQrNmWLpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-05"
+  }
+]

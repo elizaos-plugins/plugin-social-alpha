@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "1374949b-50cd-4548-b817-b17fe383caef",
+    "originalMessageId": "1306240850174677042",
+    "userId": "756963441477943326",
+    "username": "not_in_a_dao_ai",
+    "timestamp": 1731502487463,
+    "content": "It hit $1m",
+    "caMentioned": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User mentions a token hitting $1m, implying significant price increase.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+      "symbol": "VIVEK",
+      "name": "Head of D.O.G.E ",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000005998424489046495,
+      "calledPriceTimestamp": 1731502487463,
+      "bestPrice": 0.000006128762133677669,
+      "bestPriceTimestamp": 1731675287463,
+      "worstPrice": 0.000004541774277381712,
+      "worstPriceTimestamp": 1733921687463,
+      "idealProfitLoss": 1.3033764463117424e-7,
+      "idealProfitLossPercent": 2.1728646391928264,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437902250
+  },
+  {
+    "callId": "d303fd8f-4727-4b3b-b845-e3a4a0e16e2f",
+    "originalMessageId": "1306240902699679775",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1731502499986,
+    "content": "lfg! aped in at 500k+",
+    "caMentioned": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User mentions aping in at 500k+, implying investment in the previously mentioned token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+      "symbol": "VIVEK",
+      "name": "Head of D.O.G.E ",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000005998424489046495,
+      "calledPriceTimestamp": 1731502499986,
+      "bestPrice": 0.000006112874536506857,
+      "bestPriceTimestamp": 1731502499986,
+      "worstPrice": 0.000004796781898741618,
+      "worstPriceTimestamp": 1733057699986,
+      "idealProfitLoss": 1.144500474603625e-7,
+      "idealProfitLossPercent": 1.9080018039629503,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437902185
+  },
+  {
+    "callId": "7df4cf9d-d4f2-4da4-80ee-734f6de143b3",
+    "originalMessageId": "1306240965119311913",
+    "userId": "756963441477943326",
+    "username": "not_in_a_dao_ai",
+    "timestamp": 1731502514868,
+    "content": "I posted it at $160k",
+    "caMentioned": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User mentions posting about the token at $160k, implying early call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+      "symbol": "VIVEK",
+      "name": "Head of D.O.G.E ",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000005998424489046495,
+      "calledPriceTimestamp": 1731502514868,
+      "bestPrice": 0.000007117851558017612,
+      "bestPriceTimestamp": 1732280114868,
+      "worstPrice": 0.0000059596290182745315,
+      "worstPriceTimestamp": 1731588914868,
+      "idealProfitLoss": 0.0000011194270689711175,
+      "idealProfitLossPercent": 18.662018185196175,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437902255
+  },
+  {
+    "callId": "abd3f65a-6b0c-4e38-8ca9-55941e664e3a",
+    "originalMessageId": "1306240972010553364",
+    "userId": "1232060253504274503",
+    "username": "Otilrac",
+    "timestamp": 1731502516511,
+    "content": "ECcnZuiyRAB3p3sauspjFQGnLgFqLkN1bSrRedpjpump based? dev in here?",
+    "caMentioned": "ECcnZuiyRAB3p3sauspjFQGnLgFqLkN1bSrRedpjpump",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address and asks if it's based, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "ECcnZuiyRAB3p3sauspjFQGnLgFqLkN1bSrRedpjpump",
+      "symbol": "ELIZA",
+      "name": "MISTO624/-BROKEN ELIZA",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000004486911751212653,
+      "calledPriceTimestamp": 1731502516511,
+      "bestPrice": 0.000005246159819743963,
+      "bestPriceTimestamp": 1732971316511,
+      "worstPrice": 0.0000042257449391674174,
+      "worstPriceTimestamp": 1731588916511,
+      "idealProfitLoss": 2.611668120452354e-7,
+      "idealProfitLossPercent": 5.820636253312789,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437902222
+  },
+  {
+    "callId": "1cfe8a0c-bcf0-46fb-947b-5824b45df906",
+    "originalMessageId": "1306241041388670976",
+    "userId": "756963441477943326",
+    "username": "not_in_a_dao_ai",
+    "timestamp": 1731502533052,
+    "content": "We're sending",
+    "caMentioned": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User mentions 'we're sending', implying positive action on the previously mentioned token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+      "symbol": "VIVEK",
+      "name": "Head of D.O.G.E ",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000005998424489046495,
+      "calledPriceTimestamp": 1731502533052,
+      "bestPrice": 0.000008083394650679194,
+      "bestPriceTimestamp": 1734008133052,
+      "worstPrice": 0.000006053685993306419,
+      "worstPriceTimestamp": 1732366533052,
+      "idealProfitLoss": 0.000002084970161632699,
+      "idealProfitLossPercent": 34.75862979420658,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437902200
+  }
+]

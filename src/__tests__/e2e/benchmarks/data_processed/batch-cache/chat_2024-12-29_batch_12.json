@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "b344b741-e3e1-402d-9a27-a5804605e8fe",
+    "originalMessageId": "1322904853579563099",
+    "userId": "387339291270971395",
+    "username": "anon",
+    "timestamp": 1735475495477,
+    "content": ".c 8oyxbtm1aT1BUNcoMua4rgycuyrc3cPc6iE7sRsypump",
+    "caMentioned": "8oyxbtm1aT1BUNcoMua4rgycuyrc3cPc6iE7sRsypump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "4b9c54f8-edb7-475d-9f0c-6198ad922a8a",
+    "originalMessageId": "1322905528493543424",
+    "userId": "1240451108556767273",
+    "username": "wockyslush",
+    "timestamp": 1735475656389,
+    "content": "Aped some spooky",
+    "tokenMentioned": "Spooky",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User aped into Spooky, indicating a buy.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "1886e875-10ef-4d8c-b327-d44be8500d51",
+    "originalMessageId": "1322906095596994623",
+    "userId": "95989176004018176",
+    "username": "smokyboo",
+    "timestamp": 1735475791597,
+    "content": ".x 3bGuPexrqNdmXkSxeUuMavYDFdjpQTSDt9ZusDgDpump",
+    "caMentioned": "3bGuPexrqNdmXkSxeUuMavYDFdjpQTSDt9ZusDgDpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  }
+]

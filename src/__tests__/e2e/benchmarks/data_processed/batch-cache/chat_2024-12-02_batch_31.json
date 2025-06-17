@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "1dbf8d9b-466e-4f63-b16d-180ef20ffae7",
+    "originalMessageId": "1313224555744985161",
+    "userId": "709396462693515274",
+    "username": "Chesse",
+    "timestamp": 1733167532622,
+    "content": "they dont just jeet it, right?",
+    "caMentioned": "6AH9xWmRkjsKL3wnMTixhWrht6ZgCsngfUCwt8pDpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-02"
+  },
+  {
+    "callId": "8cb030f6-303c-4e4c-9cd9-8601db75b616",
+    "originalMessageId": "1313225120268947546",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1733167667215,
+    "content": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+    "caMentioned": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-02"
+  }
+]

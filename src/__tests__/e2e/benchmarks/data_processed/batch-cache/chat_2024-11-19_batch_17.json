@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "60416e17-35c7-4b77-b29b-3c1291d9fa0d",
+    "originalMessageId": "1308397955191144473",
+    "userId": "387339291270971395",
+    "username": "anon",
+    "timestamp": 1732016781376,
+    "content": "FjTJCCQpLU4fpH58mN1bTQXiQsjJVYai3QYFjYqYpump",
+    "caMentioned": "FjTJCCQpLU4fpH58mN1bTQXiQsjJVYai3QYFjYqYpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "08811743-7f96-4896-914c-24e0a91e12e0",
+    "originalMessageId": "1308398267989626981",
+    "userId": "962046720206843954",
+    "username": "flasherman",
+    "timestamp": 1732016855953,
+    "content": "2sWgTZTX8ZwWivbBFVGXwedMjVTDogNeU7cX5orKpump",
+    "caMentioned": "2sWgTZTX8ZwWivbBFVGXwedMjVTDogNeU7cX5orKpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-19"
+  }
+]

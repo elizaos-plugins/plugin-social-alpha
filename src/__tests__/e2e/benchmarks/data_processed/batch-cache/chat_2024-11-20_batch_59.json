@@ -1,0 +1,48 @@
+[
+  {
+    "callId": "b2cb8371-6d73-4afd-8785-650a4d6ce3c4",
+    "originalMessageId": "1308993230410485801",
+    "userId": "108121781537079296",
+    "username": "herby",
+    "timestamp": 1732158706048,
+    "content": "27FnN2bCjgELQ2cCkqvAJvgzHjkUzZ3XoqgP9iuepump",
+    "caMentioned": "27FnN2bCjgELQ2cCkqvAJvgzHjkUzZ3XoqgP9iuepump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "b4fd1389-bc79-47b6-9da4-49bec7501430",
+    "originalMessageId": "1308993407435280435",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1732158748254,
+    "content": "just ape a sol just incase",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User is considering buying SOL as a precaution.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-20"
+  },
+  {
+    "callId": "64b82c16-daf5-47e0-961f-12a4d4598c3f",
+    "originalMessageId": "1308993768976027710",
+    "userId": "732641521563598941",
+    "username": "JacksonINU",
+    "timestamp": 1732158834452,
+    "content": "aped $GUTS",
+    "tokenMentioned": "GUTS",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User indicates they have bought $GUTS.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-20"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "cc520af6-05c1-44b4-9393-2f82ab60ef81",
+    "originalMessageId": "1314368281808867328",
+    "userId": "732087860571668510",
+    "username": "Noname $ai16z",
+    "timestamp": 1733440218165,
+    "content": "82cL4WeWcTBeb6V1gfR561UJPkyGgMXKVAdm16Ytpump",
+    "caMentioned": "82cL4WeWcTBeb6V1gfR561UJPkyGgMXKVAdm16Ytpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-05"
+  }
+]

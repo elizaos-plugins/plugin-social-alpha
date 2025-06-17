@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "c65c6638-a480-4839-b909-b11db61a7a8a",
+    "originalMessageId": "1315568603944194068",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733726397263,
+    "content": "10 sol i’ll doxxed myself",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is joking about doxxing for 10 SOL, indicating a potential trade or interest in SOL.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "95b721ca-6701-456e-b4a1-efc107b260f0",
+    "originalMessageId": "1315569895039307817",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733726705084,
+    "content": "i think he holds big amount off zods but he’s not the dev probably",
+    "tokenMentioned": "ZODS",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User speculates about someone holding a large amount of ZODS, indicating interest in the token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "657e2dd5-b95e-4ff2-bd30-8ded6bf7016d",
+    "originalMessageId": "1315571095486730280",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733726991293,
+    "content": "No. Bid TNSR or both ser",
+    "tokenMentioned": "TNSR",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests bidding on TNSR, indicating a positive sentiment towards the token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  },
+  {
+    "callId": "4db928d6-a694-40b3-aa06-286012f92477",
+    "originalMessageId": "1315573866785148938",
+    "userId": "108121781537079296",
+    "username": "herby",
+    "timestamp": 1733727652022,
+    "content": ".x zods",
+    "tokenMentioned": "ZODS",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions ZODS, indicating interest or involvement with the token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-08"
+  }
+]

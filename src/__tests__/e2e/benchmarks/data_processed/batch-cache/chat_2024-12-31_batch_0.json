@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "05b64bf9-e39d-404e-84e5-a175c9ed3571",
+    "originalMessageId": "1323561697969176639",
+    "userId": "387339291270971395",
+    "username": "anon",
+    "timestamp": 1735632099383,
+    "content": "probably bullish for iq",
+    "tokenMentioned": "IQ",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is bullish on IQ due to an upcoming meeting.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-31"
+  },
+  {
+    "callId": "ef82f4b2-b244-4067-9f22-78fc73a50fdb",
+    "originalMessageId": "1323562578894389331",
+    "userId": "92703707409440768",
+    "username": "funboy",
+    "timestamp": 1735632309412,
+    "content": "Of course! We're 100% committed rn. \nI say \"we\" because I'm finally not doing this alone anymore. I now have a developer focused on for aI16z plugins customizaion, working on the logic and all the necessary adaptations to bypass API costs that would otherwise be prohibitive.\n\nI also brought on a dev for the Telegram mini-game web app, which will feature \"Train 2 Earn\" and \"Train 2 Airdrop\" mechanics. With its referral system and integrated X/TG activities, it should naturally boost engagement and mindshare.",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is discussing development related to ai16z, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-31"
+  },
+  {
+    "callId": "074f846a-ed9b-4a95-a62d-eca87786f0dc",
+    "originalMessageId": "1323563033481449502",
+    "userId": "372001089022590977",
+    "username": "digud.",
+    "timestamp": 1735632417794,
+    "content": "8zFZHuSRuDpuAR7J6FzwyF3vKNx4CVW3DFHJerQhc7Zd POW keeps accumulating $km and seems to believe it will reach 300m like $WOULD",
+    "tokenMentioned": "km",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User mentions accumulating $km with a belief it will reach 300m, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-31"
+  }
+]

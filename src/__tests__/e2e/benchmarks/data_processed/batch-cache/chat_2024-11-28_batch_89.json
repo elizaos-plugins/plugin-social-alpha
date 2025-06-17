@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "fae33d1a-8abb-4669-9fff-4ec50f99c58b",
+    "originalMessageId": "1311875563002134660",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1732845907689,
+    "content": "lmfao Merlin AI",
+    "tokenMentioned": "Merlin AI",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions Merlin AI, indicating interest or involvement.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "fb1e1ba7-2f3f-498e-be62-62d09e4c7738",
+    "originalMessageId": "1311875819768909874",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1732845968907,
+    "content": "im so deep in this merlin ai shit rn",
+    "tokenMentioned": "Merlin AI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is deeply involved in Merlin AI, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "b4fbda1e-21b2-429c-b804-58867482d783",
+    "originalMessageId": "1311876082609422378",
+    "userId": "724150556318498869",
+    "username": "OVT",
+    "timestamp": 1732846031573,
+    "content": "CCG5RhXuRfT9UYTimtgaYRMPf2YGDd3sF34a7qj3pump",
+    "caMentioned": "CCG5RhXuRfT9UYTimtgaYRMPf2YGDd3sF34a7qj3pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  }
+]

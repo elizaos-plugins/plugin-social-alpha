@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "e16c449b-61b1-4126-8a52-892c20cc57c6",
+    "originalMessageId": "1300180977792057355",
+    "userId": "744638061685637243",
+    "username": "climber56",
+    "timestamp": 1730057701300,
+    "content": "Accumulation between 40-60mm. Firepower to get to $200mm",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User suggests accumulation of ai16z between 40-60mm market cap.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730057701300,
+      "bestPrice": 0.21705455176548355,
+      "bestPriceTimestamp": 1730230501300,
+      "worstPrice": 0.17171859348007198,
+      "worstPriceTimestamp": 1731958501300,
+      "idealProfitLoss": 0.003436715049812189,
+      "idealProfitLossPercent": 1.6088146489314514,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438765338
+  },
+  {
+    "callId": "51054dc9-c541-4ccf-98b0-b049ac9b299e",
+    "originalMessageId": "1300181009123246143",
+    "userId": "744638061685637243",
+    "username": "climber56",
+    "timestamp": 1730057708770,
+    "content": "(within a few weeks or sooner)",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User predicts ai16z will reach $200mm market cap soon.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730057708770,
+      "bestPrice": 0.24219190507705984,
+      "bestPriceTimestamp": 1730576108770,
+      "worstPrice": 0.21542476714214936,
+      "worstPriceTimestamp": 1732563308770,
+      "idealProfitLoss": 0.028574068361388483,
+      "idealProfitLossPercent": 13.37625584113606,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438765380
+  },
+  {
+    "callId": "1daf52fc-fcfe-4f8a-9503-3eab5cfd2efa",
+    "originalMessageId": "1300199036342636606",
+    "userId": "343526121184428035",
+    "username": "arctx",
+    "timestamp": 1730062006794,
+    "content": "1b is fud",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions 1b in context of AI16Z, suggesting a price target.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730062006794,
+      "bestPrice": 0.22788523035188785,
+      "bestPriceTimestamp": 1730407606794,
+      "worstPrice": 0.19027761368914511,
+      "worstPriceTimestamp": 1732567606794,
+      "idealProfitLoss": 0.014267393636216485,
+      "idealProfitLossPercent": 6.678933676875778,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438765337
+  },
+  {
+    "callId": "469f231c-c003-42a1-b030-aad7feb096db",
+    "originalMessageId": "1300199800159080603",
+    "userId": "741471638356492358",
+    "username": "mai",
+    "timestamp": 1730062188902,
+    "content": "Next leg 100M",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User predicts next price target for AI16Z.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730062188902,
+      "bestPrice": 0.22148091839902495,
+      "bestPriceTimestamp": 1730234988902,
+      "worstPrice": 0.1685421265639885,
+      "worstPriceTimestamp": 1731098988902,
+      "idealProfitLoss": 0.00786308168335359,
+      "idealProfitLossPercent": 3.680910641286698,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438765333
+  },
+  {
+    "callId": "7acdeca8-5a0e-4b68-bd99-796babbe8fba",
+    "originalMessageId": "1300200160546127915",
+    "userId": "377909743165112322",
+    "username": "Sodas",
+    "timestamp": 1730062274825,
+    "content": "we need to pump it, no matter how illegal it may be",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User suggests pumping AI16Z, implying a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730062274825,
+      "bestPrice": 0.2414503885367765,
+      "bestPriceTimestamp": 1732135874825,
+      "worstPrice": 0.19203855237936865,
+      "worstPriceTimestamp": 1730494274825,
+      "idealProfitLoss": 0.02783255182110514,
+      "idealProfitLossPercent": 13.02913288938072,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438765298
+  }
+]

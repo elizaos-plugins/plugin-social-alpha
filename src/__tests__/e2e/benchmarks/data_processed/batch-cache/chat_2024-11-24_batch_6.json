@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "a109d32d-5510-4a9f-b3f4-099f9eb8a1f7",
+    "originalMessageId": "1310218448126873640",
+    "userId": "1188111168825471079",
+    "username": "-burak (intern)",
+    "timestamp": 1732450820715,
+    "content": "43o1ewbEFssvLy5BkAQsdE9WrwEcDu5SM4qGY62YCxzh\n\ndex getting paid on this, dev is @maz",
+    "caMentioned": "43o1ewbEFssvLy5BkAQsdE9WrwEcDu5SM4qGY62YCxzh",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-24"
+  },
+  {
+    "callId": "83980ebf-6e11-425b-9d38-bf6af73f8ef3",
+    "originalMessageId": "1310220799344644156",
+    "userId": "957181674087673866",
+    "username": "Zumbakafeo",
+    "timestamp": 1732451381289,
+    "content": ".dp 43o1ewbEFssvLy5BkAQsdE9WrwEcDu5SM4qGY62YCxzh",
+    "caMentioned": "43o1ewbEFssvLy5BkAQsdE9WrwEcDu5SM4qGY62YCxzh",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-24"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "9456917b-5929-4ff1-ab4a-2daddb45d039",
+    "originalMessageId": "1324166383973695578",
+    "userId": "1100907083647430756",
+    "username": "Socrate",
+    "timestamp": 1735776267761,
+    "content": "6koeH8kcqmeeVWmcdmaVUwuVWTBkGgyxfGqXbCXcpump",
+    "caMentioned": "6koeH8kcqmeeVWmcdmaVUwuVWTBkGgyxfGqXbCXcpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2025-01-01"
+  },
+  {
+    "callId": "16f48edf-ac28-4179-88aa-94552bdde311",
+    "originalMessageId": "1324166646352318499",
+    "userId": "196634847307890688",
+    "username": "Morrowear",
+    "timestamp": 1735776330317,
+    "content": "yeah bro I transferred 5 sol to my meme wallet to buy it at 400k but I can't come up with an explanation why I just didn't do it 😭",
+    "tokenMentioned": "unknown",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User intended to buy a token at 400k but hesitated.",
+    "certainty": "low",
+    "fileSource": "chat_2025-01-01"
+  },
+  {
+    "callId": "ebb10883-f53b-4482-9a1c-6ccddab20c31",
+    "originalMessageId": "1324167237476679711",
+    "userId": "403325839594487818",
+    "username": "VincentVG",
+    "timestamp": 1735776471252,
+    "content": "Damn, good entry on Cassie",
+    "nameMentioned": "Cassie",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User indicates a good entry point for Cassie.",
+    "certainty": "medium",
+    "fileSource": "chat_2025-01-01"
+  },
+  {
+    "callId": "57516e8d-5c94-4c61-8029-5341116424b0",
+    "originalMessageId": "1324167456167559248",
+    "userId": "403325839594487818",
+    "username": "VincentVG",
+    "timestamp": 1735776523392,
+    "content": "Buying more Cassie and Smore",
+    "nameMentioned": "Cassie",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is buying more of Cassie and Smore, indicating positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2025-01-01"
+  }
+]

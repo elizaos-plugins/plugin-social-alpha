@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "0fe2bfde-226b-4c0c-a459-37d9f7e6759b",
+    "originalMessageId": "1317273132163399710",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1734132788459,
+    "content": "STKmfGGegeoYqrHrJ3nvTafSvRC6GJJBbLwN1cqpump",
+    "caMentioned": "STKmfGGegeoYqrHrJ3nvTafSvRC6GJJBbLwN1cqpump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "ae61878a-92a6-4edf-9ed1-5446b46776f3",
+    "originalMessageId": "1317273986844852404",
+    "userId": "732087860571668510",
+    "username": "Noname $ai16z",
+    "timestamp": 1734132992231,
+    "content": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+    "caMentioned": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "58f5a22a-70b7-4fa1-acfb-36e667021289",
+    "originalMessageId": "1317274666255253575",
+    "userId": "136679971644112897",
+    "username": "Rabbidfly",
+    "timestamp": 1734133154215,
+    "content": "soo, ima Dev on z3r0w1ng and i'll do something fantastic with it - but not right now - need to have desert - ride my bike - maybe have some pump.fun with the wifey - but i'll do something for you guys",
+    "tokenMentioned": "z3r0w1ng",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions being a dev on z3r0w1ng, implying involvement and potential positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "65884e8d-ad9d-4a9b-880a-0113eda712e5",
+    "originalMessageId": "1317274850355707966",
+    "userId": "1221502488830672957",
+    "username": "JellyBean",
+    "timestamp": 1734133198108,
+    "content": "what happened to this guy when is the release of the tracker? \n\nBsgrTLoTgTYaw57zAHRjQiaFpdcN9umRbANDuDdupump",
+    "caMentioned": "BsgrTLoTgTYaw57zAHRjQiaFpdcN9umRbANDuDdupump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  }
+]

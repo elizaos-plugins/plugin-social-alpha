@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "90d9731c-b1cf-4987-954a-dc9a9c047d2e",
+    "originalMessageId": "1309404719462092832",
+    "userId": "350955967955075082",
+    "username": "Zodiac",
+    "timestamp": 1732256812683,
+    "content": "3JUUKpiMY6a9sFyQpxp2RuQn9zK639Uc5aAFgTUyUmit",
+    "caMentioned": "3JUUKpiMY6a9sFyQpxp2RuQn9zK639Uc5aAFgTUyUmit",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-21"
+  },
+  {
+    "callId": "db4f2384-cb09-4491-aefd-a4dca0a28b6d",
+    "originalMessageId": "1309406467677491233",
+    "userId": "928695383650078791",
+    "username": "Pmore",
+    "timestamp": 1732257229490,
+    "content": "7k stuffed into TESLAI there. TBH I think that's next slow cook to 1M",
+    "tokenMentioned": "TESLAI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is bullish on TESLAI, expecting it to increase significantly.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-21"
+  },
+  {
+    "callId": "84394a15-e590-4445-90eb-ff7888f1e026",
+    "originalMessageId": "1309406596987748405",
+    "userId": "846163082627776533",
+    "username": "0xzann",
+    "timestamp": 1732257260320,
+    "content": "7EqUNp343XPVjxVMSgDMPz8mRPw5JNYHVWMS8Wqzpump",
+    "caMentioned": "7EqUNp343XPVjxVMSgDMPz8mRPw5JNYHVWMS8Wqzpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-21"
+  }
+]

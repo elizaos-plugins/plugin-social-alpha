@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "d3fe1273-6e9e-4370-bd39-cc836534f98d",
+    "originalMessageId": "1311062688163430474",
+    "userId": "148210374271827969",
+    "username": "Al-Ghayb",
+    "timestamp": 1732652103225,
+    "content": "Bruh, someone here just created a swarm token and scammed freely",
+    "tokenMentioned": "swarm",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User suggests a scam involving a swarm token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "ff3dd38d-721d-4360-a4b4-f7f6b8fb318c",
+    "originalMessageId": "1311063396036116601",
+    "userId": "120322824614182912",
+    "username": "CJ",
+    "timestamp": 1732652271995,
+    "content": "ubs  is on moonshot guys gg",
+    "tokenMentioned": "UBS",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is bullish on UBS, suggesting it's on a moonshot.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "723246d1-5f2c-4b2b-86e1-7dc8b64e38de",
+    "originalMessageId": "1311063503825539184",
+    "userId": "918516563240419328",
+    "username": "Franxxco",
+    "timestamp": 1732652297694,
+    "content": "Have you ever seen this?\nCBMybrK7EMCZjKLLbWqawSwREaXLtBMAN7iPDhoLvqAZ",
+    "caMentioned": "CBMybrK7EMCZjKLLbWqawSwREaXLtBMAN7iPDhoLvqAZ",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  },
+  {
+    "callId": "afc90a3e-b43e-47a9-862a-e38dea8340a4",
+    "originalMessageId": "1311063559836274799",
+    "userId": "719354684258779187",
+    "username": "Adii",
+    "timestamp": 1732652311048,
+    "content": "jshp4FGDbuntvvXJaC5FKJZy1YCcvJ2ngkpfE18pump",
+    "caMentioned": "jshp4FGDbuntvvXJaC5FKJZy1YCcvJ2ngkpfE18pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-26"
+  }
+]

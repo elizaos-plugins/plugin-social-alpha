@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "f5f9d9dd-f8fd-4cb3-8349-083a66c4a642",
+    "originalMessageId": "1314371891301187676",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1733441078735,
+    "content": "82cL4WeWcTBeb6V1gfR561UJPkyGgMXKVAdm16Ytpump",
+    "caMentioned": "82cL4WeWcTBeb6V1gfR561UJPkyGgMXKVAdm16Ytpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-05"
+  }
+]

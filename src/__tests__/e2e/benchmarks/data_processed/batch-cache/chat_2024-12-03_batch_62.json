@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "16d709d1-e41e-4f89-9fd2-98cd4a0b6557",
+    "originalMessageId": "1313646186099642440",
+    "userId": "255788704851951616",
+    "username": "h3rt",
+    "timestamp": 1733268057132,
+    "content": "2zf4pnRR54hvBkeBikYSB6V2qBi8T1TeJmW6C82Wpump",
+    "caMentioned": "2zf4pnRR54hvBkeBikYSB6V2qBi8T1TeJmW6C82Wpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "684fd8e2-83ea-4241-a653-ff2221c99b6f",
+    "originalMessageId": "1313646211474915391",
+    "userId": "303632418907226112",
+    "username": "WolfDotPump🐺",
+    "timestamp": 1733268063182,
+    "content": "this launched on vvaifu.. could be something, could be nothing! Don't know the dev. 9sA6zYCPfQo5q5XNTHNTeud4WKzGVkmqRgWQ9dDcpump",
+    "caMentioned": "9sA6zYCPfQo5q5XNTHNTeud4WKzGVkmqRgWQ9dDcpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "ced3e37b-1691-4f34-99c4-981180a9ba95",
+    "originalMessageId": "1313647688402735264",
+    "userId": "964897234896445461",
+    "username": "`RNK 🪽",
+    "timestamp": 1733268415309,
+    "content": "https://solscan.io/tx/LRZo58ZfASfd1mnQTAFYmJnuvKsYvnkTRZKyWJV58CEimvbWiryzHAspEhbcKQeVZhMyYRn8ibnmPSPK2WWKFTn",
+    "caMentioned": "LRZo58ZfASfd1mnQTAFYmJnuvKsYvnkTRZKyWJV58CEimvbWiryzHAspEhbcKQeVZhMyYRn8ibnmPSPK2WWKFTn",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a transaction link, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "06f69eae-4bd3-4aa0-bee4-18b158cc9ac3",
+    "originalMessageId": "1313648436448329728",
+    "userId": "708269174413328416",
+    "username": "Crispy✨",
+    "timestamp": 1733268593657,
+    "content": "📊 Bundle Analysis for $AKARI\n\nOverall Statistics\n📦 Total Bundles: 7\n🪙 Total Tokens Bundled: 263.36 million\n📊 Total Percentage Bundled: 26.3359%",
+    "tokenMentioned": "AKARI",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User provided bundle analysis for $AKARI, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  }
+]

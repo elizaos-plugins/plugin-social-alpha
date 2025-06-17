@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "88938ea6-7141-4d32-af0f-acac86bd1346",
+    "originalMessageId": "1308497108478857236",
+    "userId": "308940371616989184",
+    "username": "clover",
+    "timestamp": 1732040421362,
+    "content": "didnt plan on it be as sniped as it was, personally think the characterisitcs and image of HALO is pretty cool and unique, but you're entitled to your opinion",
+    "tokenMentioned": "HALO",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses positive sentiment about HALO, indicating a potential buy.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "f83b09c8-ca5b-49a5-b02d-70ca5ec91ca0",
+    "originalMessageId": "1308497269074427998",
+    "userId": "1129591640114352190",
+    "username": "SsippiJohnHurt",
+    "timestamp": 1732040459651,
+    "content": "it's not an opinion, like you said it got sniped, was just now able to exit",
+    "tokenMentioned": "HALO",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User exited a position, indicating a sell or negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "ba6bdf82-2db3-4409-8f81-b43cb41b99f0",
+    "originalMessageId": "1308497296115240971",
+    "userId": "525206459168849923",
+    "username": "Satchel | JUP & JUICE 🧃",
+    "timestamp": 1732040466098,
+    "content": "did you get blackswan ?",
+    "tokenMentioned": "Blackswan",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User inquires about Blackswan, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-19"
+  }
+]

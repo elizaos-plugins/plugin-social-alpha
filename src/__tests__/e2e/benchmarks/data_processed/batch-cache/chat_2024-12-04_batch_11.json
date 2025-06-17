@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "7b406ed3-66bd-455d-be40-3bf11f95965b",
+    "originalMessageId": "1313857625540006020",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1733318468223,
+    "content": "nova is going to mars I hope",
+    "tokenMentioned": "nova",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is expressing hope that the token 'nova' will increase significantly in value.",
+    "certainty": "low",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "d81b6072-3ced-4618-9c5a-f612e7aae698",
+    "originalMessageId": "1313857946102267925",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1733318544651,
+    "content": "still better than this\n\nDJhpCBKYtBTYVVuzpks8das9Yj3L6FYEZAjx5YNCpump",
+    "caMentioned": "DJhpCBKYtBTYVVuzpks8das9Yj3L6FYEZAjx5YNCpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "d2d9d4b9-f45d-4db4-bb68-47a75f530db9",
+    "originalMessageId": "1313858103887790100",
+    "userId": "816616233843032076",
+    "username": "Tren",
+    "timestamp": 1733318582270,
+    "content": "Visionaire is moving\n\nX. YBnTi7GSU2E8vwcoqVcKCRurFafbSRcNfG3kPFRWQuv",
+    "caMentioned": "YBnTi7GSU2E8vwcoqVcKCRurFafbSRcNfG3kPFRWQuv",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "16c5f2ec-f60e-4155-9b67-793e5d1d0927",
+    "originalMessageId": "1313860425917530122",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733319135885,
+    "content": "Guys just a reminder that AI16Z and DEGENAI will have autonomous trading features shipping in the near future and that's likely  gonna rock the chart hard. Position accordingly.",
+    "tokenMentioned": "AI16Z",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is suggesting that AI16Z and DEGENAI will have features that could increase their value.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  }
+]

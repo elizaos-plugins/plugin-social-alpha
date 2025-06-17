@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "0a1994b2-54e7-45c0-a9f6-9aab2fbee3ac",
+    "originalMessageId": "1313519765507018793",
+    "userId": "919224704097730651",
+    "username": "ÆBYSS",
+    "timestamp": 1733237916114,
+    "content": "Anyway u dont belieb me but i just shared ca i dont even have a computer just androidphone",
+    "caMentioned": "4eFET94p4ckSpD8nwzWSSkndDMKP4e8bpMjm6xR2pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User shared a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "b16ed8c7-cb95-4408-8a11-626a3c981a86",
+    "originalMessageId": "1313519894049853480",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733237946761,
+    "content": "BRO WHO THE FUCK JUST APED THE CA PROPHET SHARED 😂 😂 😂 😂 😂 😂 😂 😂 😂 😂 😂 😂 😂 😂 😂 😂 😂",
+    "caMentioned": "4eFET94p4ckSpD8nwzWSSkndDMKP4e8bpMjm6xR2pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User reacted to someone aping into a contract address shared by The Prophet.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "3b26e530-b8b1-4184-80b7-be8888935000",
+    "originalMessageId": "1313520472557748265",
+    "userId": "518797447942766617",
+    "username": "JudahHex",
+    "timestamp": 1733238084688,
+    "content": "That happens 1/10 times",
+    "caMentioned": "A7rGS8Yoy94N2hrU76RhzpV5QsqHmhB1dgcX7uN5pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User shared a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  }
+]

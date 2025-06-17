@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "04232a73-5d47-4f78-8e5c-1b48d5f6c9f7",
+    "originalMessageId": "1312053465094291457",
+    "userId": "1252201026141032518",
+    "username": "GTrench",
+    "timestamp": 1732888322853,
+    "content": "btw i havent heard anything from cclause",
+    "tokenMentioned": "CCLAUS",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is inquiring about the status of CCLAUS, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-29"
+  }
+]

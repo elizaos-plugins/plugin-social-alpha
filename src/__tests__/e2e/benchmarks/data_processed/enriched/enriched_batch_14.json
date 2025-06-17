@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "95770a0b-551d-418c-a572-39b3a3c66d5d",
+    "originalMessageId": "1300208713243557920",
+    "userId": "513055926408839168",
+    "username": "Drill",
+    "timestamp": 1730064313947,
+    "content": "Avb is pumping now",
+    "tokenMentioned": "AVB",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions AVB is pumping, indicating a positive call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "6d5zHW5B8RkGKd51Lpb9RqFQSqDudr9GJgZ1SgQZpump",
+      "symbol": "AVB",
+      "name": "Autonomous Virtual Beings ",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.002242,
+      "calledPriceTimestamp": 1730064313947,
+      "bestPrice": 0.0021351474672647117,
+      "bestPriceTimestamp": 1730064313947,
+      "worstPrice": 0.0018356294609778118,
+      "worstPriceTimestamp": 1732310713947,
+      "idealProfitLoss": -0.00010685253273528834,
+      "idealProfitLossPercent": -4.765947044392878,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438774688
+  },
+  {
+    "callId": "4e729fc8-fdb8-4360-bf73-90afcf9691df",
+    "originalMessageId": "1300208747380998258",
+    "userId": "513055926408839168",
+    "username": "Drill",
+    "timestamp": 1730064322086,
+    "content": "Going to 10m",
+    "tokenMentioned": "AVB",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User predicts AVB will reach 10m market cap.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "6d5zHW5B8RkGKd51Lpb9RqFQSqDudr9GJgZ1SgQZpump",
+      "symbol": "AVB",
+      "name": "Autonomous Virtual Beings ",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.002242,
+      "calledPriceTimestamp": 1730064322086,
+      "bestPrice": 0.002203341859223014,
+      "bestPriceTimestamp": 1730064322086,
+      "worstPrice": 0.0017123306534827657,
+      "worstPriceTimestamp": 1732224322086,
+      "idealProfitLoss": -0.000038658140776986,
+      "idealProfitLossPercent": -1.7242703290359498,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438774688
+  },
+  {
+    "callId": "da3e930f-c7fc-45fb-9516-997388c1b9c1",
+    "originalMessageId": "1300209402799853590",
+    "userId": "387401735666270212",
+    "username": "Decentralize Or Die (e/acc)",
+    "timestamp": 1730064478350,
+    "content": "this is in the context of GOAT",
+    "tokenMentioned": "GOAT",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions GOAT in the context of the ongoing discussion.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump",
+      "symbol": "GOAT",
+      "name": "Goatseus Maximus",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.1218,
+      "calledPriceTimestamp": 1730064478350,
+      "bestPrice": 0.1511047144563112,
+      "bestPriceTimestamp": 1732397278350,
+      "worstPrice": 0.11959998706366884,
+      "worstPriceTimestamp": 1730323678350,
+      "idealProfitLoss": 0.0022000129363311666,
+      "idealProfitLossPercent": 1.8062503582357687,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438775849
+  },
+  {
+    "callId": "ae3fce83-7463-44b4-8f4e-87bd3ef54301",
+    "originalMessageId": "1300209438572941322",
+    "userId": "387401735666270212",
+    "username": "Decentralize Or Die (e/acc)",
+    "timestamp": 1730064486879,
+    "content": "dumping.",
+    "tokenMentioned": "GOAT",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User indicates GOAT is dumping.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump",
+      "symbol": "GOAT",
+      "name": "Goatseus Maximus",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.1218,
+      "calledPriceTimestamp": 1730064486879,
+      "bestPrice": 0.14040197228793572,
+      "bestPriceTimestamp": 1730928486879,
+      "worstPrice": 0.12024962040999145,
+      "worstPriceTimestamp": 1730064486879,
+      "idealProfitLoss": 0.0015503795900085604,
+      "idealProfitLossPercent": 1.2728896469692612,
+      "windowDays": 14
+    },
+    "enrichedAt": 1749438775767
+  },
+  {
+    "callId": "eb363c61-300e-41bb-86cb-f5330ae7cda9",
+    "originalMessageId": "1300209457590173767",
+    "userId": "387401735666270212",
+    "username": "Decentralize Or Die (e/acc)",
+    "timestamp": 1730064491413,
+    "content": "this is going to a billy",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User predicts the token (likely AI16Z based on context) will reach a billion market cap.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730064491413,
+      "bestPrice": 0.24578560805324304,
+      "bestPriceTimestamp": 1731014891413,
+      "worstPrice": 0.20906050860741157,
+      "worstPriceTimestamp": 1732397291413,
+      "idealProfitLoss": 0.03216777133757168,
+      "idealProfitLossPercent": 15.05856057347284,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438774904
+  }
+]

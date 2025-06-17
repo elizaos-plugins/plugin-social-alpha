@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "639636b0-c1d7-443f-82d3-2c4ae8bb6a8c",
+    "originalMessageId": "1322983800212557876",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1735494317821,
+    "content": "Lacking in Goatse",
+    "tokenMentioned": "Goatse",
+    "chain": "unknown",
+    "sentiment": "negative",
+    "conviction": "low",
+    "llmReasoning": "User mentions lacking in Goatse, implying a negative sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "b92bf1f6-4aeb-4557-97aa-2bdd5d862266",
+    "originalMessageId": "1322984385615630446",
+    "userId": "150767175504887808",
+    "username": "plantbaked",
+    "timestamp": 1735494457392,
+    "content": "I heard this dev is cooking: 6WW8TW2BgCeM9oyV17SXNPZ5AVVoPSe1YckWHqc3ivvj",
+    "caMentioned": "6WW8TW2BgCeM9oyV17SXNPZ5AVVoPSe1YckWHqc3ivvj",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "3ef0f6a8-5e36-4d1a-9342-b829d5a45feb",
+    "originalMessageId": "1322984431371157565",
+    "userId": "1210517654708686870",
+    "username": "jeweloffuture_2.0",
+    "timestamp": 1735494468301,
+    "content": "8nzCP3xmkpKAq2un87d6Jgg4r3JnvgUSkFemfLbFpump",
+    "caMentioned": "8nzCP3xmkpKAq2un87d6Jgg4r3JnvgUSkFemfLbFpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "9a13f0b3-fea9-4299-9bb6-2fb1bcfbeb03",
+    "originalMessageId": "1322984524707008553",
+    "userId": "217387490703572992",
+    "username": "sean jared",
+    "timestamp": 1735494490554,
+    "content": ">open up goatagi's chart\n>it pumps\n...",
+    "tokenMentioned": "Goatagi",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions Goatagi's chart pumping, implying a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-29"
+  }
+]

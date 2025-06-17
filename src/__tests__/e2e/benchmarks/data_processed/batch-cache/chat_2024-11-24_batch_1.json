@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "54e104bd-12ac-48e3-8da5-777238f18b78",
+    "originalMessageId": "1310184855039905812",
+    "userId": "350955967955075082",
+    "username": "Zodiac",
+    "timestamp": 1732442811499,
+    "content": "3JUUKpiMY6a9sFyQpxp2RuQn9zK639Uc5aAFgTUyUmit",
+    "caMentioned": "3JUUKpiMY6a9sFyQpxp2RuQn9zK639Uc5aAFgTUyUmit",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-24"
+  },
+  {
+    "callId": "9968fed9-fb1a-451d-bdc1-f6e387f0c6a3",
+    "originalMessageId": "1310185573650006016",
+    "userId": "350955967955075082",
+    "username": "Zodiac",
+    "timestamp": 1732442982829,
+    "content": "3JUUKpiMY6a9sFyQpxp2RuQn9zK639Uc5aAFgTUyUmit",
+    "caMentioned": "3JUUKpiMY6a9sFyQpxp2RuQn9zK639Uc5aAFgTUyUmit",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-24"
+  }
+]

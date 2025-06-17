@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "857cc1ac-57be-4dab-890d-ab49044abba6",
+    "originalMessageId": "1322971545903038474",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1735491396166,
+    "content": "Guys, whats the deal with shelloom, the maker is an ai16z partner\n\n.x HaB4yUXP9k6p27hDkXnamroq6dU572AiE45wseT4pump",
+    "caMentioned": "HaB4yUXP9k6p27hDkXnamroq6dU572AiE45wseT4pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address related to shelloom, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "fdd07d5c-441c-43b8-bb77-a85f8f036504",
+    "originalMessageId": "1322971743207297134",
+    "userId": "367629761297645568",
+    "username": "Komen",
+    "timestamp": 1735491443207,
+    "content": "ByXTsen3ftsd7SsqgXpSZqrEeoMV8Smhz1vox9j6pump",
+    "caMentioned": "ByXTsen3ftsd7SsqgXpSZqrEeoMV8Smhz1vox9j6pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  },
+  {
+    "callId": "c05c394f-7142-4255-891f-5585e6e0d922",
+    "originalMessageId": "1322971896731533312",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1735491479810,
+    "content": ".x HaB4yUXP9k6p27hDkXnamroq6dU572AiE45wseT4pump",
+    "caMentioned": "HaB4yUXP9k6p27hDkXnamroq6dU572AiE45wseT4pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User repeats a contract address, reinforcing the call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-29"
+  }
+]

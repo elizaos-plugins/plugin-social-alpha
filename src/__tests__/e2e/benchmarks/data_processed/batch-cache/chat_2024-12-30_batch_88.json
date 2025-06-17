@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "c90b33c5-1cf2-4bf4-b2cd-41a35911eaa9",
+    "originalMessageId": "1323411177006563368",
+    "userId": "1317157255271157973",
+    "username": "Pilgu",
+    "timestamp": 1735596212389,
+    "content": ".dp 8fb5D1zmjU9Bs7V2oqjtf47SwajCAgi4jzN6Nr5md3Ns",
+    "caMentioned": "8fb5D1zmjU9Bs7V2oqjtf47SwajCAgi4jzN6Nr5md3Ns",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "b18d912a-d64a-40b5-bbd7-89cd4d005431",
+    "originalMessageId": "1323411312348500112",
+    "userId": "656934801764515860",
+    "username": "Jank Dankins",
+    "timestamp": 1735596244657,
+    "content": "Shit I'm holding to 1m+ fk it",
+    "tokenMentioned": "Smore",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User expresses intent to hold until a specific price point, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "fe8585cc-c778-46e8-a535-27f4192c29cd",
+    "originalMessageId": "1323411391985483846",
+    "userId": "445368551134593045",
+    "username": "Nermic",
+    "timestamp": 1735596263644,
+    "content": "fud\nwe hold smore till 10 million :pmairca:",
+    "tokenMentioned": "Smore",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User expresses intent to hold Smore until a specific price point, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-30"
+  },
+  {
+    "callId": "c8b68b60-e651-4af6-bca0-2360ce82dccb",
+    "originalMessageId": "1323411785809924128",
+    "userId": "1088924200737185863",
+    "username": "TheHammer",
+    "timestamp": 1735596357539,
+    "content": "Bonded now buy smore",
+    "tokenMentioned": "Smore",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests buying Smore after it has bonded, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-30"
+  }
+]

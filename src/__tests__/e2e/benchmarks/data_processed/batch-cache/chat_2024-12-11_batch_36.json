@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "099b9de7-01e9-4a57-a42a-da4cf8dc6562",
+    "originalMessageId": "1316434381556158567",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1733932814731,
+    "content": "hope you got into SEND when I told you to :p SENDdRQtYMWaQrBroBrJ2Q53fgVuq95CV9UPGEvpCxa",
+    "caMentioned": "SENDdRQtYMWaQrBroBrJ2Q53fgVuq95CV9UPGEvpCxa",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is suggesting others should have invested in SEND.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-11"
+  },
+  {
+    "callId": "23331b7d-04a4-4c88-8a72-3728300efc83",
+    "originalMessageId": "1316434691175481386",
+    "userId": "193681207840604161",
+    "username": "Elias",
+    "timestamp": 1733932888550,
+    "content": "9CECTPzBQCm1VJA46nhe7WYumync1AkFQ54Facxupump",
+    "caMentioned": "9CECTPzBQCm1VJA46nhe7WYumync1AkFQ54Facxupump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-11"
+  },
+  {
+    "callId": "56bc90a8-acbe-456a-b652-44ef1387cab4",
+    "originalMessageId": "1316436647088492654",
+    "userId": "444167364796481547",
+    "username": "r",
+    "timestamp": 1733933354876,
+    "content": "79x6wWmM3xrgvGs3xaRnpxaXekuU7sYz8wVXnv9zpump",
+    "caMentioned": "79x6wWmM3xrgvGs3xaRnpxaXekuU7sYz8wVXnv9zpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-11"
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "callId": "2466dafb-7852-47cb-80e4-c72355cccfea",
+    "originalMessageId": "1308374907087880212",
+    "userId": "935778257448607794",
+    "username": "inspireviews",
+    "timestamp": 1732011286280,
+    "content": "ELIZA will get to a billion before ai16z",
+    "tokenMentioned": "ELIZA",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User is bullish on ELIZA, predicting it will reach a billion before ai16z.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "ed822ce6-b83b-4269-b8dc-845cea024882",
+    "originalMessageId": "1308375383980245032",
+    "userId": "935778257448607794",
+    "username": "inspireviews",
+    "timestamp": 1732011399980,
+    "content": "2Ey5sa3XTtjaR6KGaVmX48MUtUAmrBT14JeWjQWJcc4h",
+    "caMentioned": "2Ey5sa3XTtjaR6KGaVmX48MUtUAmrBT14JeWjQWJcc4h",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "e81f5eb4-e0d7-4c4b-9d2f-ea465c7fb78c",
+    "originalMessageId": "1308375986567643237",
+    "userId": "831476829608738866",
+    "username": "Antagonist.sats",
+    "timestamp": 1732011543648,
+    "content": ".X ai16z",
+    "tokenMentioned": "ai16z",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User is checking the price of ai16z, indicating interest.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-19"
+  },
+  {
+    "callId": "968f0c79-637c-438d-a283-592136f38fb9",
+    "originalMessageId": "1308376898849476630",
+    "userId": "269892229995167754",
+    "username": "deadlock",
+    "timestamp": 1732011761153,
+    "content": "I threw in 20 SOL shoulda gone bigger",
+    "nameMentioned": "Solana",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User invested 20 SOL, indicating a positive sentiment towards SOL.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-19"
+  }
+]

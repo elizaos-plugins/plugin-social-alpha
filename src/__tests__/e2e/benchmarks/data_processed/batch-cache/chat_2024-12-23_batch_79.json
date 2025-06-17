@@ -1,0 +1,17 @@
+[
+  {
+    "callId": "f555a915-783d-4e4e-ac21-62b1923bd4c5",
+    "originalMessageId": "1321024129104875594",
+    "userId": "361881492949041175",
+    "username": "Paulnotokay",
+    "timestamp": 1735027095820,
+    "content": "The aipool bot still alive on x. Should be safe",
+    "tokenMentioned": "AIPOOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User mentions aipool bot being active, implying continued functionality/safety of the AIPOOL token",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-23"
+  }
+]

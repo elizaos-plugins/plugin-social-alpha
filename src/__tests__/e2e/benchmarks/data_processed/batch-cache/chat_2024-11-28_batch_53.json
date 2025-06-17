@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "e6c86a09-5f18-4e1a-9a3c-9416e1b683f4",
+    "originalMessageId": "1311801400816308247",
+    "userId": "400797447049445386",
+    "username": "lewiscopernicus",
+    "timestamp": 1732828226046,
+    "content": "8gxZqVGwf6pz1eiw4hut5fkeGRKxnLi8W2bjdkU5pump",
+    "caMentioned": "8gxZqVGwf6pz1eiw4hut5fkeGRKxnLi8W2bjdkU5pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "874b5aae-5813-422b-86d4-24cf583126ea",
+    "originalMessageId": "1311801543489749083",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1732828260062,
+    "content": ".x randy",
+    "tokenMentioned": "randy",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions 'randy', which is a token being discussed.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "fb2293e6-d567-4e6e-9c8b-30e0589c059a",
+    "originalMessageId": "1311802765219205200",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1732828551345,
+    "content": "IM GONNA APE DUNGEONAI NOW, GOOD NARRATIVE",
+    "tokenMentioned": "DungeonAI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User expresses intent to buy DungeonAI, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  },
+  {
+    "callId": "272cf331-8ede-4c75-8501-e5d8b04ac9ef",
+    "originalMessageId": "1311802863856517130",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1732828574862,
+    "content": "APED.",
+    "tokenMentioned": "DungeonAI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User confirms they have aped into DungeonAI, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-28"
+  }
+]

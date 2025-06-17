@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "7de2f016-fd9a-4c27-9c70-f07221deb0c6",
+    "originalMessageId": "1313653427817021490",
+    "userId": "416704453601787935",
+    "username": "Klimq",
+    "timestamp": 1733269783692,
+    "content": "aped pennies into this Cm9fXHhjJay9kssd7zHoebsa3vpJaG7za7Fo3pXSEAmm 5% dao twitter and frequency paid launched on top hat pawg whale idk what else i can say can be a farm also can go ray idk",
+    "caMentioned": "Cm9fXHhjJay9kssd7zHoebsa3vpJaG7za7Fo3pXSEAmm",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions aping into a token with a contract address, indicating a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "394ef49a-b76a-4ecc-ae65-e2b6ff1bd65e",
+    "originalMessageId": "1313653896249606247",
+    "userId": "957181674087673866",
+    "username": "Zumbakafeo",
+    "timestamp": 1733269895375,
+    "content": "akari just send 5% to dao 9sA6zYCPfQo5q5XNTHNTeud4WKzGVkmqRgWQ9dDcpump",
+    "tokenMentioned": "AKARI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a transaction involving Akari, indicating a call.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "c45cd3ca-311e-4d6b-b6ad-036a0b19ec1c",
+    "originalMessageId": "1313654307349987379",
+    "userId": "532222421457960961",
+    "username": "Sai",
+    "timestamp": 1733269993389,
+    "content": "Cm9fXHhjJay9kssd7zHoebsa3vpJaG7za7Fo3pXSEAmm",
+    "caMentioned": "Cm9fXHhjJay9kssd7zHoebsa3vpJaG7za7Fo3pXSEAmm",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address, indicating a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  },
+  {
+    "callId": "be09a916-8f3e-4650-8423-e706b4de0a9b",
+    "originalMessageId": "1313654527601283072",
+    "userId": "928695383650078791",
+    "username": "Smore",
+    "timestamp": 1733270045901,
+    "content": "Aped this too E7uKrD3df9CTEmGWEWMBjRD2DQB1gz5dofqZZXBtpump",
+    "caMentioned": "E7uKrD3df9CTEmGWEWMBjRD2DQB1gz5dofqZZXBtpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions aping into a token with a contract address, indicating a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-03"
+  }
+]

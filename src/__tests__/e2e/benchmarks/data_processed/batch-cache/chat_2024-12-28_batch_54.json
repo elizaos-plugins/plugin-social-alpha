@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "518a2fdc-9ad4-49d3-8487-6f30c897d4fc",
+    "originalMessageId": "1322656909731303604",
+    "userId": "1100907083647430756",
+    "username": "Socrate",
+    "timestamp": 1735416381057,
+    "content": "is stoic the 100M runner of the month",
+    "tokenMentioned": "stoic",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is speculating on Stoic being a high performer.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "fd23e5e0-cd02-4fb5-9bc2-24a3a59a8ade",
+    "originalMessageId": "1322657018028228659",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1735416406877,
+    "content": ".x HaB4yUXP9k6p27hDkXnamroq6dU572AiE45wseT4pump\n\nAnyone checked if the dev is actually \n\nhttps://x.com/anthrupad?t=egAnBBPM7UQnKfwezCBGYQ&s=09",
+    "caMentioned": "HaB4yUXP9k6p27hDkXnamroq6dU572AiE45wseT4pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "290ebac7-e259-41a1-abea-ac4d73f79bab",
+    "originalMessageId": "1322657285289410651",
+    "userId": "903683094870110298",
+    "username": "AyZee",
+    "timestamp": 1735416470597,
+    "content": "9S9fB8R5fhXN9jnXPNJtDXgfPjXBJhoAEMhJojP5pump",
+    "caMentioned": "9S9fB8R5fhXN9jnXPNJtDXgfPjXBJhoAEMhJojP5pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  },
+  {
+    "callId": "cf48101b-b1ff-4a17-b3ae-d964c2de0712",
+    "originalMessageId": "1322657857367310338",
+    "userId": "1319447861078917171",
+    "username": "Stan",
+    "timestamp": 1735416606991,
+    "content": "HaB4yUXP9k6p27hDkXnamroq6dU572AiE45wseT4pump",
+    "caMentioned": "HaB4yUXP9k6p27hDkXnamroq6dU572AiE45wseT4pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-28"
+  }
+]

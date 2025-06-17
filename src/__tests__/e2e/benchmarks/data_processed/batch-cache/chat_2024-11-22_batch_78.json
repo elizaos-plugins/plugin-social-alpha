@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "e43e0616-6617-4c63-a37b-9209885724d6",
+    "originalMessageId": "1309785795871117332",
+    "userId": "831476829608738866",
+    "username": "Antagonist.sats",
+    "timestamp": 1732347668379,
+    "content": "BdznCspmf3H9syve7RTtcQsj2HCVzwzXdwrWRDZYpump",
+    "caMentioned": "BdznCspmf3H9syve7RTtcQsj2HCVzwzXdwrWRDZYpump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "4a730ca5-37ec-4226-b5ca-3232d172507f",
+    "originalMessageId": "1309785896941518849",
+    "userId": "831476829608738866",
+    "username": "Antagonist.sats",
+    "timestamp": 1732347692476,
+    "content": "AM84n1iLdxgVTAyENBcLdjXoyvjentTbu5Q6EpKV1PeG",
+    "caMentioned": "AM84n1iLdxgVTAyENBcLdjXoyvjentTbu5Q6EpKV1PeG",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "f7efe83e-7bfc-4aa3-ae58-f76615dc0a64",
+    "originalMessageId": "1309786110188064869",
+    "userId": "831476829608738866",
+    "username": "Antagonist.sats",
+    "timestamp": 1732347743318,
+    "content": "AM84n1iLdxgVTAyENBcLdjXoyvjentTbu5Q6EpKV1PeG",
+    "caMentioned": "AM84n1iLdxgVTAyENBcLdjXoyvjentTbu5Q6EpKV1PeG",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  },
+  {
+    "callId": "b7b359eb-8801-40df-b06e-d7eae1b8b288",
+    "originalMessageId": "1309787406492372993",
+    "userId": "1158224225178505337",
+    "username": "zilyx - noob crypto",
+    "timestamp": 1732348052381,
+    "content": "D31BkMewERdR56TdnMD7fvh4fySjFKeG54jZ2rQwpump",
+    "caMentioned": "D31BkMewERdR56TdnMD7fvh4fySjFKeG54jZ2rQwpump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-22"
+  }
+]

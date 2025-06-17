@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "3dfb8564-ae6c-4525-83ba-d4ec2e29cf19",
+    "originalMessageId": "1310362196710133861",
+    "userId": "178021559296983040",
+    "username": "Bucho aka TriggityTron",
+    "timestamp": 1732485093048,
+    "content": "3jHKvkZga4kGYwxs4mUs8YvREuBYxkvB9XZPT1kTpump",
+    "caMentioned": "3jHKvkZga4kGYwxs4mUs8YvREuBYxkvB9XZPT1kTpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-24"
+  },
+  {
+    "callId": "f47dd693-aecd-44d1-a146-d8ccc0fdc8ab",
+    "originalMessageId": "1310363007334879352",
+    "userId": "935778257448607794",
+    "username": "inspireviews",
+    "timestamp": 1732485286316,
+    "content": "BUZFom1YPnAZVYSccbpddBmFYmHcS4Xtc3JQG5cFpump",
+    "caMentioned": "BUZFom1YPnAZVYSccbpddBmFYmHcS4Xtc3JQG5cFpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-24"
+  }
+]

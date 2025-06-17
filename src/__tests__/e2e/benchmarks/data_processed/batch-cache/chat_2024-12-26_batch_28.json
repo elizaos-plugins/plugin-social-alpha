@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "936f0564-0b91-4d8e-9659-9e035084d85b",
+    "originalMessageId": "1321894866975719485",
+    "userId": "719354684258779187",
+    "username": "Adii",
+    "timestamp": 1735234695906,
+    "content": "waht ru building? add my sols in there",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User wants to add SOL to a project",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-26"
+  },
+  {
+    "callId": "cb3620ba-d396-419b-8c23-9bf3f573e951",
+    "originalMessageId": "1321895264675565588",
+    "userId": "238086587873886220",
+    "username": "MasoRich",
+    "timestamp": 1735234790725,
+    "content": "Modern Stoic being shilled in hush chat @meltingsnow",
+    "tokenMentioned": "STOIC",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "Modern Stoic token being promoted in Hush chat",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-26"
+  },
+  {
+    "callId": "ce3ee9b1-a9fe-4357-9fc7-5c0fb4794d6d",
+    "originalMessageId": "1321895694801571881",
+    "userId": "218464496845324289",
+    "username": "firekid",
+    "timestamp": 1735234893275,
+    "content": "ok so its like 1.5 or something sol left, ill just approve for everyone and whoever gets it",
+    "tokenMentioned": "SOL",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "Discussion about 1.5 SOL allocation",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-26"
+  }
+]

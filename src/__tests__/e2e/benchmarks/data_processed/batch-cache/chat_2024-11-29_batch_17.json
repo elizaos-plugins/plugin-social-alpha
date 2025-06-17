@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "89cbb30a-77df-4896-9590-6530fa40b1e8",
+    "originalMessageId": "1312017812939866155",
+    "userId": "1311997883800621079",
+    "username": "Cobra ai",
+    "timestamp": 1732879822717,
+    "content": "z9QqD2ABCK6X29z96zPsJNtz4q1c6n2JWq7TSGQpump",
+    "caMentioned": "z9QqD2ABCK6X29z96zPsJNtz4q1c6n2JWq7TSGQpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "4aae62cc-b948-4dfa-8c98-b3117fe91f36",
+    "originalMessageId": "1312018687204659210",
+    "userId": "403574677164916746",
+    "username": "Dr. Neuro",
+    "timestamp": 1732880031158,
+    "content": "https://pump.fun/coin/CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "caMentioned": "CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  },
+  {
+    "callId": "bcc6f693-e4e5-43ff-9d18-6b1c5f04f83e",
+    "originalMessageId": "1312018898010505278",
+    "userId": "390130738718310421",
+    "username": "SmolHodler",
+    "timestamp": 1732880081418,
+    "content": "https://pump.fun/coin/CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "caMentioned": "CAnD1gWVDHa74eXBHUfVgLkgk2wrg65abjb9DaEQpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-29"
+  }
+]

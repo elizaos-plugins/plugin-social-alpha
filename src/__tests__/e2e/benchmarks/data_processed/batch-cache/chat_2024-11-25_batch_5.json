@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "7980c67f-5c55-41c9-a8df-3e2dc3f1941a",
+    "originalMessageId": "1310572976457908265",
+    "userId": "1307441609733963896",
+    "username": "Mndy Aoorray",
+    "timestamp": 1732535346856,
+    "content": ".dp Cy7j64LsmNMbxJ2TKypcc1pFP8LL97Gktx3LauFvpump",
+    "caMentioned": "Cy7j64LsmNMbxJ2TKypcc1pFP8LL97Gktx3LauFvpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "46bcbfed-65f6-497a-be44-9d97b934ac5e",
+    "originalMessageId": "1310576527968309309",
+    "userId": "350955967955075082",
+    "username": "Zodiac",
+    "timestamp": 1732536193602,
+    "content": "AUBKPKcYoMd9saGuQjZEjfU1nH19HSJLtMFaWT4pump",
+    "caMentioned": "AUBKPKcYoMd9saGuQjZEjfU1nH19HSJLtMFaWT4pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  },
+  {
+    "callId": "2c336de8-bcf7-4e07-90e1-48ebcfdcdde0",
+    "originalMessageId": "1310577098435461211",
+    "userId": "708269174413328416",
+    "username": "Crispy✨",
+    "timestamp": 1732536329612,
+    "content": ".dp Cy7j64LsmNMbxJ2TKypcc1pFP8LL97Gktx3LauFvpump",
+    "caMentioned": "Cy7j64LsmNMbxJ2TKypcc1pFP8LL97Gktx3LauFvpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-25"
+  }
+]

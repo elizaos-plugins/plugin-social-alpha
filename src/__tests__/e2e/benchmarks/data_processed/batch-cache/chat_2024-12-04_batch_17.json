@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "65278f55-6e2e-40fd-8ae5-5725422dccf7",
+    "originalMessageId": "1313877772833390603",
+    "userId": "1011297759246160022",
+    "username": "ika",
+    "timestamp": 1733323271712,
+    "content": "no he will prolly rug us, wait for bonding to ape",
+    "tokenMentioned": "HIM",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User suggests waiting for bonding before buying, implying a negative short-term view",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "7c3b2068-c621-4104-ac3e-c9267c1958a6",
+    "originalMessageId": "1313878187637211187",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1733323370609,
+    "content": "gonna rug, don't buy",
+    "tokenMentioned": "HIM",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User explicitly warns against buying, predicting a rug",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "05abec82-f5b6-4c7e-8d53-b106d493cd4d",
+    "originalMessageId": "1313878451157073934",
+    "userId": "193681207840604161",
+    "username": "Elias",
+    "timestamp": 1733323433437,
+    "content": ".c kaia",
+    "tokenMentioned": "KAIA",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User references kAia token",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "9cac068a-61db-40d4-8532-1edf38d1aa0a",
+    "originalMessageId": "1313878797145084046",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1733323515927,
+    "content": "he's gonna rug, don't buy",
+    "tokenMentioned": "HIM",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User warns against buying, predicting a rug",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-04"
+  }
+]

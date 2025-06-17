@@ -1,0 +1,62 @@
+[
+  {
+    "callId": "d291403f-c504-4999-8d67-5004fe72aa2f",
+    "originalMessageId": "1313049553775235083",
+    "userId": "1300900247249358861",
+    "username": "0xbubs",
+    "timestamp": 1733125808901,
+    "content": "ca for beast plz",
+    "nameMentioned": "beast",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User is asking for the contract address of 'beast', indicating interest in trading it.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-01"
+  },
+  {
+    "callId": "3d3eb6a1-30c9-4385-8d45-ebe05bfc29a6",
+    "originalMessageId": "1313049639976570942",
+    "userId": "813526297379995690",
+    "username": "Artego",
+    "timestamp": 1733125829453,
+    "content": ".x 92cCPLniCMvVsGqjFAkyqK26G7BXT5taa8Qhu5gVpump",
+    "caMentioned": "92cCPLniCMvVsGqjFAkyqK26G7BXT5taa8Qhu5gVpump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User is referencing a specific contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-01"
+  },
+  {
+    "callId": "704c9032-8a60-419e-80c9-9286ab9a6a84",
+    "originalMessageId": "1313049942247608362",
+    "userId": "813526297379995690",
+    "username": "Artego",
+    "timestamp": 1733125901520,
+    "content": "LFGGGGGG $666X",
+    "tokenMentioned": "666X",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User is expressing excitement about $666X, indicating a positive sentiment.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-01"
+  },
+  {
+    "callId": "9cd067bd-4dbc-493b-b438-41e7eb60ee22",
+    "originalMessageId": "1313050189589774408",
+    "userId": "209724094394925059",
+    "username": "Ponzi",
+    "timestamp": 1733125960491,
+    "content": "8k4ohqRj4k6AteMQmNA371HANz9Xe7nU75iVh6pCpump",
+    "caMentioned": "8k4ohqRj4k6AteMQmNA371HANz9Xe7nU75iVh6pCpump",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "neutral",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-01"
+  }
+]

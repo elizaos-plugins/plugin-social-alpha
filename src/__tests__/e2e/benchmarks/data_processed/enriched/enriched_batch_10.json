@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "9968e9d1-0cef-468d-a2b7-df13ef3e5cc3",
+    "originalMessageId": "1300204974650687528",
+    "userId": "562056248992989204",
+    "username": "Aarishaa (Severa)",
+    "timestamp": 1730063422597,
+    "content": "true for sure! so regarding ai16z dao, people were just lucky? or was it some kind of insider stuff",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User asks about AI16Z DAO, showing interest in the token.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063422597,
+      "bestPrice": 0.25883568566739246,
+      "bestPriceTimestamp": 1731186622597,
+      "worstPrice": 0.20496652990508255,
+      "worstPriceTimestamp": 1730236222597,
+      "idealProfitLoss": 0.008651306810588816,
+      "idealProfitLossPercent": 4.049899083148117,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438768500
+  },
+  {
+    "callId": "e3e26bca-c4ec-4e86-8eff-bfa9433c55f9",
+    "originalMessageId": "1300205697719341147",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730063594990,
+    "content": "theres a certain amount of luck that goes into it just like everything. i cant speak for anyone else, but for me, i just happen to come across degenspartanai shit posting. i used to follow degenspartan back in the days and he was very entertaining",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions DegenSpartanAI, implying connection to AI16Z or DegenAI.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063594990,
+      "bestPrice": 0.26416257986739194,
+      "bestPriceTimestamp": 1731359594990,
+      "worstPrice": 0.20916431638709876,
+      "worstPriceTimestamp": 1730409194990,
+      "idealProfitLoss": 0.050544743151720584,
+      "idealProfitLossPercent": 23.66129342419866,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438768852
+  },
+  {
+    "callId": "939029c9-9156-4280-8bd8-140fb4b0deb2",
+    "originalMessageId": "1300205794968600587",
+    "userId": "515875062822338570",
+    "username": "k4ze",
+    "timestamp": 1730063618176,
+    "content": "i bought ai16z before it was entirely funded",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User mentions buying AI16Z early, indicating positive sentiment.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063618176,
+      "bestPrice": 0.24820660217629198,
+      "bestPriceTimestamp": 1731878018176,
+      "worstPrice": 0.21430303107944856,
+      "worstPriceTimestamp": 1730063618176,
+      "idealProfitLoss": 0.03458876546062062,
+      "idealProfitLossPercent": 16.191890149444216,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438768489
+  },
+  {
+    "callId": "a8dab7c1-7fea-4108-bdde-203beba13cd4",
+    "originalMessageId": "1300205827738828841",
+    "userId": "515875062822338570",
+    "username": "k4ze",
+    "timestamp": 1730063625989,
+    "content": "at like 60% funded",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User confirms buying AI16Z early, reinforcing positive sentiment.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063625989,
+      "bestPrice": 0.28620362042859065,
+      "bestPriceTimestamp": 1732569225989,
+      "worstPrice": 0.22230579454637475,
+      "worstPriceTimestamp": 1730063625989,
+      "idealProfitLoss": 0.0725857837129193,
+      "idealProfitLossPercent": 33.97927103321999,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438768463
+  },
+  {
+    "callId": "b052fcc6-b5d1-48b7-8a91-3c93bad7fa03",
+    "originalMessageId": "1300205862769397840",
+    "userId": "387401735666270212",
+    "username": "Decentralize Or Die (e/acc)",
+    "timestamp": 1730063634341,
+    "content": "why is price pumping",
+    "tokenMentioned": "AI16Z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User notes price increase of AI16Z.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730063634341,
+      "bestPrice": 0.21651760815963395,
+      "bestPriceTimestamp": 1730063634341,
+      "worstPrice": 0.15779418578268095,
+      "worstPriceTimestamp": 1732310034341,
+      "idealProfitLoss": 0.0028997714439625843,
+      "idealProfitLossPercent": 1.3574575459362155,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438768514
+  }
+]

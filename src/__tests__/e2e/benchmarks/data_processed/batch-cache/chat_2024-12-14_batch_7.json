@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "5a71509f-c0df-4f4b-90d0-f6eaa0569b2f",
+    "originalMessageId": "1317483690493874236",
+    "userId": "261844124762636290",
+    "username": "Zardique",
+    "timestamp": 1734182989477,
+    "content": "https://x.com/Fomodotfund\n\nThese guys are currently raising at 20M FDV, token launch should be quite soon (by EOM), launching on ChainGPT",
+    "nameMentioned": "Fomodotfund",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a token launch on ChainGPT, indicating a potential investment opportunity.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-14"
+  },
+  {
+    "callId": "ea2fa1e9-cd48-415e-b1c8-7787147b06a4",
+    "originalMessageId": "1317486056437710849",
+    "userId": "708269174413328416",
+    "username": "Crispy✨",
+    "timestamp": 1734183553562,
+    "content": "rug, delete and repeat",
+    "tokenMentioned": "BROKEAGI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions going back into BROKEAGI, indicating a positive sentiment towards the token.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-14"
+  },
+  {
+    "callId": "f30f4eeb-873f-4e3e-b6a1-3ecdb8203b9d",
+    "originalMessageId": "1317486155612295208",
+    "userId": "798095765750022174",
+    "username": "ElBru",
+    "timestamp": 1734183577207,
+    "content": "Things are only slow and down bad until they aren’t anymore",
+    "tokenMentioned": "BROKEAGI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User expresses conviction in BROKEAGI and GOATAGI, indicating a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-12-14"
+  }
+]

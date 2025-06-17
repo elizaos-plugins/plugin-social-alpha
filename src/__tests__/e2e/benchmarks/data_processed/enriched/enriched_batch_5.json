@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "fd8f77aa-aaed-4a21-9a0f-49a53b79f97c",
+    "originalMessageId": "1300172076350570607",
+    "userId": "752197956970741901",
+    "username": "debut",
+    "timestamp": 1730055579031,
+    "content": "just for reference, terminal of fun which was a larp ai trading bot went to $20m mcap, thats why when i saw this at sub 1m I knew to buy",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User mentions buying ai16z at sub 1m market cap.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730055579031,
+      "bestPrice": 0.2580038340102058,
+      "bestPriceTimestamp": 1732388379031,
+      "worstPrice": 0.2110785261389681,
+      "worstPriceTimestamp": 1730228379031,
+      "idealProfitLoss": 0.04438599729453446,
+      "idealProfitLossPercent": 20.77822618979749,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438757063
+  },
+  {
+    "callId": "9992e3b7-474d-47a9-8919-9e17f1811b95",
+    "originalMessageId": "1300172474989940836",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730055674074,
+    "content": "in other words.. degenai more bullish imo.. the fact that its impossible to value alone..",
+    "tokenMentioned": "DegenAI",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User expresses bullish sentiment on DegenAI.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump",
+      "symbol": "degenai",
+      "name": "Degen Spartan AI",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.003502,
+      "calledPriceTimestamp": 1730055674074,
+      "bestPrice": 0.004225930079014122,
+      "bestPriceTimestamp": 1732042874074,
+      "worstPrice": 0.0035233731822800003,
+      "worstPriceTimestamp": 1730055674074,
+      "idealProfitLoss": 0.0007239300790141219,
+      "idealProfitLossPercent": 20.671904026673953,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438756747
+  },
+  {
+    "callId": "854e6333-b919-46c8-ac1f-5d97c3d21b8b",
+    "originalMessageId": "1300172504932814989",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730055681213,
+    "content": "but both ridic undervalued",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User suggests both ai16z and DegenAI are undervalued.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730055681213,
+      "bestPrice": 0.223536970046024,
+      "bestPriceTimestamp": 1730833281213,
+      "worstPrice": 0.19123839874238044,
+      "worstPriceTimestamp": 1732129281213,
+      "idealProfitLoss": 0.00991913333035263,
+      "idealProfitLossPercent": 4.6434012640785,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438756993
+  },
+  {
+    "callId": "aa499419-2dcb-488c-b2af-f769b56b271f",
+    "originalMessageId": "1300172596582813746",
+    "userId": "860978196366491659",
+    "username": "hehehe6854",
+    "timestamp": 1730055703064,
+    "content": "AVB watchout",
+    "tokenMentioned": "AVB",
+    "chain": "unknown",
+    "sentiment": "neutral",
+    "conviction": "low",
+    "llmReasoning": "User mentions AVB, possibly as a warning or alert.",
+    "certainty": "low",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "6d5zHW5B8RkGKd51Lpb9RqFQSqDudr9GJgZ1SgQZpump",
+      "symbol": "AVB",
+      "name": "Autonomous Virtual Beings ",
+      "chain": "UNKNOWN"
+    },
+    "priceData": {
+      "calledPrice": 0.002242,
+      "calledPriceTimestamp": 1730055703064,
+      "bestPrice": 0.0023181095951647786,
+      "bestPriceTimestamp": 1731524503064,
+      "worstPrice": 0.0019761283720048464,
+      "worstPriceTimestamp": 1731178903064,
+      "idealProfitLoss": 0.0002658716279951537,
+      "idealProfitLossPercent": 11.85868099889178,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438756985
+  },
+  {
+    "callId": "ef53ddb0-fa20-4cac-b826-d4a8dc34037d",
+    "originalMessageId": "1300172620322574389",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730055708724,
+    "content": "goat at 616m atm, at least 10x comparatively",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "high",
+    "llmReasoning": "User compares ai16z favorably to GOAT token, suggesting 10x potential.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730055708724,
+      "bestPrice": 0.2430345594388457,
+      "bestPriceTimestamp": 1731524508724,
+      "worstPrice": 0.21469468892211366,
+      "worstPriceTimestamp": 1732042908724,
+      "idealProfitLoss": 0.029416722723174332,
+      "idealProfitLossPercent": 13.770724006688845,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438757049
+  }
+]

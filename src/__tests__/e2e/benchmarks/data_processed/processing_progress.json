@@ -1,0 +1,344 @@
+{
+  "files": {
+    "chat_2024-10-26": {
+      "totalBatches": 1,
+      "completedBatches": 1,
+      "lastProcessedBatch": 0
+    },
+    "chat_2024-10-27": {
+      "totalBatches": 24,
+      "completedBatches": 24,
+      "lastProcessedBatch": 23
+    },
+    "chat_2024-10-28": {
+      "totalBatches": 24,
+      "completedBatches": 24,
+      "lastProcessedBatch": 23
+    },
+    "chat_2024-10-29": {
+      "totalBatches": 12,
+      "completedBatches": 12,
+      "lastProcessedBatch": 11
+    },
+    "chat_2024-10-30": {
+      "totalBatches": 4,
+      "completedBatches": 4,
+      "lastProcessedBatch": 3
+    },
+    "chat_2024-10-31": {
+      "totalBatches": 2,
+      "completedBatches": 2,
+      "lastProcessedBatch": 1
+    },
+    "chat_2024-11-01": {
+      "totalBatches": 2,
+      "completedBatches": 2,
+      "lastProcessedBatch": 1
+    },
+    "chat_2024-11-02": {
+      "totalBatches": 6,
+      "completedBatches": 6,
+      "lastProcessedBatch": 5
+    },
+    "chat_2024-11-03": {
+      "totalBatches": 11,
+      "completedBatches": 11,
+      "lastProcessedBatch": 10
+    },
+    "chat_2024-11-04": {
+      "totalBatches": 9,
+      "completedBatches": 9,
+      "lastProcessedBatch": 8
+    },
+    "chat_2024-11-05": {
+      "totalBatches": 3,
+      "completedBatches": 3,
+      "lastProcessedBatch": 2
+    },
+    "chat_2024-11-06": {
+      "totalBatches": 2,
+      "completedBatches": 2,
+      "lastProcessedBatch": 1
+    },
+    "chat_2024-11-07": {
+      "totalBatches": 4,
+      "completedBatches": 4,
+      "lastProcessedBatch": 3
+    },
+    "chat_2024-11-08": {
+      "totalBatches": 3,
+      "completedBatches": 3,
+      "lastProcessedBatch": 2
+    },
+    "chat_2024-11-09": {
+      "totalBatches": 3,
+      "completedBatches": 3,
+      "lastProcessedBatch": 2
+    },
+    "chat_2024-11-10": {
+      "totalBatches": 11,
+      "completedBatches": 11,
+      "lastProcessedBatch": 10
+    },
+    "chat_2024-11-11": {
+      "totalBatches": 17,
+      "completedBatches": 17,
+      "lastProcessedBatch": 16
+    },
+    "chat_2024-11-12": {
+      "totalBatches": 106,
+      "completedBatches": 106,
+      "lastProcessedBatch": 105
+    },
+    "chat_2024-11-13": {
+      "totalBatches": 95,
+      "completedBatches": 95,
+      "lastProcessedBatch": 94
+    },
+    "chat_2024-11-14": {
+      "totalBatches": 104,
+      "completedBatches": 104,
+      "lastProcessedBatch": 103
+    },
+    "chat_2024-11-15": {
+      "totalBatches": 121,
+      "completedBatches": 121,
+      "lastProcessedBatch": 120
+    },
+    "chat_2024-11-16": {
+      "totalBatches": 161,
+      "completedBatches": 161,
+      "lastProcessedBatch": 160
+    },
+    "chat_2024-11-17": {
+      "totalBatches": 193,
+      "completedBatches": 193,
+      "lastProcessedBatch": 192
+    },
+    "chat_2024-11-18": {
+      "totalBatches": 163,
+      "completedBatches": 163,
+      "lastProcessedBatch": 162
+    },
+    "chat_2024-11-19": {
+      "totalBatches": 102,
+      "completedBatches": 102,
+      "lastProcessedBatch": 101
+    },
+    "chat_2024-11-20": {
+      "totalBatches": 75,
+      "completedBatches": 75,
+      "lastProcessedBatch": 74
+    },
+    "chat_2024-11-21": {
+      "totalBatches": 85,
+      "completedBatches": 85,
+      "lastProcessedBatch": 84
+    },
+    "chat_2024-11-22": {
+      "totalBatches": 81,
+      "completedBatches": 81,
+      "lastProcessedBatch": 80
+    },
+    "chat_2024-11-23": {
+      "totalBatches": 76,
+      "completedBatches": 76,
+      "lastProcessedBatch": 75
+    },
+    "chat_2024-11-24": {
+      "totalBatches": 68,
+      "completedBatches": 68,
+      "lastProcessedBatch": 67
+    },
+    "chat_2024-11-25": {
+      "totalBatches": 89,
+      "completedBatches": 89,
+      "lastProcessedBatch": 88
+    },
+    "chat_2024-11-26": {
+      "totalBatches": 95,
+      "completedBatches": 95,
+      "lastProcessedBatch": 94
+    },
+    "chat_2024-11-27": {
+      "totalBatches": 108,
+      "completedBatches": 108,
+      "lastProcessedBatch": 107
+    },
+    "chat_2024-11-28": {
+      "totalBatches": 128,
+      "completedBatches": 128,
+      "lastProcessedBatch": 127
+    },
+    "chat_2024-11-29": {
+      "totalBatches": 102,
+      "completedBatches": 102,
+      "lastProcessedBatch": 101
+    },
+    "chat_2024-11-30": {
+      "totalBatches": 72,
+      "completedBatches": 72,
+      "lastProcessedBatch": 71
+    },
+    "chat_2024-12-01": {
+      "totalBatches": 59,
+      "completedBatches": 59,
+      "lastProcessedBatch": 58
+    },
+    "chat_2024-12-02": {
+      "totalBatches": 81,
+      "completedBatches": 81,
+      "lastProcessedBatch": 80
+    },
+    "chat_2024-12-03": {
+      "totalBatches": 95,
+      "completedBatches": 95,
+      "lastProcessedBatch": 94
+    },
+    "chat_2024-12-04": {
+      "totalBatches": 68,
+      "completedBatches": 68,
+      "lastProcessedBatch": 67
+    },
+    "chat_2024-12-05": {
+      "totalBatches": 47,
+      "completedBatches": 47,
+      "lastProcessedBatch": 46
+    },
+    "chat_2024-12-06": {
+      "totalBatches": 54,
+      "completedBatches": 54,
+      "lastProcessedBatch": 53
+    },
+    "chat_2024-12-07": {
+      "totalBatches": 33,
+      "completedBatches": 33,
+      "lastProcessedBatch": 32
+    },
+    "chat_2024-12-08": {
+      "totalBatches": 51,
+      "completedBatches": 51,
+      "lastProcessedBatch": 50
+    },
+    "chat_2024-12-09": {
+      "totalBatches": 47,
+      "completedBatches": 47,
+      "lastProcessedBatch": 46
+    },
+    "chat_2024-12-10": {
+      "totalBatches": 35,
+      "completedBatches": 35,
+      "lastProcessedBatch": 34
+    },
+    "chat_2024-12-11": {
+      "totalBatches": 105,
+      "completedBatches": 105,
+      "lastProcessedBatch": 104
+    },
+    "chat_2024-12-12": {
+      "totalBatches": 69,
+      "completedBatches": 69,
+      "lastProcessedBatch": 68
+    },
+    "chat_2024-12-13": {
+      "totalBatches": 82,
+      "completedBatches": 82,
+      "lastProcessedBatch": 81
+    },
+    "chat_2024-12-14": {
+      "totalBatches": 68,
+      "completedBatches": 68,
+      "lastProcessedBatch": 67
+    },
+    "chat_2024-12-15": {
+      "totalBatches": 54,
+      "completedBatches": 54,
+      "lastProcessedBatch": 53
+    },
+    "chat_2024-12-16": {
+      "totalBatches": 59,
+      "completedBatches": 59,
+      "lastProcessedBatch": 58
+    },
+    "chat_2024-12-17": {
+      "totalBatches": 53,
+      "completedBatches": 53,
+      "lastProcessedBatch": 52
+    },
+    "chat_2024-12-18": {
+      "totalBatches": 71,
+      "completedBatches": 71,
+      "lastProcessedBatch": 70
+    },
+    "chat_2024-12-19": {
+      "totalBatches": 66,
+      "completedBatches": 66,
+      "lastProcessedBatch": 65
+    },
+    "chat_2024-12-20": {
+      "totalBatches": 95,
+      "completedBatches": 95,
+      "lastProcessedBatch": 94
+    },
+    "chat_2024-12-21": {
+      "totalBatches": 70,
+      "completedBatches": 70,
+      "lastProcessedBatch": 69
+    },
+    "chat_2024-12-22": {
+      "totalBatches": 83,
+      "completedBatches": 83,
+      "lastProcessedBatch": 82
+    },
+    "chat_2024-12-23": {
+      "totalBatches": 80,
+      "completedBatches": 80,
+      "lastProcessedBatch": 79
+    },
+    "chat_2024-12-24": {
+      "totalBatches": 71,
+      "completedBatches": 71,
+      "lastProcessedBatch": 70
+    },
+    "chat_2024-12-25": {
+      "totalBatches": 66,
+      "completedBatches": 66,
+      "lastProcessedBatch": 65
+    },
+    "chat_2024-12-26": {
+      "totalBatches": 86,
+      "completedBatches": 86,
+      "lastProcessedBatch": 85
+    },
+    "chat_2024-12-27": {
+      "totalBatches": 107,
+      "completedBatches": 107,
+      "lastProcessedBatch": 106
+    },
+    "chat_2024-12-28": {
+      "totalBatches": 136,
+      "completedBatches": 136,
+      "lastProcessedBatch": 135
+    },
+    "chat_2024-12-29": {
+      "totalBatches": 106,
+      "completedBatches": 106,
+      "lastProcessedBatch": 105
+    },
+    "chat_2024-12-30": {
+      "totalBatches": 149,
+      "completedBatches": 149,
+      "lastProcessedBatch": 148
+    },
+    "chat_2024-12-31": {
+      "totalBatches": 120,
+      "completedBatches": 120,
+      "lastProcessedBatch": 119
+    },
+    "chat_2025-01-01": {
+      "totalBatches": 135,
+      "completedBatches": 135,
+      "lastProcessedBatch": 134
+    }
+  }
+}

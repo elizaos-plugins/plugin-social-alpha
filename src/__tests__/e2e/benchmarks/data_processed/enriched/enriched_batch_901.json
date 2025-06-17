@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "b6ab9a33-8cac-42ad-bd8d-7cb766db87dc",
+    "originalMessageId": "1306239598468534322",
+    "userId": "1266673985383305287",
+    "username": "Ivan",
+    "timestamp": 1731502189033,
+    "content": "ECcnZuiyRAB3p3sauspjFQGnLgFqLkN1bSrRedpjpump",
+    "caMentioned": "ECcnZuiyRAB3p3sauspjFQGnLgFqLkN1bSrRedpjpump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "ECcnZuiyRAB3p3sauspjFQGnLgFqLkN1bSrRedpjpump",
+      "symbol": "ELIZA",
+      "name": "MISTO624/-BROKEN ELIZA",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000004486911751212653,
+      "calledPriceTimestamp": 1731502189033,
+      "bestPrice": 0.000004826785451457273,
+      "bestPriceTimestamp": 1732798189033,
+      "worstPrice": 0.000004262581152973068,
+      "worstPriceTimestamp": 1731761389033,
+      "idealProfitLoss": 3.398737002446204e-7,
+      "idealProfitLossPercent": 7.574780140321784,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437897313
+  },
+  {
+    "callId": "c562d512-854b-407a-97cf-31b63977d587",
+    "originalMessageId": "1306239694593458177",
+    "userId": "295981149061251082",
+    "username": "Mr.Paw",
+    "timestamp": 1731502211951,
+    "content": "2j9LsHkRaZUkfVRUYxJun4FxeJuxraZDaVzUqvsWpump",
+    "caMentioned": "2j9LsHkRaZUkfVRUYxJun4FxeJuxraZDaVzUqvsWpump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "2j9LsHkRaZUkfVRUYxJun4FxeJuxraZDaVzUqvsWpump",
+      "symbol": "ailon",
+      "name": "AilonMusk",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000009204467305433189,
+      "calledPriceTimestamp": 1731502211951,
+      "bestPrice": 0.000009894390950122323,
+      "bestPriceTimestamp": 1732193411951,
+      "worstPrice": 0.000008321182311220208,
+      "worstPriceTimestamp": 1734007811951,
+      "idealProfitLoss": 6.899236446891339e-7,
+      "idealProfitLossPercent": 7.4955303962227955,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437897273
+  },
+  {
+    "callId": "d42eab80-71f4-4206-bcf6-55aa86a5286a",
+    "originalMessageId": "1306239723299147827",
+    "userId": "1305900903353684024",
+    "username": "ktw805",
+    "timestamp": 1731502218795,
+    "content": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+    "caMentioned": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "EPvdp4pbj7CEj7uh8hGbdMD9gwWhDEKENJSqZW26pump",
+      "symbol": "VIVEK",
+      "name": "Head of D.O.G.E ",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000005998424489046495,
+      "calledPriceTimestamp": 1731502218795,
+      "bestPrice": 0.000007703923504464624,
+      "bestPriceTimestamp": 1733921418795,
+      "worstPrice": 0.000005983007000359917,
+      "worstPriceTimestamp": 1731502218795,
+      "idealProfitLoss": 0.0000017054990154181297,
+      "idealProfitLossPercent": 28.4324495295803,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437897628
+  },
+  {
+    "callId": "61c58a8f-8fab-485d-a80a-e52628acf44e",
+    "originalMessageId": "1306239846536314900",
+    "userId": "295981149061251082",
+    "username": "Mr.Paw",
+    "timestamp": 1731502248177,
+    "content": "4J869ikzZt4Gn6vjfTQkY5DqDDwMeP8gcL9EeAkypump",
+    "caMentioned": "4J869ikzZt4Gn6vjfTQkY5DqDDwMeP8gcL9EeAkypump",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "4J869ikzZt4Gn6vjfTQkY5DqDDwMeP8gcL9EeAkypump",
+      "symbol": "TRUMPEXE",
+      "name": "TRUMP.EXE",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.00000421227543492708,
+      "calledPriceTimestamp": 1731502248177,
+      "bestPrice": 0.000004320567546880827,
+      "bestPriceTimestamp": 1734007848177,
+      "worstPrice": 0.000003655631161213564,
+      "worstPriceTimestamp": 1732971048177,
+      "idealProfitLoss": 1.0829211195374656e-7,
+      "idealProfitLossPercent": 2.5708696790294585,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437897366
+  },
+  {
+    "callId": "20da3bf1-eaf6-42e7-9026-d40e619a4dac",
+    "originalMessageId": "1306240083107774606",
+    "userId": "796329939234324491",
+    "username": "justmeyouka",
+    "timestamp": 1731502304580,
+    "content": "what do you guys think about this? \n\nDcbRJ9VJVEaku61YiZYvfLuH5SnCogrErHqSHKffpump",
+    "caMentioned": "DcbRJ9VJVEaku61YiZYvfLuH5SnCogrErHqSHKffpump",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User posts a contract address and asks for opinions, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-13",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "DcbRJ9VJVEaku61YiZYvfLuH5SnCogrErHqSHKffpump",
+      "symbol": "$USÐ",
+      "name": "UNITED STATES DOGE",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000007697622945560381,
+      "calledPriceTimestamp": 1731502304580,
+      "bestPrice": 0.000009026915879409131,
+      "bestPriceTimestamp": 1734007904580,
+      "worstPrice": 0.000006689499569359926,
+      "worstPriceTimestamp": 1732452704580,
+      "idealProfitLoss": 0.0000010081233762004552,
+      "idealProfitLossPercent": 13.096554395170685,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749437897289
+  }
+]

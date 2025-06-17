@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "b57d1d24-baa2-42a6-91bc-592f74d7aa73",
+    "originalMessageId": "1311593558104473681",
+    "userId": "204498241281064960",
+    "username": "LevelsDennis",
+    "timestamp": 1732778672482,
+    "content": "4Pa3RUNRzT4pDR8d9Aibnyst7ncCMiqJbq29Vie4pump",
+    "caMentioned": "4Pa3RUNRzT4pDR8d9Aibnyst7ncCMiqJbq29Vie4pump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "6bfeb926-ab9f-4bd7-9d7f-49b62cda8097",
+    "originalMessageId": "1311594768643522613",
+    "userId": "372064931681533962",
+    "username": "Veki",
+    "timestamp": 1732778961097,
+    "content": "9nCEhmGRqZwrjffVyESezzAMepnGTiaWGJJkWEbj8QEf",
+    "caMentioned": "9nCEhmGRqZwrjffVyESezzAMepnGTiaWGJJkWEbj8QEf",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-11-27"
+  },
+  {
+    "callId": "86be08cf-61c2-4e61-ac46-2c1691cc4305",
+    "originalMessageId": "1311595088241098772",
+    "userId": "244800483582017539",
+    "username": "Daek",
+    "timestamp": 1732779037295,
+    "content": "5% will be given to the dao",
+    "tokenMentioned": "grinch",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions $grinch gaining holders, suggesting a positive sentiment.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-11-27"
+  }
+]

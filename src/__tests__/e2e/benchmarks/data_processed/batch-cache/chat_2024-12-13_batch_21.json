@@ -1,0 +1,32 @@
+[
+  {
+    "callId": "2a048494-4753-4413-bc5c-58432669b009",
+    "originalMessageId": "1317138054476992552",
+    "userId": "695719769541705779",
+    "username": "zo",
+    "timestamp": 1734100583429,
+    "content": "AGmEr35uKQzLWbLmoixqFvTQb3833Rw2roDHjEHH1MRZ",
+    "caMentioned": "AGmEr35uKQzLWbLmoixqFvTQb3833Rw2roDHjEHH1MRZ",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  },
+  {
+    "callId": "07897b49-8c92-4300-a53c-778b4e87773e",
+    "originalMessageId": "1317140450175619074",
+    "userId": "1311288464863662090",
+    "username": "Krome",
+    "timestamp": 1734101154608,
+    "content": "8TACaGVgqnq1naYXA3TEbwKVBoKrBQTki9RVDiHoLQjM",
+    "caMentioned": "8TACaGVgqnq1naYXA3TEbwKVBoKrBQTki9RVDiHoLQjM",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User posted a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-13"
+  }
+]

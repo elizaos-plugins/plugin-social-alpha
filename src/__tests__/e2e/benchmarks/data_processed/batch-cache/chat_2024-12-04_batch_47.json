@@ -1,0 +1,47 @@
+[
+  {
+    "callId": "caf978cc-c6cc-4c39-be9b-f00e1e82db16",
+    "originalMessageId": "1313983737192779998",
+    "userId": "193681207840604161",
+    "username": "Elias",
+    "timestamp": 1733348535584,
+    "content": "H3DD9iD84WULm4598b6yfA7DYPTfpyT3TUESwsXopump this could be good, dev just out",
+    "caMentioned": "H3DD9iD84WULm4598b6yfA7DYPTfpyT3TUESwsXopump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "da0c0be4-d439-42b8-91db-f54d24ac7d0f",
+    "originalMessageId": "1313985807786442823",
+    "userId": "193681207840604161",
+    "username": "Elias",
+    "timestamp": 1733349029252,
+    "content": ".dp H3DD9iD84WULm4598b6yfA7DYPTfpyT3TUESwsXopump",
+    "caMentioned": "H3DD9iD84WULm4598b6yfA7DYPTfpyT3TUESwsXopump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  },
+  {
+    "callId": "84898c63-a6a1-4db4-9c9d-85012cff5e5f",
+    "originalMessageId": "1313986178650869820",
+    "userId": "1244324072264040450",
+    "username": "David.joanou",
+    "timestamp": 1733349117673,
+    "content": "BeiiM4aEyfPAgrxEYcvzifQiTW6dugxfLKontfjWpump",
+    "caMentioned": "BeiiM4aEyfPAgrxEYcvzifQiTW6dugxfLKontfjWpump",
+    "chain": "unknown",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User mentions a contract address, implying a call.",
+    "certainty": "high",
+    "fileSource": "chat_2024-12-04"
+  }
+]

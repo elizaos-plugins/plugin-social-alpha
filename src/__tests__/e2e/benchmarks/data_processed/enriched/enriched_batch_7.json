@@ -1,0 +1,172 @@
+[
+  {
+    "callId": "13deb24b-2b52-4ae8-a724-81f50a5990e9",
+    "originalMessageId": "1300176313637666837",
+    "userId": "232496590655324162",
+    "username": "Rick",
+    "timestamp": 1730056589279,
+    "content": "can we pls pump back",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "low",
+    "llmReasoning": "User expresses desire for price to increase.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730056589279,
+      "bestPrice": 0.282104240483252,
+      "bestPriceTimestamp": 1731870989279,
+      "worstPrice": 0.22361621288786243,
+      "worstPriceTimestamp": 1730142989279,
+      "idealProfitLoss": 0.06848640376758064,
+      "idealProfitLossPercent": 32.06024591417294,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438763728
+  },
+  {
+    "callId": "9542fe0c-e52f-4b25-88e5-f7a06c5e4298",
+    "originalMessageId": "1300177401036411004",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730056848535,
+    "content": "its a rugpull..",
+    "tokenMentioned": "FARTBOOK",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "high",
+    "llmReasoning": "User suggests FARTBOOK is a rugpull.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "FotQdDFbeHME1ApAVM7KGVxXJv9TpgqNs8ppbaUppump",
+      "symbol": "FARTBOOK",
+      "name": "FartbookAI",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000020778049866758936,
+      "calledPriceTimestamp": 1730056848535,
+      "bestPrice": 0.0000206221901074575,
+      "bestPriceTimestamp": 1730143248535,
+      "worstPrice": 0.000018657224123545468,
+      "worstPriceTimestamp": 1731180048535,
+      "idealProfitLoss": 0.0000021208257432134675,
+      "idealProfitLossPercent": 10.207049058085087,
+      "windowDays": 14
+    },
+    "enrichedAt": 1749438763854
+  },
+  {
+    "callId": "217a2bff-a20b-4ddd-ac08-162aadfb6690",
+    "originalMessageId": "1300177472494506066",
+    "userId": "213343891322044416",
+    "username": "Invictus",
+    "timestamp": 1730056865572,
+    "content": "bubblemaps look like shit",
+    "tokenMentioned": "FARTBOOK",
+    "chain": "solana",
+    "sentiment": "negative",
+    "conviction": "medium",
+    "llmReasoning": "User suggests FARTBOOK's bubblemaps look bad.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "FotQdDFbeHME1ApAVM7KGVxXJv9TpgqNs8ppbaUppump",
+      "symbol": "FARTBOOK",
+      "name": "FartbookAI",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000020778049866758936,
+      "calledPriceTimestamp": 1730056865572,
+      "bestPrice": 0.00002039864240640783,
+      "bestPriceTimestamp": 1730056865572,
+      "worstPrice": 0.00001767837193774226,
+      "worstPriceTimestamp": 1731007265572,
+      "idealProfitLoss": 0.0000030996779290166773,
+      "idealProfitLossPercent": 14.918040667404464,
+      "windowDays": 14
+    },
+    "enrichedAt": 1749438763943
+  },
+  {
+    "callId": "5a42b360-ff0b-420d-9cb2-fa8edd69df0e",
+    "originalMessageId": "1300178312001490965",
+    "userId": "720342144719519865",
+    "username": "guzus",
+    "timestamp": 1730057065726,
+    "content": "too cheap",
+    "tokenMentioned": "ai16z",
+    "chain": "solana",
+    "sentiment": "positive",
+    "conviction": "medium",
+    "llmReasoning": "User suggests a token (likely ai16z from context) is undervalued.",
+    "certainty": "medium",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "AI16Z",
+      "name": "ai16z",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.21361783671567136,
+      "calledPriceTimestamp": 1730057065726,
+      "bestPrice": 0.22185761678797408,
+      "bestPriceTimestamp": 1730143465726,
+      "worstPrice": 0.18686224467598803,
+      "worstPriceTimestamp": 1731180265726,
+      "idealProfitLoss": 0.008239780072302721,
+      "idealProfitLossPercent": 3.857252839457407,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438763816
+  },
+  {
+    "callId": "88874e74-d6b7-4ebf-8cf1-2f8a8b7e11ea",
+    "originalMessageId": "1300178828257267743",
+    "userId": "1006628736763969650",
+    "username": "lonnad",
+    "timestamp": 1730057188811,
+    "content": "haha probably coz it was sent to the fund wallet and Shaw's wallet",
+    "tokenMentioned": "FARTBOOK",
+    "chain": "solana",
+    "sentiment": "neutral",
+    "conviction": "medium",
+    "llmReasoning": "User mentions FARTBOOK tokens sent to fund and personal wallets.",
+    "certainty": "high",
+    "fileSource": "chat_2024-10-27",
+    "enrichmentStatus": "success",
+    "resolvedToken": {
+      "address": "FotQdDFbeHME1ApAVM7KGVxXJv9TpgqNs8ppbaUppump",
+      "symbol": "FARTBOOK",
+      "name": "FartbookAI",
+      "chain": "SOLANA"
+    },
+    "priceData": {
+      "calledPrice": 0.000020778049866758936,
+      "calledPriceTimestamp": 1730057188811,
+      "bestPrice": 0.00002310049806128645,
+      "bestPriceTimestamp": 1730575588811,
+      "worstPrice": 0.000017877425139112782,
+      "worstPriceTimestamp": 1732130788811,
+      "idealProfitLoss": 0.0000029006247276461534,
+      "idealProfitLossPercent": 13.96004315249344,
+      "windowDays": 30
+    },
+    "enrichedAt": 1749438763886
+  }
+]
